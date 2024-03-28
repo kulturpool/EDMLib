@@ -1,0 +1,52 @@
+from typing import List, Union, Any, Optional # type: ignore
+from edm_python.edm.base import EDM_BaseClass
+from rdflib import URIRef, Literal
+from edm_python.edm import MixedValuesList
+
+{% for EDM_CLASS, props in data.items() %}
+
+
+class {{EDM_CLASS}}(EDM_BaseClass):
+    """
+    {% for mandate in props|groupby('mandate') %}
+    {{mandate.grouper}}-properties: {% for p in mandate.list %}{{p.to_template_namespace}}_{{p.to_template_label}}{% if loop.last%}{% else %}, {%endif%}{%endfor%}
+    {% endfor %}
+    """
+    {% for prop in props%}
+    {% if not prop.cardinality.startswith("zero")%}
+    {{prop.to_template_namespace|lower}}_{{prop.to_template_label}}: {% if prop.value_type %} {{prop.to_template_type}} {% else  %}Any {% endif %}
+    """
+    Mandate: 
+    {{prop.mandate}}
+
+    Cardinality: 
+    {{prop.cardinality}}
+
+    Value-Type:
+    {% if prop.to_template_type %}{{prop.to_template_type}}{% else %}Any{% endif %}
+    
+    Description: 
+
+    {{prop.to_template_description}}
+    """{% endif %}{% endfor %}
+    {% for prop in props%}
+    {% if prop.cardinality.startswith("zero")%}
+    {{prop.to_template_namespace|lower}}_{{prop.to_template_label}}: {% if prop.value_type %} {{prop.to_template_type}} {% else %}Any{% endif %}= None
+    """
+    Mandate: 
+    {{prop.mandate}}
+
+    Cardinality: 
+    {{prop.cardinality}}
+
+    Value-Type:
+    {% if prop.to_template_type %}{{prop.to_template_type}}{% else %}Any{% endif %}
+    
+    Description: 
+
+    {{prop.to_template_description}}
+    """{% endif %}{% endfor %}
+{% endfor %}
+
+    {# {{prop.to_template_namespace}}_{{prop.to_template_label}}: {{prop.to_template_parent_class}}_{{prop.to_template_namespace}}_{{prop.to_template_label}}{% endfor %} #}
+

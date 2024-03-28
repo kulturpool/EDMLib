@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "EDM-Python"
+version = "0.1.0"
+description = "Python utilities for working with the EDM (Europeana Data Model). Maps all EDM-classes and properties to pydantic models and attributes."
+authors = ["Gregor Pirgie <gregor.pirgie@nhm-wien.ac.at>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "./edm_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rdflib = "^7.0.0"
+pandas = "^2.1.4"
+lxml = "^5.1.0"
+openpyxl = "^3.1.2"
+pydantic = "^2.5.3"
+sickle = "^0.7.0"
+pyld = "^2.0.3"
+jupyter-server = "^2.12.5"
+jupyterlab = "^4.1.1"
+python-lsp-server = {extras = ["all"], version = "^1.10.0"}
+pytest = "^8.1.1"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+jinja2 = "^3.1.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
