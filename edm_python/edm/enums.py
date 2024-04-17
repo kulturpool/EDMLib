@@ -23,6 +23,8 @@ class EDM_Namespace(StrEnum):
     WGS84_POS = "http://www.w3.org/2003/01/geo/wgs84_pos#"
     CRM = "http://www.cidoc-crm.org/cidoc-­crm/"
     ODRL = "http://www.w3.org/ns/odrl/2/"
+    SVCS = "http://rdfs.org/sioc/services#"
+    DOAP = "http://usefulinc.com/ns/doap#"
     # TODO: gp/update add service class namespaces
 
     # TODO: gp/refactor all uri methods
@@ -46,7 +48,7 @@ class EDM_Namespace(StrEnum):
     @classmethod
     def get_from_name(cls, name: str, return_full_uri: bool = False) -> str:
         """
-        Expects a property or in the form: "EDM_PropertyName" and returns
+        Expects a property in the form: "EDM_PropertyName" ( {PREFIX}_{PropertyName} ) and returns
         either only the namespace-uri as a string or the full uri of the given property
         or class – if return_full_uri is set to 'True'
         """

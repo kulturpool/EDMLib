@@ -14,6 +14,7 @@ from ..edm import (
     EDM_Agent,
     EDM_Place,
     EDM_TimeSpan,
+    SVCS_Service,
 )
 
 from typing import get_type_hints, List, Any, Dict
@@ -204,7 +205,7 @@ class EDM_Parser:
         res: List[Any] = []
         for inst in instances:
             res.append(
-                cls_obj(id=str(inst[0]), **self.get_instance_triples(inst[0], cls_obj))  # type: ignore
+                cls_obj(id=str(inst), **self.get_instance_triples(inst, cls_obj))  # type: ignore
             )
 
         return res
@@ -218,6 +219,7 @@ class EDM_Parser:
         edm_agents = self.parse_many_class(EDM_Agent)
         edm_places = self.parse_many_class(EDM_Place)
         cc_licenses = self.parse_many_class(CC_License)
+        svcs_services = self.parse_many_class(SVCS_Service)
 
         return EDM_Record(
             provided_cho=cho,
@@ -228,4 +230,5 @@ class EDM_Parser:
             edm_agent=edm_agents,
             edm_place=edm_places,
             cc_license=cc_licenses,
+            svcs_service=svcs_services,
         )
