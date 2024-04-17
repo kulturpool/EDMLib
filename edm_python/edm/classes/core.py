@@ -1,7 +1,8 @@
 from typing import Any, List, Optional, Union  # type: ignore
 
 from rdflib import Literal, URIRef
-
+from typing_extensions import Self
+from pydantic import model_validator
 from ..types import MixedValuesList
 from ..base import EDM_BaseClass
 
@@ -268,6 +269,13 @@ class ORE_Aggregation(EDM_BaseClass):
 	<edm:provider>LoCloud</edm:provider> <edm:intermediateProvider>Erfgoedplus.be</edm:int
 	ermediateProvider>
     """
+
+    @model_validator(mode="after")
+    def validate_conditional_attributes(self) -> Self:
+        assert (
+            self.edm_isShownAt or self.edm_isShownBy
+        ), f"Aggregation must have either edm_isShownAt or edm_isShownBy, got: {self.edm_isShownAt=}, {self.edm_isShownBy}."
+        return self
 
 
 class EDM_ProvidedCHO(EDM_BaseClass):
@@ -1258,6 +1266,21 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	-­‐parties for the object. <owl:sameAs rdf:resource=“http://www.identifier/SameResourc
 	eElsewhere/”>
     """
+
+    @model_validator(mode="after")
+    def validate_dependent_edm(self) -> Self:
+        assert (
+            self.dc_type
+            or self.dc_subject
+            or self.dcterms_temporal
+            or self.dcterms_spatial
+        ), f"ProvidedCHO must have one of [dc_type, dc_subject, dcterms_termporal, dctermrs_spatial], got {self.dc_type=}, {self.dc_subject=}, {self.dcterms_spatial=}, {self.dcterms_temporal=}."
+        assert (
+            self.dc_title or self.dc_description
+        ), f"ProvidedCHO must have either a dc_title or dc_description, got {self.dc_title=}, {self.dc_description=}."
+        if self.edm_type == "TEXT":
+            assert self.dc_language, f"ProvidedCHO must have dc_language if it is of edm_type 'TEXT', got {self.edm_type=}, {self.dc_language}."
+        return self
 
 
 class EDM_WebResource(EDM_BaseClass):

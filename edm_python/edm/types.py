@@ -1,5 +1,51 @@
 from typing import List, TypeAlias, Union
-from rdflib import Literal, URIRef
+from pydantic import BaseModel, model_validator, field_validator
+from typing import Optional
+from typing_extensions import Self
+from edm_python.edm.validation.uri import is_valid_uri
 
 
-MixedValuesList: TypeAlias = List[Union[Literal, URIRef]] | List[URIRef] | List[Literal]
+class URIRefType(BaseModel):
+    """
+    About IRIs (from the rdflib.URIRef docstring):
+
+    RDF 1.1's IRI Section https://www.w3.org/TR/rdf11-concepts/#section-IRIs
+    An IRI (Internationalized Resource Identifier) within an RDF graph is a Unicode string that conforms to the syntax defined in RFC 3987.
+    IRIs in the RDF abstract syntax MUST be absolute, and MAY contain a fragment identifier.
+    IRIs are a generalization of URIs [RFC3986] that permits a wider range of Unicode characters.
+    """
+
+    value: str
+
+    @field_validator("value")
+    @classmethod
+    def validate_value_as_uri(cls, value: str):
+        assert is_valid_uri(value)
+
+
+class LiteralType(BaseModel):
+    """
+    Overrides the RDFLib Literal with a custom class, so that it is serializable in pydantic model.
+    For the same reason, it uses the same attribute names.
+    Ignore the normalize attribute, it is just added for completeness.
+    """
+
+    lexical_or_value: str
+    lang: Optional[str] = None
+    datatype: Optional[str] = None
+    normalize: Optional[bool] = False
+
+    @model_validator(mode="after")
+    def validate_consistency(self) -> Self:
+        """
+        Checks that literal either has a lang_tag or a datatype, not both.
+        """
+        assert not (
+            self.lang and self.datatype
+        ), f"A literal can either have a datatype or lang_tag, not both: {self.lang=}, {self.datatype=}."
+        return self
+
+
+MixedValuesList: TypeAlias = (
+    List[Union[LiteralType, URIRefType]] | List[URIRefType] | List[LiteralType]
+)
