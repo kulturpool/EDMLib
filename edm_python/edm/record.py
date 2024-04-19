@@ -1,8 +1,8 @@
 from typing import List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, model_validator
 from rdflib import Graph
-
+from typing_extensions import Self
 from .classes import (
     CC_License,
     EDM_Agent,
@@ -22,13 +22,16 @@ __all__ = ["EDM_Record"]
 class EDM_Record(BaseModel):
     """
     Pydantic model representing an edm record, as a fully typed structure.
+    All contained non-standard types are themselves BaseModels, and the fields are always also either BaseModels or
+    standard-types. This ensured that without further conversion, an Instance of this class can be
+    dumped as a dict (or json) and restored from such a dict (or json).
 
     Validation:
     This model is responsible for validating the overall structure, order and completeness
     of the record.
     The individual models for each of its properties are responsible for validating their own attributes –
     the completeness, cardinality and order of their members.
-    Finally, the value dataclasses (Ref, RDF_Literal) within those container types are responsible for validating
+    Finally, the special type models - UIRefType, LiteralType - within those container types are responsible for validating
     the indiviudal values.
     """
 
@@ -85,3 +88,10 @@ class EDM_Record(BaseModel):
         graph = self.get_rdf_graph()
 
         return graph.serialize(format=format, max_depth=max_depth)
+
+    @model_validator(mode="after")
+    def validate_provided_cho_identity(self) -> Self:
+        assert (
+            self.provided_cho.id.value == self.aggregation.edm_aggregatedCHO.value
+        ), f"URIs of providedCHO and aggregation.edm_aggregatedCHO do not match: {self.provided_cho.id.value=} != {self.aggregation.edm_aggregatedCHO.value=}."
+        return self

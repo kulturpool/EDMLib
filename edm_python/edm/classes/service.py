@@ -1,8 +1,8 @@
 from typing import List, Optional
 
 from rdflib import URIRef
-
 from ..base import EDM_BaseClass
+from ..types import URIRefType
 
 
 class SVCS_Service(EDM_BaseClass):
@@ -25,7 +25,7 @@ class SVCS_Service(EDM_BaseClass):
         <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
     """
 
-    dcterms_conformsTo: Optional[List[URIRef]]
+    dcterms_conformsTo: Optional[List[URIRefType]]
     """
     Mandate: 
         Optional
@@ -40,7 +40,7 @@ class SVCS_Service(EDM_BaseClass):
         <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
     """
 
-    doap_implements: Optional[URIRef]
+    doap_implements: Optional[URIRefType]
     """
     Mandate: 
         Optional

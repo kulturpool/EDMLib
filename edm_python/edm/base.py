@@ -1,7 +1,7 @@
 from typing import Any, List, Tuple
 from rdflib import RDF, URIRef
 from edm_python.edm.types import URIRefType
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel
 
 from .enums import EDM_Namespace
 
@@ -14,7 +14,7 @@ class EDM_BaseClass(BaseModel):
     the instance with its class is included here.
     """
 
-    model_config = ConfigDict(arbitrary_types_allowed=True)
+    # model_config = ConfigDict(arbitrary_types_allowed=True)
 
     id: URIRefType
 
@@ -39,7 +39,7 @@ class EDM_BaseClass(BaseModel):
     def get_triples(self) -> List[Tuple[Any, Any, Any]]:
         triples: List[Tuple[Any, Any, Any]] = []
         try:
-            subject = URIRef(self.id)
+            subject = URIRef(self.id.value)
         except Exception as e:
             print("here: ", e)
             raise e
@@ -57,6 +57,7 @@ class EDM_BaseClass(BaseModel):
                 field_val = getattr(self, field_name)
 
                 if field_name != "id" and field_val:
+                    # TODO: make the prop_uri an instance of URIRef here, not below
                     prop_uri = EDM_Namespace.get_from_name(
                         field_name, return_full_uri=True
                     )
@@ -64,11 +65,14 @@ class EDM_BaseClass(BaseModel):
                     if isinstance(field_val, list):
                         val: Any
                         for val in field_val:
-                            triples.append((subject, URIRef(f"{prop_uri}"), val))
+                            triples.append(
+                                (subject, URIRef(f"{prop_uri}"), val.to_rdflib())
+                            )
                     else:
-                        triples.append((subject, URIRef(f"{prop_uri}"), field_val))
-            #     for el in triples:  # type: ignore
-            #         pass
+                        triples.append(
+                            (subject, URIRef(f"{prop_uri}"), field_val.to_rdflib())
+                        )
+
             return triples
         except Exception as e:
             print("Third place in here: ", e)

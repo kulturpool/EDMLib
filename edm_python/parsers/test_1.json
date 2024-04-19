@@ -148,7 +148,7 @@
             "normalize": false
         },
         "edm_rights": {
-            "value": "http://example.com/placeholder_rights"
+            "value": "http://creativecommons.org/publicdomain/zero/1.0/"
         },
         "edm_hasView": [
             {

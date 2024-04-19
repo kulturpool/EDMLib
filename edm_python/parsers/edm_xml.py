@@ -205,9 +205,9 @@ class EDM_Parser:
                     "edm_provider": LiteralType(
                         lexical_or_value="Kulturpool", lang="de"
                     ),
-                    "edm_rights": URIRefType(
-                        value="http://example.com/placeholder_rights"
-                    ),
+                    # "edm_rights": URIRefType(
+                    #     value="http://example.com/placeholder_rights"
+                    # ),
                 }
             case _:  # type: ignore
                 pass

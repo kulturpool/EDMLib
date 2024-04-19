@@ -3,6 +3,7 @@ from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional
 from typing_extensions import Self
 from edm_python.edm.validation.uri import is_valid_uri
+from rdflib import URIRef, Literal
 
 
 class URIRefType(BaseModel):
@@ -22,6 +23,13 @@ class URIRefType(BaseModel):
     def validate_value_as_uri(cls, value: str):
         assert is_valid_uri(value)
         return value
+
+    def to_rdflib(self):
+        """
+        Helper to convert this custom type to the rdflib equivalent
+        Used in the graph serialization of the EDM_Base-Class
+        """
+        return URIRef(self.value)
 
 
 class LiteralType(BaseModel):
@@ -45,6 +53,13 @@ class LiteralType(BaseModel):
             self.lang and self.datatype
         ), f"A literal can either have a datatype or lang_tag, not both: {self.lang=}, {self.datatype=}."
         return self
+
+    def to_rdflib(self):
+        """
+        Helper to convert this custom type to the rdflib equivalent
+        Used in the graph serialization of the EDM_Base-Class
+        """
+        return Literal(**self.model_dump())
 
 
 MixedValuesList: TypeAlias = (

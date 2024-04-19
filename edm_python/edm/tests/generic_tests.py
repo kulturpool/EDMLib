@@ -1,130 +1,66 @@
 # type: ignore
 from pytest import fixture
 from edm_python.edm import EDM_Record, EDM_ProvidedCHO, EDM_WebResource, ORE_Aggregation
+import json
 
 
 # create fixtures to use in tests
 @fixture(scope="session")
 def record_input_data():
-    data = {
-        "provided_cho": {
-            "id": "oai:fue.onb.at:eTravel:25fde500-1d2b-4ee2-a604-5f9d07331094",
-            "edm_type": rdflib.term.Literal("IMAGE"),
-            "dc_contributor": None,
-            "dc_coverage": None,
-            "dc_creator": None,
-            "dc_date": [rdflib.term.Literal("1904-04-01")],
-            "dc_description": [
-                rdflib.term.Literal(
-                    "Zeitung zu den Themen Reise, Tourismus, Fremdenverkehr", lang="de"
-                ),
-                rdflib.term.Literal(
-                    "Journal on the themes of travel and tourism", lang="en"
-                ),
-            ],
-            "dc_format": None,
-            "dc_identifier": [
-                rdflib.term.Literal(
-                    "oai:fue.onb.at:eTravel:25fde500-1d2b-4ee2-a604-5f9d07331094"
-                )
-            ],
-            "dc_language": [rdflib.term.Literal("de"), rdflib.term.Literal("en")],
-            "dc_publisher": [rdflib.term.Literal("Dillinger", lang="de")],
-            "dc_relation": None,
-            "dc_rights": None,
-            "dc_source": None,
-            "dc_subject": [
-                rdflib.term.Literal("Reise", lang="de"),
-                rdflib.term.Literal("Tourimus", lang="de"),
-                rdflib.term.Literal("Fremdenverkehr", lang="de"),
-                rdflib.term.Literal("travel", lang="en"),
-                rdflib.term.Literal("tourism", lang="en"),
-            ],
-            "dc_title": [
-                rdflib.term.Literal(
-                    "Dillingers Reiseführer : illustrierte Zeitschrift für internationalen Reise- und Fremdenverkehr, 1904-04-01",
-                    lang="de",
-                )
-            ],
-            "dc_type": [rdflib.term.Literal("Text", lang="de")],
-            "dcterms_alternative": None,
-            "dcterms_conformsTo": None,
-            "dcterms_created": [rdflib.term.Literal("1904-04-01")],
-            "dcterms_extent": None,
-            "dcterms_hasFormat": None,
-            "dcterms_hasPart": None,
-            "dcterms_hasVersion": None,
-            "dcterms_isFormatOf": None,
-            "dcterms_isPartOf": [rdflib.term.Literal("Anno")],
-            "dcterms_isReferencedBy": None,
-            "dcterms_isReplacedBy": None,
-            "dcterms_isRequiredBy": None,
-            "dcterms_issued": None,
-            "dcterms_isVersionOf": None,
-            "dcterms_medium": None,
-            "dcterms_provenance": None,
-            "dcterms_references": None,
-            "dcterms_replaces": None,
-            "dcterms_requires": None,
-            "dcterms_spatial": None,
-            "dcterms_tableOfContents": None,
-            "dcterms_temporal": [
-                rdflib.term.Literal(
-                    "Wien : 14.1903 - 24.1913 ; anfangs 2 x monatlich, später monatlich"
-                )
-            ],
-            "edm_currentLocation": None,
-            "edm_hasMet": None,
-            "edm_hasType": None,
-            "edm_incorporates": None,
-            "edm_isDerivativeOf": None,
-            "edm_IsNextInSequence": None,
-            "edm_isRelatedTo": None,
-            "edm_isRepresentationOf": None,
-            "edm_isSimilarTo": None,
-            "edm_isSuccessorOf": None,
-            "edm_realizes": None,
-            "owl_isSameAs": None,
-        },
-        "aggregation": {
-            "id": "http://anno.onb.ac.at/cgi-content/anno?apm=0&aid=dil&datum=19040401",
-            "edm_aggregatedCHO": rdflib.term.URIRef(
-                "oai:fue.onb.at:eTravel:25fde500-1d2b-4ee2-a604-5f9d07331094"
-            ),
-            "edm_dataProvider": rdflib.term.Literal(
-                "Österreichische Nationalbibliothek"
-            ),
-            "edm_provider": rdflib.term.Literal("Kulturpool"),
-            "edm_rights": rdflib.term.URIRef("http://example.com/placeholder_rights"),
-            "edm_hasView": None,
-            "edm_isShownAt": rdflib.term.URIRef(
-                "http://anno.onb.ac.at/cgi-content/anno?apm=0&aid=dil&datum=19040401"
-            ),
-            "edm_isShownBy": rdflib.term.URIRef(
-                "http://anno.onb.ac.at/preview/dil/1904/19040401/00000001.png"
-            ),
-            "edm_object": rdflib.term.URIRef(
-                "http://anno.onb.ac.at/preview/dil/1904/19040401/00000001.png"
-            ),
-            "dc_rights": None,
-            "edm_ugc": None,
-            "edm_intermediateProvider": None,
-        },
-        "web_resource": [],
-        "skos_concept": [],
-        "edm_agent": [],
-        "edm_time_span": [],
-        "edm_place": [],
-        "cc_license": [],
-        "svcs_service": None,
-    }
+    data = json.loads(
+        """{"provided_cho":{"id":{"value":"file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"},"edm_type":{"lexical_or_value":"IMAGE","lang":null,"datatype":null,"normalize":false},"dc_contributor":null,"dc_coverage":null,"dc_creator":null,"dc_date":null,"dc_description":[{"lexical_or_value":"Negativform Detail 2 Voluten aus Blattranken. Die Voluten kommen aus einem gemeinsamen Stängel und sind auf dieselbe Weise mit mehreren Blättern verziert. In der Mitte der Voluten ist das Blattwerk noch einmal verdichtet.","lang":null,"datatype":null,"normalize":false}],"dc_format":null,"dc_identifier":[{"lexical_or_value":"SE536","lang":null,"datatype":null,"normalize":false}],"dc_language":null,"dc_publisher":null,"dc_relation":null,"dc_rights":[{"lexical_or_value":"Schaubetrieb Ofenkachelmanufaktur Erndt","lang":null,"datatype":null,"normalize":false}],"dc_source":null,"dc_subject":null,"dc_title":[{"lexical_or_value":"Negativform Detail 2 Voluten aus Blattranken","lang":null,"datatype":null,"normalize":false}],"dc_type":[{"lexical_or_value":"Museumsobjekt","lang":null,"datatype":null,"normalize":false}],"dcterms_alternative":null,"dcterms_conformsTo":null,"dcterms_created":null,"dcterms_extent":[{"lexical_or_value":"B x H x T: 24.1cm x 13.5cm x 5.3cm , Durchmesser: 0cm","lang":null,"datatype":null,"normalize":false}],"dcterms_hasFormat":null,"dcterms_hasPart":null,"dcterms_hasVersion":null,"dcterms_isFormatOf":null,"dcterms_isPartOf":[{"lexical_or_value":"Negativformen","lang":null,"datatype":null,"normalize":false}],"dcterms_isReferencedBy":null,"dcterms_isReplacedBy":null,"dcterms_isRequiredBy":null,"dcterms_issued":null,"dcterms_isVersionOf":null,"dcterms_medium":[{"lexical_or_value":"Gips","lang":null,"datatype":null,"normalize":false}],"dcterms_provenance":null,"dcterms_references":null,"dcterms_replaces":null,"dcterms_requires":null,"dcterms_spatial":null,"dcterms_tableOfContents":null,"dcterms_temporal":null,"edm_currentLocation":null,"edm_hasMet":null,"edm_hasType":[{"lexical_or_value":"Arbeit|Gewerbe|Handwerk|Handel|Industrie","lang":null,"datatype":null,"normalize":false},{"lexical_or_value":"Kachelöfen|Kachelofenteile","lang":null,"datatype":null,"normalize":false}],"edm_incorporates":null,"edm_isDerivativeOf":null,"edm_IsNextInSequence":null,"edm_isRelatedTo":null,"edm_isRepresentationOf":null,"edm_isSimilarTo":null,"edm_isSuccessorOf":null,"edm_realizes":null,"owl_isSameAs":null},"aggregation":{"id":{"value":"file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation"},"edm_aggregatedCHO":{"value":"file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"},"edm_dataProvider":{"lexical_or_value":"Schaubetrieb Ofenkachelmanufaktur Erndt","lang":null,"datatype":null,"normalize":false},"edm_provider":{"lexical_or_value":"Kulturpool","lang":"de","datatype":null,"normalize":false},"edm_rights":{"value":"http://creativecommons.org/publicdomain/zero/1.0/"},"edm_hasView":[{"value":"https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"}],"edm_isShownAt":{"value":"https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/"},"edm_isShownBy":{"value":"https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg"},"edm_object":null,"dc_rights":null,"edm_ugc":null,"edm_intermediateProvider":[{"lexical_or_value":"Museumsmanagement Niederösterreich","lang":null,"datatype":null,"normalize":false}]},"web_resource":[{"id":{"value":"https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"},"dc_creator":null,"dc_description":null,"dc_format":[{"lexical_or_value":"jpg","lang":null,"datatype":null,"normalize":false}],"dc_rights":[{"lexical_or_value":"Museumsmanagement Niederösterreich, Foto: Elena Krizmanics","lang":null,"datatype":null,"normalize":false}],"dc_source":null,"dc_type":[{"lexical_or_value":"digital image","lang":null,"datatype":null,"normalize":false}],"dcterms_conformsTo":null,"dcterms_created":null,"dcterms_extent":null,"dcterms_hasPart":null,"dcterms_isFormatOf":null,"dcterms_isPartOf":null,"dcterms_isReferencedBy":null,"dcterms_issued":null,"edm_isNextInSequence":null,"edm_rights":null,"owl_sameAs":null,"svcs_has_service":null,"dcterms_IsReferencedBy":null},{"id":{"value":"https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/"},"dc_creator":null,"dc_description":null,"dc_format":null,"dc_rights":null,"dc_source":null,"dc_type":null,"dcterms_conformsTo":null,"dcterms_created":null,"dcterms_extent":null,"dcterms_hasPart":null,"dcterms_isFormatOf":null,"dcterms_isPartOf":null,"dcterms_isReferencedBy":null,"dcterms_issued":null,"edm_isNextInSequence":null,"edm_rights":null,"owl_sameAs":null,"svcs_has_service":null,"dcterms_IsReferencedBy":null},{"id":{"value":"https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg"},"dc_creator":null,"dc_description":null,"dc_format":[{"lexical_or_value":"jpg","lang":null,"datatype":null,"normalize":false}],"dc_rights":[{"lexical_or_value":"Museumsmanagement Niederösterreich, Foto: Elena Krizmanics","lang":null,"datatype":null,"normalize":false}],"dc_source":null,"dc_type":[{"lexical_or_value":"digital image","lang":null,"datatype":null,"normalize":false}],"dcterms_conformsTo":null,"dcterms_created":null,"dcterms_extent":null,"dcterms_hasPart":null,"dcterms_isFormatOf":null,"dcterms_isPartOf":null,"dcterms_isReferencedBy":null,"dcterms_issued":null,"edm_isNextInSequence":null,"edm_rights":null,"owl_sameAs":null,"svcs_has_service":null,"dcterms_IsReferencedBy":null}],"skos_concept":[],"edm_agent":[],"edm_time_span":[],"edm_place":[],"cc_license":[],"svcs_service":[]}"""
+    )
 
     return data
 
 
 @fixture(scope="session")
 def web_resource_input_data():
-    data = {}
+    data = json.loads("""{
+            "id": {
+                "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"
+            },
+            "dc_creator": null,
+            "dc_description": null,
+            "dc_format": [
+                {
+                    "lexical_or_value": "jpg",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_rights": [
+                {
+                    "lexical_or_value": "Museumsmanagement Niederösterreich, Foto: Elena Krizmanics",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_source": null,
+            "dc_type": [
+                {
+                    "lexical_or_value": "digital image",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dcterms_conformsTo": null,
+            "dcterms_created": null,
+            "dcterms_extent": null,
+            "dcterms_hasPart": null,
+            "dcterms_isFormatOf": null,
+            "dcterms_isPartOf": null,
+            "dcterms_isReferencedBy": null,
+            "dcterms_issued": null,
+            "edm_isNextInSequence": null,
+            "edm_rights": null,
+            "owl_sameAs": null,
+            "svcs_has_service": null,
+            "dcterms_IsReferencedBy": null
+        }""")
 
     return data
 

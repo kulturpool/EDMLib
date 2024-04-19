@@ -7,13 +7,13 @@ import os
 
 
 class OriginalType(StrEnum):
-    lido_xml = "lido_xml"
-    edm_xml = "edm_xml"
-    mets_xml = "mets_xml"
-    mods_xml = "mods_xml"
-    mets_mods_xml = "mets_mods_xml"
+    lido_xml = "lido-xml"
+    edm_xml = "edm-xml"
+    mets_xml = "mets-xml"
+    mods_xml = "mods-xml"
+    mets_mods_xml = "mets-mods-xml"
     edm_python_json = "json"
-    kpool_framed_json_ld = "kpool_framed_json_ld"
+    kpool_framed_json_ld = "kpool-framed-json-ld"
     rdf_ttl = "ttl"
     rdf_xml = "rdf/xml"
     jsonld = "json-ld"
