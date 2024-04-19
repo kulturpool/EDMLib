@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,jupyternotebooks,python,django,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,jupyternotebooks,python,django,node
 
+edm_python/edm/examples/framed/*
+
 ### Django ###
 *.log
 *.pot

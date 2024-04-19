@@ -1,6 +1,5 @@
 # type: ignore
 from pytest import fixture
-import rdflib
 from edm_python.edm import EDM_Record, EDM_ProvidedCHO, EDM_WebResource, ORE_Aggregation
 
 
@@ -137,7 +136,9 @@ def test_provided_cho(record_input_data):
 
 
 def test_aggregation(record_input_data):
-    assert ORE_Aggregation(**record_input_data["aggregation"])
+    assert ORE_Aggregation(
+        **record_input_data["aggregation"]
+    ), f"Aggregation init test failed"
 
 
 def test_webresource(web_resource_input_data):

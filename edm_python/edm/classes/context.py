@@ -1,8 +1,6 @@
 from typing import Any, List, Optional, Union  # type: ignore
 
-from rdflib import Literal, URIRef
-
-from ..types import MixedValuesList
+from ..types import MixedValuesList, LiteralType, URIRefType
 from ..base import EDM_BaseClass
 
 
@@ -15,7 +13,7 @@ class SKOS_Concept(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[Literal] = None
+    skos_prefLabel: Optional[LiteralType] = None
     """
     Mandate: 
     recommended
@@ -24,7 +22,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -38,7 +36,7 @@ class SKOS_Concept(EDM_BaseClass):
 	B and Metadata Tier C
     """
 
-    skos_altLabel: Optional[List[Literal]] = None
+    skos_altLabel: Optional[List[LiteralType]] = None
     """
     Mandate: 
     recommended
@@ -47,7 +45,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -57,7 +55,7 @@ class SKOS_Concept(EDM_BaseClass):
 	d property for this class.
     """
 
-    skos_broader: Optional[List[URIRef]] = None
+    skos_broader: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -66,7 +64,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -76,7 +74,7 @@ class SKOS_Concept(EDM_BaseClass):
 	er B and Metadata Tier C
     """
 
-    skos_narrower: Optional[List[URIRef]] = None
+    skos_narrower: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -85,7 +83,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -94,7 +92,7 @@ class SKOS_Concept(EDM_BaseClass):
 	y Metadata Tier B and Metadata Tier C
     """
 
-    skos_related: Optional[List[URIRef]] = None
+    skos_related: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -103,7 +101,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -112,7 +110,7 @@ class SKOS_Concept(EDM_BaseClass):
 	tadata Tier B and Metadata Tier C
     """
 
-    skos_broadMatch: Optional[List[URIRef]] = None
+    skos_broadMatch: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -121,7 +119,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -131,7 +129,7 @@ class SKOS_Concept(EDM_BaseClass):
 	atch.term/”/>
     """
 
-    skos_narrowMatch: Optional[List[URIRef]] = None
+    skos_narrowMatch: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -140,7 +138,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -150,7 +148,7 @@ class SKOS_Concept(EDM_BaseClass):
 	atch.term/”/>
     """
 
-    skos_relatedMatch: Optional[List[URIRef]] = None
+    skos_relatedMatch: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -159,7 +157,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -169,7 +167,7 @@ class SKOS_Concept(EDM_BaseClass):
 	atch.term/”/>
     """
 
-    skos_exactMatch: Optional[List[URIRef]] = None
+    skos_exactMatch: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -178,7 +176,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -188,7 +186,7 @@ class SKOS_Concept(EDM_BaseClass):
 	, more specifically Metadata Tier B and Metadata Tier C
     """
 
-    skos_closeMatch: Optional[List[URIRef]] = None
+    skos_closeMatch: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -197,7 +195,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -207,7 +205,7 @@ class SKOS_Concept(EDM_BaseClass):
 	, more specifically Metadata Tier B and Metadata Tier C
     """
 
-    skos_note: Optional[List[Literal]] = None
+    skos_note: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -216,7 +214,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -226,7 +224,7 @@ class SKOS_Concept(EDM_BaseClass):
 	irements, more specifically Metadata Tier B and Metadata Tier C.
     """
 
-    skos_notation: Optional[List[Literal]] = None
+    skos_notation: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -235,7 +233,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -244,7 +242,7 @@ class SKOS_Concept(EDM_BaseClass):
 	http://www.w3.org/2001/XMLSchema#int”>123</skos:notation>
     """
 
-    skos_inScheme: Optional[List[URIRef]] = None
+    skos_inScheme: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -253,7 +251,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -270,7 +268,7 @@ class EDM_Agent(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[Literal] = None
+    skos_prefLabel: Optional[LiteralType] = None
     """
     Mandate: 
     recommended
@@ -279,7 +277,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -293,7 +291,7 @@ class EDM_Agent(EDM_BaseClass):
 	C
     """
 
-    skos_altLabel: Optional[List[Literal]] = None
+    skos_altLabel: Optional[List[LiteralType]] = None
     """
     Mandate: 
     recommended
@@ -302,7 +300,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -311,7 +309,7 @@ class EDM_Agent(EDM_BaseClass):
 	Augte. Courtois aîné</skos:altLabel>
     """
 
-    skos_note: Optional[List[Literal]] = None
+    skos_note: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -320,7 +318,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -346,7 +344,7 @@ class EDM_Agent(EDM_BaseClass):
 	ISO 8601 starting with the year and with hyphens (YYYY-MM-DD).<dc:date>1803</dc:date/>
     """
 
-    dc_identifier: Optional[List[Literal]] = None
+    dc_identifier: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -355,7 +353,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -363,7 +361,7 @@ class EDM_Agent(EDM_BaseClass):
 	er>
     """
 
-    dcterms_hasPart: Optional[List[URIRef]] = None
+    dcterms_hasPart: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -372,7 +370,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -380,7 +378,7 @@ class EDM_Agent(EDM_BaseClass):
 	oration).<dcterms:hasPart rdf:resource=“http://identifier/partOfCorporation/”>
     """
 
-    dcterms_isPartOf: Optional[List[URIRef]] = None
+    dcterms_isPartOf: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -389,7 +387,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -397,7 +395,7 @@ class EDM_Agent(EDM_BaseClass):
 	ce=“http://identifier/parentCorporation/”>
     """
 
-    edm_begin: Optional[Literal] = None
+    edm_begin: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -406,7 +404,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -418,7 +416,7 @@ class EDM_Agent(EDM_BaseClass):
 	 more specifically Metadata Tier B and Metadata Tier C
     """
 
-    edm_end: Optional[Literal] = None
+    edm_end: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -427,7 +425,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -437,7 +435,7 @@ class EDM_Agent(EDM_BaseClass):
 	 , more specifically Metadata Tier B and Metadata Tier C
     """
 
-    edm_hasMet: Optional[List[URIRef]] = None
+    edm_hasMet: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -446,7 +444,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -454,7 +452,7 @@ class EDM_Agent(EDM_BaseClass):
 	reference to a Place class<edm:hasMet rdf:resource=“http://sws.geonames.org/6620265/”>
     """
 
-    edm_isRelatedTo: Optional[List[URIRef]] = None
+    edm_isRelatedTo: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -463,7 +461,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -471,7 +469,7 @@ class EDM_Agent(EDM_BaseClass):
 	 in a generic sense.<edm:isRelatedTo rdf:resource=“http://identifier/relatedAgent/”>
     """
 
-    foaf_name: Optional[List[Literal]] = None
+    foaf_name: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -480,7 +478,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -488,7 +486,7 @@ class EDM_Agent(EDM_BaseClass):
 	e>
     """
 
-    rdagr2_biographicalInformation: Optional[List[Literal]] = None
+    rdagr2_biographicalInformation: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -497,7 +495,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -506,7 +504,7 @@ class EDM_Agent(EDM_BaseClass):
 	ments in Paris in 1803</rdaGr2:biographicalInformation>
     """
 
-    rdagr2_dateOfBirth: Optional[Literal] = None
+    rdagr2_dateOfBirth: Optional[LiteralType] = None
     """
     Mandate: 
     recommended
@@ -515,7 +513,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -526,7 +524,7 @@ class EDM_Agent(EDM_BaseClass):
 	tadata Tier C
     """
 
-    rdagr2_dateOfDeath: Optional[Literal] = None
+    rdagr2_dateOfDeath: Optional[LiteralType] = None
     """
     Mandate: 
     recommended
@@ -535,7 +533,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -546,7 +544,7 @@ class EDM_Agent(EDM_BaseClass):
 	r C
     """
 
-    rdagr2_dateOfEstablishment: Optional[Literal] = None
+    rdagr2_dateOfEstablishment: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -555,7 +553,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -563,7 +561,7 @@ class EDM_Agent(EDM_BaseClass):
 	Establishment>1795</rdaGr2:dateOfEstablishment>
     """
 
-    rdagr2_dateOfTermination: Optional[Literal] = None
+    rdagr2_dateOfTermination: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -572,7 +570,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -580,7 +578,7 @@ class EDM_Agent(EDM_BaseClass):
 	fTermination>1895</rdaGr2:dateOfTermination>
     """
 
-    rdagr2_gender: Optional[Literal] = None
+    rdagr2_gender: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -589,14 +587,14 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
     The gender with which the agent identifies.< rdaGr2:gender>Female</rdaGr2:gender>
     """
 
-    rdagr2_placeOfBirth: Optional[Union[Literal, URIRef]] = None
+    rdagr2_placeOfBirth: Optional[Union[LiteralType, URIRefType]] = None
     """
     Mandate: 
     optional
@@ -605,7 +603,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Union[Literal, URIRef]]
+    Optional[Union[LiteralType, URIRefType]]
     
     Description: 
 
@@ -615,7 +613,7 @@ class EDM_Agent(EDM_BaseClass):
 	 A-C requirements , more specifically Metadata Tier B and Metadata Tier C
     """
 
-    rdagr2_placeOfDeath: Optional[Union[Literal, URIRef]] = None
+    rdagr2_placeOfDeath: Optional[Union[LiteralType, URIRefType]] = None
     """
     Mandate: 
     optional
@@ -624,7 +622,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Union[Literal, URIRef]]
+    Optional[Union[LiteralType, URIRefType]]
     
     Description: 
 
@@ -651,7 +649,7 @@ class EDM_Agent(EDM_BaseClass):
 	OrOccupation>Instrument Maker</rdaGr2:professionOrOccupation>
     """
 
-    owl_sameAs: Optional[List[URIRef]] = None
+    owl_sameAs: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -660,7 +658,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -678,7 +676,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[Literal] = None
+    skos_prefLabel: Optional[LiteralType] = None
     """
     Mandate: 
     recommended
@@ -687,7 +685,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -698,7 +696,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	 Empire</skos:prefLabel>This is a recommended property for this class.
     """
 
-    skos_altLabel: Optional[List[Literal]] = None
+    skos_altLabel: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -707,7 +705,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -715,7 +713,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	'>Empire romain (27 avant J.-­‐C.-­‐476 après J.-­C.)</skos:altLabel >
     """
 
-    skos_note: Optional[List[Literal]] = None
+    skos_note: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -724,7 +722,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -734,7 +732,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	e Mediterranean in Europe, Africa, and Asia.</skos:note>
     """
 
-    dcterms_hasPart: Optional[List[URIRef]] = None
+    dcterms_hasPart: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -743,14 +741,14 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
     Reference to a timespan which is part of the described timespan.
     """
 
-    dcterms_isPartOf: Optional[List[URIRef]] = None
+    dcterms_isPartOf: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -759,14 +757,14 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
     Reference to a timespan of which the described timespan is a part.
     """
 
-    edm_begin: Optional[Literal] = None
+    edm_begin: Optional[LiteralType] = None
     """
     Mandate: 
     recommended
@@ -775,7 +773,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -787,7 +785,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	re specifically Metadata Tier B and Metadata Tier C
     """
 
-    edm_end: Optional[Literal] = None
+    edm_end: Optional[LiteralType] = None
     """
     Mandate: 
     recommended
@@ -796,7 +794,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -807,7 +805,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	data Tier C
     """
 
-    edm_isNextInSequence: Optional[List[URIRef]] = None
+    edm_isNextInSequence: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -816,7 +814,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -826,7 +824,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	eded by the Roman Republic)
     """
 
-    owl_sameAs: Optional[List[URIRef]] = None
+    owl_sameAs: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -835,7 +833,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -852,7 +850,7 @@ class CC_License(EDM_BaseClass):
 
     """
 
-    odrl_inheritFrom: URIRef
+    odrl_inheritFrom: URIRefType
     """
     Mandate: 
     mandatory
@@ -861,7 +859,7 @@ class CC_License(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    URIRef
+    URIRefType
     
     Description: 
 
@@ -897,7 +895,7 @@ class EDM_Place(EDM_BaseClass):
 
     """
 
-    wgs84_pos_lat: Optional[Literal] = None
+    wgs84_pos_lat: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -906,7 +904,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -915,7 +913,7 @@ class EDM_Place(EDM_BaseClass):
 	 see Tier A-C requirements , more specifically Metadata Tier B and Metadata Tier C 
     """
 
-    wgs84_pos_long: Optional[Literal] = None
+    wgs84_pos_long: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -924,7 +922,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -934,7 +932,7 @@ class EDM_Place(EDM_BaseClass):
 	 
     """
 
-    wgs84_pos_alt: Optional[Literal] = None
+    wgs84_pos_alt: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -943,7 +941,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -951,7 +949,7 @@ class EDM_Place(EDM_BaseClass):
 	/wgs84_pos:alt>
     """
 
-    skos_prefLabel: Optional[Literal] = None
+    skos_prefLabel: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -960,7 +958,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -972,7 +970,7 @@ class EDM_Place(EDM_BaseClass):
 	lly Metadata Tier B and Metadata Tier C 
     """
 
-    skos_altLabel: Optional[List[Literal]] = None
+    skos_altLabel: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -981,7 +979,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -989,7 +987,7 @@ class EDM_Place(EDM_BaseClass):
 	</skos:altLabel>
     """
 
-    skos_note: Optional[List[Literal]] = None
+    skos_note: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -998,14 +996,14 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
     Information relating to the place.<skos:note xml:lang="en">Pop. 21m</skos:note>
     """
 
-    dcterms_hasPart: Optional[List[URIRef]] = None
+    dcterms_hasPart: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1014,7 +1012,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1022,7 +1020,7 @@ class EDM_Place(EDM_BaseClass):
 	source=“http://sws.geonames.org/2643741/”/> (City of London)
     """
 
-    dcterms_isPartOf: Optional[List[URIRef]] = None
+    dcterms_isPartOf: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1031,7 +1029,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1039,7 +1037,7 @@ class EDM_Place(EDM_BaseClass):
 	e=“http://sws.geonames.org/2635167/”/> (United Kingdom)
     """
 
-    edm_isNextInSequence: Optional[List[URIRef]] = None
+    edm_isNextInSequence: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1048,7 +1046,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1057,7 +1055,7 @@ class EDM_Place(EDM_BaseClass):
 	e to ensure correct display in the portal.
     """
 
-    owl_sameAs: Optional[List[URIRef]] = None
+    owl_sameAs: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1066,7 +1064,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 

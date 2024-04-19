@@ -1,9 +1,9 @@
 from typing import Any, List, Optional, Union  # type: ignore
 
-from rdflib import Literal, URIRef
+# from rdflib import Literal, URIRef
 from typing_extensions import Self
 from pydantic import model_validator
-from ..types import MixedValuesList
+from ..types import MixedValuesList, URIRefType, LiteralType
 from ..base import EDM_BaseClass
 
 
@@ -18,7 +18,7 @@ class ORE_Aggregation(EDM_BaseClass):
 
     """
 
-    edm_aggregatedCHO: URIRef
+    edm_aggregatedCHO: URIRefType
     """
     Mandate: 
     mandatory
@@ -27,7 +27,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    URIRef
+    URIRefType
     
     Description: 
 
@@ -36,7 +36,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	214”/>
     """
 
-    edm_dataProvider: Union[Literal, URIRef]
+    edm_dataProvider: Union[LiteralType, URIRefType]
     """
     Mandate: 
     mandatory
@@ -45,7 +45,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    Union[Literal, URIRef]
+    Union[LiteralType, URIRefType]
     
     Description: 
 
@@ -58,7 +58,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	rovider>
     """
 
-    edm_provider: Union[Literal, URIRef]
+    edm_provider: Union[LiteralType, URIRefType]
     """
     Mandate: 
     mandatory
@@ -67,7 +67,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    Union[Literal, URIRef]
+    Union[LiteralType, URIRefType]
     
     Description: 
 
@@ -80,7 +80,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	oCloud</edm:provider> 
     """
 
-    edm_rights: URIRef
+    edm_rights: URIRefType
     """
     Mandate: 
     mandatory
@@ -89,7 +89,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    URIRef
+    URIRefType
     
     Description: 
 
@@ -124,7 +124,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	:resource="#statement_3000095353971"/>
     """
 
-    edm_hasView: Optional[List[URIRef]] = None
+    edm_hasView: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -133,7 +133,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -147,7 +147,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	IN/AUDIO/0032195s.mp3"/>
     """
 
-    edm_isShownAt: Optional[URIRef] = None
+    edm_isShownAt: Optional[URIRefType] = None
     """
     Mandate: 
     mandatory
@@ -156,7 +156,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRef]
+    Optional[URIRefType]
     
     Description: 
 
@@ -167,7 +167,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	http://www.mimo-­‐db.eu/UEDIN/214"/>
     """
 
-    edm_isShownBy: Optional[URIRef] = None
+    edm_isShownBy: Optional[URIRefType] = None
     """
     Mandate: 
     mandatory
@@ -176,7 +176,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRef]
+    Optional[URIRefType]
     
     Description: 
 
@@ -187,7 +187,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	ShownBy rdf:resource="http://www.mimo‐db.eu/media/UEDIN/IMAGE/0032195c.jpg"/>
     """
 
-    edm_object: Optional[URIRef] = None
+    edm_object: Optional[URIRefType] = None
     """
     Mandate: 
     recommended
@@ -196,7 +196,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRef]
+    Optional[URIRefType]
     
     Description: 
 
@@ -227,7 +227,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	 rights apply to.
     """
 
-    edm_ugc: Optional[Literal] = None
+    edm_ugc: Optional[LiteralType] = None
     """
     Mandate: 
     optional
@@ -236,7 +236,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Literal]
+    Optional[LiteralType]
     
     Description: 
 
@@ -289,7 +289,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 
     """
 
-    edm_type: Literal
+    edm_type: LiteralType
     """
     Mandate: 
     mandatory
@@ -298,7 +298,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    Literal
+    LiteralType
     
     Description: 
 
@@ -430,7 +430,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	uirements . 
     """
 
-    dc_identifier: Optional[List[Literal]] = None
+    dc_identifier: Optional[List[LiteralType]] = None
     """
     Mandate: 
     recommended
@@ -439,14 +439,14 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
     An identifier of the original CHO. <dc:identifier>RP-­T-­1952-­380</dc:identifier>
     """
 
-    dc_language: Optional[List[Literal]] = None
+    dc_language: Optional[List[LiteralType]] = None
     """
     Mandate: 
     mandatory
@@ -455,7 +455,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -565,7 +565,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	ments . 
     """
 
-    dc_title: Optional[List[Literal]] = None
+    dc_title: Optional[List[LiteralType]] = None
     """
     Mandate: 
     mandatory
@@ -574,7 +574,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -607,7 +607,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	s on medata quality see Tier A-C requirements . 
     """
 
-    dcterms_alternative: Optional[List[Literal]] = None
+    dcterms_alternative: Optional[List[LiteralType]] = None
     """
     Mandate: 
     recommended
@@ -616,7 +616,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -997,7 +997,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	ta quality see Tier A-C requirements . 
     """
 
-    dcterms_tableOfContents: Optional[List[Literal]] = None
+    dcterms_tableOfContents: Optional[List[LiteralType]] = None
     """
     Mandate: 
     optional
@@ -1006,7 +1006,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[Literal]]
+    Optional[List[LiteralType]]
     
     Description: 
 
@@ -1039,7 +1039,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	ommendations on medata quality see Tier A-C requirements . 
     """
 
-    edm_currentLocation: Optional[Union[Literal, URIRef]] = None
+    edm_currentLocation: Optional[Union[LiteralType, URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1048,7 +1048,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Union[Literal, URIRef]]
+    Optional[Union[LiteralType, URIRefType]]
     
     Description: 
 
@@ -1057,7 +1057,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	 or address or inside another location that has a position, such as a room within a (m
 	useum) building. Ideally this position should be provided with the value of the proper
 	ty, either by using a reference (to a Place entity) that has coordinates or an address
-	 attribute, or as a simple literal. edm:currentLocation is used only to record the pla
+	 attribute, or as a simple LiteralType. edm:currentLocation is used only to record the pla
 	ce where the CHO is currently held (e.g. a museum or gallery)dcterms:spatial is used t
 	o record the place depicted in the CHO and other locations associated with itBe carefu
 	l to choose the most appropriate one!<edm:currentLocation rdf:resource=“https://sws.ge
@@ -1065,7 +1065,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	 Tier A-C requirements . 
     """
 
-    edm_hasMet: Optional[List[URIRef]] = None
+    edm_hasMet: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1074,7 +1074,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1104,7 +1104,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	tions. <edm:hasType>Painting</edm:hasType>
     """
 
-    edm_incorporates: Optional[List[URIRef]] = None
+    edm_incorporates: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1113,7 +1113,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1122,7 +1122,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	<edm:incorporates rdf:resource=“http://www.identifier/IncorporatedResource/“>
     """
 
-    edm_isDerivativeOf: Optional[List[URIRef]] = None
+    edm_isDerivativeOf: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1131,7 +1131,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1140,7 +1140,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	sDerivativeOf rdf:resource=“http://www.identifier/SourceResource/”>
     """
 
-    edm_IsNextInSequence: Optional[List[URIRef]] = None
+    edm_IsNextInSequence: Optional[List[URIRefType]] = None
     """
     Mandate: 
     recommended
@@ -1149,7 +1149,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1178,7 +1178,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	“http://www.eionet.europa.eu/gemet/concept?cp=4850/”>
     """
 
-    edm_isRepresentationOf: Optional[URIRef] = None
+    edm_isRepresentationOf: Optional[URIRefType] = None
     """
     Mandate: 
     optional
@@ -1187,7 +1187,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRef]
+    Optional[URIRefType]
     
     Description: 
 
@@ -1196,7 +1196,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	. <edm:isRepresentativeOf rdf:resource=“http://www.identifier/RepresentedResource/”>
     """
 
-    edm_isSimilarTo: Optional[List[URIRef]] = None
+    edm_isSimilarTo: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1205,7 +1205,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1213,7 +1213,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	arTo rdf:resource=“http://www.identifier/SimilarResource”/>
     """
 
-    edm_isSuccessorOf: Optional[List[URIRef]] = None
+    edm_isSuccessorOf: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1222,7 +1222,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1231,7 +1231,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	http://dbpedia.org/resource/The_Fellowship_of_the_Ring/”>
     """
 
-    edm_realizes: Optional[List[URIRef]] = None
+    edm_realizes: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1240,7 +1240,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1248,7 +1248,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	. E.g. a copy of the Gutenberg publication realizes the Bible.
     """
 
-    owl_isSameAs: Optional[List[URIRef]] = None
+    owl_isSameAs: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1257,7 +1257,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1278,7 +1278,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
         assert (
             self.dc_title or self.dc_description
         ), f"ProvidedCHO must have either a dc_title or dc_description, got {self.dc_title=}, {self.dc_description=}."
-        if self.edm_type == "TEXT":
+        if self.edm_type.lexical_or_value == "TEXT":
             assert self.dc_language, f"ProvidedCHO must have dc_language if it is of edm_type 'TEXT', got {self.edm_type=}, {self.dc_language}."
         return self
 
@@ -1453,7 +1453,7 @@ class EDM_WebResource(EDM_BaseClass):
 	s:extent>
     """
 
-    dcterms_hasPart: Optional[List[URIRef]] = None
+    dcterms_hasPart: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1462,7 +1462,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1490,7 +1490,7 @@ class EDM_WebResource(EDM_BaseClass):
 	wikipedia/en/f/f3/Europeana_logo.png”/>
     """
 
-    dcterms_isPartOf: Optional[List[URIRef]] = None
+    dcterms_isPartOf: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1499,7 +1499,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1549,7 +1549,7 @@ class EDM_WebResource(EDM_BaseClass):
 	s<dcterms:issued rdf:resource=“http://semium.org/time/2010”/>
     """
 
-    edm_isNextInSequence: Optional[List[URIRef]] = None
+    edm_isNextInSequence: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1558,7 +1558,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1568,7 +1568,7 @@ class EDM_WebResource(EDM_BaseClass):
 	operty to give the URI of the preceding resource in the sequence.
     """
 
-    edm_rights: Optional[URIRef] = None
+    edm_rights: Optional[URIRefType] = None
     """
     Mandate: 
     recommended
@@ -1577,7 +1577,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRef]
+    Optional[URIRefType]
     
     Description: 
 
@@ -1595,7 +1595,7 @@ class EDM_WebResource(EDM_BaseClass):
 	rights rdf:resource="#statement_3000095353971"/>This is a recommended property.
     """
 
-    owl_sameAs: Optional[List[URIRef]] = None
+    owl_sameAs: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1604,7 +1604,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1612,7 +1612,7 @@ class EDM_WebResource(EDM_BaseClass):
 	source=”urn:soundcloud:150424305>
     """
 
-    svcs_has_service: Optional[List[URIRef]] = None
+    svcs_has_service: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1621,7 +1621,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 
@@ -1630,7 +1630,7 @@ class EDM_WebResource(EDM_BaseClass):
 <svcs:has_service rdf:resource="http://www.example.org/Service/IIIF">
     """
 
-    dcterms_IsReferencedBy: Optional[List[URIRef]] = None
+    dcterms_IsReferencedBy: Optional[List[URIRefType]] = None
     """
     Mandate: 
     optional
@@ -1639,7 +1639,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRef]]
+    Optional[List[URIRefType]]
     
     Description: 
 

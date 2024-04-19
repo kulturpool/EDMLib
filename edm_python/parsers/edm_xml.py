@@ -15,6 +15,8 @@ from ..edm import (
     EDM_Place,
     EDM_TimeSpan,
     SVCS_Service,
+    LiteralType,
+    URIRefType,
 )
 
 from typing import get_type_hints, List, Any, Dict
@@ -38,20 +40,22 @@ def check_if_many(cls: object, attname: str) -> bool:
 
 def to_literal(literal: Literal):
     """
-    Temporary helper function to convert rdflib.Literal to edm_python.edm.RDF_Literal
+    Temporary helper function to convert rdflib.Literal to edm_python.edm.LiteralType
     """
-    return literal
+    return LiteralType(
+        lexical_or_value=literal.value, lang=literal.language, datatype=literal.datatype
+    )
 
 
-def to_ref(graph: Graph, ref: URIRef):
+def to_ref(ref: URIRef):
     """
-    Temporary helper function to convert rdflib.URIRef to edm_python.edm.Ref
+    Temporary helper function to convert rdflib.URIRef to edm_python.edm.URIRefType
     """
     try:
         # prefix, namespace, identifier = graph.compute_qname(ref)
-        return ref
+        return URIRefType(value=str(ref))
     except Exception as e:  # type: ignore
-        return None
+        raise (e)
 
 
 def cls_attribute_to_ref(attname: str) -> URIRef:
@@ -99,13 +103,13 @@ def get_attributes(cls: object) -> Dict[str, URIRef]:
     return {el: cls_attribute_to_ref_new(el) for el in attlist}
 
 
-def convert(lit_or_ref: URIRef | Literal, graph: Graph):
+def convert(lit_or_ref: URIRef | Literal):
     """
     Helper to convert a rdlib.URIRef or rdflib.Literal to the
     corresponding edm-python object.
     """
     if isinstance(lit_or_ref, URIRef):
-        return to_ref(graph, lit_or_ref)
+        return to_ref(lit_or_ref)
     elif isinstance(lit_or_ref, Literal):  # type: ignore
         return to_literal(lit_or_ref)
 
@@ -126,6 +130,7 @@ class EDM_Parser:
         """
         res = self.get_many_ref(obj_cls)
         assert len(res) == 1
+        print("in get single ref: ", res[0])
         return res[0]
 
     def get_many_ref(self, obj_cls: object) -> List[URIRef]:
@@ -160,20 +165,19 @@ class EDM_Parser:
         return webresources
 
     def get_instance_triples(self, instance: URIRef, cls_obj: object) -> Dict[str, Any]:
-        # triples = self.get_triples(instance)
         attribs = get_attributes(cls_obj)
         temp: Dict[str, Any] = {}
         for att, ref in attribs.items():
-            # convert(el[2], self.graph)
             values = [
-                el[2]
+                convert(el[2])  # type: ignore
                 for el in list(self.graph.triples((instance, ref, None)))
-                # if (sol := (convert(el[2], self.graph)))  # type: ignore
             ]
             if values:
                 many = check_if_many(cls_obj, att)
                 if not many:
-                    # assert len(values) == 1, f"Expected 1 value but got {len(values)}; {cls_obj=}; {att=}"
+                    assert (
+                        len(values) == 1
+                    ), f"Expected 1 value but got {len(values)}; {cls_obj=}; {att=}"
                     values = values[0]
                 temp.update({att: values})
         return temp
@@ -186,8 +190,12 @@ class EDM_Parser:
             case "ORE_Aggregation":
                 inst = self.get_aggregation()
                 add = {
-                    "edm_provider": Literal(lexical_or_value="Kulturpool"),
-                    "edm_rights": URIRef(value="http://example.com/placeholder_rights"),
+                    "edm_provider": LiteralType(
+                        lexical_or_value="Kulturpool", lang="de"
+                    ),
+                    "edm_rights": URIRefType(
+                        value="http://example.com/placeholder_rights"
+                    ),
                 }
             case _:  # type: ignore
                 pass

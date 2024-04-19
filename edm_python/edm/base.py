@@ -1,7 +1,6 @@
 from typing import Any, List, Tuple
-
-from pydantic import BaseModel, ConfigDict
 from rdflib import RDF, URIRef
+from pydantic import BaseModel, ConfigDict
 
 from .enums import EDM_Namespace
 

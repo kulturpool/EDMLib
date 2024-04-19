@@ -25,7 +25,6 @@ class EDM_Namespace(StrEnum):
     ODRL = "http://www.w3.org/ns/odrl/2/"
     SVCS = "http://rdfs.org/sioc/services#"
     DOAP = "http://usefulinc.com/ns/doap#"
-    # TODO: gp/update add service class namespaces
 
     # TODO: gp/refactor all uri methods
     @classmethod
@@ -59,13 +58,17 @@ class EDM_Namespace(StrEnum):
             return ns_uri + label
         return ns_uri
 
+    @classmethod
+    def list(cls) -> list[str]:
+        return [el.value for el in cls]
+
 
 class XSD_Types(StrEnum):
     """
     Enum that represents all XSD-Datatypes as defined in the 2001 XML schema definition.
     Converted from the rdflib implementation of the XML schema.
 
-    can by checked via the followign import:
+    can by checked via the following import:
 
     from rdflib import XML
     """
@@ -154,6 +157,10 @@ class XSD_Types(StrEnum):
             return res
         return None
 
+    @classmethod
+    def list(cls) -> list[str]:
+        return [el.value for el in cls]
+
 
 # NOTE: shared
 class MANDATE(StrEnum):
@@ -165,6 +172,10 @@ class MANDATE(StrEnum):
     MANDATORY = "mandatory"
     RECOMMENDED = "recommended"
     OPTIONAL = "optional"
+
+    @classmethod
+    def list(cls) -> list[str]:
+        return [el.value for el in cls]
 
 
 # NOTE: shared
@@ -181,3 +192,7 @@ class CARDINALITY(StrEnum):
     @property
     def is_optional(self):
         return self.value.startswith("zero")
+
+    @classmethod
+    def list(cls) -> list[str]:
+        return [el.value for el in cls]

@@ -5,13 +5,14 @@ import os
 import pathlib
 from edm_python.parsers import EDM_Parser
 
-output_dir = (
-    pathlib.Path().absolute().parent.parent.parent
-    / "code"
-    / "nhm"
-    / "kpool-backend"
-    / "sample_data"
-)
+# output_dir = (
+#     pathlib.Path().absolute().parent.parent.parent
+#     / "code"
+#     / "nhm"
+#     / "kpool-backend"
+#     / "sample_data"
+# )
+output_dir = pathlib.Path().absolute() / "conversion" / "output"
 print(output_dir)
 print(os.path.exists(output_dir))
 # Output_dir = pathlib.Path("")
@@ -44,6 +45,7 @@ def process():
                 print("processing", name, idx)
 
             process_json(idx, el, name)
+            break
 
 
 if __name__ == "__main__":
