@@ -1,5 +1,6 @@
 from typing import Any, List, Tuple
 from rdflib import RDF, URIRef
+from edm_python.edm.types import URIRefType
 from pydantic import BaseModel, ConfigDict
 
 from .enums import EDM_Namespace
@@ -15,7 +16,7 @@ class EDM_BaseClass(BaseModel):
 
     model_config = ConfigDict(arbitrary_types_allowed=True)
 
-    id: str
+    id: URIRefType
 
     @classmethod
     def get_class_ref(cls):

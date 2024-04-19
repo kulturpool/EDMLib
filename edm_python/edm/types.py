@@ -21,6 +21,7 @@ class URIRefType(BaseModel):
     @classmethod
     def validate_value_as_uri(cls, value: str):
         assert is_valid_uri(value)
+        return value
 
 
 class LiteralType(BaseModel):

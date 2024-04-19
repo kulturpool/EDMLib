@@ -21,6 +21,8 @@ from ..edm import (
 
 from typing import get_type_hints, List, Any, Dict
 
+from pydantic import ValidationError
+
 
 def check_if_many(cls: object, attname: str) -> bool:
     """
@@ -51,11 +53,14 @@ def to_ref(ref: URIRef):
     """
     Temporary helper function to convert rdflib.URIRef to edm_python.edm.URIRefType
     """
-    try:
-        # prefix, namespace, identifier = graph.compute_qname(ref)
-        return URIRefType(value=str(ref))
-    except Exception as e:  # type: ignore
-        raise (e)
+    print("----> creating ref for", type(ref), ref)
+    print("----> creating ref for", type(ref), ref)
+
+    # prefix, namespace, identifier = graph.compute_qname(ref)
+    value = str(ref)
+    res = URIRefType(value=value)
+    print(res, ref, str(ref))
+    return res
 
 
 def cls_attribute_to_ref(attname: str) -> URIRef:
@@ -108,9 +113,12 @@ def convert(lit_or_ref: URIRef | Literal):
     Helper to convert a rdlib.URIRef or rdflib.Literal to the
     corresponding edm-python object.
     """
+    print("lit_or_ref is", type(lit_or_ref), lit_or_ref)
     if isinstance(lit_or_ref, URIRef):
+        print("called to ref")
         return to_ref(lit_or_ref)
     elif isinstance(lit_or_ref, Literal):  # type: ignore
+        print("called to literal")
         return to_literal(lit_or_ref)
 
 
@@ -162,7 +170,10 @@ class EDM_Parser:
         webresources = list(
             self.graph.triples((None, RDF.type, EDM_WebResource.get_class_ref()))
         )
-        return webresources
+        print("WEB-REsources", webresources)
+        res = [el[0] for el in webresources]
+        print(res)
+        return res
 
     def get_instance_triples(self, instance: URIRef, cls_obj: object) -> Dict[str, Any]:
         attribs = get_attributes(cls_obj)
@@ -180,6 +191,7 @@ class EDM_Parser:
                     ), f"Expected 1 value but got {len(values)}; {cls_obj=}; {att=}"
                     values = values[0]
                 temp.update({att: values})
+        print("instance_triples", temp)
         return temp
 
     def parse_single_class(self, cls_obj: object) -> Any:
@@ -202,7 +214,7 @@ class EDM_Parser:
         triples = self.get_instance_triples(inst, cls_obj)  # type: ignore
 
         triples.update(**add)
-        return cls_obj(id=str(inst), **triples)  # type: ignore
+        return cls_obj(id=URIRefType(value=str(inst)), **triples)  # type: ignore
 
     def parse_many_class(self, cls_obj: Any) -> List[Any]:
         match cls_obj.__name__:
@@ -212,8 +224,12 @@ class EDM_Parser:
                 instances = self.get_many_ref(cls_obj)
         res: List[Any] = []
         for inst in instances:
+            print("instance", type(inst), inst)
             res.append(
-                cls_obj(id=str(inst), **self.get_instance_triples(inst, cls_obj))  # type: ignore
+                cls_obj(
+                    id=URIRefType(value=str(inst)),
+                    **self.get_instance_triples(inst, cls_obj),
+                )  # type: ignore
             )
 
         return res

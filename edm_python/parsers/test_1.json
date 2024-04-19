@@ -1,0 +1,298 @@
+{
+    "provided_cho": {
+        "id": {
+            "value": "file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
+        },
+        "edm_type": {
+            "lexical_or_value": "IMAGE",
+            "lang": null,
+            "datatype": null,
+            "normalize": false
+        },
+        "dc_contributor": null,
+        "dc_coverage": null,
+        "dc_creator": null,
+        "dc_date": null,
+        "dc_description": [
+            {
+                "lexical_or_value": "Negativform Detail 2 Voluten aus Blattranken. Die Voluten kommen aus einem gemeinsamen Stängel und sind auf dieselbe Weise mit mehreren Blättern verziert. In der Mitte der Voluten ist das Blattwerk noch einmal verdichtet.",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dc_format": null,
+        "dc_identifier": [
+            {
+                "lexical_or_value": "SE536",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dc_language": null,
+        "dc_publisher": null,
+        "dc_relation": null,
+        "dc_rights": [
+            {
+                "lexical_or_value": "Schaubetrieb Ofenkachelmanufaktur Erndt",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dc_source": null,
+        "dc_subject": null,
+        "dc_title": [
+            {
+                "lexical_or_value": "Negativform Detail 2 Voluten aus Blattranken",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dc_type": [
+            {
+                "lexical_or_value": "Museumsobjekt",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dcterms_alternative": null,
+        "dcterms_conformsTo": null,
+        "dcterms_created": null,
+        "dcterms_extent": [
+            {
+                "lexical_or_value": "B x H x T: 24.1cm x 13.5cm x 5.3cm , Durchmesser: 0cm",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dcterms_hasFormat": null,
+        "dcterms_hasPart": null,
+        "dcterms_hasVersion": null,
+        "dcterms_isFormatOf": null,
+        "dcterms_isPartOf": [
+            {
+                "lexical_or_value": "Negativformen",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dcterms_isReferencedBy": null,
+        "dcterms_isReplacedBy": null,
+        "dcterms_isRequiredBy": null,
+        "dcterms_issued": null,
+        "dcterms_isVersionOf": null,
+        "dcterms_medium": [
+            {
+                "lexical_or_value": "Gips",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "dcterms_provenance": null,
+        "dcterms_references": null,
+        "dcterms_replaces": null,
+        "dcterms_requires": null,
+        "dcterms_spatial": null,
+        "dcterms_tableOfContents": null,
+        "dcterms_temporal": null,
+        "edm_currentLocation": null,
+        "edm_hasMet": null,
+        "edm_hasType": [
+            {
+                "lexical_or_value": "Arbeit|Gewerbe|Handwerk|Handel|Industrie",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            },
+            {
+                "lexical_or_value": "Kachelöfen|Kachelofenteile",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ],
+        "edm_incorporates": null,
+        "edm_isDerivativeOf": null,
+        "edm_IsNextInSequence": null,
+        "edm_isRelatedTo": null,
+        "edm_isRepresentationOf": null,
+        "edm_isSimilarTo": null,
+        "edm_isSuccessorOf": null,
+        "edm_realizes": null,
+        "owl_isSameAs": null
+    },
+    "aggregation": {
+        "id": {
+            "value": "file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation"
+        },
+        "edm_aggregatedCHO": {
+            "value": "file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
+        },
+        "edm_dataProvider": {
+            "lexical_or_value": "Schaubetrieb Ofenkachelmanufaktur Erndt",
+            "lang": null,
+            "datatype": null,
+            "normalize": false
+        },
+        "edm_provider": {
+            "lexical_or_value": "Kulturpool",
+            "lang": "de",
+            "datatype": null,
+            "normalize": false
+        },
+        "edm_rights": {
+            "value": "http://example.com/placeholder_rights"
+        },
+        "edm_hasView": [
+            {
+                "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"
+            }
+        ],
+        "edm_isShownAt": {
+            "value": "https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/"
+        },
+        "edm_isShownBy": {
+            "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg"
+        },
+        "edm_object": null,
+        "dc_rights": null,
+        "edm_ugc": null,
+        "edm_intermediateProvider": [
+            {
+                "lexical_or_value": "Museumsmanagement Niederösterreich",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            }
+        ]
+    },
+    "web_resource": [
+        {
+            "id": {
+                "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"
+            },
+            "dc_creator": null,
+            "dc_description": null,
+            "dc_format": [
+                {
+                    "lexical_or_value": "jpg",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_rights": [
+                {
+                    "lexical_or_value": "Museumsmanagement Niederösterreich, Foto: Elena Krizmanics",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_source": null,
+            "dc_type": [
+                {
+                    "lexical_or_value": "digital image",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dcterms_conformsTo": null,
+            "dcterms_created": null,
+            "dcterms_extent": null,
+            "dcterms_hasPart": null,
+            "dcterms_isFormatOf": null,
+            "dcterms_isPartOf": null,
+            "dcterms_isReferencedBy": null,
+            "dcterms_issued": null,
+            "edm_isNextInSequence": null,
+            "edm_rights": null,
+            "owl_sameAs": null,
+            "svcs_has_service": null,
+            "dcterms_IsReferencedBy": null
+        },
+        {
+            "id": {
+                "value": "https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/"
+            },
+            "dc_creator": null,
+            "dc_description": null,
+            "dc_format": null,
+            "dc_rights": null,
+            "dc_source": null,
+            "dc_type": null,
+            "dcterms_conformsTo": null,
+            "dcterms_created": null,
+            "dcterms_extent": null,
+            "dcterms_hasPart": null,
+            "dcterms_isFormatOf": null,
+            "dcterms_isPartOf": null,
+            "dcterms_isReferencedBy": null,
+            "dcterms_issued": null,
+            "edm_isNextInSequence": null,
+            "edm_rights": null,
+            "owl_sameAs": null,
+            "svcs_has_service": null,
+            "dcterms_IsReferencedBy": null
+        },
+        {
+            "id": {
+                "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg"
+            },
+            "dc_creator": null,
+            "dc_description": null,
+            "dc_format": [
+                {
+                    "lexical_or_value": "jpg",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_rights": [
+                {
+                    "lexical_or_value": "Museumsmanagement Niederösterreich, Foto: Elena Krizmanics",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_source": null,
+            "dc_type": [
+                {
+                    "lexical_or_value": "digital image",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dcterms_conformsTo": null,
+            "dcterms_created": null,
+            "dcterms_extent": null,
+            "dcterms_hasPart": null,
+            "dcterms_isFormatOf": null,
+            "dcterms_isPartOf": null,
+            "dcterms_isReferencedBy": null,
+            "dcterms_issued": null,
+            "edm_isNextInSequence": null,
+            "edm_rights": null,
+            "owl_sameAs": null,
+            "svcs_has_service": null,
+            "dcterms_IsReferencedBy": null
+        }
+    ],
+    "skos_concept": [],
+    "edm_agent": [],
+    "edm_time_span": [],
+    "edm_place": [],
+    "cc_license": [],
+    "svcs_service": []
+}
