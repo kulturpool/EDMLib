@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [{include = "./edm_python"}]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.11"
 rdflib = "^7.0.0"
 pandas = "^2.1.4"
 lxml = "^5.1.0"
