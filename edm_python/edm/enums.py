@@ -51,7 +51,11 @@ class EDM_Namespace(StrEnum):
         either only the namespace-uri as a string or the full uri of the given property
         or class – if return_full_uri is set to 'True'
         """
-        ns, label = name.split("_")
+        if name.startswith("wgs84_pos"):
+            ns = "WGS84_POS"
+            label = name.replace("wgs84_pos_", "")
+        else:
+            ns, label = name.split("_", 1)
 
         ns_uri = getattr(cls, ns.upper()).value
         if return_full_uri:
