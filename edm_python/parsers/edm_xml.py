@@ -4,11 +4,9 @@ from rdflib import Graph, URIRef, Literal, RDF
 from ..edm import (
     EDM_Record,
     EDM_Namespace,
-    Literal,
     EDM_ProvidedCHO,
     EDM_WebResource,
     ORE_Aggregation,
-    URIRef,
     CC_License,
     SKOS_Concept,
     EDM_Agent,
@@ -53,13 +51,13 @@ def to_ref(ref: URIRef):
     """
     Temporary helper function to convert rdflib.URIRef to edm_python.edm.URIRefType
     """
-    print("----> creating ref for", type(ref), ref)
-    print("----> creating ref for", type(ref), ref)
+    # print("----> creating ref for", type(ref), ref)
+    # print("----> creating ref for", type(ref), ref)
 
     # prefix, namespace, identifier = graph.compute_qname(ref)
     value = str(ref)
     res = URIRefType(value=value)
-    print(res, ref, str(ref))
+    # print(res, ref, str(ref))
     return res
 
 
@@ -113,12 +111,12 @@ def convert(lit_or_ref: URIRef | Literal):
     Helper to convert a rdlib.URIRef or rdflib.Literal to the
     corresponding edm-python object.
     """
-    print("lit_or_ref is", type(lit_or_ref), lit_or_ref)
+    # print("lit_or_ref is", type(lit_or_ref), lit_or_ref)
     if isinstance(lit_or_ref, URIRef):
-        print("called to ref")
+        # print("called to ref")
         return to_ref(lit_or_ref)
     elif isinstance(lit_or_ref, Literal):  # type: ignore
-        print("called to literal")
+        # print("called to literal")
         return to_literal(lit_or_ref)
 
 
@@ -137,8 +135,8 @@ class EDM_Parser:
         This method expects that the cardinality of the obj_cls is one per record.
         """
         res = self.get_many_ref(obj_cls)
-        assert len(res) == 1
-        print("in get single ref: ", res[0])
+        assert len(res) == 1, f"Got: {len(res)}, {res=}"
+        # print("in get single ref: ", res[0])
         return res[0]
 
     def get_many_ref(self, obj_cls: object) -> List[URIRef]:
@@ -163,16 +161,16 @@ class EDM_Parser:
         agg = list(
             self.graph.triples((None, RDF.type, ORE_Aggregation.get_class_ref()))
         )
-        assert len(agg) == 1
+        assert len(agg) == 1, f"Expected one aggregation, got {len(agg)}. {agg=}"
         return agg[0][0]
 
     def get_webresources(self):
         webresources = list(
             self.graph.triples((None, RDF.type, EDM_WebResource.get_class_ref()))
         )
-        print("WEB-REsources", webresources)
+        # print("WEB-REsources", webresources)
         res = [el[0] for el in webresources]
-        print(res)
+        # print(res)
         return res
 
     def get_instance_triples(self, instance: URIRef, cls_obj: object) -> Dict[str, Any]:
@@ -191,7 +189,7 @@ class EDM_Parser:
                     ), f"Expected 1 value but got {len(values)}; {cls_obj=}; {att=}"
                     values = values[0]
                 temp.update({att: values})
-        print("instance_triples", temp)
+        # print("instance_triples", temp)
         return temp
 
     def parse_single_class(self, cls_obj: object) -> Any:
@@ -224,7 +222,7 @@ class EDM_Parser:
                 instances = self.get_many_ref(cls_obj)
         res: List[Any] = []
         for inst in instances:
-            print("instance", type(inst), inst)
+            # print("instance", type(inst), inst)
             res.append(
                 cls_obj(
                     id=URIRefType(value=str(inst)),

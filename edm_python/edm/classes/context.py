@@ -676,13 +676,13 @@ class EDM_TimeSpan(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[LiteralType] = None
+    skos_prefLabel: Optional[List[LiteralType]] = None
     """
     Mandate: 
     recommended
 
     Cardinality: 
-    zero_to_one
+    zero_to_many
 
     Value-Type:
     Optional[LiteralType]
@@ -839,6 +839,9 @@ class EDM_TimeSpan(EDM_BaseClass):
 
     The URI of a timespan<owl:sameAs rdf:resource=“http://semium.org/time/roman_empire”/>
     """
+
+
+# TODO: add validator for property skos_preferedLabel: validate that if there are multiple, that each has a different lang-tag
 
 
 class CC_License(EDM_BaseClass):
