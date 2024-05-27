@@ -19,8 +19,6 @@ from ..edm import (
 
 from typing import get_type_hints, List, Any, Dict
 
-from pydantic import ValidationError
-
 
 def check_if_many(cls: object, attname: str) -> bool:
     """
@@ -222,8 +220,8 @@ class EDM_Parser:
             res.append(
                 cls_obj(
                     id=Ref(value=str(inst)),
-                    **self.get_instance_triples(inst, cls_obj),
-                )  # type: ignore
+                    **self.get_instance_triples(inst, cls_obj),  # type: ignore
+                )
             )
 
         return res
