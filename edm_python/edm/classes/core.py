@@ -1278,7 +1278,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
         assert (
             self.dc_title or self.dc_description
         ), f"ProvidedCHO must have either a dc_title or dc_description, got {self.dc_title=}, {self.dc_description=}."
-        if self.edm_type.lexical_or_value == "TEXT":
+        if self.edm_type.value == "TEXT":
             assert self.dc_language, f"ProvidedCHO must have dc_language if it is of edm_type 'TEXT', got {self.edm_type=}, {self.dc_language}."
         return self
 

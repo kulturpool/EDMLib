@@ -3,6 +3,7 @@ from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional
 from typing_extensions import Self
 from edm_python.edm.validation.uri import is_valid_uri
+from edm_python.edm.enums import XSD_Types
 from rdflib import URIRef, Literal
 
 
@@ -39,7 +40,7 @@ class LiteralType(BaseModel):
     Ignore the normalize attribute, it is just added for completeness.
     """
 
-    lexical_or_value: str
+    value: str
     lang: Optional[str] = None
     datatype: Optional[str] = None
     normalize: Optional[bool] = False
@@ -59,7 +60,12 @@ class LiteralType(BaseModel):
         Helper to convert this custom type to the rdflib equivalent
         Used in the graph serialization of the EDM_Base-Class
         """
-        return Literal(**self.model_dump())
+        return Literal(
+            lexical_or_value=self.value,
+            lang=self.lang,
+            datatype=self.datatype,
+            normalize=self.normalize,
+        )
 
 
 MixedValuesList: TypeAlias = (
