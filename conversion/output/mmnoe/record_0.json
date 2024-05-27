@@ -1,1 +1,225 @@
-{"header": {"original_header": "Lido record did not have original header.", "identifier": "WG4", "page_id": "0", "datestamp": "2023-12-18T16:48:06+01:00", "first_harvested": "2024-03-13T11:11:54.284000Z", "last_harvested": "2024-03-13T11:11:54.284000Z", "notes": []}, "record": {"provided_cho": {"id": "file:///Users/gregorpirgie/code/nhm/edm-python/kulturpool_Walzengravieranstalt__Guntramsdorf_WG4_cho", "edm_type": {"lexical_or_value": "IMAGE", "lang": null, "datatype": null, "normalize": false}, "dc_contributor": null, "dc_coverage": null, "dc_creator": null, "dc_date": null, "dc_description": [{"lexical_or_value": "Zylindrisch geformte Molette; an beiden Enden zylindrische Forts\u00e4tze; linker Fortsatz l\u00e4nger ausgearbeitet mit verj\u00fcngtem Ende; verj\u00fcngter Fortsatz mit vier angebohrten L\u00f6chern am Mantel, verbunden durch eine vertiefte Linie; an den Deckfl\u00e4chen des linken und rechten Fortsatzes je ein Loch; am Molettenmantel ein erhabenes Muster aus pyramidalen Formen", "lang": null, "datatype": null, "normalize": false}], "dc_format": null, "dc_identifier": [{"lexical_or_value": "WG4", "lang": null, "datatype": null, "normalize": false}], "dc_language": null, "dc_publisher": null, "dc_relation": null, "dc_rights": [{"lexical_or_value": "Walzengravieranstalt Guntramsdorf", "lang": null, "datatype": null, "normalize": false}], "dc_source": null, "dc_subject": null, "dc_title": [{"lexical_or_value": "Molette", "lang": null, "datatype": null, "normalize": false}], "dc_type": [{"lexical_or_value": "Museumsobjekt", "lang": null, "datatype": null, "normalize": false}], "dcterms_alternative": null, "dcterms_conformsTo": null, "dcterms_created": null, "dcterms_extent": [{"lexical_or_value": "B x H x T: 0cm x 12cm x 0cm , Durchmesser: 4.5cm", "lang": null, "datatype": null, "normalize": false}], "dcterms_hasFormat": null, "dcterms_hasPart": null, "dcterms_hasVersion": null, "dcterms_isFormatOf": null, "dcterms_isPartOf": [{"lexical_or_value": "Moletten", "lang": null, "datatype": null, "normalize": false}], "dcterms_isReferencedBy": null, "dcterms_isReplacedBy": null, "dcterms_isRequiredBy": null, "dcterms_issued": null, "dcterms_isVersionOf": null, "dcterms_medium": [{"lexical_or_value": "Stahl", "lang": null, "datatype": null, "normalize": false}], "dcterms_provenance": null, "dcterms_references": null, "dcterms_replaces": null, "dcterms_requires": null, "dcterms_spatial": null, "dcterms_tableOfContents": null, "dcterms_temporal": null, "edm_currentLocation": null, "edm_hasMet": null, "edm_hasType": [{"lexical_or_value": "Arbeit|Gewerbe|Handwerk|Handel|Industrie", "lang": null, "datatype": null, "normalize": false}], "edm_incorporates": null, "edm_isDerivativeOf": null, "edm_IsNextInSequence": null, "edm_isRelatedTo": null, "edm_isRepresentationOf": null, "edm_isSimilarTo": null, "edm_isSuccessorOf": null, "edm_realizes": null, "owl_isSameAs": null}, "aggregation": {"id": "file:///Users/gregorpirgie/code/nhm/edm-python/kulturpool_Walzengravieranstalt__Guntramsdorf_WG4_aggregation", "edm_aggregatedCHO": {"value": null}, "edm_dataProvider": {"lexical_or_value": "Walzengravieranstalt Guntramsdorf", "lang": null, "datatype": null, "normalize": false}, "edm_provider": {"lexical_or_value": "Kulturpool", "lang": "de", "datatype": null, "normalize": false}, "edm_rights": {"value": null}, "edm_hasView": null, "edm_isShownAt": {"value": null}, "edm_isShownBy": {"value": null}, "edm_object": null, "dc_rights": null, "edm_ugc": null, "edm_intermediateProvider": [{"lexical_or_value": "Museumsmanagement Nieder\u00f6sterreich", "lang": null, "datatype": null, "normalize": false}]}, "web_resource": [{"id": "(rdflib.term.URIRef('https://www.noemuseen.at/objekt-detail/catalog/molette-91/'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.europeana.eu/schemas/edm/WebResource'))", "dc_creator": null, "dc_description": null, "dc_format": null, "dc_rights": null, "dc_source": null, "dc_type": null, "dcterms_conformsTo": null, "dcterms_created": null, "dcterms_extent": null, "dcterms_hasPart": null, "dcterms_isFormatOf": null, "dcterms_isPartOf": null, "dcterms_isReferencedBy": null, "dcterms_issued": null, "edm_isNextInSequence": null, "edm_rights": null, "owl_sameAs": null, "svcs_has_service": null, "dcterms_IsReferencedBy": null}, {"id": "(rdflib.term.URIRef('https://media.noemuseen.at/imdasemuseen/0158/01-Grundinventar/_thumbnails/WG4_jpg_sr_1280x1280.jpg'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.europeana.eu/schemas/edm/WebResource'))", "dc_creator": null, "dc_description": null, "dc_format": null, "dc_rights": null, "dc_source": null, "dc_type": null, "dcterms_conformsTo": null, "dcterms_created": null, "dcterms_extent": null, "dcterms_hasPart": null, "dcterms_isFormatOf": null, "dcterms_isPartOf": null, "dcterms_isReferencedBy": null, "dcterms_issued": null, "edm_isNextInSequence": null, "edm_rights": null, "owl_sameAs": null, "svcs_has_service": null, "dcterms_IsReferencedBy": null}], "skos_concept": [], "edm_agent": [], "edm_time_span": [], "edm_place": [], "cc_license": [], "svcs_service": []}}
+{
+    "header": {
+        "original_header": "Lido record did not have original header.",
+        "identifier": "WG4",
+        "page_id": "0",
+        "datestamp": "2023-12-18T16:48:06+01:00",
+        "first_harvested": "2024-03-13T11:11:54.284000Z",
+        "last_harvested": "2024-03-13T11:11:54.284000Z",
+        "notes": []
+    },
+    "record": {
+        "provided_cho": {
+            "id": "file:///Users/gregorpirgie/code/nhm/edm-python/kulturpool_Walzengravieranstalt__Guntramsdorf_WG4_cho",
+            "edm_type": {
+                "value": "IMAGE",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            },
+            "dc_contributor": null,
+            "dc_coverage": null,
+            "dc_creator": null,
+            "dc_date": null,
+            "dc_description": [
+                {
+                    "value": "Zylindrisch geformte Molette; an beiden Enden zylindrische Forts\u00e4tze; linker Fortsatz l\u00e4nger ausgearbeitet mit verj\u00fcngtem Ende; verj\u00fcngter Fortsatz mit vier angebohrten L\u00f6chern am Mantel, verbunden durch eine vertiefte Linie; an den Deckfl\u00e4chen des linken und rechten Fortsatzes je ein Loch; am Molettenmantel ein erhabenes Muster aus pyramidalen Formen",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_format": null,
+            "dc_identifier": [
+                {
+                    "value": "WG4",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_language": null,
+            "dc_publisher": null,
+            "dc_relation": null,
+            "dc_rights": [
+                {
+                    "value": "Walzengravieranstalt Guntramsdorf",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_source": null,
+            "dc_subject": null,
+            "dc_title": [
+                {
+                    "value": "Molette",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dc_type": [
+                {
+                    "value": "Museumsobjekt",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dcterms_alternative": null,
+            "dcterms_conformsTo": null,
+            "dcterms_created": null,
+            "dcterms_extent": [
+                {
+                    "value": "B x H x T: 0cm x 12cm x 0cm , Durchmesser: 4.5cm",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dcterms_hasFormat": null,
+            "dcterms_hasPart": null,
+            "dcterms_hasVersion": null,
+            "dcterms_isFormatOf": null,
+            "dcterms_isPartOf": [
+                {
+                    "value": "Moletten",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dcterms_isReferencedBy": null,
+            "dcterms_isReplacedBy": null,
+            "dcterms_isRequiredBy": null,
+            "dcterms_issued": null,
+            "dcterms_isVersionOf": null,
+            "dcterms_medium": [
+                {
+                    "value": "Stahl",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "dcterms_provenance": null,
+            "dcterms_references": null,
+            "dcterms_replaces": null,
+            "dcterms_requires": null,
+            "dcterms_spatial": null,
+            "dcterms_tableOfContents": null,
+            "dcterms_temporal": null,
+            "edm_currentLocation": null,
+            "edm_hasMet": null,
+            "edm_hasType": [
+                {
+                    "value": "Arbeit|Gewerbe|Handwerk|Handel|Industrie",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ],
+            "edm_incorporates": null,
+            "edm_isDerivativeOf": null,
+            "edm_IsNextInSequence": null,
+            "edm_isRelatedTo": null,
+            "edm_isRepresentationOf": null,
+            "edm_isSimilarTo": null,
+            "edm_isSuccessorOf": null,
+            "edm_realizes": null,
+            "owl_isSameAs": null
+        },
+        "aggregation": {
+            "id": "file:///Users/gregorpirgie/code/nhm/edm-python/kulturpool_Walzengravieranstalt__Guntramsdorf_WG4_aggregation",
+            "edm_aggregatedCHO": {
+                "value": null
+            },
+            "edm_dataProvider": {
+                "value": "Walzengravieranstalt Guntramsdorf",
+                "lang": null,
+                "datatype": null,
+                "normalize": false
+            },
+            "edm_provider": {
+                "value": "Kulturpool",
+                "lang": "de",
+                "datatype": null,
+                "normalize": false
+            },
+            "edm_rights": {
+                "value": null
+            },
+            "edm_hasView": null,
+            "edm_isShownAt": {
+                "value": null
+            },
+            "edm_isShownBy": {
+                "value": null
+            },
+            "edm_object": null,
+            "dc_rights": null,
+            "edm_ugc": null,
+            "edm_intermediateProvider": [
+                {
+                    "value": "Museumsmanagement Nieder\u00f6sterreich",
+                    "lang": null,
+                    "datatype": null,
+                    "normalize": false
+                }
+            ]
+        },
+        "web_resource": [
+            {
+                "id": "(rdflib.term.URIRef('https://www.noemuseen.at/objekt-detail/catalog/molette-91/'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.europeana.eu/schemas/edm/WebResource'))",
+                "dc_creator": null,
+                "dc_description": null,
+                "dc_format": null,
+                "dc_rights": null,
+                "dc_source": null,
+                "dc_type": null,
+                "dcterms_conformsTo": null,
+                "dcterms_created": null,
+                "dcterms_extent": null,
+                "dcterms_hasPart": null,
+                "dcterms_isFormatOf": null,
+                "dcterms_isPartOf": null,
+                "dcterms_isReferencedBy": null,
+                "dcterms_issued": null,
+                "edm_isNextInSequence": null,
+                "edm_rights": null,
+                "owl_sameAs": null,
+                "svcs_has_service": null,
+                "dcterms_IsReferencedBy": null
+            },
+            {
+                "id": "(rdflib.term.URIRef('https://media.noemuseen.at/imdasemuseen/0158/01-Grundinventar/_thumbnails/WG4_jpg_sr_1280x1280.jpg'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.europeana.eu/schemas/edm/WebResource'))",
+                "dc_creator": null,
+                "dc_description": null,
+                "dc_format": null,
+                "dc_rights": null,
+                "dc_source": null,
+                "dc_type": null,
+                "dcterms_conformsTo": null,
+                "dcterms_created": null,
+                "dcterms_extent": null,
+                "dcterms_hasPart": null,
+                "dcterms_isFormatOf": null,
+                "dcterms_isPartOf": null,
+                "dcterms_isReferencedBy": null,
+                "dcterms_issued": null,
+                "edm_isNextInSequence": null,
+                "edm_rights": null,
+                "owl_sameAs": null,
+                "svcs_has_service": null,
+                "dcterms_IsReferencedBy": null
+            }
+        ],
+        "skos_concept": [],
+        "edm_agent": [],
+        "edm_time_span": [],
+        "edm_place": [],
+        "cc_license": [],
+        "svcs_service": []
+    }
+}

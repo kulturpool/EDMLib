@@ -42,9 +42,7 @@ def to_literal(literal: Literal):
     """
     Temporary helper function to convert rdflib.Literal to edm_python.edm.Lit
     """
-    return Lit(
-        lexical_or_value=literal.value, lang=literal.language, datatype=literal.datatype
-    )
+    return Lit(value=literal.value, lang=literal.language, datatype=literal.datatype)
 
 
 def to_ref(ref: URIRef):
@@ -200,7 +198,7 @@ class EDM_Parser:
             case "ORE_Aggregation":
                 inst = self.get_aggregation()
                 add = {
-                    "edm_provider": Lit(lexical_or_value="Kulturpool", lang="de"),
+                    "edm_provider": Lit(value="Kulturpool", lang="de"),
                     # "edm_rights": Ref(
                     #     value="http://example.com/placeholder_rights"
                     # ),
