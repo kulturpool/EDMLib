@@ -27,7 +27,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    URIRefType
+    Ref
     
     Description: 
 
@@ -45,7 +45,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    Union[LiteralType, URIRefType]
+    Union[Lit, Ref]
     
     Description: 
 
@@ -67,7 +67,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    Union[LiteralType, URIRefType]
+    Union[Lit, Ref]
     
     Description: 
 
@@ -89,7 +89,7 @@ class ORE_Aggregation(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    URIRefType
+    Ref
     
     Description: 
 
@@ -133,7 +133,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -156,7 +156,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRefType]
+    Optional[Ref]
     
     Description: 
 
@@ -176,7 +176,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRefType]
+    Optional[Ref]
     
     Description: 
 
@@ -196,7 +196,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRefType]
+    Optional[Ref]
     
     Description: 
 
@@ -236,7 +236,7 @@ class ORE_Aggregation(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -298,7 +298,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    LiteralType
+    Lit
     
     Description: 
 
@@ -439,7 +439,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -455,7 +455,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -574,7 +574,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -616,7 +616,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -1006,7 +1006,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -1048,7 +1048,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Union[LiteralType, URIRefType]]
+    Optional[Union[Lit, Ref]]
     
     Description: 
 
@@ -1057,7 +1057,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	 or address or inside another location that has a position, such as a room within a (m
 	useum) building. Ideally this position should be provided with the value of the proper
 	ty, either by using a reference (to a Place entity) that has coordinates or an address
-	 attribute, or as a simple LiteralType. edm:currentLocation is used only to record the pla
+	 attribute, or as a simple Lit. edm:currentLocation is used only to record the pla
 	ce where the CHO is currently held (e.g. a museum or gallery)dcterms:spatial is used t
 	o record the place depicted in the CHO and other locations associated with itBe carefu
 	l to choose the most appropriate one!<edm:currentLocation rdf:resource=“https://sws.ge
@@ -1074,7 +1074,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1113,7 +1113,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1131,7 +1131,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1149,7 +1149,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1187,7 +1187,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRefType]
+    Optional[Ref]
     
     Description: 
 
@@ -1205,7 +1205,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1222,7 +1222,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1240,7 +1240,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1257,7 +1257,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1462,7 +1462,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1499,7 +1499,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1558,7 +1558,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1577,7 +1577,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[URIRefType]
+    Optional[Ref]
     
     Description: 
 
@@ -1604,7 +1604,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1621,7 +1621,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1639,7 +1639,7 @@ class EDM_WebResource(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 

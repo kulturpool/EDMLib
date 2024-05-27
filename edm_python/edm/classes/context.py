@@ -22,7 +22,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -45,7 +45,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -64,7 +64,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -83,7 +83,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -101,7 +101,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -119,7 +119,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -138,7 +138,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -157,7 +157,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -176,7 +176,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -195,7 +195,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -214,7 +214,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -233,7 +233,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -251,7 +251,7 @@ class SKOS_Concept(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -277,7 +277,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -300,7 +300,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -318,7 +318,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -353,7 +353,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -370,7 +370,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -387,7 +387,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -404,7 +404,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -425,7 +425,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -444,7 +444,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -461,7 +461,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -478,7 +478,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -495,7 +495,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -513,7 +513,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -533,7 +533,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -553,7 +553,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -570,7 +570,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -587,7 +587,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -603,7 +603,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Union[LiteralType, URIRefType]]
+    Optional[Union[Lit, Ref]]
     
     Description: 
 
@@ -622,7 +622,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Union[LiteralType, URIRefType]]
+    Optional[Union[Lit, Ref]]
     
     Description: 
 
@@ -658,7 +658,7 @@ class EDM_Agent(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -685,7 +685,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -705,7 +705,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -722,7 +722,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -741,7 +741,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -757,7 +757,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -773,7 +773,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -794,7 +794,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -814,7 +814,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -833,7 +833,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -862,7 +862,7 @@ class CC_License(EDM_BaseClass):
     exactly_one
 
     Value-Type:
-    URIRefType
+    Ref
     
     Description: 
 
@@ -907,7 +907,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -925,7 +925,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -944,7 +944,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -961,7 +961,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[LiteralType]
+    Optional[Lit]
     
     Description: 
 
@@ -982,7 +982,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -999,7 +999,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[LiteralType]]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -1015,7 +1015,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1032,7 +1032,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1049,7 +1049,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 
@@ -1067,7 +1067,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[List[URIRefType]]
+    Optional[List[Ref]]
     
     Description: 
 

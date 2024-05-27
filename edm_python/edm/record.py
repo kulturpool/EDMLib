@@ -23,15 +23,15 @@ class EDM_Record(BaseModel):
     """
     Pydantic model representing an edm record, as a fully typed structure.
     All contained non-standard types are themselves BaseModels, and the fields are always also either BaseModels or
-    standard-types. This ensured that without further conversion, an Instance of this class can be
+    standard-types. This ensures that without further conversion, an instance of this class can be
     dumped as a dict (or json) and restored from such a dict (or json).
 
     Validation:
     This model is responsible for validating the overall structure, order and completeness
     of the record.
     The individual models for each of its properties are responsible for validating their own attributes –
-    the completeness, cardinality and order of their members.
-    Finally, the special type models - UIRefType, LiteralType - within those container types are responsible for validating
+    their completeness, cardinality and structure.
+    Finally, the special type models - Ref and Lit - within those container types are responsible for validating
     the indiviudal values.
     """
 

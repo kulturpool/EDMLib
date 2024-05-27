@@ -40,7 +40,7 @@ def check_if_many(cls: object, attname: str) -> bool:
 
 def to_literal(literal: Literal):
     """
-    Temporary helper function to convert rdflib.Literal to edm_python.edm.LiteralType
+    Temporary helper function to convert rdflib.Literal to edm_python.edm.Lit
     """
     return Lit(
         lexical_or_value=literal.value, lang=literal.language, datatype=literal.datatype
@@ -49,7 +49,7 @@ def to_literal(literal: Literal):
 
 def to_ref(ref: URIRef):
     """
-    Temporary helper function to convert rdflib.URIRef to edm_python.edm.URIRefType
+    Temporary helper function to convert rdflib.URIRef to edm_python.edm.Ref
     """
     # print("----> creating ref for", type(ref), ref)
     # print("----> creating ref for", type(ref), ref)
@@ -201,7 +201,7 @@ class EDM_Parser:
                 inst = self.get_aggregation()
                 add = {
                     "edm_provider": Lit(lexical_or_value="Kulturpool", lang="de"),
-                    # "edm_rights": URIRefType(
+                    # "edm_rights": Ref(
                     #     value="http://example.com/placeholder_rights"
                     # ),
                 }
