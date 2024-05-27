@@ -1,6 +1,6 @@
 # pylint: disable=pointless-string-statement
 from rdflib.term import _is_valid_uri
-from edm_python.edm.exceptions import InvalidURIRefException
+from edmlib.edm.exceptions import InvalidRefException
 
 """
 This is the function that validates a URIRef in rdflib:
@@ -63,6 +63,6 @@ def is_valid_uri(uri: str, strict: bool = False) -> bool:
     if _is_valid_uri(uri) and uri_is_not_local(uri) and uri_is_not_path(uri):
         return True
     elif strict:
-        raise InvalidURIRefException(f"Uri is invalid: '{uri}'.")
+        raise InvalidRefException(f"Uri is invalid: '{uri}'.")
     else:
         return False

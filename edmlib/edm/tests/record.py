@@ -1,4 +1,4 @@
-from edm_python.edm.tests.fixtures.record import (
+from edmlib.edm.tests.fixtures.record import (
     valid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
     invalid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
     valid_record_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401

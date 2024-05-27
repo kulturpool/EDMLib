@@ -105,14 +105,11 @@ def get_attributes(cls: object) -> Dict[str, URIRef]:
 def convert(lit_or_ref: URIRef | Literal):
     """
     Helper to convert a rdlib.URIRef or rdflib.Literal to the
-    corresponding edm-python object.
+    corresponding edm-python object (Lit or Ref).
     """
-    # print("lit_or_ref is", type(lit_or_ref), lit_or_ref)
     if isinstance(lit_or_ref, URIRef):
-        # print("called to ref")
         return to_ref(lit_or_ref)
     elif isinstance(lit_or_ref, Literal):  # type: ignore
-        # print("called to literal")
         return to_literal(lit_or_ref)
 
 
@@ -122,6 +119,7 @@ class EDM_Parser:
     """
 
     def __init__(self, graph: Graph):
+        # TODO: consider refactor to also allow a path to a file or file-like object or a string
         self.graph: Graph = graph
 
     def get_single_ref(self, obj_cls: object) -> URIRef:

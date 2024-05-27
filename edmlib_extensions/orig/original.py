@@ -1,6 +1,6 @@
 from pydantic import BaseModel
-from edm_python.oai.header import OaiHeader
-from edm_python.oai.provenance import Provenance
+from edmlib.oai.header import OaiHeader
+from edmlib.oai.provenance import Provenance
 from enum import StrEnum
 import subprocess
 import os

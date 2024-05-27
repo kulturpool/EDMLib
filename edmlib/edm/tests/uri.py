@@ -1,5 +1,5 @@
-from edm_python.edm.tests.fixtures.uri import get_valid_uris, get_invalid_uris  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
-from edm_python.edm.validation.uri import is_valid_uri
+from edmlib.edm.tests.fixtures.uri import get_valid_uris, get_invalid_uris  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
+from edmlib.edm.validation.uri import is_valid_uri
 from typing import Any
 
 

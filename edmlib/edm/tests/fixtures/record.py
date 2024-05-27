@@ -1,6 +1,6 @@
 from pytest import fixture
 from typing import Any
-from edm_python.edm import EDM_Record
+from edmlib.edm import EDM_Record
 
 
 @fixture(scope="session")

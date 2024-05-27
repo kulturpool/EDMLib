@@ -1,6 +1,6 @@
 from typing import Any, List, Tuple
 from rdflib import RDF, URIRef
-from edm_python.edm.value_types import Ref
+from edmlib.edm.value_types import Ref
 from pydantic import BaseModel
 
 from .enums import EDM_Namespace

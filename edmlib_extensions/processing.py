@@ -7,8 +7,8 @@ from rdflib import Graph
 from sickle import Sickle  # type: ignore
 from sickle.models import Record  # type: ignore
 
-from ..edm import EDM_Record
-from ..parsers import EDM_Parser
+from ..edmlib.edm import EDM_Record
+from ..edmlib.parser import EDM_Parser
 
 endpoint_url = "http://sammlungenonline.albertina.at:16015/oai/"
 sickle = Sickle(endpoint_url)

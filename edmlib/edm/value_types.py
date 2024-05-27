@@ -2,7 +2,7 @@ from typing import List, TypeAlias, Union
 from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional
 from typing_extensions import Self
-from edm_python.edm.validation.uri import is_valid_uri
+from edmlib.edm.validation.uri import is_valid_uri
 from rdflib import URIRef, Literal
 
 

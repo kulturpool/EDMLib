@@ -1,8 +1,8 @@
 from rdflib import Graph
 import os
 from pathlib import Path
-from edm_python.parsers.edm_xml import EDM_Parser
-from edm_python.edm import EDM_Record
+from edmlib.parser.edm_xml import EDM_Parser
+from edmlib.edm import EDM_Record
 import json
 
 FILE = Path(__file__).absolute().parent

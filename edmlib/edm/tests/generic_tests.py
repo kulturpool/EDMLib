@@ -1,6 +1,6 @@
 # type: ignore
 from pytest import fixture
-from edm_python.edm import EDM_Record, EDM_ProvidedCHO, EDM_WebResource, ORE_Aggregation
+from edmlib.edm import EDM_Record, EDM_ProvidedCHO, EDM_WebResource, ORE_Aggregation
 import json
 
 

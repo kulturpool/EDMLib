@@ -15,7 +15,7 @@ from .edm import (
     SVCS_Service,
     MixedValuesList,
 )
-from .parsers import EDM_Parser
+from .parser import EDM_Parser
 
 __all__ = [
     "XSD_Types",

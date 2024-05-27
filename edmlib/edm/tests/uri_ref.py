@@ -1,6 +1,6 @@
 from pytest import raises
-from edm_python.edm.tests.fixtures.uri import get_invalid_uris, get_valid_uris  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
-from edm_python.edm.value_types import Ref
+from edmlib.edm.tests.fixtures.uri import get_invalid_uris, get_valid_uris  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
+from edmlib.edm.value_types import Ref
 from pydantic import ValidationError
 from typing import Any
 

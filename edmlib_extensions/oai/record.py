@@ -1,7 +1,7 @@
 from pydantic import BaseModel
-from edm_python.oai.header import OaiHeader
-from edm_python.oai.about import OaiAbout
-from edm_python.edm import EDM_Record
+from edmlib.oai.header import OaiHeader
+from edmlib.oai.about import OaiAbout
+from edmlib.edm import EDM_Record
 
 
 class OaiRecord(BaseModel):

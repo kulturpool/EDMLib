@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from edm_python.oai.provenance import Provenance
+from edmlib.oai.provenance import Provenance
 
 
 class OaiAbout(BaseModel):

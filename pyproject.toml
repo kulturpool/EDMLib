@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "EDM-Python"
+name = "edmlib"
 version = "0.1.0"
 description = "Python utilities for working with the EDM (Europeana Data Model). Maps all EDM-classes and properties to pydantic models and attributes."
 authors = ["Gregor Pirgie <gregor.pirgie@nhm-wien.ac.at>"]
