@@ -13,8 +13,8 @@ from ..edm import (
     EDM_Place,
     EDM_TimeSpan,
     SVCS_Service,
-    LiteralType,
-    URIRefType,
+    Lit,
+    Ref,
 )
 
 from typing import get_type_hints, List, Any, Dict
@@ -42,7 +42,7 @@ def to_literal(literal: Literal):
     """
     Temporary helper function to convert rdflib.Literal to edm_python.edm.LiteralType
     """
-    return LiteralType(
+    return Lit(
         lexical_or_value=literal.value, lang=literal.language, datatype=literal.datatype
     )
 
@@ -56,7 +56,7 @@ def to_ref(ref: URIRef):
 
     # prefix, namespace, identifier = graph.compute_qname(ref)
     value = str(ref)
-    res = URIRefType(value=value)
+    res = Ref(value=value)
     # print(res, ref, str(ref))
     return res
 
@@ -200,9 +200,7 @@ class EDM_Parser:
             case "ORE_Aggregation":
                 inst = self.get_aggregation()
                 add = {
-                    "edm_provider": LiteralType(
-                        lexical_or_value="Kulturpool", lang="de"
-                    ),
+                    "edm_provider": Lit(lexical_or_value="Kulturpool", lang="de"),
                     # "edm_rights": URIRefType(
                     #     value="http://example.com/placeholder_rights"
                     # ),
@@ -212,7 +210,7 @@ class EDM_Parser:
         triples = self.get_instance_triples(inst, cls_obj)  # type: ignore
 
         triples.update(**add)
-        return cls_obj(id=URIRefType(value=str(inst)), **triples)  # type: ignore
+        return cls_obj(id=Ref(value=str(inst)), **triples)  # type: ignore
 
     def parse_many_class(self, cls_obj: Any) -> List[Any]:
         match cls_obj.__name__:
@@ -225,7 +223,7 @@ class EDM_Parser:
             # print("instance", type(inst), inst)
             res.append(
                 cls_obj(
-                    id=URIRefType(value=str(inst)),
+                    id=Ref(value=str(inst)),
                     **self.get_instance_triples(inst, cls_obj),
                 )  # type: ignore
             )

@@ -1,6 +1,6 @@
 from typing import Any, List, Optional, Union  # type: ignore
 
-from ..value_types import MixedValuesList, LiteralType, URIRefType
+from ..value_types import MixedValuesList, Lit, Ref
 from ..base import EDM_BaseClass
 
 
@@ -13,7 +13,7 @@ class SKOS_Concept(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[LiteralType] = None
+    skos_prefLabel: Optional[Lit] = None
     """
     Mandate: 
     recommended
@@ -36,7 +36,7 @@ class SKOS_Concept(EDM_BaseClass):
 	B and Metadata Tier C
     """
 
-    skos_altLabel: Optional[List[LiteralType]] = None
+    skos_altLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     recommended
@@ -55,7 +55,7 @@ class SKOS_Concept(EDM_BaseClass):
 	d property for this class.
     """
 
-    skos_broader: Optional[List[URIRefType]] = None
+    skos_broader: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -74,7 +74,7 @@ class SKOS_Concept(EDM_BaseClass):
 	er B and Metadata Tier C
     """
 
-    skos_narrower: Optional[List[URIRefType]] = None
+    skos_narrower: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -92,7 +92,7 @@ class SKOS_Concept(EDM_BaseClass):
 	y Metadata Tier B and Metadata Tier C
     """
 
-    skos_related: Optional[List[URIRefType]] = None
+    skos_related: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -110,7 +110,7 @@ class SKOS_Concept(EDM_BaseClass):
 	tadata Tier B and Metadata Tier C
     """
 
-    skos_broadMatch: Optional[List[URIRefType]] = None
+    skos_broadMatch: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -129,7 +129,7 @@ class SKOS_Concept(EDM_BaseClass):
 	atch.term/”/>
     """
 
-    skos_narrowMatch: Optional[List[URIRefType]] = None
+    skos_narrowMatch: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -148,7 +148,7 @@ class SKOS_Concept(EDM_BaseClass):
 	atch.term/”/>
     """
 
-    skos_relatedMatch: Optional[List[URIRefType]] = None
+    skos_relatedMatch: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -167,7 +167,7 @@ class SKOS_Concept(EDM_BaseClass):
 	atch.term/”/>
     """
 
-    skos_exactMatch: Optional[List[URIRefType]] = None
+    skos_exactMatch: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -186,7 +186,7 @@ class SKOS_Concept(EDM_BaseClass):
 	, more specifically Metadata Tier B and Metadata Tier C
     """
 
-    skos_closeMatch: Optional[List[URIRefType]] = None
+    skos_closeMatch: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -205,7 +205,7 @@ class SKOS_Concept(EDM_BaseClass):
 	, more specifically Metadata Tier B and Metadata Tier C
     """
 
-    skos_note: Optional[List[LiteralType]] = None
+    skos_note: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -224,7 +224,7 @@ class SKOS_Concept(EDM_BaseClass):
 	irements, more specifically Metadata Tier B and Metadata Tier C.
     """
 
-    skos_notation: Optional[List[LiteralType]] = None
+    skos_notation: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -242,7 +242,7 @@ class SKOS_Concept(EDM_BaseClass):
 	http://www.w3.org/2001/XMLSchema#int”>123</skos:notation>
     """
 
-    skos_inScheme: Optional[List[URIRefType]] = None
+    skos_inScheme: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -268,7 +268,7 @@ class EDM_Agent(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[LiteralType] = None
+    skos_prefLabel: Optional[Lit] = None
     """
     Mandate: 
     recommended
@@ -291,7 +291,7 @@ class EDM_Agent(EDM_BaseClass):
 	C
     """
 
-    skos_altLabel: Optional[List[LiteralType]] = None
+    skos_altLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     recommended
@@ -309,7 +309,7 @@ class EDM_Agent(EDM_BaseClass):
 	Augte. Courtois aîné</skos:altLabel>
     """
 
-    skos_note: Optional[List[LiteralType]] = None
+    skos_note: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -344,7 +344,7 @@ class EDM_Agent(EDM_BaseClass):
 	ISO 8601 starting with the year and with hyphens (YYYY-MM-DD).<dc:date>1803</dc:date/>
     """
 
-    dc_identifier: Optional[List[LiteralType]] = None
+    dc_identifier: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -361,7 +361,7 @@ class EDM_Agent(EDM_BaseClass):
 	er>
     """
 
-    dcterms_hasPart: Optional[List[URIRefType]] = None
+    dcterms_hasPart: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -378,7 +378,7 @@ class EDM_Agent(EDM_BaseClass):
 	oration).<dcterms:hasPart rdf:resource=“http://identifier/partOfCorporation/”>
     """
 
-    dcterms_isPartOf: Optional[List[URIRefType]] = None
+    dcterms_isPartOf: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -395,7 +395,7 @@ class EDM_Agent(EDM_BaseClass):
 	ce=“http://identifier/parentCorporation/”>
     """
 
-    edm_begin: Optional[LiteralType] = None
+    edm_begin: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -416,7 +416,7 @@ class EDM_Agent(EDM_BaseClass):
 	 more specifically Metadata Tier B and Metadata Tier C
     """
 
-    edm_end: Optional[LiteralType] = None
+    edm_end: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -435,7 +435,7 @@ class EDM_Agent(EDM_BaseClass):
 	 , more specifically Metadata Tier B and Metadata Tier C
     """
 
-    edm_hasMet: Optional[List[URIRefType]] = None
+    edm_hasMet: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -452,7 +452,7 @@ class EDM_Agent(EDM_BaseClass):
 	reference to a Place class<edm:hasMet rdf:resource=“http://sws.geonames.org/6620265/”>
     """
 
-    edm_isRelatedTo: Optional[List[URIRefType]] = None
+    edm_isRelatedTo: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -469,7 +469,7 @@ class EDM_Agent(EDM_BaseClass):
 	 in a generic sense.<edm:isRelatedTo rdf:resource=“http://identifier/relatedAgent/”>
     """
 
-    foaf_name: Optional[List[LiteralType]] = None
+    foaf_name: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -486,7 +486,7 @@ class EDM_Agent(EDM_BaseClass):
 	e>
     """
 
-    rdagr2_biographicalInformation: Optional[List[LiteralType]] = None
+    rdagr2_biographicalInformation: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -504,7 +504,7 @@ class EDM_Agent(EDM_BaseClass):
 	ments in Paris in 1803</rdaGr2:biographicalInformation>
     """
 
-    rdagr2_dateOfBirth: Optional[LiteralType] = None
+    rdagr2_dateOfBirth: Optional[Lit] = None
     """
     Mandate: 
     recommended
@@ -524,7 +524,7 @@ class EDM_Agent(EDM_BaseClass):
 	tadata Tier C
     """
 
-    rdagr2_dateOfDeath: Optional[LiteralType] = None
+    rdagr2_dateOfDeath: Optional[Lit] = None
     """
     Mandate: 
     recommended
@@ -544,7 +544,7 @@ class EDM_Agent(EDM_BaseClass):
 	r C
     """
 
-    rdagr2_dateOfEstablishment: Optional[LiteralType] = None
+    rdagr2_dateOfEstablishment: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -561,7 +561,7 @@ class EDM_Agent(EDM_BaseClass):
 	Establishment>1795</rdaGr2:dateOfEstablishment>
     """
 
-    rdagr2_dateOfTermination: Optional[LiteralType] = None
+    rdagr2_dateOfTermination: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -578,7 +578,7 @@ class EDM_Agent(EDM_BaseClass):
 	fTermination>1895</rdaGr2:dateOfTermination>
     """
 
-    rdagr2_gender: Optional[LiteralType] = None
+    rdagr2_gender: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -594,7 +594,7 @@ class EDM_Agent(EDM_BaseClass):
     The gender with which the agent identifies.< rdaGr2:gender>Female</rdaGr2:gender>
     """
 
-    rdagr2_placeOfBirth: Optional[Union[LiteralType, URIRefType]] = None
+    rdagr2_placeOfBirth: Optional[Union[Lit, Ref]] = None
     """
     Mandate: 
     optional
@@ -613,7 +613,7 @@ class EDM_Agent(EDM_BaseClass):
 	 A-C requirements , more specifically Metadata Tier B and Metadata Tier C
     """
 
-    rdagr2_placeOfDeath: Optional[Union[LiteralType, URIRefType]] = None
+    rdagr2_placeOfDeath: Optional[Union[Lit, Ref]] = None
     """
     Mandate: 
     optional
@@ -649,7 +649,7 @@ class EDM_Agent(EDM_BaseClass):
 	OrOccupation>Instrument Maker</rdaGr2:professionOrOccupation>
     """
 
-    owl_sameAs: Optional[List[URIRefType]] = None
+    owl_sameAs: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -676,7 +676,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[List[LiteralType]] = None
+    skos_prefLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     recommended
@@ -696,7 +696,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	 Empire</skos:prefLabel>This is a recommended property for this class.
     """
 
-    skos_altLabel: Optional[List[LiteralType]] = None
+    skos_altLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -713,7 +713,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	'>Empire romain (27 avant J.-­‐C.-­‐476 après J.-­C.)</skos:altLabel >
     """
 
-    skos_note: Optional[List[LiteralType]] = None
+    skos_note: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -732,7 +732,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	e Mediterranean in Europe, Africa, and Asia.</skos:note>
     """
 
-    dcterms_hasPart: Optional[List[URIRefType]] = None
+    dcterms_hasPart: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -748,7 +748,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     Reference to a timespan which is part of the described timespan.
     """
 
-    dcterms_isPartOf: Optional[List[URIRefType]] = None
+    dcterms_isPartOf: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -764,7 +764,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     Reference to a timespan of which the described timespan is a part.
     """
 
-    edm_begin: Optional[LiteralType] = None
+    edm_begin: Optional[Lit] = None
     """
     Mandate: 
     recommended
@@ -785,7 +785,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	re specifically Metadata Tier B and Metadata Tier C
     """
 
-    edm_end: Optional[LiteralType] = None
+    edm_end: Optional[Lit] = None
     """
     Mandate: 
     recommended
@@ -805,7 +805,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	data Tier C
     """
 
-    edm_isNextInSequence: Optional[List[URIRefType]] = None
+    edm_isNextInSequence: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -824,7 +824,7 @@ class EDM_TimeSpan(EDM_BaseClass):
 	eded by the Roman Republic)
     """
 
-    owl_sameAs: Optional[List[URIRefType]] = None
+    owl_sameAs: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -853,7 +853,7 @@ class CC_License(EDM_BaseClass):
 
     """
 
-    odrl_inheritFrom: URIRefType
+    odrl_inheritFrom: Ref
     """
     Mandate: 
     mandatory
@@ -898,7 +898,7 @@ class EDM_Place(EDM_BaseClass):
 
     """
 
-    wgs84_pos_lat: Optional[LiteralType] = None
+    wgs84_pos_lat: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -916,7 +916,7 @@ class EDM_Place(EDM_BaseClass):
 	 see Tier A-C requirements , more specifically Metadata Tier B and Metadata Tier C 
     """
 
-    wgs84_pos_long: Optional[LiteralType] = None
+    wgs84_pos_long: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -935,7 +935,7 @@ class EDM_Place(EDM_BaseClass):
 	 
     """
 
-    wgs84_pos_alt: Optional[LiteralType] = None
+    wgs84_pos_alt: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -952,7 +952,7 @@ class EDM_Place(EDM_BaseClass):
 	/wgs84_pos:alt>
     """
 
-    skos_prefLabel: Optional[LiteralType] = None
+    skos_prefLabel: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -973,7 +973,7 @@ class EDM_Place(EDM_BaseClass):
 	lly Metadata Tier B and Metadata Tier C 
     """
 
-    skos_altLabel: Optional[List[LiteralType]] = None
+    skos_altLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -990,7 +990,7 @@ class EDM_Place(EDM_BaseClass):
 	</skos:altLabel>
     """
 
-    skos_note: Optional[List[LiteralType]] = None
+    skos_note: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -1006,7 +1006,7 @@ class EDM_Place(EDM_BaseClass):
     Information relating to the place.<skos:note xml:lang="en">Pop. 21m</skos:note>
     """
 
-    dcterms_hasPart: Optional[List[URIRefType]] = None
+    dcterms_hasPart: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1023,7 +1023,7 @@ class EDM_Place(EDM_BaseClass):
 	source=“http://sws.geonames.org/2643741/”/> (City of London)
     """
 
-    dcterms_isPartOf: Optional[List[URIRefType]] = None
+    dcterms_isPartOf: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1040,7 +1040,7 @@ class EDM_Place(EDM_BaseClass):
 	e=“http://sws.geonames.org/2635167/”/> (United Kingdom)
     """
 
-    edm_isNextInSequence: Optional[List[URIRefType]] = None
+    edm_isNextInSequence: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1058,7 +1058,7 @@ class EDM_Place(EDM_BaseClass):
 	e to ensure correct display in the portal.
     """
 
-    owl_sameAs: Optional[List[URIRefType]] = None
+    owl_sameAs: Optional[List[Ref]] = None
     """
     Mandate: 
     optional

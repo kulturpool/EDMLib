@@ -3,7 +3,7 @@ from rdflib import Literal, URIRef
 from .classes.service import SVCS_Service
 from .enums import EDM_Namespace, XSD_Types
 from .record import EDM_Record
-from .value_types import MixedValuesList, LiteralType, URIRefType
+from .value_types import MixedValuesList, Lit, Ref
 from .validation.uri import is_valid_uri
 
 from .classes import (
@@ -36,7 +36,7 @@ __all__ = [
     "SVCS_Service",
     "MixedValuesList",
     "SVCS_Service",
-    "LiteralType",
-    "URIRefType",
+    "Lit",
+    "Ref",
     "is_valid_uri",
 ]

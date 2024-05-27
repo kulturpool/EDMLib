@@ -3,11 +3,10 @@ from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional
 from typing_extensions import Self
 from edm_python.edm.validation.uri import is_valid_uri
-from edm_python.edm.enums import XSD_Types
 from rdflib import URIRef, Literal
 
 
-class URIRefType(BaseModel):
+class Ref(BaseModel):
     """
     About IRIs (from the rdflib.URIRef docstring):
 
@@ -33,7 +32,7 @@ class URIRefType(BaseModel):
         return URIRef(self.value)
 
 
-class LiteralType(BaseModel):
+class Lit(BaseModel):
     """
     Overrides the RDFLib Literal with a custom class, so that it is serializable in pydantic model.
     For the same reason, it uses the same attribute names.
@@ -68,6 +67,4 @@ class LiteralType(BaseModel):
         )
 
 
-MixedValuesList: TypeAlias = (
-    List[Union[LiteralType, URIRefType]] | List[URIRefType] | List[LiteralType]
-)
+MixedValuesList: TypeAlias = List[Union[Lit, Ref]] | List[Ref] | List[Lit]

@@ -3,7 +3,7 @@ from typing import Any, List, Optional, Union  # type: ignore
 # from rdflib import Literal, URIRef
 from typing_extensions import Self
 from pydantic import model_validator
-from ..value_types import MixedValuesList, URIRefType, LiteralType
+from ..value_types import MixedValuesList, Ref, Lit
 from ..base import EDM_BaseClass
 
 
@@ -18,7 +18,7 @@ class ORE_Aggregation(EDM_BaseClass):
 
     """
 
-    edm_aggregatedCHO: URIRefType
+    edm_aggregatedCHO: Ref
     """
     Mandate: 
     mandatory
@@ -36,7 +36,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	214”/>
     """
 
-    edm_dataProvider: Union[LiteralType, URIRefType]
+    edm_dataProvider: Union[Lit, Ref]
     """
     Mandate: 
     mandatory
@@ -58,7 +58,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	rovider>
     """
 
-    edm_provider: Union[LiteralType, URIRefType]
+    edm_provider: Union[Lit, Ref]
     """
     Mandate: 
     mandatory
@@ -80,7 +80,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	oCloud</edm:provider> 
     """
 
-    edm_rights: URIRefType
+    edm_rights: Ref
     """
     Mandate: 
     mandatory
@@ -124,7 +124,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	:resource="#statement_3000095353971"/>
     """
 
-    edm_hasView: Optional[List[URIRefType]] = None
+    edm_hasView: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -147,7 +147,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	IN/AUDIO/0032195s.mp3"/>
     """
 
-    edm_isShownAt: Optional[URIRefType] = None
+    edm_isShownAt: Optional[Ref] = None
     """
     Mandate: 
     mandatory
@@ -167,7 +167,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	http://www.mimo-­‐db.eu/UEDIN/214"/>
     """
 
-    edm_isShownBy: Optional[URIRefType] = None
+    edm_isShownBy: Optional[Ref] = None
     """
     Mandate: 
     mandatory
@@ -187,7 +187,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	ShownBy rdf:resource="http://www.mimo‐db.eu/media/UEDIN/IMAGE/0032195c.jpg"/>
     """
 
-    edm_object: Optional[URIRefType] = None
+    edm_object: Optional[Ref] = None
     """
     Mandate: 
     recommended
@@ -227,7 +227,7 @@ class ORE_Aggregation(EDM_BaseClass):
 	 rights apply to.
     """
 
-    edm_ugc: Optional[LiteralType] = None
+    edm_ugc: Optional[Lit] = None
     """
     Mandate: 
     optional
@@ -289,7 +289,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 
     """
 
-    edm_type: LiteralType
+    edm_type: Lit
     """
     Mandate: 
     mandatory
@@ -430,7 +430,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	uirements . 
     """
 
-    dc_identifier: Optional[List[LiteralType]] = None
+    dc_identifier: Optional[List[Lit]] = None
     """
     Mandate: 
     recommended
@@ -446,7 +446,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     An identifier of the original CHO. <dc:identifier>RP-­T-­1952-­380</dc:identifier>
     """
 
-    dc_language: Optional[List[LiteralType]] = None
+    dc_language: Optional[List[Lit]] = None
     """
     Mandate: 
     mandatory
@@ -565,7 +565,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	ments . 
     """
 
-    dc_title: Optional[List[LiteralType]] = None
+    dc_title: Optional[List[Lit]] = None
     """
     Mandate: 
     mandatory
@@ -607,7 +607,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	s on medata quality see Tier A-C requirements . 
     """
 
-    dcterms_alternative: Optional[List[LiteralType]] = None
+    dcterms_alternative: Optional[List[Lit]] = None
     """
     Mandate: 
     recommended
@@ -997,7 +997,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	ta quality see Tier A-C requirements . 
     """
 
-    dcterms_tableOfContents: Optional[List[LiteralType]] = None
+    dcterms_tableOfContents: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -1039,7 +1039,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	ommendations on medata quality see Tier A-C requirements . 
     """
 
-    edm_currentLocation: Optional[Union[LiteralType, URIRefType]] = None
+    edm_currentLocation: Optional[Union[Lit, Ref]] = None
     """
     Mandate: 
     optional
@@ -1065,7 +1065,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	 Tier A-C requirements . 
     """
 
-    edm_hasMet: Optional[List[URIRefType]] = None
+    edm_hasMet: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1104,7 +1104,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	tions. <edm:hasType>Painting</edm:hasType>
     """
 
-    edm_incorporates: Optional[List[URIRefType]] = None
+    edm_incorporates: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1122,7 +1122,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	<edm:incorporates rdf:resource=“http://www.identifier/IncorporatedResource/“>
     """
 
-    edm_isDerivativeOf: Optional[List[URIRefType]] = None
+    edm_isDerivativeOf: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1140,7 +1140,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	sDerivativeOf rdf:resource=“http://www.identifier/SourceResource/”>
     """
 
-    edm_IsNextInSequence: Optional[List[URIRefType]] = None
+    edm_IsNextInSequence: Optional[List[Ref]] = None
     """
     Mandate: 
     recommended
@@ -1178,7 +1178,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	“http://www.eionet.europa.eu/gemet/concept?cp=4850/”>
     """
 
-    edm_isRepresentationOf: Optional[URIRefType] = None
+    edm_isRepresentationOf: Optional[Ref] = None
     """
     Mandate: 
     optional
@@ -1196,7 +1196,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	. <edm:isRepresentativeOf rdf:resource=“http://www.identifier/RepresentedResource/”>
     """
 
-    edm_isSimilarTo: Optional[List[URIRefType]] = None
+    edm_isSimilarTo: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1213,7 +1213,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	arTo rdf:resource=“http://www.identifier/SimilarResource”/>
     """
 
-    edm_isSuccessorOf: Optional[List[URIRefType]] = None
+    edm_isSuccessorOf: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1231,7 +1231,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	http://dbpedia.org/resource/The_Fellowship_of_the_Ring/”>
     """
 
-    edm_realizes: Optional[List[URIRefType]] = None
+    edm_realizes: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1248,7 +1248,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	. E.g. a copy of the Gutenberg publication realizes the Bible.
     """
 
-    owl_isSameAs: Optional[List[URIRefType]] = None
+    owl_isSameAs: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1453,7 +1453,7 @@ class EDM_WebResource(EDM_BaseClass):
 	s:extent>
     """
 
-    dcterms_hasPart: Optional[List[URIRefType]] = None
+    dcterms_hasPart: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1490,7 +1490,7 @@ class EDM_WebResource(EDM_BaseClass):
 	wikipedia/en/f/f3/Europeana_logo.png”/>
     """
 
-    dcterms_isPartOf: Optional[List[URIRefType]] = None
+    dcterms_isPartOf: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1549,7 +1549,7 @@ class EDM_WebResource(EDM_BaseClass):
 	s<dcterms:issued rdf:resource=“http://semium.org/time/2010”/>
     """
 
-    edm_isNextInSequence: Optional[List[URIRefType]] = None
+    edm_isNextInSequence: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1568,7 +1568,7 @@ class EDM_WebResource(EDM_BaseClass):
 	operty to give the URI of the preceding resource in the sequence.
     """
 
-    edm_rights: Optional[URIRefType] = None
+    edm_rights: Optional[Ref] = None
     """
     Mandate: 
     recommended
@@ -1595,7 +1595,7 @@ class EDM_WebResource(EDM_BaseClass):
 	rights rdf:resource="#statement_3000095353971"/>This is a recommended property.
     """
 
-    owl_sameAs: Optional[List[URIRefType]] = None
+    owl_sameAs: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1612,7 +1612,7 @@ class EDM_WebResource(EDM_BaseClass):
 	source=”urn:soundcloud:150424305>
     """
 
-    svcs_has_service: Optional[List[URIRefType]] = None
+    svcs_has_service: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1630,7 +1630,7 @@ class EDM_WebResource(EDM_BaseClass):
 <svcs:has_service rdf:resource="http://www.example.org/Service/IIIF">
     """
 
-    dcterms_IsReferencedBy: Optional[List[URIRefType]] = None
+    dcterms_IsReferencedBy: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
