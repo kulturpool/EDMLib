@@ -1,8 +1,7 @@
 from typing import List, Optional
 
-from rdflib import URIRef
 from ..base import EDM_BaseClass
-from ..types import URIRefType
+from ..value_types import URIRefType
 
 
 class SVCS_Service(EDM_BaseClass):

@@ -3,7 +3,7 @@ from typing import Any, List, Optional, Union  # type: ignore
 # from rdflib import Literal, URIRef
 from typing_extensions import Self
 from pydantic import model_validator
-from ..types import MixedValuesList, URIRefType, LiteralType
+from ..value_types import MixedValuesList, URIRefType, LiteralType
 from ..base import EDM_BaseClass
 
 

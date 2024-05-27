@@ -1,6 +1,6 @@
 from typing import Any, List, Optional, Union  # type: ignore
 
-from ..types import MixedValuesList, LiteralType, URIRefType
+from ..value_types import MixedValuesList, LiteralType, URIRefType
 from ..base import EDM_BaseClass
 
 
