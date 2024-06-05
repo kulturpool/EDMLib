@@ -1140,7 +1140,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	sDerivativeOf rdf:resource=“http://www.identifier/SourceResource/”>
     """
 
-    edm_IsNextInSequence: Optional[List[Ref]] = None
+    edm_isNextInSequence: Optional[List[Ref]] = None
     """
     Mandate: 
     recommended
@@ -1628,24 +1628,4 @@ class EDM_WebResource(EDM_BaseClass):
     The identifier of the svcs:Service required to consume the edm:WebResource. Example: 	
 	
 <svcs:has_service rdf:resource="http://www.example.org/Service/IIIF">
-    """
-
-    dcterms_IsReferencedBy: Optional[List[Ref]] = None
-    """
-    Mandate: 
-    optional
-
-    Cardinality: 
-    zero_to_many
-
-    Value-Type:
-    Optional[List[Ref]]
-    
-    Description: 
-
-    A related resource that references, cites, or otherwise points to the described resour
-	ce. In IIIF, dcterms:isReferencedBy can be used to connect an edm:WebResource to a III
-	F manifest URI. 
-    Example: <dcterms:isReferencedBy rdf:resource="https://gallica.bn
-	f.fr/iiif/ark:/12148/btv1b55001425m/manifest.json"/>
     """
