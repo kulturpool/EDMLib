@@ -5,7 +5,7 @@ description = "Python utilities for working with the EDM (Europeana Data Model).
 authors = ["Gregor Pirgie <gregor.pirgie@nhm-wien.ac.at>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "./edm_python"}]
+packages = [{include = "./edmlib"}]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0.0"
