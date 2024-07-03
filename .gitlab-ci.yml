@@ -1,22 +1,8 @@
+stages:
+  - publish
+  - release
+
 include:
-  - local: 'deploy/ci-template.yml'
+  - component: $CI_SERVER_FQDN/development-operations/ci-cd-components/publish-poetry-package/publish-poetry-package-on-tag@1.0.0
+  - component: $CI_SERVER_FQDN/development-operations/ci-cd-components/release-project/release-from-tag@1.1.1
 
-variables:
-  GIT_DEPTH: 20
-
-publish-package:
-  extends: .template_base
-  image:
-    name: python:3.12
-    entrypoint:
-      - ''
-  stage: build
-  variables:
-    POETRY_HTTP_BASIC_GITLAB_USERNAME: gitlab-ci-token
-    POETRY_HTTP_BASIC_GITLAB_PASSWORD: ${CI_JOB_TOKEN}
-    POETRY_REPOSITORIES_GITLAB_URL: "https://git.kpool.at/api/v4/projects/infrastructure-core%2Fkpool-edm/packages/pypi"
-  script:
-    - python -m pip install --upgrade pip setuptools && python -m pip install poetry
-    - poetry install
-    - poetry self add "poetry-dynamic-versioning[plugin]"
-    - poetry publish --build --repository gitlab
