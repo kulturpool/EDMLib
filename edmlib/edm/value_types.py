@@ -2,7 +2,7 @@ from typing import List, TypeAlias, Union
 from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional
 from typing_extensions import Self
-from edmlib.edm.validation.uri import is_valid_uri
+from edmlib.edm.validation.uri import is_valid_uri, sanitize_url_quotation
 from rdflib import URIRef, Literal
 
 
@@ -21,6 +21,7 @@ class Ref(BaseModel):
     @field_validator("value")
     @classmethod
     def validate_value_as_uri(cls, value: str):
+        value = sanitize_url_quotation(value)
         assert is_valid_uri(value)
         return value
 

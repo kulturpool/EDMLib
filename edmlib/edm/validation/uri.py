@@ -1,6 +1,7 @@
 # pylint: disable=pointless-string-statement
 from rdflib.term import _is_valid_uri
 from edmlib.edm.exceptions import InvalidRefException
+import urllib
 
 """
 This is the function that validates a URIRef in rdflib:
@@ -43,6 +44,35 @@ def __new__(cls, value: str, base: Optional[str] = None) -> "URIRef":
 TODO: I think this is not enough for our case. it does not catch local uris.
 
 """
+
+def unquote_url_recursively(url):
+    """
+    Unquote an url until there is nothing left to unquote.
+    """
+    prev = url
+    while True:
+        unquoted_url = urllib.parse.unquote(prev)
+        if unquoted_url == prev:
+            break
+        prev = unquoted_url
+    return unquoted_url
+
+
+def sanitize_url_quotation(url):
+    """
+    Unquote an url until it is stripped of all quotes,
+    then quote it once savely.
+    NOTE: does return an url containing '?' or '#' as is.
+    """
+    if "?" in url or "#" in url:
+        return url
+
+    unquoted = unquote_url_recursively(url)
+    if "://" in unquoted:
+        scheme, rest = unquoted.split("://", 1)
+        return f"{scheme}://{urllib.parse.quote(rest)}"
+    else:
+        return unquoted
 
 
 def uri_is_not_local(uri: str) -> bool:
