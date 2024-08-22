@@ -3,6 +3,6 @@ stages:
   - release
 
 include:
-  - component: $CI_SERVER_FQDN/development-operations/ci-cd-components/publish-poetry-package/publish-poetry-package-on-tag@1.0.0
+  - component: $CI_SERVER_FQDN/development-operations/ci-cd-components/publish-poetry-package/publish-poetry-package-on-tag@1.1.0
   - component: $CI_SERVER_FQDN/development-operations/ci-cd-components/release-project/release-from-tag@1.1.1
 
