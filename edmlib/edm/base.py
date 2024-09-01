@@ -22,7 +22,7 @@ class EDM_BaseClass(BaseModel):
     def get_class_ref(cls):
         if cls.__name__ == "EDM_BaseClass":
             raise Exception(
-                f"EDM_BaseClass is an abstract parent class that can't be converted to a URIRef."
+                "EDM_BaseClass is an abstract parent class that can't be converted to a URIRef."
             )
 
         cls_uri = EDM_Namespace.get_from_name(cls.__name__, return_full_uri=True)

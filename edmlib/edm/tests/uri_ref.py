@@ -1,3 +1,5 @@
+# ruff: noqa: F811
+
 from pytest import raises
 from edmlib.edm.tests.fixtures.uri import get_invalid_uris, get_valid_uris  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
 from edmlib.edm.value_types import Ref

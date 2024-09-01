@@ -1,4 +1,4 @@
-from typing import Any, List, Optional, Union  # type: ignore
+from typing import List, Optional, Union  # type: ignore
 
 # from rdflib import Literal, URIRef
 from typing_extensions import Self

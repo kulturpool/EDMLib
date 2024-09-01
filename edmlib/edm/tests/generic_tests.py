@@ -1,4 +1,5 @@
 # type: ignore
+# ruff: noqa: F811
 from pytest import fixture
 from edmlib.edm import EDM_Record, EDM_ProvidedCHO, EDM_WebResource, ORE_Aggregation
 import json
@@ -65,22 +66,18 @@ def web_resource_input_data():
 
 
 def test_provided_cho(record_input_data):
-    assert EDM_ProvidedCHO(
-        **record_input_data["provided_cho"]
-    ), f"Provided CHO init test failed"
+    assert EDM_ProvidedCHO(**record_input_data["provided_cho"]), "Provided CHO init test failed"
 
 
 def test_aggregation(record_input_data):
-    assert ORE_Aggregation(
-        **record_input_data["aggregation"]
-    ), f"Aggregation init test failed"
+    assert ORE_Aggregation(**record_input_data["aggregation"]), "Aggregation init test failed"
 
 
 def test_webresource(web_resource_input_data):
-    assert EDM_WebResource(**web_resource_input_data), f"WebResource init test failed"
+    assert EDM_WebResource(**web_resource_input_data), "WebResource init test failed"
 
 
 def test_record_init(record_input_data):
     assert (
         EDM_Record(**record_input_data).model_dump() == record_input_data
-    ), f"record input data did not equal parsed and re-serialised data"
+    ), "record input data did not equal parsed and re-serialised data"

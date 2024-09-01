@@ -1,3 +1,6 @@
+# ruff: noqa: F811
+
+
 from edmlib.edm.tests.fixtures.record import (
     valid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
     invalid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401

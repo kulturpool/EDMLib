@@ -45,20 +45,21 @@ TODO: I think this is not enough for our case. it does not catch local uris.
 
 """
 
-def unquote_url_recursively(url):
+
+def unquote_url_recursively(url: str):
     """
     Unquote an url until there is nothing left to unquote.
     """
     prev = url
     while True:
-        unquoted_url = urllib.parse.unquote(prev)
+        unquoted_url = str(urllib.parse.unquote(prev))  # type: ignore
         if unquoted_url == prev:
             break
         prev = unquoted_url
     return unquoted_url
 
 
-def sanitize_url_quotation(url):
+def sanitize_url_quotation(url: str):
     """
     Unquote an url until it is stripped of all quotes,
     then quote it once savely.
@@ -70,7 +71,7 @@ def sanitize_url_quotation(url):
     unquoted = unquote_url_recursively(url)
     if "://" in unquoted:
         scheme, rest = unquoted.split("://", 1)
-        return f"{scheme}://{urllib.parse.quote(rest)}"
+        return f"{scheme}://{urllib.parse.quote(rest)}"  # type: ignore
     else:
         return unquoted
 

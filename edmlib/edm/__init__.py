@@ -1,6 +1,7 @@
+# ruff: noqa: F811
 from rdflib import Literal, URIRef
 
-from .classes.service import SVCS_Service
+
 from .enums import EDM_Namespace, XSD_Types
 from .record import EDM_Record
 from .value_types import MixedValuesList, Lit, Ref

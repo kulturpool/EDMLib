@@ -1,9 +1,18 @@
-from enum import StrEnum
-from typing import Union
+from enum import (
+    StrEnum,
+)
+from typing import (
+    Union,
+)
 
-from rdflib import Namespace
+from rdflib import (
+    Namespace,
+)
 
-__all__ = ["EDM_Namespace", "XSD_Types"]
+__all__ = [
+    "EDM_Namespace",
+    "XSD_Types",
+]
 
 
 class EDM_Namespace(StrEnum):
@@ -28,16 +37,30 @@ class EDM_Namespace(StrEnum):
 
     # TODO: gp/refactor all uri methods
     @classmethod
-    def get_namespace_tuples(cls):
-        return [(k, Namespace(v)) for k, v in cls.__members__.items()]
+    def get_namespace_tuples(
+        cls,
+    ):
+        return [
+            (
+                k,
+                Namespace(v),
+            )
+            for k, v in cls.__members__.items()
+        ]
 
     @classmethod
-    def get_uri_from_prefix(cls, prefix: str) -> str:
+    def get_uri_from_prefix(
+        cls,
+        prefix: str,
+    ) -> str:
         """
         Returns the namespace-uri for a given prefix as a string.
         Prefix will be converted to uppercase to match the ENUM attribute naming style.
         """
-        namespace_uri = getattr(cls, prefix.upper()).value
+        namespace_uri = getattr(
+            cls,
+            prefix.upper(),
+        ).value
         if not namespace_uri:
             raise Exception(
                 f"Could not match prefix {prefix} with any known {cls.__name__}-Option."
@@ -45,7 +68,11 @@ class EDM_Namespace(StrEnum):
         return namespace_uri
 
     @classmethod
-    def get_from_name(cls, name: str, return_full_uri: bool = False) -> str:
+    def get_from_name(
+        cls,
+        name: str,
+        return_full_uri: bool = False,
+    ) -> str:
         """
         Expects a property in the form: "EDM_PropertyName" ( {PREFIX}_{PropertyName} ) and returns
         either only the namespace-uri as a string or the full uri of the given property
@@ -53,17 +80,31 @@ class EDM_Namespace(StrEnum):
         """
         if name.startswith("wgs84_pos"):
             ns = "WGS84_POS"
-            label = name.replace("wgs84_pos_", "")
+            label = name.replace(
+                "wgs84_pos_",
+                "",
+            )
         else:
-            ns, label = name.split("_", 1)
+            (
+                ns,
+                label,
+            ) = name.split(
+                "_",
+                1,
+            )
 
-        ns_uri = getattr(cls, ns.upper()).value
+        ns_uri = getattr(
+            cls,
+            ns.upper(),
+        ).value
         if return_full_uri:
             return ns_uri + label
         return ns_uri
 
     @classmethod
-    def list(cls) -> list[str]:
+    def list(
+        cls,
+    ) -> list[str]:
         return [el.value for el in cls]
 
 
@@ -151,18 +192,29 @@ class XSD_Types(StrEnum):
     YEARMONTHDURATION = "http://www.w3.org/2001/XMLSchema#yearMonthDuration"
 
     @classmethod
-    def get(cls, value: str) -> Union["XSD_Types", None]:
+    def get(
+        cls,
+        value: str,
+    ) -> Union[
+        "XSD_Types",
+        None,
+    ]:
         # TODO: test this method and check existing output
         if not value:
             return None
 
-        res = getattr(cls, value.upper())
+        res = getattr(
+            cls,
+            value.upper(),
+        )
         if res:
             return res
         return None
 
     @classmethod
-    def list(cls) -> list[str]:
+    def list(
+        cls,
+    ) -> list[str]:
         return [el.value for el in cls]
 
 
@@ -178,7 +230,9 @@ class MANDATE(StrEnum):
     OPTIONAL = "optional"
 
     @classmethod
-    def list(cls) -> list[str]:
+    def list(
+        cls,
+    ) -> list[str]:
         return [el.value for el in cls]
 
 
@@ -194,9 +248,13 @@ class CARDINALITY(StrEnum):
     EXACTLY_ONE = "exactly_one"
 
     @property
-    def is_optional(self):
+    def is_optional(
+        self,
+    ):
         return self.value.startswith("zero")
 
     @classmethod
-    def list(cls) -> list[str]:
+    def list(
+        cls,
+    ) -> list[str]:
         return [el.value for el in cls]
