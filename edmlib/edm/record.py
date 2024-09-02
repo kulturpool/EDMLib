@@ -101,7 +101,7 @@ class EDM_Record(BaseModel):
     
     def get_framed_json_ld(self):
         graph = self.get_rdf_graph()
-        json_str = graph.serialize(format="json-ld", auto_compact=True, max_depth=max_depth)
+        json_str = graph.serialize(format="json-ld", auto_compact=True)
         json_str = re.sub('file:///.+?(?P<uri>[^#/]+)"', r'#\g<uri>"', json_str)
         json_data = json.loads(json_str)
         return jsonld.frame(
