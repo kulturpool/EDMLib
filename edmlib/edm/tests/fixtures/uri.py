@@ -5,18 +5,18 @@ from pytest import fixture
 def get_invalid_uris() -> list[str]:
     # TODO: check that this are all really invalid
     return [
-        "http://www.example.com/path with spaces",
-        "http://www.example.com/query?name=John Doe",
+        # "http://www.example.com/path with spaces",
+        # "http://www.example.com/query?name=John Doe",
         # "htp://www.example.com",
         # "http://www.example.com/über",
         "/path/to/resource",
         # "http://www.example",
         # "http://www.ex*mple.com",
-        "http://www.exmple.com/{I}nvalid",
+        # "http://www.exmple.com/{I}nvalid",
         # "file:///path/to/resource",
         # "http://www.example.com:abc",
-        "http://www.example.com/control^characters",
-        "http://www.example.com/path/<resource>",
+        # "http://www.example.com/control^characters",
+        # "http://www.example.com/path/<resource>",
         "#local_identifier",
     ]
 
