@@ -1,6 +1,10 @@
+import json
+import os
+import re
 from typing import List
 
 from pydantic import BaseModel, model_validator
+from pyld import jsonld
 from rdflib import Graph
 from typing_extensions import Self
 from .classes import (
@@ -17,6 +21,13 @@ from .classes import (
 from .enums import EDM_Namespace
 
 __all__ = ["EDM_Record"]
+
+
+edm_jsonld_frame_path = os.path.join(
+    os.path.dirname(__file__), "edm_jsonld_frame.jsonld"
+)
+with open(edm_jsonld_frame_path) as frame_file:
+    edm_jsonld_frame = json.load(frame_file)
 
 
 class EDM_Record(BaseModel):
@@ -86,8 +97,18 @@ class EDM_Record(BaseModel):
         TODO: enforce the order of elements with a simple xslt transformation
         """
         graph = self.get_rdf_graph()
-
         return graph.serialize(format=format, max_depth=max_depth)
+    
+    def get_framed_json_ld(self):
+        graph = self.get_rdf_graph()
+        json_str = graph.serialize(format="json-ld", auto_compact=True)
+        json_str = re.sub('file:///.+?(?P<uri>[^#/]+)"', r'#\g<uri>"', json_str)
+        json_data = json.loads(json_str)
+        return jsonld.frame(
+            json_data,
+            edm_jsonld_frame,
+            options={"embed": "@always"},
+        )
 
     @model_validator(mode="after")
     def validate_provided_cho_identity(self) -> Self:
