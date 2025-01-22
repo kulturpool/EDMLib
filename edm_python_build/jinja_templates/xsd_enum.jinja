@@ -1,7 +1,0 @@
-from enum import StrEnum
-
-class XSDTYPE(StrEnum):
-    {% for d in data %}
-    {{d.label|upper}} = "{{d.full}}"{% endfor %}
-    
-

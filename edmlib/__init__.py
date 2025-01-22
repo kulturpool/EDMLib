@@ -14,6 +14,8 @@ from .edm import (
     XSD_Types,
     SVCS_Service,
     MixedValuesList,
+    Ref,
+    Lit,
 )
 from .parser import EDM_Parser
 
@@ -34,4 +36,6 @@ __all__ = [
     "SVCS_Service",
     "MixedValuesList",
     "EDM_Parser",
+    "Ref",
+    "Lit",
 ]

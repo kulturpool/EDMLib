@@ -21,9 +21,7 @@ class EDM_BaseClass(BaseModel):
     @classmethod
     def get_class_ref(cls):
         if cls.__name__ == "EDM_BaseClass":
-            raise Exception(
-                "EDM_BaseClass is an abstract parent class that can't be converted to a URIRef."
-            )
+            raise Exception("EDM_BaseClass is an abstract parent class that can't be converted to a URIRef.")
 
         cls_uri = EDM_Namespace.get_from_name(cls.__name__, return_full_uri=True)
         if cls_uri:
@@ -48,9 +46,7 @@ class EDM_BaseClass(BaseModel):
                 (  # type: ignore
                     subject,
                     RDF.type,
-                    URIRef(
-                        f"{EDM_Namespace.get_from_name(self.label)}{self.label.split('_')[1]}"
-                    ),
+                    URIRef(f"{EDM_Namespace.get_from_name(self.label)}{self.label.split('_')[1]}"),
                 )
             )
             for field_name, _ in self.model_fields.items():
@@ -58,20 +54,14 @@ class EDM_BaseClass(BaseModel):
 
                 if field_name != "id" and field_val:
                     # TODO: make the prop_uri an instance of URIRef here, not below
-                    prop_uri = EDM_Namespace.get_from_name(
-                        field_name, return_full_uri=True
-                    )
+                    prop_uri = EDM_Namespace.get_from_name(field_name, return_full_uri=True)
 
                     if isinstance(field_val, list):
                         val: Any
                         for val in field_val:
-                            triples.append(
-                                (subject, URIRef(f"{prop_uri}"), val.to_rdflib())
-                            )
+                            triples.append((subject, URIRef(f"{prop_uri}"), val.to_rdflib()))
                     else:
-                        triples.append(
-                            (subject, URIRef(f"{prop_uri}"), field_val.to_rdflib())
-                        )
+                        triples.append((subject, URIRef(f"{prop_uri}"), field_val.to_rdflib()))
 
             return triples
         except Exception as e:

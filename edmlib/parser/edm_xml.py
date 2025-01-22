@@ -1,7 +1,7 @@
 from rdflib import Graph, URIRef, Literal, RDF
 
 
-from ..edm import (
+from edmlib.edm import (
     EDM_Record,
     EDM_Namespace,
     EDM_ProvidedCHO,
@@ -17,7 +17,7 @@ from ..edm import (
     Ref,
 )
 
-from typing import get_type_hints, List, Any, Dict
+from typing import get_type_hints, List, Any, Dict, Self
 
 
 def check_if_many(cls: object, attname: str) -> bool:
@@ -26,35 +26,33 @@ def check_if_many(cls: object, attname: str) -> bool:
     cardinality of a property in the context of a spefic class.
     """
     hints = get_type_hints(cls).get(attname)
-    if hints and (
-        str(hints).startswith("typing.Optional[typing.List")
-        or str(hints).startswith("typing.List")
-        or str(hints).startswith("typing.Union[typing.List")
-    ):
-        return True
-    else:
-        return False
+    return bool(
+        hints
+        and (
+            str(hints).startswith("typing.Optional[typing.List")
+            or str(hints).startswith("typing.List")
+            or str(hints).startswith("typing.Union[typing.List")
+        ),
+    )
 
 
-def to_literal(literal: Literal):
+def to_literal(literal: Literal) -> Lit:
     """
     Temporary helper function to convert rdflib.Literal to edm_python.edm.Lit
     """
-    return Lit(value=literal.value, lang=literal.language, datatype=literal.datatype)
+    return Lit(
+        value=literal.value,
+        lang=literal.language,
+        datatype=literal.datatype,
+    )
 
 
-def to_ref(ref: URIRef):
+def to_ref(ref: URIRef) -> Ref:
     """
     Temporary helper function to convert rdflib.URIRef to edm_python.edm.Ref
     """
-    # print("----> creating ref for", type(ref), ref)
-    # print("----> creating ref for", type(ref), ref)
-
-    # prefix, namespace, identifier = graph.compute_qname(ref)
     value = str(ref)
-    res = Ref(value=value)
-    # print(res, ref, str(ref))
-    return res
+    return Ref(value=value)
 
 
 def cls_attribute_to_ref(attname: str) -> URIRef:
@@ -62,15 +60,9 @@ def cls_attribute_to_ref(attname: str) -> URIRef:
     Helper that converts a edm_classes attribute name to the corresponding properties full IRI.
     """
     res = attname.split("_")
-    if attname.startswith("WGS84_POS"):
-        ns = "WGS84_POS"
-    else:
-        ns = res[0]
+    ns = "WGS84_POS" if attname.startswith("WGS84_POS") else res[0]
 
-    if len(res) > 2:
-        res = "_".join(res[1:])
-    else:
-        res = res[1]
+    res = "_".join(res[1:]) if len(res) > 2 else res[1]
 
     return URIRef(f"{getattr(EDM_Namespace, ns.upper())}{res}")
 
@@ -86,10 +78,7 @@ def cls_attribute_to_ref_new(attname: str) -> URIRef:
     else:
         ns = res[0]
 
-        if len(res) > 2:
-            res = "_".join(res[1:])
-        else:
-            res = res[1]
+        res = "_".join(res[1:]) if len(res) > 2 else res[1]
 
     return URIRef(f"{getattr(EDM_Namespace, ns.upper())}{res}")
 
@@ -102,15 +91,19 @@ def get_attributes(cls: object) -> Dict[str, URIRef]:
     return {el: cls_attribute_to_ref_new(el) for el in attlist}
 
 
-def convert(lit_or_ref: URIRef | Literal):
+def convert(lit_or_ref: URIRef | Literal) -> Ref | Lit:
     """
     Helper to convert a rdlib.URIRef or rdflib.Literal to the
     corresponding edm-python object (Lit or Ref).
     """
     if isinstance(lit_or_ref, URIRef):
         return to_ref(lit_or_ref)
-    elif isinstance(lit_or_ref, Literal):  # type: ignore
-        return to_literal(lit_or_ref)
+
+    assert isinstance(
+        lit_or_ref, Literal
+    ), f"Argument 'lit_or_ref'  must be of tpye 'rdflib.URIRef' or 'rdflib.Literal' go {type(lit_or_ref)} instead."
+
+    return to_literal(lit_or_ref)
 
 
 class EDM_Parser:
@@ -118,8 +111,19 @@ class EDM_Parser:
     Parser for edm-xml records. Returns an edm_python.edm.EDM_Record object.
     """
 
-    def __init__(self, graph: Graph):
-        # TODO: consider refactor to also allow a path to a file or file-like object or a string
+    @classmethod
+    def from_file(cls, path: str, format: str = "xml") -> Self:
+        # TODO: add logic to add the placholder here and to remove it in serialization again
+        graph = Graph().parse(path, format=format, publicID="placeholder")
+        return cls(graph=graph)
+
+    @classmethod
+    def from_string(cls, content: str, format: str = "xml") -> Self:
+        # TODO: add logic to add the placholder here and to remove it in serialization again
+        graph = Graph().parse(data=content, format=format, publicID="placeholder")
+        return cls(graph=graph)
+
+    def __init__(self, graph: Graph) -> None:
         self.graph: Graph = graph
 
     def get_single_ref(self, obj_cls: object) -> URIRef:
@@ -153,19 +157,28 @@ class EDM_Parser:
 
     def get_aggregation(self):
         agg = list(
-            self.graph.triples((None, RDF.type, ORE_Aggregation.get_class_ref()))
+            self.graph.triples(
+                (
+                    None,
+                    RDF.type,
+                    ORE_Aggregation.get_class_ref(),
+                )
+            )
         )
         assert len(agg) == 1, f"Expected one aggregation, got {len(agg)}. {agg=}"
         return agg[0][0]
 
-    def get_webresources(self):
+    def get_webresources(self) -> list[Any]:
         webresources = list(
-            self.graph.triples((None, RDF.type, EDM_WebResource.get_class_ref()))
+            self.graph.triples(
+                (
+                    None,
+                    RDF.type,
+                    EDM_WebResource.get_class_ref(),
+                ),
+            ),
         )
-        # print("WEB-REsources", webresources)
-        res = [el[0] for el in webresources]
-        # print(res)
-        return res
+        return [el[0] for el in webresources]
 
     def get_instance_triples(self, instance: URIRef, cls_obj: object) -> Dict[str, Any]:
         attribs = get_attributes(cls_obj)
@@ -183,7 +196,6 @@ class EDM_Parser:
                     ), f"Expected 1 value but got {len(values)}; {cls_obj=}; {att=}"
                     values = values[0]
                 temp.update({att: values})
-        # print("instance_triples", temp)
         return temp
 
     def parse_single_class(self, cls_obj: object) -> Any:
@@ -195,9 +207,6 @@ class EDM_Parser:
                 inst = self.get_aggregation()
                 add = {
                     "edm_provider": Lit(value="Kulturpool", lang="de"),
-                    # "edm_rights": Ref(
-                    #     value="http://example.com/placeholder_rights"
-                    # ),
                 }
             case _:  # type: ignore
                 pass
@@ -224,7 +233,7 @@ class EDM_Parser:
 
         return res
 
-    def parse(self):
+    def parse(self) -> EDM_Record:
         cho = self.parse_single_class(EDM_ProvidedCHO)
         aggre = self.parse_single_class(ORE_Aggregation)
         web_resources = self.parse_many_class(EDM_WebResource)

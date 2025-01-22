@@ -5,6 +5,7 @@ from edmlib.parser.edm_xml import EDM_Parser
 from edmlib.edm import EDM_Record
 import json
 
+
 FILE = Path(__file__).absolute().parent
 
 
@@ -19,6 +20,7 @@ def process():
 
 if __name__ == "__main__":
     graphs = process()
+
     test = EDM_Parser(graphs[0]).parse()
     # test.provided_cho.id.value = "another_custom_value"
     dump = test.model_dump_json()
@@ -43,6 +45,4 @@ if __name__ == "__main__":
         file.write(json.dumps(schema))
 
     # Test that Model can be turned into an rdf graph:
-    restored_graph = restored.get_rdf_graph().serialize(
-        FILE / "restored_graph.ttl", format="ttl"
-    )
+    restored_graph = restored.get_rdf_graph().serialize(FILE / "restored_graph.ttl", format="ttl")

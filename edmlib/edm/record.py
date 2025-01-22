@@ -23,9 +23,7 @@ from .enums import EDM_Namespace
 __all__ = ["EDM_Record"]
 
 
-edm_jsonld_frame_path = os.path.join(
-    os.path.dirname(__file__), "edm_jsonld_frame.jsonld"
-)
+edm_jsonld_frame_path = os.path.join(os.path.dirname(__file__), "edm_jsonld_frame.jsonld")
 with open(edm_jsonld_frame_path) as frame_file:
     edm_jsonld_frame = json.load(frame_file)
 
@@ -90,18 +88,17 @@ class EDM_Record(BaseModel):
                     [graph.add(triple) for triple in triples]
         return graph
 
-    def serialize(self, format: str = "pretty-xml", max_depth: int = 1):
+    def serialize(self, format: str = "pretty-xml", max_depth: int = 1) -> str:
         """
         Serialize graph to rdf/xml with pretty-formatting.
-        TODO: the returned xml is not yet edm conform, i.e. the ordering of the xml elements is not enforced.
-        TODO: enforce the order of elements with a simple xslt transformation
         """
         graph = self.get_rdf_graph()
         return graph.serialize(format=format, max_depth=max_depth)
-    
+
     def get_framed_json_ld(self):
         graph = self.get_rdf_graph()
         json_str = graph.serialize(format="json-ld", auto_compact=True)
+        # TODO: this needs fixing, as there a relative uri replacements that can be broken by this
         json_str = re.sub('file:///.+?(?P<uri>[^#/]+)"', r'#\g<uri>"', json_str)
         json_data = json.loads(json_str)
         return jsonld.frame(

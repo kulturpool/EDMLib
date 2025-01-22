@@ -7,6 +7,5 @@
             "source.organizeImports.ruff": "never",
         },
     },
-    "python.analysis.typeCheckingMode": "standard",
-    "autoDocstring.docstringFormat": "google",
+    "python.analysis.typeCheckingMode": "standard"
 }
