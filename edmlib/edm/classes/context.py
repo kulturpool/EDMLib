@@ -1,5 +1,5 @@
-from typing import Any, List, Optional, Union  # type: ignore
-
+from typing import Any, List, Optional, Union, Self  # type: ignore
+from pydantic import model_validator
 from ..value_types import MixedValuesList, Lit, Ref
 from ..base import EDM_BaseClass
 
@@ -13,16 +13,16 @@ class SKOS_Concept(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[Lit] = None
+    skos_prefLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     recommended
 
     Cardinality: 
-    zero_to_one
+    zero_to_many
 
     Value-Type:
-    Optional[Lit]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -258,6 +258,16 @@ class SKOS_Concept(EDM_BaseClass):
     The URI of a concept scheme
     """
 
+    @model_validator(mode="after")
+    def validate_skos_pref_label(self) -> Self:
+        pref_label: Optional[list[Lit]] = getattr(self, "skos_prefLabel")
+        if pref_label and isinstance(pref_label, list) and len(pref_label) > 1:
+            tag_set = {label.lang for label in pref_label if label.lang}
+            assert (
+                len(tag_set) == len(pref_label)
+            ), f"If multiple pref_labels are provided, each must have a lang tag and the lang tags must be distinct"
+        return self
+
 
 class EDM_Agent(EDM_BaseClass):
     """
@@ -268,16 +278,16 @@ class EDM_Agent(EDM_BaseClass):
 
     """
 
-    skos_prefLabel: Optional[Lit] = None
+    skos_prefLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     recommended
 
     Cardinality: 
-    zero_to_one
+    zero_to_many
 
     Value-Type:
-    Optional[Lit]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -666,6 +676,16 @@ class EDM_Agent(EDM_BaseClass):
 	urceElsewhere”/>
     """
 
+    @model_validator(mode="after")
+    def validate_skos_pref_label(self) -> Self:
+        pref_label: Optional[list[Lit]] = getattr(self, "skos_prefLabel")
+        if pref_label and isinstance(pref_label, list) and len(pref_label) > 1:
+            tag_set = {label.lang for label in pref_label if label.lang}
+            assert (
+                len(tag_set) == len(pref_label)
+            ), f"If multiple pref_labels are provided, each must have a lang tag and the lang tags must be distinct"
+        return self
+
 
 class EDM_TimeSpan(EDM_BaseClass):
     """
@@ -685,7 +705,7 @@ class EDM_TimeSpan(EDM_BaseClass):
     zero_to_many
 
     Value-Type:
-    Optional[Lit]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -840,8 +860,15 @@ class EDM_TimeSpan(EDM_BaseClass):
     The URI of a timespan<owl:sameAs rdf:resource=“http://semium.org/time/roman_empire”/>
     """
 
-
-# TODO: add validator for property skos_preferedLabel: validate that if there are multiple, that each has a different lang-tag
+    @model_validator(mode="after")
+    def validate_skos_pref_label(self) -> Self:
+        pref_label: Optional[list[Lit]] = getattr(self, "skos_prefLabel")
+        if pref_label and isinstance(pref_label, list) and len(pref_label) > 1:
+            tag_set = {label.lang for label in pref_label if label.lang}
+            assert (
+                len(tag_set) == len(pref_label)
+            ), f"If multiple pref_labels are provided, each must have a lang tag and the lang tags must be distinct"
+        return self
 
 
 class CC_License(EDM_BaseClass):
@@ -952,7 +979,7 @@ class EDM_Place(EDM_BaseClass):
 	/wgs84_pos:alt>
     """
 
-    skos_prefLabel: Optional[Lit] = None
+    skos_prefLabel: Optional[List[Lit]] = None
     """
     Mandate: 
     optional
@@ -961,7 +988,7 @@ class EDM_Place(EDM_BaseClass):
     zero_to_one
 
     Value-Type:
-    Optional[Lit]
+    Optional[List[Lit]]
     
     Description: 
 
@@ -1073,3 +1100,13 @@ class EDM_Place(EDM_BaseClass):
 
     URI of a Place<owl:sameAs rdf:resource=“http://sws.geonames.org/2635167/”/>(London)
     """
+
+    @model_validator(mode="after")
+    def validate_skos_pref_label(self) -> Self:
+        pref_label: Optional[list[Lit]] = getattr(self, "skos_prefLabel")
+        if pref_label and isinstance(pref_label, list) and len(pref_label) > 1:
+            tag_set = {label.lang for label in pref_label if label.lang}
+            assert (
+                len(tag_set) == len(pref_label)
+            ), f"If multiple pref_labels are provided, each must have a lang tag and the lang tags must be distinct"
+        return self

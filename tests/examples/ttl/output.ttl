@@ -1,0 +1,52 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdagr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix svcs: <http://rdfs.org/sioc/services#> .
+
+<https://id.kulturpool.at/000056bf-fe34-4e7f-ad3c-eb7bfff37c70/aggregation> a ore:Aggregation ;
+    edm:aggregatedCHO <https://id.kulturpool.at/000056bf-fe34-4e7f-ad3c-eb7bfff37c70/cho> ;
+    edm:dataProvider "Albertina" ;
+    edm:hasView <https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes> ;
+    edm:isShownAt <https://sammlungenonline.albertina.at/?query=search=/record/objectnumbersearch=[DG1949/697]&showtype=record> ;
+    edm:isShownBy <https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes> ;
+    edm:object <https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes&maxwidth=400> ;
+    edm:provider "Kulturpool"@de ;
+    edm:rights <http://creativecommons.org/publicdomain/mark/1.0/> .
+
+<http://vocab.getty.edu/aat/300041273> a skos:Concept ;
+    skos:prefLabel "Druckgraphik" .
+
+<https://id.kulturpool.at/000056bf-fe34-4e7f-ad3c-eb7bfff37c70/cho> a edm:ProvidedCHO ;
+    dc:creator <http://d-nb.info/gnd/11869703X> ;
+    dc:identifier "DG1949/697" ;
+    dc:language "de" ;
+    dc:rights "Albertina, Wien, Österreich" ;
+    dc:title "Die Erweckung des Lazarus"@german ;
+    dc:type <http://vocab.getty.edu/aat/300041273> ;
+    dcterms:created "1506" ;
+    dcterms:extent "22,5 x 15,9 cm (laut Hollstein)" ;
+    dcterms:isPartOf "Graphische Sammlung" ;
+    dcterms:medium "Holzschnitt" ;
+    edm:type "IMAGE" .
+
+<https://sammlungenonline.albertina.at/iiif/images/DG1949_697.JPG> a svcs:Service ;
+    dcterms:conformsTo <http://iiif.io/api/image> ;
+    doap:implements <http://iiif.io/api/image/2/level2.json> .
+
+<http://d-nb.info/gnd/11869703X> a edm:Agent ;
+    rdagr2:biographicalInformation "Solothurn um 1485 - 1527/28 Basel" ;
+    owl:sameAs <http://d-nb.info/gnd/11869703X>,
+        <http://de.wikipedia.org/wiki/Urs_Graf_der_%C3%84ltere> ;
+    skos:prefLabel "Urs Graf d. Ä." .
+
+<https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes> a edm:WebResource ;
+    dc:rights "Albertina, Wien, Österreich" ;
+    dcterms:isReferencedBy <https://sammlungenonline.albertina.at/iiif/tms_101507/manifest.json> ;
+    svcs:has_service <https://sammlungenonline.albertina.at/iiif/images/DG1949_697.JPG> ;
+    edm:rights <http://creativecommons.org/publicdomain/mark/1.0/> .
+

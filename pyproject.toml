@@ -6,25 +6,23 @@ description = "Python utilities for working with the EDM (Europeana Data Model).
 authors = ["Gregor Pirgie <gregor.pirgie@nhm-wien.ac.at>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "./edmlib"}]
+packages = [{ include = "./edmlib" }]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0.0"
 rdflib = "^7.0.0"
-pandas = "^2.1.4"
 lxml = "^5.1.0"
-openpyxl = "^3.1.2"
-pydantic = "^2.5.3"
-sickle = "^0.7.0"
+pydantic = "^2.10.3"
 pyld = "^2.0.3"
-jupyter-server = "^2.12.5"
-jupyterlab = "^4.1.1"
-python-lsp-server = {extras = ["all"], version = "^1.10.0"}
-pytest = "^8.1.1"
+
 
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
-jinja2 = "^3.1.3"
+jupyter-server = "^2.12.5"
+jupyterlab = "^4.1.1"
+ruff = "^0.8.1"
+pytest = "^8.1.1"
+polyfactory = "^2.18.1"
 
 [build-system]
 requires = ["poetry-core"]
@@ -33,7 +31,7 @@ build-backend = "poetry_dynamic_versioning.backend"
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
-pattern="^(?P<base>[0-9]+[.][0-9]+[.][0-9]+)$"
+pattern = "^(?P<base>[0-9]+[.][0-9]+[.][0-9]+)$"
 
 
 [tool.ruff]
@@ -75,11 +73,36 @@ indent-width = 4
 target-version = "py312"
 
 [tool.ruff.lint]
-# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# SEE ALL RULES HERE https://docs.astral.sh/ruff/rules/
+select = [
+    "E4",
+    "E7",
+    "E9",
+    "F",
+    "FIX002",
+    "PTH",
+    "ARG",
+    "TID",
+    "SIM",
+    "SLOT",
+    "SLF",
+    "RET",
+    "Q",
+    "G",
+    "LOG",
+    "C4",
+    "COM",
+    "CPY",
+    "BLE",
+    "ANN",
+    "D211",
+
+
+] # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
 # Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
 # McCabe complexity (`C901`) by default.
-select = ["E4", "E7", "E9", "F"]
-ignore = []
+#select = ["E4", "E7", "E9", "F"]
+ignore = ["E501"]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
