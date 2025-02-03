@@ -1269,7 +1269,6 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 
     @model_validator(mode="after")
     def validate_dependent_edm(self) -> Self:
-        print("provided cho after validator called")
         assert (
             self.dc_type or self.dc_subject or self.dcterms_temporal or self.dcterms_spatial
         ), f"ProvidedCHO must have one of [dc_type, dc_subject, dcterms_termporal, dctermrs_spatial], got {self.dc_type=}, {self.dc_subject=}, {self.dcterms_spatial=}, {self.dcterms_temporal=}."
