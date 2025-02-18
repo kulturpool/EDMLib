@@ -19,6 +19,7 @@ from .classes import (
     SVCS_Service,
 )
 from .enums import EDM_Namespace
+import requests
 
 __all__ = ["EDM_Record"]
 
@@ -26,6 +27,9 @@ __all__ = ["EDM_Record"]
 edm_jsonld_frame_path = os.path.join(os.path.dirname(__file__), "edm_jsonld_frame.jsonld")
 with open(edm_jsonld_frame_path) as frame_file:
     edm_jsonld_frame = json.load(frame_file)
+
+
+
 
 
 class EDM_Record(BaseModel):
@@ -113,3 +117,34 @@ class EDM_Record(BaseModel):
             self.provided_cho.id.value == self.aggregation.edm_aggregatedCHO.value
         ), f"URIs of providedCHO and aggregation.edm_aggregatedCHO do not match: {self.provided_cho.id.value=} != {self.aggregation.edm_aggregatedCHO.value=}."
         return self
+
+    def fetch_edm_isShownBy_head(self) -> requests.Response:
+        shown_by = self.aggregation.edm_isShownBy
+        if not shown_by:
+            raise Exception(">edm_isShownBy< is >None<. Cannot fetch head.")
+        return requests.head(shown_by.value)
+        
+    def has_edm_object(self) -> bool:
+        return bool(self.aggregation.edm_object)
+
+    def fetch_edm_object_head(self) -> requests.Response:
+        _object = self.aggregation.edm_object
+        if not _object:
+            raise Exception(">edm_object< is >None<. Cannot fetch head.")
+        return requests.head(_object.value)
+
+    def has_edm_hasView(self) -> bool:
+        return bool(self.aggregation.edm_hasView)
+
+    def fetch_edm_hasView_heads(self) -> list[requests.Response]:
+        has_view = self.aggregation.edm_hasView
+        if not has_view:
+            raise Exception(">edm_hasView< is >None<. Cannot fetch heads.")
+        return [requests.head(view.value) for view in has_view]
+
+
+    def fetch_edm_isShownAt_head(self) -> requests.Response:
+        shown_at = self.aggregation.edm_isShownAt
+        if not shown_at:
+            raise Exception(">edm_isShownAt< is >None<. Cannot fetch head.")
+        return requests.head(shown_at.value)
