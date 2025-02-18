@@ -1,3 +1,4 @@
+sandbox*
 .virtual_documents/
 notebooks/*
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,jupyternotebooks,python,django,node
