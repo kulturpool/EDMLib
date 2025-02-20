@@ -41,7 +41,7 @@ def to_literal(literal: Literal) -> Lit:
     Temporary helper function to convert rdflib.Literal to edm_python.edm.Lit
     """
     return Lit(
-        value=literal.value,
+        value=str(literal.value),
         lang=literal.language,
         datatype=literal.datatype,
     )
