@@ -118,6 +118,9 @@ class EDM_Record(BaseModel):
         ), f"URIs of providedCHO and aggregation.edm_aggregatedCHO do not match: {self.provided_cho.id.value=} != {self.aggregation.edm_aggregatedCHO.value=}."
         return self
 
+
+    # === media checks ===
+
     def fetch_edm_isShownBy_head(self) -> requests.Response:
         shown_by = self.aggregation.edm_isShownBy
         if not shown_by:

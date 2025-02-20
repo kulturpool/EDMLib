@@ -272,9 +272,8 @@ class ORE_Aggregation(EDM_BaseClass):
 
     @model_validator(mode="after")
     def validate_conditional_attributes(self) -> Self:
-        assert (
-            self.edm_isShownAt or self.edm_isShownBy
-        ), f"Aggregation must have either edm_isShownAt or edm_isShownBy, got: {self.edm_isShownAt=}, {self.edm_isShownBy}."
+        assert (self.edm_isShownAt), f"Aggregation must have edm_isShownAt, got: {self.edm_isShownAt}."
+        assert (self.edm_isShownBy), f"Aggregation must have edm_isShownBy, got: {self.edm_isShownBy}."
         return self
 
 
