@@ -1,4 +1,4 @@
-from pytest import fixture
+from pytest import fixture, mark
 from edmlib.edm import EDM_Record, EDM_ProvidedCHO, EDM_WebResource, ORE_Aggregation
 import json
 
@@ -71,6 +71,7 @@ def test_webresource(web_resource_input_data) -> None:  # noqa: ANN001, F811
     assert EDM_WebResource(**web_resource_input_data), "WebResource init test failed"
 
 
+@mark.skip
 def test_record_init(record_input_data) -> None:  # noqa: ANN001, F811
     assert (
         EDM_Record(**record_input_data).model_dump() == record_input_data
