@@ -121,9 +121,6 @@ class EDM_Record(BaseModel):
 
     # === media checks ===
 
-    def has_edm_isShownBy(self) -> bool:
-        return bool(self.aggregation.edm_isShownBy)
-
     def fetch_edm_isShownBy_head(self) -> requests.Response:
         shown_by = self.aggregation.edm_isShownBy
         if not shown_by:
@@ -148,8 +145,6 @@ class EDM_Record(BaseModel):
             raise Exception(">edm_hasView< is >None<. Cannot fetch heads.")
         return [requests.head(view.value) for view in has_view]
 
-    def has_edm_isShownAt(self) -> bool:
-        return bool(self.aggregation.edm_isShownAt)
 
     def fetch_edm_isShownAt_head(self) -> requests.Response:
         shown_at = self.aggregation.edm_isShownAt
