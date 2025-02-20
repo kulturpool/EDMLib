@@ -17,6 +17,7 @@ class Ref(BaseModel):
     """
 
     value: str
+    is_ref: bool = True
 
     @field_validator("value")
     @classmethod
