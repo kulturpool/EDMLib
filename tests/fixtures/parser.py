@@ -57,6 +57,74 @@ def get_ref_lit_xml() -> str:
 
 
 @fixture(scope="session")
+def get_xml_with_xsdtypes() -> str:
+    return """<rdf:RDF xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:doap="http://usefulinc.com/ns/doap#"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:rdagr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ore:Aggregation rdf:about="ABSC12-042_Aggregation">
+        <edm:aggregatedCHO rdf:resource="ABSC12-042" />
+        <edm:dataProvider xml:lang="de">Alban Berg Stiftung</edm:dataProvider>
+        <edm:rights rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/" />
+        <edm:isShownAt
+            rdf:resource="https://www.absw.at/bibliothekseintrag.php?id_bibliothekseintrag=1667&amp;action=view" />
+        <edm:isShownBy rdf:resource="https://www.absw.at/bilddaten/ersteSeiten/C12-042_S1_sml.pdf" />
+        <edm:hasView rdf:resource="https://www.absw.at/bilddaten/ersteSeiten/C12-042_S1.pdf" />
+        <edm:object
+            rdf:resource="https://www.absw.at/phpThumb.php?src=bilddaten/ersteSeiten%2FC12-042_S1.pdf&amp;w=350" />
+        <edm:provider>Kulturpool</edm:provider>
+    </ore:Aggregation>
+    <edm:ProvidedCHO rdf:about="ABSC12-042">
+        <edm:type>TEXT</edm:type>
+        <dc:identifier>C12-042</dc:identifier>
+        <dc:language>de</dc:language>
+        <dc:rights xml:lang="de">Alban Berg Stiftung</dc:rights>
+        <dcterms:isPartOf xml:lang="de">Alban Berg Stiftung / Bibliothek</dcterms:isPartOf>
+        <dc:title xml:lang="de">Deutsches Musiker-Lexikon</dc:title>
+        <dc:description xml:lang="de">Gebunden (blau, gold)</dc:description>
+        <dc:type>Buch</dc:type>
+        <dc:publisher rdf:resource="https://d-nb.info/gnd/118924133" /><!-- GND-Referenz zu M&#252;ller von Asow,
+        Erich Hermann -->
+        <dc:publisher>Wilhelm Limpert-Verlag, Dresden</dc:publisher>
+        <dcterms:created>1929</dcterms:created>
+        <dcterms:extent>&lt;8&gt;, VIII Sp., &lt;4&gt;, [1644] Sp., &lt;12&gt; S.</dcterms:extent>
+        <dcterms:extent>22,5*29,2*5,8 cm</dcterms:extent>
+        <edm:currentLocation>Alban Berg Stiftung, Wien</edm:currentLocation>
+    </edm:ProvidedCHO>
+    <edm:Agent xmlns:dnbt="https://d-nb.info/standards/elementset/dnb#"
+        xmlns:gndo="https://d-nb.info/standards/elementset/gnd#" xmlns:owl="http://www.w3.org/2002/07/owl#"
+        rdf:about="https://d-nb.info/gnd/118924133">
+        <owl:sameAs rdf:resource="http://viaf.org/viaf/62347536" />
+        <owl:sameAs rdf:resource="https://isni.org/isni/0000000109081511" />
+        <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q26160311" />
+        <owl:sameAs rdf:resource="http://id.loc.gov/rwo/agents/n85207029" />
+        <owl:sameAs rdf:resource="https://d-nb.info/gnd/1157512356" />
+        <rdagr2:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1892-08-31</rdagr2:dateOfBirth>
+        <skos:altLabel>Müller von Asow, Erich H.</skos:altLabel>
+        <skos:altLabel>Müller, Erich H.</skos:altLabel>
+        <skos:altLabel>Müller-Dresden, Erich Hermann</skos:altLabel>
+        <skos:altLabel>Müller-Dresden, Erich H.</skos:altLabel>
+        <skos:altLabel>Mueller- von Asow, Erich Hermann</skos:altLabel>
+        <skos:altLabel>Mueller von Asow, E. H.</skos:altLabel>
+        <skos:altLabel>Mueller von Asow, Erich Hermann</skos:altLabel>
+        <skos:altLabel>Asow, Erich Hermann Müller von</skos:altLabel>
+        <skos:altLabel>Asow, Erich H. Müller von</skos:altLabel>
+        <skos:altLabel>Asow, Erich Hermann Mueller von</skos:altLabel>
+        <skos:altLabel>Asow, E. H. Mueller von</skos:altLabel>
+        <skos:altLabel>Asow, E.H. Mueller von</skos:altLabel>
+        <skos:altLabel>Dresden, Erich Hermann Müller-</skos:altLabel>
+        <skos:altLabel>Müller, Erich Hermann</skos:altLabel>
+        <skos:altLabel>Asow, Erich Hermann von</skos:altLabel>
+        <skos:altLabel>Müller, Erich Hermann</skos:altLabel>
+        <rdagr2:dateOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1964-06-04</rdagr2:dateOfDeath>
+        <skos:prefLabel>Müller von Asow, Erich Hermann</skos:prefLabel>
+    </edm:Agent>
+</rdf:RDF>"""
+
+
+@fixture(scope="session")
 def get_ref_lit_json() -> dict:
     return json.loads("""{
                 "provided_cho": {

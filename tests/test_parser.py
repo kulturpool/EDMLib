@@ -1,7 +1,7 @@
 from edmlib import EDM_Parser, EDM_Record, Ref, Lit
 from pathlib import Path
 from tests.fixtures.record import xml_string  # noqa: F401
-from tests.fixtures.parser import get_ref_lit_json, get_ref_lit_xml
+from tests.fixtures.parser import get_ref_lit_json, get_ref_lit_xml, get_xml_with_xsdtypes
 
 
 def test_file_parser() -> None:
@@ -35,3 +35,9 @@ def test_serialization_lit_ref(get_ref_lit_xml) -> None:
     assert isinstance(re_rec.provided_cho.dc_type, list)
     assert len(re_rec.provided_cho.dc_type) == 1
     assert isinstance(re_rec.provided_cho.dc_type[0], Ref)
+
+
+def test_xml_datatypes_parsing(get_xml_with_xsdtypes) -> None:
+    parser = EDM_Parser.from_string(get_xml_with_xsdtypes)
+    rec = parser.parse()
+    assert rec
