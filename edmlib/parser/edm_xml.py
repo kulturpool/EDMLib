@@ -1,6 +1,5 @@
 from rdflib import Graph, URIRef, Literal, RDF
 
-
 from edmlib.edm import (
     EDM_Record,
     EDM_Namespace,
@@ -18,6 +17,7 @@ from edmlib.edm import (
 )
 
 from typing import get_type_hints, List, Any, Dict, Self
+from rdflib.term import _castPythonToLiteral
 
 
 def check_if_many(cls: object, attname: str) -> bool:
@@ -40,10 +40,13 @@ def to_literal(literal: Literal) -> Lit:
     """
     Temporary helper function to convert rdflib.Literal to edm_python.edm.Lit
     """
+
+    obj, dtype = _castPythonToLiteral(literal.value, literal.datatype)
+
     return Lit(
-        value=str(literal.value),
+        value=str(obj),
         lang=literal.language,
-        datatype=literal.datatype,
+        datatype=dtype,
     )
 
 
