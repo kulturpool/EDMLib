@@ -121,33 +121,33 @@ class EDM_Record(BaseModel):
 
     # === media checks ===
 
-    def fetch_edm_isShownBy_head(self) -> requests.Response:
+    def fetch_edm_isShownBy_head(self, **kwargs) -> requests.Response:
         shown_by = self.aggregation.edm_isShownBy
         if not shown_by:
             raise Exception(">edm_isShownBy< is >None<. Cannot fetch head.")
-        return requests.head(shown_by.value)
+        return requests.head(shown_by.value, **kwargs)
         
     def has_edm_object(self) -> bool:
         return bool(self.aggregation.edm_object)
 
-    def fetch_edm_object_head(self) -> requests.Response:
+    def fetch_edm_object_head(self, **kwargs) -> requests.Response:
         _object = self.aggregation.edm_object
         if not _object:
             raise Exception(">edm_object< is >None<. Cannot fetch head.")
-        return requests.head(_object.value)
+        return requests.head(_object.value, **kwargs)
 
     def has_edm_hasView(self) -> bool:
         return bool(self.aggregation.edm_hasView)
 
-    def fetch_edm_hasView_heads(self) -> list[requests.Response]:
+    def fetch_edm_hasView_heads(self, **kwargs) -> list[requests.Response]:
         has_view = self.aggregation.edm_hasView
         if not has_view:
             raise Exception(">edm_hasView< is >None<. Cannot fetch heads.")
-        return [requests.head(view.value) for view in has_view]
+        return [requests.head(view.value, **kwargs) for view in has_view]
 
 
-    def fetch_edm_isShownAt_head(self) -> requests.Response:
+    def fetch_edm_isShownAt_head(self, **kwargs) -> requests.Response:
         shown_at = self.aggregation.edm_isShownAt
         if not shown_at:
             raise Exception(">edm_isShownAt< is >None<. Cannot fetch head.")
-        return requests.head(shown_at.value)
+        return requests.head(shown_at.value, **kwargs)
