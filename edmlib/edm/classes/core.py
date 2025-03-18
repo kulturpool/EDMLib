@@ -272,8 +272,21 @@ class ORE_Aggregation(EDM_BaseClass):
 
     @model_validator(mode="after")
     def validate_conditional_attributes(self) -> Self:
-        assert (self.edm_isShownAt), f"Aggregation must have edm_isShownAt, got: {self.edm_isShownAt}."
-        assert (self.edm_isShownBy), f"Aggregation must have edm_isShownBy, got: {self.edm_isShownBy}."
+        assert (
+            self.edm_isShownAt
+        ), f"Aggregation must have edm_isShownAt, got: {self.edm_isShownAt}."
+        assert (
+            self.edm_isShownBy
+        ), f"Aggregation must have edm_isShownBy, got: {self.edm_isShownBy}."
+
+        assert self.edm_rights, "Missing edm-rights"
+
+        assert self.edm_rights.value, "Missing value for edm-rights"
+        assert not self.edm_rights.value.startswith("https:")
+
+        # if self.edm_rights.value.startswith("https:"):
+        #     self.edm_rights.value = self.edm_rights.value.replace("https:", "http:")
+
         return self
 
 
@@ -1278,6 +1291,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
             assert self.dc_language, f"ProvidedCHO must have dc_language if it is of edm_type 'TEXT', got {self.edm_type=}, {self.dc_language}."
         assert not self.edm_type.lang, f"Property edm_type is not allowed to have a lang-tag"
         assert self.dc_identifier, f"dc-identifier is a non-optional property for the kulturpool"
+
         return self
 
 
@@ -1627,3 +1641,18 @@ class EDM_WebResource(EDM_BaseClass):
 	
 <svcs:has_service rdf:resource="http://www.example.org/Service/IIIF">
     """
+
+    @model_validator(mode="after")
+    def validate_web_resource(self) -> Self:
+        if (
+            hasattr(self, "edm_rights")
+            and self.edm_rights is not None
+            and self.edm_rights.value is not None
+        ):
+            assert self.edm_rights
+            assert self.edm_rights.value, "Missing value for edm-rights"
+            assert not self.edm_rights.value.startswith("https:")
+            # if self.edm_rights.value.startswith("https:"):
+            #     self.edm_rights.value = self.edm_rights.value.replace("https:", "http:")
+
+        return self
