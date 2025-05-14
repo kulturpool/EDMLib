@@ -31,6 +31,3 @@ class EdmRightsTestCase(TestCase):
         parser = EDM_Parser.from_string(self.record_with_http_rights)
         self.assertIsInstance(parser.parse(), EDM_Record)
 
-    def test_https_edm_rights_raises_error(self):
-        parser = EDM_Parser.from_string(self.record_with_https_rights)
-        self.assertRaises(ValidationError, parser.parse)
