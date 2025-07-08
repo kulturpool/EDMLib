@@ -295,7 +295,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 
     mandatory-properties: DC_description, DC_language, DC_subject, DC_title, DC_type, DCTERMS_spatial, DCTERMS_temporal, EDM_type
 
-    optional-properties: DC_coverage, DC_format, DC_relation, DC_rights, DCTERMS_conformsTo, DCTERMS_extent, DCTERMS_hasFormat, DCTERMS_hasPart, DCTERMS_hasVersion, DCTERMS_isFormatOf, DCTERMS_isReferencedBy, DCTERMS_isReplacedBy, DCTERMS_isRequiredBy, DCTERMS_isVersionOf, DCTERMS_medium, DCTERMS_provenance, DCTERMS_references, DCTERMS_replaces, DCTERMS_requires, DCTERMS_tableOfContents , EDM_currentLocation, EDM_hasMet, EDM_hasType, EDM_incorporates, EDM_isDerivativeOf, EDM_isRelatedTo, EDM_isRepresentationOf, EDM_isSimilarTo, EDM_isSuccessorOf, EDM_realizes, OWL_isSameAs
+    optional-properties: DC_coverage, DC_format, DC_relation, DC_rights, DCTERMS_conformsTo, DCTERMS_extent, DCTERMS_hasFormat, DCTERMS_hasPart, DCTERMS_hasVersion, DCTERMS_isFormatOf, DCTERMS_isReferencedBy, DCTERMS_isReplacedBy, DCTERMS_isRequiredBy, DCTERMS_isVersionOf, DCTERMS_medium, DCTERMS_provenance, DCTERMS_references, DCTERMS_replaces, DCTERMS_requires, DCTERMS_tableOfContents , EDM_currentLocation, EDM_hasMet, EDM_hasType, EDM_incorporates, EDM_isDerivativeOf, EDM_isRelatedTo, EDM_isRepresentationOf, EDM_isSimilarTo, EDM_isSuccessorOf, EDM_realizes, OWL_sameAs
 
     recommended-properties: DC_contributor, DC_creator, DC_date, DC_identifier, DC_publisher, DC_source, DCTERMS_alternative, DCTERMS_created, DCTERMS_isPartOf, DCTERMS_issued, EDM_IsNextInSequence
 
@@ -1260,7 +1260,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	. E.g. a copy of the Gutenberg publication realizes the Bible.
     """
 
-    owl_isSameAs: Optional[List[Ref]] = None
+    owl_sameAs: Optional[List[Ref]] = None
     """
     Mandate: 
     optional
@@ -1273,10 +1273,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
     
     Description: 
 
-    Use to point to your own (linked data) representation of the object, if you have alrea
-	dy minted a URI identifier for it. It is also possible to provide URIs minted by third
-	-­‐parties for the object. <owl:sameAs rdf:resource=“http://www.identifier/SameResourc
-	eElsewhere/”>
+    Use to point to your own (linked data) representation of the object, if you have already minted a URI identifier for it. It is also possible to provide URIs minted by third-parties for the object. <owl:sameAs rdf:resource=“http://www.identifier/SameResourceElsewhere/”>
     """
 
     @model_validator(mode="after")
