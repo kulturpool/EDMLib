@@ -191,6 +191,7 @@ class EDM_Parser:
                 convert(el[2])  # type: ignore
                 for el in list(self.graph.triples((instance, ref, None)))
             ]
+            values = [lit_or_ref for lit_or_ref in values if lit_or_ref.value != ""]
             if values:
                 many = check_if_many(cls_obj, att)
                 if not many:
