@@ -442,7 +442,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
 	uirements . 
     """
 
-    dc_identifier: Optional[List[Lit]] = None
+    dc_identifier: List[Lit]
     """
     Mandate: 
     recommended
@@ -1294,9 +1294,6 @@ class EDM_ProvidedCHO(EDM_BaseClass):
         assert (
             not self.edm_type.lang
         ), f"Property edm_type is not allowed to have a lang-tag"
-        assert (
-            self.dc_identifier
-        ), f"dc-identifier is a non-optional property for the kulturpool"
 
         return self
 

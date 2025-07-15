@@ -1,5 +1,5 @@
-from typing import List, TypeAlias, Union
-from pydantic import BaseModel, model_validator, field_validator
+from typing import Annotated, List, TypeAlias, Union
+from pydantic import BaseModel, Field, StringConstraints, model_validator, field_validator
 from typing import Optional
 from typing_extensions import Self
 from edmlib.edm.validation.uri import is_valid_uri, sanitize_url_quotation
@@ -16,7 +16,7 @@ class Ref(BaseModel):
     IRIs are a generalization of URIs [RFC3986] that permits a wider range of Unicode characters.
     """
 
-    value: str
+    value: Annotated[str, StringConstraints(min_length=1, strip_whitespace=True)]
     is_ref: bool = True
 
     @field_validator("value")
@@ -41,7 +41,7 @@ class Lit(BaseModel):
     Ignore the normalize attribute, it is just added for completeness.
     """
 
-    value: str
+    value: Annotated[str, StringConstraints(min_length=1, strip_whitespace=True)]
     lang: Optional[str] = None
     datatype: Optional[str] = None
     normalize: Optional[bool] = False
