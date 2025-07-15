@@ -1,7 +1,9 @@
+from pydantic import ValidationError
+import pytest
 from edmlib import EDM_Parser, EDM_Record, Ref, Lit
 from pathlib import Path
 from tests.fixtures.record import xml_string  # noqa: F401
-from tests.fixtures.parser import get_ref_lit_json, get_ref_lit_xml, get_xml_with_xsdtypes
+from tests.fixtures.parser import get_ref_lit_json, get_ref_lit_xml, get_xml_with_xsdtypes, xml_with_empty_description, xml_with_empty_description_and_invalid_ref
 
 
 def test_file_parser() -> None:
@@ -41,3 +43,16 @@ def test_xml_datatypes_parsing(get_xml_with_xsdtypes) -> None:
     parser = EDM_Parser.from_string(get_xml_with_xsdtypes)
     rec = parser.parse()
     assert rec
+
+
+def test_parser_empty_element(xml_with_empty_description):
+    parser = EDM_Parser.from_string(content=xml_with_empty_description, format="xml")
+    rec = parser.parse()
+    EDM_Record.model_validate(rec)
+    assert rec.provided_cho.dc_description is None or len(rec.provided_cho.dc_description) == 0
+
+def test_parser_empty_element_and_invalid_ref(xml_with_empty_description_and_invalid_ref):
+    parser = EDM_Parser.from_string(content=xml_with_empty_description_and_invalid_ref, format="xml")
+    with pytest.raises(ValidationError):
+        parser.parse()
+    

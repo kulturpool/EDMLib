@@ -43,7 +43,7 @@ def to_literal(literal: Literal) -> Lit:
 
     obj, dtype = _castPythonToLiteral(literal.value, literal.datatype)
 
-    return Lit(
+    return Lit.model_construct(
         value=str(obj),
         lang=literal.language,
         datatype=dtype,
@@ -55,7 +55,7 @@ def to_ref(ref: URIRef) -> Ref:
     Temporary helper function to convert rdflib.URIRef to edm_python.edm.Ref
     """
     value = str(ref)
-    return Ref(value=value)
+    return Ref.model_construct(value=value)
 
 
 def cls_attribute_to_ref(attname: str) -> URIRef:
@@ -192,6 +192,8 @@ class EDM_Parser:
                 for el in list(self.graph.triples((instance, ref, None)))
             ]
             values = [lit_or_ref for lit_or_ref in values if lit_or_ref.value != ""]
+            for value in values:
+                value.__class__.model_validate(value.__class__(**value.model_dump()))  
             if values:
                 many = check_if_many(cls_obj, att)
                 if not many:
