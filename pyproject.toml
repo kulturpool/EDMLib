@@ -15,6 +15,7 @@ lxml = "^5.1.0"
 pydantic = "^2.10.3"
 pyld = "^2.0.3"
 requests = "^2.32.3"
+pdoc = "^15.0.4"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -33,3 +34,6 @@ build-backend = "poetry_dynamic_versioning.backend"
 enable = true
 vcs = "git"
 pattern = "^(?P<base>[0-9]+[.][0-9]+[.][0-9]+)$"
+
+[tool.poetry.scripts]
+update-api-docs = "scripts.apidocs:main"

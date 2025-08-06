@@ -11,6 +11,7 @@ __all__ = [
 class EDM_Namespace(StrEnum):
     """
     Represents the basic namespaces that are listed in the edm mapping guidelines.
+    @nopdoc
     """
 
     ORE = "http://www.openarchives.org/ore/terms/"
@@ -80,6 +81,7 @@ class XSD_Types(StrEnum):
     can by checked via the following import:
 
     from rdflib import XML
+    @nopdoc
     """
 
     ASSERTIONS = "http://www.w3.org/2001/XMLSchema#Assertions"
