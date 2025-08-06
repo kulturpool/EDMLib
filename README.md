@@ -35,6 +35,8 @@ priority = "supplemental"
 
 ## Quick Start
 
+EDM specifications are encapsulated in `EDM_Record`. All data is validated at instantiation, ensuring compliance with EDM.
+
 ### Parse EDM Records
 
 ```python
