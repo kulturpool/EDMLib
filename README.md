@@ -170,6 +170,9 @@ poetry install
 
 # Run tests
 pytest .
+
+# Generate API Documentation
+poetry run update-api-docs
 ```
 
 ### Requirements
