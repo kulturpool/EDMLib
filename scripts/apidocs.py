@@ -2,7 +2,62 @@ import sys
 import re
 from pathlib import Path
 from pdoc.__main__ import cli
+from pdoc.render import env
 import shutil
+
+import re
+from typing import Set, Optional
+
+
+def generate_id(text: str, existing_ids: Optional[Set[str]] = None) -> str:
+    """
+    Generate a unique ID from text following GitHub-style anchor rules.
+
+    Args:
+        text: Input text to convert to ID
+        existing_ids: Set of already used IDs to ensure uniqueness
+
+    Returns:
+        String ID conforming to the specified rules
+    """
+    if existing_ids is None:
+        existing_ids = set()
+
+    # Convert to lowercase
+    result = text.lower()
+
+    # Remove all non-word characters (keep letters, numbers, spaces, hyphens)
+    result = re.sub(r"[^\w\s-]", "", result)
+
+    # Convert spaces to hyphens
+    result = re.sub(r"\s+", "-", result)
+
+    # Convert multiple hyphens to single hyphen
+    result = re.sub(r"-+", "-", result)
+
+    # Remove leading/trailing hyphens
+    result = result.strip("-")
+
+    # Handle empty result
+    if not result:
+        result = "section"
+
+    # Ensure uniqueness by appending incrementing number if needed
+    base_id = result
+    counter = 1
+
+    while result in existing_ids:
+        result = f"{base_id}-{counter}"
+        counter += 1
+
+    # Add to existing_ids set if provided
+    existing_ids.add(result)
+
+    return result
+
+
+def format_id(input: str):
+    return generate_id(input)
 
 
 def main():
@@ -11,6 +66,8 @@ def main():
         project_root = script_dir.parent
         docs_dir = project_root / "docs"
         edm_html_path = docs_dir / "edmlib.html"
+
+        env.filters.update({"format_id": format_id})
 
         cli(
             [

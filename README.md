@@ -182,250 +182,245 @@ pytest .
   - pyld ^2.0.3
   - requests ^2.32.3
 
-
-
 <!--pdoc-start-->
 ## API documentation
 
+*  [EDM_Record](#edm_record)             
+    *  [provided_cho](#edm_recordprovided_cho)  
+    *  [aggregation](#edm_recordaggregation)  
+    *  [web_resource](#edm_recordweb_resource)  
+    *  [skos_concept](#edm_recordskos_concept)  
+    *  [edm_agent](#edm_recordedm_agent)  
+    *  [edm_time_span](#edm_recordedm_time_span)  
+    *  [edm_place](#edm_recordedm_place)  
+    *  [cc_license](#edm_recordcc_license)  
+    *  [svcs_service](#edm_recordsvcs_service)  
+    *  [get_rdf_graph](#edm_recordget_rdf_graph)  
+    *  [serialize](#edm_recordserialize)  
+    *  [get_framed_json_ld](#edm_recordget_framed_json_ld)  
+    *  [validate_provided_cho_identity](#edm_recordvalidate_provided_cho_identity)  
+    *  [fetch_edm_isShownBy_head](#edm_recordfetch_edm_isshownby_head)  
+    *  [has_edm_object](#edm_recordhas_edm_object)  
+    *  [fetch_edm_object_head](#edm_recordfetch_edm_object_head)  
+    *  [has_edm_hasView](#edm_recordhas_edm_hasview)  
+    *  [fetch_edm_hasView_heads](#edm_recordfetch_edm_hasview_heads)  
+    *  [fetch_edm_isShownAt_head](#edm_recordfetch_edm_isshownat_head)  
+    *  [model_config](#edm_recordmodel_config)
 
-<!--### Modules-->
-*  <a href="#EDM_Record">EDM_Record</a>             
-    *  <a href="#EDM_Record.provided_cho">provided_cho</a>  
-    *  <a href="#EDM_Record.aggregation">aggregation</a>  
-    *  <a href="#EDM_Record.web_resource">web_resource</a>  
-    *  <a href="#EDM_Record.skos_concept">skos_concept</a>  
-    *  <a href="#EDM_Record.edm_agent">edm_agent</a>  
-    *  <a href="#EDM_Record.edm_time_span">edm_time_span</a>  
-    *  <a href="#EDM_Record.edm_place">edm_place</a>  
-    *  <a href="#EDM_Record.cc_license">cc_license</a>  
-    *  <a href="#EDM_Record.svcs_service">svcs_service</a>  
-    *  <a href="#EDM_Record.get_rdf_graph">get_rdf_graph</a>  
-    *  <a href="#EDM_Record.serialize">serialize</a>  
-    *  <a href="#EDM_Record.get_framed_json_ld">get_framed_json_ld</a>  
-    *  <a href="#EDM_Record.validate_provided_cho_identity">validate_provided_cho_identity</a>  
-    *  <a href="#EDM_Record.fetch_edm_isShownBy_head">fetch_edm_isShownBy_head</a>  
-    *  <a href="#EDM_Record.has_edm_object">has_edm_object</a>  
-    *  <a href="#EDM_Record.fetch_edm_object_head">fetch_edm_object_head</a>  
-    *  <a href="#EDM_Record.has_edm_hasView">has_edm_hasView</a>  
-    *  <a href="#EDM_Record.fetch_edm_hasView_heads">fetch_edm_hasView_heads</a>  
-    *  <a href="#EDM_Record.fetch_edm_isShownAt_head">fetch_edm_isShownAt_head</a>  
-    *  <a href="#EDM_Record.model_config">model_config</a>  
+*  [EDM_ProvidedCHO](#edm_providedcho)             
+    *  [edm_type](#edm_providedchoedm_type)  
+    *  [dc_contributor](#edm_providedchodc_contributor)  
+    *  [dc_coverage](#edm_providedchodc_coverage)  
+    *  [dc_creator](#edm_providedchodc_creator)  
+    *  [dc_date](#edm_providedchodc_date)  
+    *  [dc_description](#edm_providedchodc_description)  
+    *  [dc_format](#edm_providedchodc_format)  
+    *  [dc_identifier](#edm_providedchodc_identifier)  
+    *  [dc_language](#edm_providedchodc_language)  
+    *  [dc_publisher](#edm_providedchodc_publisher)  
+    *  [dc_relation](#edm_providedchodc_relation)  
+    *  [dc_rights](#edm_providedchodc_rights)  
+    *  [dc_source](#edm_providedchodc_source)  
+    *  [dc_subject](#edm_providedchodc_subject)  
+    *  [dc_title](#edm_providedchodc_title)  
+    *  [dc_type](#edm_providedchodc_type)  
+    *  [dcterms_alternative](#edm_providedchodcterms_alternative)  
+    *  [dcterms_conformsTo](#edm_providedchodcterms_conformsto)  
+    *  [dcterms_created](#edm_providedchodcterms_created)  
+    *  [dcterms_extent](#edm_providedchodcterms_extent)  
+    *  [dcterms_hasFormat](#edm_providedchodcterms_hasformat)  
+    *  [dcterms_hasPart](#edm_providedchodcterms_haspart)  
+    *  [dcterms_hasVersion](#edm_providedchodcterms_hasversion)  
+    *  [dcterms_isFormatOf](#edm_providedchodcterms_isformatof)  
+    *  [dcterms_isPartOf](#edm_providedchodcterms_ispartof)  
+    *  [dcterms_isReferencedBy](#edm_providedchodcterms_isreferencedby)  
+    *  [dcterms_isReplacedBy](#edm_providedchodcterms_isreplacedby)  
+    *  [dcterms_isRequiredBy](#edm_providedchodcterms_isrequiredby)  
+    *  [dcterms_issued](#edm_providedchodcterms_issued)  
+    *  [dcterms_isVersionOf](#edm_providedchodcterms_isversionof)  
+    *  [dcterms_medium](#edm_providedchodcterms_medium)  
+    *  [dcterms_provenance](#edm_providedchodcterms_provenance)  
+    *  [dcterms_references](#edm_providedchodcterms_references)  
+    *  [dcterms_replaces](#edm_providedchodcterms_replaces)  
+    *  [dcterms_requires](#edm_providedchodcterms_requires)  
+    *  [dcterms_spatial](#edm_providedchodcterms_spatial)  
+    *  [dcterms_tableOfContents](#edm_providedchodcterms_tableofcontents)  
+    *  [dcterms_temporal](#edm_providedchodcterms_temporal)  
+    *  [edm_currentLocation](#edm_providedchoedm_currentlocation)  
+    *  [edm_hasMet](#edm_providedchoedm_hasmet)  
+    *  [edm_hasType](#edm_providedchoedm_hastype)  
+    *  [edm_incorporates](#edm_providedchoedm_incorporates)  
+    *  [edm_isDerivativeOf](#edm_providedchoedm_isderivativeof)  
+    *  [edm_isNextInSequence](#edm_providedchoedm_isnextinsequence)  
+    *  [edm_isRelatedTo](#edm_providedchoedm_isrelatedto)  
+    *  [edm_isRepresentationOf](#edm_providedchoedm_isrepresentationof)  
+    *  [edm_isSimilarTo](#edm_providedchoedm_issimilarto)  
+    *  [edm_isSuccessorOf](#edm_providedchoedm_issuccessorof)  
+    *  [edm_realizes](#edm_providedchoedm_realizes)  
+    *  [owl_sameAs](#edm_providedchoowl_sameas)  
+    *  [validate_dependent_edm](#edm_providedchovalidate_dependent_edm)  
+    *  [model_config](#edm_providedchomodel_config)
 
-*  <a href="#EDM_ProvidedCHO">EDM_ProvidedCHO</a>             
-    *  <a href="#EDM_ProvidedCHO.edm_type">edm_type</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_contributor">dc_contributor</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_coverage">dc_coverage</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_creator">dc_creator</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_date">dc_date</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_description">dc_description</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_format">dc_format</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_identifier">dc_identifier</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_language">dc_language</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_publisher">dc_publisher</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_relation">dc_relation</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_rights">dc_rights</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_source">dc_source</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_subject">dc_subject</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_title">dc_title</a>  
-    *  <a href="#EDM_ProvidedCHO.dc_type">dc_type</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_alternative">dcterms_alternative</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_conformsTo">dcterms_conformsTo</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_created">dcterms_created</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_extent">dcterms_extent</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_hasFormat">dcterms_hasFormat</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_hasPart">dcterms_hasPart</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_hasVersion">dcterms_hasVersion</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_isFormatOf">dcterms_isFormatOf</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_isPartOf">dcterms_isPartOf</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_isReferencedBy">dcterms_isReferencedBy</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_isReplacedBy">dcterms_isReplacedBy</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_isRequiredBy">dcterms_isRequiredBy</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_issued">dcterms_issued</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_isVersionOf">dcterms_isVersionOf</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_medium">dcterms_medium</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_provenance">dcterms_provenance</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_references">dcterms_references</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_replaces">dcterms_replaces</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_requires">dcterms_requires</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_spatial">dcterms_spatial</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_tableOfContents">dcterms_tableOfContents</a>  
-    *  <a href="#EDM_ProvidedCHO.dcterms_temporal">dcterms_temporal</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_currentLocation">edm_currentLocation</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_hasMet">edm_hasMet</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_hasType">edm_hasType</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_incorporates">edm_incorporates</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_isDerivativeOf">edm_isDerivativeOf</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_isNextInSequence">edm_isNextInSequence</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_isRelatedTo">edm_isRelatedTo</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_isRepresentationOf">edm_isRepresentationOf</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_isSimilarTo">edm_isSimilarTo</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_isSuccessorOf">edm_isSuccessorOf</a>  
-    *  <a href="#EDM_ProvidedCHO.edm_realizes">edm_realizes</a>  
-    *  <a href="#EDM_ProvidedCHO.owl_sameAs">owl_sameAs</a>  
-    *  <a href="#EDM_ProvidedCHO.validate_dependent_edm">validate_dependent_edm</a>  
-    *  <a href="#EDM_ProvidedCHO.model_config">model_config</a>  
+*  [ORE_Aggregation](#ore_aggregation)             
+    *  [edm_aggregatedCHO](#ore_aggregationedm_aggregatedcho)  
+    *  [edm_dataProvider](#ore_aggregationedm_dataprovider)  
+    *  [edm_provider](#ore_aggregationedm_provider)  
+    *  [edm_rights](#ore_aggregationedm_rights)  
+    *  [edm_hasView](#ore_aggregationedm_hasview)  
+    *  [edm_isShownAt](#ore_aggregationedm_isshownat)  
+    *  [edm_isShownBy](#ore_aggregationedm_isshownby)  
+    *  [edm_object](#ore_aggregationedm_object)  
+    *  [dc_rights](#ore_aggregationdc_rights)  
+    *  [edm_ugc](#ore_aggregationedm_ugc)  
+    *  [edm_intermediateProvider](#ore_aggregationedm_intermediateprovider)  
+    *  [validate_conditional_attributes](#ore_aggregationvalidate_conditional_attributes)  
+    *  [model_config](#ore_aggregationmodel_config)
 
-*  <a href="#ORE_Aggregation">ORE_Aggregation</a>             
-    *  <a href="#ORE_Aggregation.edm_aggregatedCHO">edm_aggregatedCHO</a>  
-    *  <a href="#ORE_Aggregation.edm_dataProvider">edm_dataProvider</a>  
-    *  <a href="#ORE_Aggregation.edm_provider">edm_provider</a>  
-    *  <a href="#ORE_Aggregation.edm_rights">edm_rights</a>  
-    *  <a href="#ORE_Aggregation.edm_hasView">edm_hasView</a>  
-    *  <a href="#ORE_Aggregation.edm_isShownAt">edm_isShownAt</a>  
-    *  <a href="#ORE_Aggregation.edm_isShownBy">edm_isShownBy</a>  
-    *  <a href="#ORE_Aggregation.edm_object">edm_object</a>  
-    *  <a href="#ORE_Aggregation.dc_rights">dc_rights</a>  
-    *  <a href="#ORE_Aggregation.edm_ugc">edm_ugc</a>  
-    *  <a href="#ORE_Aggregation.edm_intermediateProvider">edm_intermediateProvider</a>  
-    *  <a href="#ORE_Aggregation.validate_conditional_attributes">validate_conditional_attributes</a>  
-    *  <a href="#ORE_Aggregation.model_config">model_config</a>  
+*  [EDM_WebResource](#edm_webresource)             
+    *  [dc_creator](#edm_webresourcedc_creator)  
+    *  [dc_description](#edm_webresourcedc_description)  
+    *  [dc_format](#edm_webresourcedc_format)  
+    *  [dc_rights](#edm_webresourcedc_rights)  
+    *  [dc_source](#edm_webresourcedc_source)  
+    *  [dc_type](#edm_webresourcedc_type)  
+    *  [dcterms_conformsTo](#edm_webresourcedcterms_conformsto)  
+    *  [dcterms_created](#edm_webresourcedcterms_created)  
+    *  [dcterms_extent](#edm_webresourcedcterms_extent)  
+    *  [dcterms_hasPart](#edm_webresourcedcterms_haspart)  
+    *  [dcterms_isFormatOf](#edm_webresourcedcterms_isformatof)  
+    *  [dcterms_isPartOf](#edm_webresourcedcterms_ispartof)  
+    *  [dcterms_isReferencedBy](#edm_webresourcedcterms_isreferencedby)  
+    *  [dcterms_issued](#edm_webresourcedcterms_issued)  
+    *  [edm_isNextInSequence](#edm_webresourceedm_isnextinsequence)  
+    *  [edm_rights](#edm_webresourceedm_rights)  
+    *  [owl_sameAs](#edm_webresourceowl_sameas)  
+    *  [svcs_has_service](#edm_webresourcesvcs_has_service)  
+    *  [validate_web_resource](#edm_webresourcevalidate_web_resource)  
+    *  [model_config](#edm_webresourcemodel_config)
 
-*  <a href="#EDM_WebResource">EDM_WebResource</a>             
-    *  <a href="#EDM_WebResource.dc_creator">dc_creator</a>  
-    *  <a href="#EDM_WebResource.dc_description">dc_description</a>  
-    *  <a href="#EDM_WebResource.dc_format">dc_format</a>  
-    *  <a href="#EDM_WebResource.dc_rights">dc_rights</a>  
-    *  <a href="#EDM_WebResource.dc_source">dc_source</a>  
-    *  <a href="#EDM_WebResource.dc_type">dc_type</a>  
-    *  <a href="#EDM_WebResource.dcterms_conformsTo">dcterms_conformsTo</a>  
-    *  <a href="#EDM_WebResource.dcterms_created">dcterms_created</a>  
-    *  <a href="#EDM_WebResource.dcterms_extent">dcterms_extent</a>  
-    *  <a href="#EDM_WebResource.dcterms_hasPart">dcterms_hasPart</a>  
-    *  <a href="#EDM_WebResource.dcterms_isFormatOf">dcterms_isFormatOf</a>  
-    *  <a href="#EDM_WebResource.dcterms_isPartOf">dcterms_isPartOf</a>  
-    *  <a href="#EDM_WebResource.dcterms_isReferencedBy">dcterms_isReferencedBy</a>  
-    *  <a href="#EDM_WebResource.dcterms_issued">dcterms_issued</a>  
-    *  <a href="#EDM_WebResource.edm_isNextInSequence">edm_isNextInSequence</a>  
-    *  <a href="#EDM_WebResource.edm_rights">edm_rights</a>  
-    *  <a href="#EDM_WebResource.owl_sameAs">owl_sameAs</a>  
-    *  <a href="#EDM_WebResource.svcs_has_service">svcs_has_service</a>  
-    *  <a href="#EDM_WebResource.validate_web_resource">validate_web_resource</a>  
-    *  <a href="#EDM_WebResource.model_config">model_config</a>  
+*  [CC_License](#cc_license)             
+    *  [odrl_inheritFrom](#cc_licenseodrl_inheritfrom)  
+    *  [cc_deprecatedOn](#cc_licensecc_deprecatedon)  
+    *  [model_config](#cc_licensemodel_config)
 
-*  <a href="#CC_License">CC_License</a>             
-    *  <a href="#CC_License.odrl_inheritFrom">odrl_inheritFrom</a>  
-    *  <a href="#CC_License.cc_deprecatedOn">cc_deprecatedOn</a>  
-    *  <a href="#CC_License.model_config">model_config</a>  
+*  [SKOS_Concept](#skos_concept)             
+    *  [skos_prefLabel](#skos_conceptskos_preflabel)  
+    *  [skos_altLabel](#skos_conceptskos_altlabel)  
+    *  [skos_broader](#skos_conceptskos_broader)  
+    *  [skos_narrower](#skos_conceptskos_narrower)  
+    *  [skos_related](#skos_conceptskos_related)  
+    *  [skos_broadMatch](#skos_conceptskos_broadmatch)  
+    *  [skos_narrowMatch](#skos_conceptskos_narrowmatch)  
+    *  [skos_relatedMatch](#skos_conceptskos_relatedmatch)  
+    *  [skos_exactMatch](#skos_conceptskos_exactmatch)  
+    *  [skos_closeMatch](#skos_conceptskos_closematch)  
+    *  [skos_note](#skos_conceptskos_note)  
+    *  [skos_notation](#skos_conceptskos_notation)  
+    *  [skos_inScheme](#skos_conceptskos_inscheme)  
+    *  [validate_skos_pref_label](#skos_conceptvalidate_skos_pref_label)  
+    *  [model_config](#skos_conceptmodel_config)
 
-*  <a href="#SKOS_Concept">SKOS_Concept</a>             
-    *  <a href="#SKOS_Concept.skos_prefLabel">skos_prefLabel</a>  
-    *  <a href="#SKOS_Concept.skos_altLabel">skos_altLabel</a>  
-    *  <a href="#SKOS_Concept.skos_broader">skos_broader</a>  
-    *  <a href="#SKOS_Concept.skos_narrower">skos_narrower</a>  
-    *  <a href="#SKOS_Concept.skos_related">skos_related</a>  
-    *  <a href="#SKOS_Concept.skos_broadMatch">skos_broadMatch</a>  
-    *  <a href="#SKOS_Concept.skos_narrowMatch">skos_narrowMatch</a>  
-    *  <a href="#SKOS_Concept.skos_relatedMatch">skos_relatedMatch</a>  
-    *  <a href="#SKOS_Concept.skos_exactMatch">skos_exactMatch</a>  
-    *  <a href="#SKOS_Concept.skos_closeMatch">skos_closeMatch</a>  
-    *  <a href="#SKOS_Concept.skos_note">skos_note</a>  
-    *  <a href="#SKOS_Concept.skos_notation">skos_notation</a>  
-    *  <a href="#SKOS_Concept.skos_inScheme">skos_inScheme</a>  
-    *  <a href="#SKOS_Concept.validate_skos_pref_label">validate_skos_pref_label</a>  
-    *  <a href="#SKOS_Concept.model_config">model_config</a>  
+*  [EDM_Agent](#edm_agent)             
+    *  [skos_prefLabel](#edm_agentskos_preflabel)  
+    *  [skos_altLabel](#edm_agentskos_altlabel)  
+    *  [skos_note](#edm_agentskos_note)  
+    *  [dc_date](#edm_agentdc_date)  
+    *  [dc_identifier](#edm_agentdc_identifier)  
+    *  [dcterms_hasPart](#edm_agentdcterms_haspart)  
+    *  [dcterms_isPartOf](#edm_agentdcterms_ispartof)  
+    *  [edm_begin](#edm_agentedm_begin)  
+    *  [edm_end](#edm_agentedm_end)  
+    *  [edm_hasMet](#edm_agentedm_hasmet)  
+    *  [edm_isRelatedTo](#edm_agentedm_isrelatedto)  
+    *  [foaf_name](#edm_agentfoaf_name)  
+    *  [rdagr2_biographicalInformation](#edm_agentrdagr2_biographicalinformation)  
+    *  [rdagr2_dateOfBirth](#edm_agentrdagr2_dateofbirth)  
+    *  [rdagr2_dateOfDeath](#edm_agentrdagr2_dateofdeath)  
+    *  [rdagr2_dateOfEstablishment](#edm_agentrdagr2_dateofestablishment)  
+    *  [rdagr2_dateOfTermination](#edm_agentrdagr2_dateoftermination)  
+    *  [rdagr2_gender](#edm_agentrdagr2_gender)  
+    *  [rdagr2_placeOfBirth](#edm_agentrdagr2_placeofbirth)  
+    *  [rdagr2_placeOfDeath](#edm_agentrdagr2_placeofdeath)  
+    *  [rdagr2_professionOrOccupation](#edm_agentrdagr2_professionoroccupation)  
+    *  [owl_sameAs](#edm_agentowl_sameas)  
+    *  [validate_skos_pref_label](#edm_agentvalidate_skos_pref_label)  
+    *  [model_config](#edm_agentmodel_config)
 
-*  <a href="#EDM_Agent">EDM_Agent</a>             
-    *  <a href="#EDM_Agent.skos_prefLabel">skos_prefLabel</a>  
-    *  <a href="#EDM_Agent.skos_altLabel">skos_altLabel</a>  
-    *  <a href="#EDM_Agent.skos_note">skos_note</a>  
-    *  <a href="#EDM_Agent.dc_date">dc_date</a>  
-    *  <a href="#EDM_Agent.dc_identifier">dc_identifier</a>  
-    *  <a href="#EDM_Agent.dcterms_hasPart">dcterms_hasPart</a>  
-    *  <a href="#EDM_Agent.dcterms_isPartOf">dcterms_isPartOf</a>  
-    *  <a href="#EDM_Agent.edm_begin">edm_begin</a>  
-    *  <a href="#EDM_Agent.edm_end">edm_end</a>  
-    *  <a href="#EDM_Agent.edm_hasMet">edm_hasMet</a>  
-    *  <a href="#EDM_Agent.edm_isRelatedTo">edm_isRelatedTo</a>  
-    *  <a href="#EDM_Agent.foaf_name">foaf_name</a>  
-    *  <a href="#EDM_Agent.rdagr2_biographicalInformation">rdagr2_biographicalInformation</a>  
-    *  <a href="#EDM_Agent.rdagr2_dateOfBirth">rdagr2_dateOfBirth</a>  
-    *  <a href="#EDM_Agent.rdagr2_dateOfDeath">rdagr2_dateOfDeath</a>  
-    *  <a href="#EDM_Agent.rdagr2_dateOfEstablishment">rdagr2_dateOfEstablishment</a>  
-    *  <a href="#EDM_Agent.rdagr2_dateOfTermination">rdagr2_dateOfTermination</a>  
-    *  <a href="#EDM_Agent.rdagr2_gender">rdagr2_gender</a>  
-    *  <a href="#EDM_Agent.rdagr2_placeOfBirth">rdagr2_placeOfBirth</a>  
-    *  <a href="#EDM_Agent.rdagr2_placeOfDeath">rdagr2_placeOfDeath</a>  
-    *  <a href="#EDM_Agent.rdagr2_professionOrOccupation">rdagr2_professionOrOccupation</a>  
-    *  <a href="#EDM_Agent.owl_sameAs">owl_sameAs</a>  
-    *  <a href="#EDM_Agent.validate_skos_pref_label">validate_skos_pref_label</a>  
-    *  <a href="#EDM_Agent.model_config">model_config</a>  
+*  [EDM_TimeSpan](#edm_timespan)             
+    *  [skos_prefLabel](#edm_timespanskos_preflabel)  
+    *  [skos_altLabel](#edm_timespanskos_altlabel)  
+    *  [skos_note](#edm_timespanskos_note)  
+    *  [dcterms_hasPart](#edm_timespandcterms_haspart)  
+    *  [dcterms_isPartOf](#edm_timespandcterms_ispartof)  
+    *  [edm_begin](#edm_timespanedm_begin)  
+    *  [edm_end](#edm_timespanedm_end)  
+    *  [edm_isNextInSequence](#edm_timespanedm_isnextinsequence)  
+    *  [owl_sameAs](#edm_timespanowl_sameas)  
+    *  [validate_skos_pref_label](#edm_timespanvalidate_skos_pref_label)  
+    *  [model_config](#edm_timespanmodel_config)
 
-*  <a href="#EDM_TimeSpan">EDM_TimeSpan</a>             
-    *  <a href="#EDM_TimeSpan.skos_prefLabel">skos_prefLabel</a>  
-    *  <a href="#EDM_TimeSpan.skos_altLabel">skos_altLabel</a>  
-    *  <a href="#EDM_TimeSpan.skos_note">skos_note</a>  
-    *  <a href="#EDM_TimeSpan.dcterms_hasPart">dcterms_hasPart</a>  
-    *  <a href="#EDM_TimeSpan.dcterms_isPartOf">dcterms_isPartOf</a>  
-    *  <a href="#EDM_TimeSpan.edm_begin">edm_begin</a>  
-    *  <a href="#EDM_TimeSpan.edm_end">edm_end</a>  
-    *  <a href="#EDM_TimeSpan.edm_isNextInSequence">edm_isNextInSequence</a>  
-    *  <a href="#EDM_TimeSpan.owl_sameAs">owl_sameAs</a>  
-    *  <a href="#EDM_TimeSpan.validate_skos_pref_label">validate_skos_pref_label</a>  
-    *  <a href="#EDM_TimeSpan.model_config">model_config</a>  
+*  [EDM_Place](#edm_place)             
+    *  [wgs84_pos_lat](#edm_placewgs84_pos_lat)  
+    *  [wgs84_pos_long](#edm_placewgs84_pos_long)  
+    *  [wgs84_pos_alt](#edm_placewgs84_pos_alt)  
+    *  [skos_prefLabel](#edm_placeskos_preflabel)  
+    *  [skos_altLabel](#edm_placeskos_altlabel)  
+    *  [skos_note](#edm_placeskos_note)  
+    *  [dcterms_hasPart](#edm_placedcterms_haspart)  
+    *  [dcterms_isPartOf](#edm_placedcterms_ispartof)  
+    *  [edm_isNextInSequence](#edm_placeedm_isnextinsequence)  
+    *  [owl_sameAs](#edm_placeowl_sameas)  
+    *  [validate_skos_pref_label](#edm_placevalidate_skos_pref_label)  
+    *  [model_config](#edm_placemodel_config)
 
-*  <a href="#EDM_Place">EDM_Place</a>             
-    *  <a href="#EDM_Place.wgs84_pos_lat">wgs84_pos_lat</a>  
-    *  <a href="#EDM_Place.wgs84_pos_long">wgs84_pos_long</a>  
-    *  <a href="#EDM_Place.wgs84_pos_alt">wgs84_pos_alt</a>  
-    *  <a href="#EDM_Place.skos_prefLabel">skos_prefLabel</a>  
-    *  <a href="#EDM_Place.skos_altLabel">skos_altLabel</a>  
-    *  <a href="#EDM_Place.skos_note">skos_note</a>  
-    *  <a href="#EDM_Place.dcterms_hasPart">dcterms_hasPart</a>  
-    *  <a href="#EDM_Place.dcterms_isPartOf">dcterms_isPartOf</a>  
-    *  <a href="#EDM_Place.edm_isNextInSequence">edm_isNextInSequence</a>  
-    *  <a href="#EDM_Place.owl_sameAs">owl_sameAs</a>  
-    *  <a href="#EDM_Place.validate_skos_pref_label">validate_skos_pref_label</a>  
-    *  <a href="#EDM_Place.model_config">model_config</a>  
+*  [SVCS_Service](#svcs_service)             
+    *  [dcterms_conformsTo](#svcs_servicedcterms_conformsto)  
+    *  [doap_implements](#svcs_servicedoap_implements)  
+    *  [model_config](#svcs_servicemodel_config)
 
-*  <a href="#SVCS_Service">SVCS_Service</a>             
-    *  <a href="#SVCS_Service.dcterms_conformsTo">dcterms_conformsTo</a>  
-    *  <a href="#SVCS_Service.doap_implements">doap_implements</a>  
-    *  <a href="#SVCS_Service.model_config">model_config</a>  
+*  [MixedValuesList](#mixedvalueslist)  
+*  [EDM_Parser](#edm_parser)             
+    *  [EDM_Parser](#edm_parser__init__)  
+    *  [from_file](#edm_parserfrom_file)  
+    *  [from_string](#edm_parserfrom_string)  
+    *  [graph](#edm_parsergraph)  
+    *  [get_single_ref](#edm_parserget_single_ref)  
+    *  [get_many_ref](#edm_parserget_many_ref)  
+    *  [get_triples](#edm_parserget_triples)  
+    *  [get_aggregation](#edm_parserget_aggregation)  
+    *  [get_webresources](#edm_parserget_webresources)  
+    *  [get_instance_triples](#edm_parserget_instance_triples)  
+    *  [parse_single_class](#edm_parserparse_single_class)  
+    *  [parse_many_class](#edm_parserparse_many_class)  
+    *  [parse](#edm_parserparse)
 
-*  <a href="#MixedValuesList">MixedValuesList</a>  
-*  <a href="#EDM_Parser">EDM_Parser</a>             
-    *  <a class="function" href="#EDM_Parser.__init__">EDM_Parser</a>  
-    *  <a href="#EDM_Parser.from_file">from_file</a>  
-    *  <a href="#EDM_Parser.from_string">from_string</a>  
-    *  <a href="#EDM_Parser.graph">graph</a>  
-    *  <a href="#EDM_Parser.get_single_ref">get_single_ref</a>  
-    *  <a href="#EDM_Parser.get_many_ref">get_many_ref</a>  
-    *  <a href="#EDM_Parser.get_triples">get_triples</a>  
-    *  <a href="#EDM_Parser.get_aggregation">get_aggregation</a>  
-    *  <a href="#EDM_Parser.get_webresources">get_webresources</a>  
-    *  <a href="#EDM_Parser.get_instance_triples">get_instance_triples</a>  
-    *  <a href="#EDM_Parser.parse_single_class">parse_single_class</a>  
-    *  <a href="#EDM_Parser.parse_many_class">parse_many_class</a>  
-    *  <a href="#EDM_Parser.parse">parse</a>  
+*  [Ref](#ref)             
+    *  [value](#refvalue)  
+    *  [is_ref](#refis_ref)  
+    *  [validate_value_as_uri](#refvalidate_value_as_uri)  
+    *  [to_rdflib](#refto_rdflib)  
+    *  [model_config](#refmodel_config)
 
-*  <a href="#Ref">Ref</a>             
-    *  <a href="#Ref.value">value</a>  
-    *  <a href="#Ref.is_ref">is_ref</a>  
-    *  <a href="#Ref.validate_value_as_uri">validate_value_as_uri</a>  
-    *  <a href="#Ref.to_rdflib">to_rdflib</a>  
-    *  <a href="#Ref.model_config">model_config</a>  
-
-*  <a href="#Lit">Lit</a>             
-    *  <a href="#Lit.value">value</a>  
-    *  <a href="#Lit.lang">lang</a>  
-    *  <a href="#Lit.datatype">datatype</a>  
-    *  <a href="#Lit.normalize">normalize</a>  
-    *  <a href="#Lit.validate_consistency">validate_consistency</a>  
-    *  <a href="#Lit.to_rdflib">to_rdflib</a>  
-    *  <a href="#Lit.model_config">model_config</a>  
+*  [Lit](#lit)             
+    *  [value](#litvalue)  
+    *  [lang](#litlang)  
+    *  [datatype](#litdatatype)  
+    *  [normalize](#litnormalize)  
+    *  [validate_consistency](#litvalidate_consistency)  
+    *  [to_rdflib](#litto_rdflib)  
+    *  [model_config](#litmodel_config)
 
 
 
 
 
+---
+### EDM_Record
+```python
+class EDM_Record(pydantic.main.BaseModel):
+``` 
 
 
-
-<section id="EDM_Record">
-
-###    class EDM_Record<wbr>(<span class="base">pydantic.main.BaseModel</span>): 
-
-<a class="headerlink" href="#EDM_Record"></a>
 
 <div class="docstring"><p>Pydantic model representing an edm record, as a fully typed structure.
 All contained non-standard types are themselves BaseModels, and the fields are always also either BaseModels or
@@ -441,198 +436,199 @@ Finally, the special type models - Ref and Lit - within those container types ar
 the indiviudal values.</p>
 </div> 
 
-<div id="EDM_Record.provided_cho" class="classattr">
-
-#### provided_cho: edmlib.edm.classes.core.EDM_ProvidedCHO 
-
-<a class="headerlink" href="#EDM_Record.provided_cho"></a>
-
-
-
-</div>
-<div id="EDM_Record.aggregation" class="classattr">
-
-#### aggregation: edmlib.edm.classes.core.ORE_Aggregation 
-
-<a class="headerlink" href="#EDM_Record.aggregation"></a>
+#### EDM_Record.provided_cho
+```python
+provided_cho: edmlib.edm.classes.core.EDM_ProvidedCHO
+```
 
 
 
-</div>
-<div id="EDM_Record.web_resource" class="classattr">
-
-#### web_resource: Optional[List[edmlib.edm.classes.core.EDM_WebResource]] 
-
-<a class="headerlink" href="#EDM_Record.web_resource"></a>
 
 
-
-</div>
-<div id="EDM_Record.skos_concept" class="classattr">
-
-#### skos_concept: Optional[List[edmlib.edm.classes.context.SKOS_Concept]] 
-
-<a class="headerlink" href="#EDM_Record.skos_concept"></a>
+#### EDM_Record.aggregation
+```python
+aggregation: edmlib.edm.classes.core.ORE_Aggregation
+```
 
 
 
-</div>
-<div id="EDM_Record.edm_agent" class="classattr">
-
-#### edm_agent: Optional[List[edmlib.edm.classes.context.EDM_Agent]] 
-
-<a class="headerlink" href="#EDM_Record.edm_agent"></a>
 
 
-
-</div>
-<div id="EDM_Record.edm_time_span" class="classattr">
-
-#### edm_time_span: Optional[List[edmlib.edm.classes.context.EDM_TimeSpan]] 
-
-<a class="headerlink" href="#EDM_Record.edm_time_span"></a>
+#### EDM_Record.web_resource
+```python
+web_resource: Optional[List[edmlib.edm.classes.core.EDM_WebResource]]
+```
 
 
 
-</div>
-<div id="EDM_Record.edm_place" class="classattr">
-
-#### edm_place: Optional[List[edmlib.edm.classes.context.EDM_Place]] 
-
-<a class="headerlink" href="#EDM_Record.edm_place"></a>
 
 
-
-</div>
-<div id="EDM_Record.cc_license" class="classattr">
-
-#### cc_license: Optional[List[edmlib.edm.classes.context.CC_License]] 
-
-<a class="headerlink" href="#EDM_Record.cc_license"></a>
+#### EDM_Record.skos_concept
+```python
+skos_concept: Optional[List[edmlib.edm.classes.context.SKOS_Concept]]
+```
 
 
 
-</div>
-<div id="EDM_Record.svcs_service" class="classattr">
-
-#### svcs_service: Optional[List[edmlib.edm.classes.service.SVCS_Service]] 
-
-<a class="headerlink" href="#EDM_Record.svcs_service"></a>
 
 
+#### EDM_Record.edm_agent
+```python
+edm_agent: Optional[List[edmlib.edm.classes.context.EDM_Agent]]
+```
 
-</div>
-<div id="EDM_Record.get_rdf_graph" class="classattr">
 
-####     def get_rdf_graph(self)  
 
-<a class="headerlink" href="#EDM_Record.get_rdf_graph"></a>
+
+
+#### EDM_Record.edm_time_span
+```python
+edm_time_span: Optional[List[edmlib.edm.classes.context.EDM_TimeSpan]]
+```
+
+
+
+
+
+#### EDM_Record.edm_place
+```python
+edm_place: Optional[List[edmlib.edm.classes.context.EDM_Place]]
+```
+
+
+
+
+
+#### EDM_Record.cc_license
+```python
+cc_license: Optional[List[edmlib.edm.classes.context.CC_License]]
+```
+
+
+
+
+
+#### EDM_Record.svcs_service
+```python
+svcs_service: Optional[List[edmlib.edm.classes.service.SVCS_Service]]
+```
+
+
+
+
+
+#### EDM_Record.get_rdf_graph
+```python
+def get_rdf_graph(self)
+```
+
+
 
 <div class="docstring"><p>Return whole record as as an RDF - rdflib.Graph object.</p>
 </div> 
 
-</div>
-<div id="EDM_Record.serialize" class="classattr">
+#### EDM_Record.serialize
+```python
+def serialize(self, format: str = 'pretty-xml', max_depth: int = 1) -> str
+```
 
-####     def serialize(self, format: str = &#39;pretty-xml&#39;, max_depth: int = 1) -&gt; str  
 
-<a class="headerlink" href="#EDM_Record.serialize"></a>
 
 <div class="docstring"><p>Serialize graph to rdf/xml with pretty-formatting.</p>
 </div> 
 
-</div>
-<div id="EDM_Record.get_framed_json_ld" class="classattr">
-
-####     def get_framed_json_ld(self)  
-
-<a class="headerlink" href="#EDM_Record.get_framed_json_ld"></a>
+#### EDM_Record.get_framed_json_ld
+```python
+def get_framed_json_ld(self)
+```
 
 
 
-</div>
-<div id="EDM_Record.validate_provided_cho_identity" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_provided_cho_identity(self) -&gt; Self  
-
-<a class="headerlink" href="#EDM_Record.validate_provided_cho_identity"></a>
 
 
-
-</div>
-<div id="EDM_Record.fetch_edm_isShownBy_head" class="classattr">
-
-####     def fetch_edm_isShownBy_head(self, **kwargs) -&gt; requests.models.Response  
-
-<a class="headerlink" href="#EDM_Record.fetch_edm_isShownBy_head"></a>
+#### EDM_Record.validate_provided_cho_identity
+```python
+@model_validator(mode='after') def validate_provided_cho_identity(self) -> Self
+```
 
 
 
-</div>
-<div id="EDM_Record.has_edm_object" class="classattr">
-
-####     def has_edm_object(self) -&gt; bool  
-
-<a class="headerlink" href="#EDM_Record.has_edm_object"></a>
 
 
-
-</div>
-<div id="EDM_Record.fetch_edm_object_head" class="classattr">
-
-####     def fetch_edm_object_head(self, **kwargs) -&gt; requests.models.Response  
-
-<a class="headerlink" href="#EDM_Record.fetch_edm_object_head"></a>
+#### EDM_Record.fetch_edm_isShownBy_head
+```python
+def fetch_edm_isShownBy_head(self, **kwargs) -> requests.models.Response
+```
 
 
 
-</div>
-<div id="EDM_Record.has_edm_hasView" class="classattr">
-
-####     def has_edm_hasView(self) -&gt; bool  
-
-<a class="headerlink" href="#EDM_Record.has_edm_hasView"></a>
 
 
-
-</div>
-<div id="EDM_Record.fetch_edm_hasView_heads" class="classattr">
-
-####     def fetch_edm_hasView_heads(self, **kwargs) -&gt; list[requests.models.Response]  
-
-<a class="headerlink" href="#EDM_Record.fetch_edm_hasView_heads"></a>
+#### EDM_Record.has_edm_object
+```python
+def has_edm_object(self) -> bool
+```
 
 
 
-</div>
-<div id="EDM_Record.fetch_edm_isShownAt_head" class="classattr">
-
-####     def fetch_edm_isShownAt_head(self, **kwargs) -&gt; requests.models.Response  
-
-<a class="headerlink" href="#EDM_Record.fetch_edm_isShownAt_head"></a>
 
 
+#### EDM_Record.fetch_edm_object_head
+```python
+def fetch_edm_object_head(self, **kwargs) -> requests.models.Response
+```
 
-</div>
-<div id="EDM_Record.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#EDM_Record.model_config"></a>
+
+
+#### EDM_Record.has_edm_hasView
+```python
+def has_edm_hasView(self) -> bool
+```
+
+
+
+
+
+#### EDM_Record.fetch_edm_hasView_heads
+```python
+def fetch_edm_hasView_heads(self, **kwargs) -> list[requests.models.Response]
+```
+
+
+
+
+
+#### EDM_Record.fetch_edm_isShownAt_head
+```python
+def fetch_edm_isShownAt_head(self, **kwargs) -> requests.models.Response
+```
+
+
+
+
+
+#### EDM_Record.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="EDM_ProvidedCHO">
+---
+### EDM_ProvidedCHO
+```python
+class EDM_ProvidedCHO(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class EDM_ProvidedCHO<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#EDM_ProvidedCHO"></a>
 
 <div class="docstring"><p>mandatory-properties: DC_description, DC_language, DC_subject, DC_title, DC_type, DCTERMS_spatial, DCTERMS_temporal, EDM_type</p>
 
@@ -641,11 +637,12 @@ the indiviudal values.</p>
 <p>recommended-properties: DC_contributor, DC_creator, DC_date, DC_identifier, DC_publisher, DC_source, DCTERMS_alternative, DCTERMS_created, DCTERMS_isPartOf, DCTERMS_issued, EDM_IsNextInSequence</p>
 </div> 
 
-<div id="EDM_ProvidedCHO.edm_type" class="classattr">
+#### EDM_ProvidedCHO.edm_type
+```python
+edm_type: edmlib.edm.value_types.Lit
+```
 
-#### edm_type: edmlib.edm.value_types.Lit 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_type"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -664,12 +661,12 @@ ctionality: TEXT, VIDEO, SOUND, IMAGE, 3D. (For 3D, when applicable, use the val
 pe>3D</edm:type> (upper-­case &amp; case sensitive)</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_contributor" class="classattr">
+#### EDM_ProvidedCHO.dc_contributor
+```python
+dc_contributor: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_contributor: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_contributor"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -690,12 +687,12 @@ class <dc:contributor rdf:resource=“http://www.example.com/MariaCallas”&gt;F
 ations on medata quality see Tier A-C requirements ,</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_coverage" class="classattr">
+#### EDM_ProvidedCHO.dc_coverage
+```python
+dc_coverage: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_coverage: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_coverage"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -715,12 +712,12 @@ ntextual class, for example, a Place class <dc:coverage rdf:resource=“<a href=
 ames.org/2950159/ ”/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_creator" class="classattr">
+#### EDM_ProvidedCHO.dc_creator
+```python
+dc_creator: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_creator: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_creator"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -740,12 +737,12 @@ ce=“http://viaf.org/viaf/96994048”/>For recommendations on medata quality se
 requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_date" class="classattr">
+#### EDM_ProvidedCHO.dc_date
+```python
+dc_date: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_date: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_date"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -767,12 +764,12 @@ ate a reference to an instance of the TimeSpan class <dc:date rdf:resource=“<a
 ium.org/time/19xx_1_third”/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_description" class="classattr">
+#### EDM_ProvidedCHO.dc_description
+```python
+dc_description: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_description: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_description"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -792,12 +789,12 @@ vement Guidance and Control System) for airports with low visibility conditions.
 escription></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_format" class="classattr">
+#### EDM_ProvidedCHO.dc_format
+```python
+dc_format: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_format: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_format"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -816,12 +813,12 @@ te. <dc:format>paper</dc:format>For recommendations on medata quality see Tier A
 uirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_identifier" class="classattr">
+#### EDM_ProvidedCHO.dc_identifier
+```python
+dc_identifier: List[edmlib.edm.value_types.Lit]
+```
 
-#### dc_identifier: List[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_identifier"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -837,12 +834,12 @@ Optional[List[Lit]]</p>
 <p>An identifier of the original CHO. <dc:identifier>RP-­T-­1952-­380</dc:identifier></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_language" class="classattr">
+#### EDM_ProvidedCHO.dc_language
+```python
+dc_language: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### dc_language: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_language"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -862,12 +859,12 @@ gs.Repeat for multiple languages. We also recommend the use of the ISO 639-­2 c
 no linguistic content (ZXX).</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_publisher" class="classattr">
+#### EDM_ProvidedCHO.dc_publisher
+```python
+dc_publisher: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_publisher: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_publisher"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -886,12 +883,12 @@ reate a reference to an instance of the Agent class <dc:publisher rdf:resource=�
 /www.oup.com/”/>For recommendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_relation" class="classattr">
+#### EDM_ProvidedCHO.dc_relation
+```python
+dc_relation: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_relation: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_relation"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -910,12 +907,12 @@ de a link to another object: <dc:relation rdf:resource=“<a href="http://www.id
 bject”/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_rights" class="classattr">
+#### EDM_ProvidedCHO.dc_rights
+```python
+dc_rights: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_rights: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_rights"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -934,12 +931,12 @@ l objects and applies to the edm:WebResource and/or edm:Aggregation). <dc:rights
 ight © British Library Board</dc:rights></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_source" class="classattr">
+#### EDM_ProvidedCHO.dc_source
+```python
+dc_source: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_source: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_source"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -957,12 +954,12 @@ e. the source of the original CHO.  (Not the name of the content holder: for thi
 edm:dataProvider.) <dc:source>Security Magazine pp 3-12</dc:source></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_subject" class="classattr">
+#### EDM_ProvidedCHO.dc_subject
+```python
+dc_subject: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_subject: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_subject"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -986,12 +983,12 @@ os:prefLabel></skos:Concept>For recommendations on medata quality see Tier A-C r
 ments .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_title" class="classattr">
+#### EDM_ProvidedCHO.dc_title
+```python
+dc_title: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### dc_title: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_title"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -1011,12 +1008,12 @@ l language attributes. <dc:title xml:lang=“en”&gt;Eight Weeks</dc:title> <dc
 ng=“it”&gt;Ocho semanas</ dc:title></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dc_type" class="classattr">
+#### EDM_ProvidedCHO.dc_type
+```python
+dc_type: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_type: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dc_type"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -1038,12 +1035,12 @@ dc:type should not be (strictly) identical to edm:type. <dc:type>Book</dc:type> 
 s on medata quality see Tier A-C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_alternative" class="classattr">
+#### EDM_ProvidedCHO.dcterms_alternative
+```python
+dcterms_alternative: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### dcterms_alternative: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_alternative"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -1060,12 +1057,12 @@ Optional[List[Lit]]</p>
 be exact. <dcterms:alternativexml:lang=“en”&gt;Eight weeks: a novel</dcterms:alternative></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_conformsTo" class="classattr">
+#### EDM_ProvidedCHO.dcterms_conformsTo
+```python
+dcterms_conformsTo: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_conformsTo: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_conformsTo"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1083,12 +1080,12 @@ cterms:conformsTo> (conforms to web content accessibility guidelines). Or link t
 resource <dcterms:conformsTo rdf:resource=“http://www.w3.org/TR/WCAG/”/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_created" class="classattr">
+#### EDM_ProvidedCHO.dcterms_created
+```python
+dcterms_created: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_created: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_created"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -1111,12 +1108,12 @@ http://semium.org/time/15xx_3_third”/>For recommendations on medata quality se
 -C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_extent" class="classattr">
+#### EDM_ProvidedCHO.dcterms_extent
+```python
+dcterms_extent: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_extent: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_extent"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1134,12 +1131,12 @@ an original object). <dcterms:extent>34 minutes</dcterms:extent> (the duration o
 udio file)</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_hasFormat" class="classattr">
+#### EDM_ProvidedCHO.dcterms_hasFormat
+```python
+dcterms_hasFormat: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_hasFormat: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_hasFormat"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1159,12 +1156,12 @@ link to a resource <dcterms:hasFormat rdf:resource=“<a href="http://upload.wik
 edia/en/f/f3/Europeana_logo.png’’/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_hasPart" class="classattr">
+#### EDM_ProvidedCHO.dcterms_hasPart
+```python
+dcterms_hasPart: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_hasPart: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_hasPart"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1184,12 +1181,12 @@ en) it is preferable to use dcterms:isPartOf. <dcterms:hasPart>Vol.2. Issue 1</d
 :hasPart></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_hasVersion" class="classattr">
+#### EDM_ProvidedCHO.dcterms_hasVersion
+```python
+dcterms_hasVersion: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_hasVersion: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_hasVersion"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1208,12 +1205,12 @@ r’s Apprentice (translation by Edwin Zeydel, 1955)</dcterms:hasVersion> In thi
 e the 1955 translation is a version of the described resource.</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_isFormatOf" class="classattr">
+#### EDM_ProvidedCHO.dcterms_isFormatOf
+```python
+dcterms_isFormatOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isFormatOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_isFormatOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1231,12 +1228,12 @@ erms:isFormatOf>Europeana_logo.tiff</dcterms:isFormatOf> where the resource bein
 ribed is a png image file</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_isPartOf" class="classattr">
+#### EDM_ProvidedCHO.dcterms_isPartOf
+```python
+dcterms_isPartOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isPartOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_isPartOf"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -1259,12 +1256,12 @@ ny children) it is preferable to use dcterms:isPartOf. <dcterms:isPartOf>Crace C
 ion of Maps of London</dcterms:isPartOf></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_isReferencedBy" class="classattr">
+#### EDM_ProvidedCHO.dcterms_isReferencedBy
+```python
+dcterms_isReferencedBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isReferencedBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_isReferencedBy"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1282,12 +1279,12 @@ erencedBy>Till, Nicholas (1994) Mozart and the Enlightenment: Truth, Virtue and 
 in Mozart’s Operas, W. W. Norton &amp; Company</dcterms:isReferencedBy></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_isReplacedBy" class="classattr">
+#### EDM_ProvidedCHO.dcterms_isReplacedBy
+```python
+dcterms_isReplacedBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isReplacedBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_isReplacedBy"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1307,12 +1304,12 @@ or link <dcterms:isReplacedBy rdf:resource=“<a href="http://dublincore.org/abo
 aws/”/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_isRequiredBy" class="classattr">
+#### EDM_ProvidedCHO.dcterms_isRequiredBy
+```python
+dcterms_isRequiredBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isRequiredBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_isRequiredBy"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1330,12 +1327,12 @@ herence <isRequiredBy><a href="http://www.myslides.com/myslideshow.ppt">http://w
 image being described is required for an online slideshow.</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_issued" class="classattr">
+#### EDM_ProvidedCHO.dcterms_issued
+```python
+dcterms_issued: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_issued: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_issued"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -1360,12 +1357,12 @@ the TimeSpan class <dcterms:issued rdf:resource=“<a href="http://semium.org/ti
 </blockquote>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_isVersionOf" class="classattr">
+#### EDM_ProvidedCHO.dcterms_isVersionOf
+```python
+dcterms_isVersionOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isVersionOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_isVersionOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1384,12 +1381,12 @@ rcerer’s Apprentice<dcterms:isVersionOf>In this example The Sorcerer’s Appre
 nslation by Edwin Zeydel, 1955) is the resource being described.</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_medium" class="classattr">
+#### EDM_ProvidedCHO.dcterms_medium
+```python
+dcterms_medium: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_medium: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_medium"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1406,12 +1403,12 @@ Optional[MixedValuesList]</p>
 r recommendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_provenance" class="classattr">
+#### EDM_ProvidedCHO.dcterms_provenance
+```python
+dcterms_provenance: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_provenance: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_provenance"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1429,12 +1426,12 @@ cant for authenticity, integrity and interpretation. <dcterms:provenance>Donated
 e National Library in 1965</dcterms:provenance></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_references" class="classattr">
+#### EDM_ProvidedCHO.dcterms_references
+```python
+dcterms_references: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_references: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_references"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1451,12 +1448,12 @@ Optional[MixedValuesList]</p>
 ces>Honderd jaar Noorse schilderkunst </dcterms:references></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_replaces" class="classattr">
+#### EDM_ProvidedCHO.dcterms_replaces
+```python
+dcterms_replaces: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_replaces: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_replaces"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1476,12 +1473,12 @@ r link to resource <dcterms:replaces rdf:resource=“<a href="http://dublincore.
 /01/bylaws/”/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_requires" class="classattr">
+#### EDM_ProvidedCHO.dcterms_requires
+```python
+dcterms_requires: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_requires: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_requires"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1500,12 +1497,12 @@ browsers.css </dcterms:requires> where the resource described is an HTML file at
 //ads.ahds.ac.uk/project/userinfo/digitalTextArchiving.html</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_spatial" class="classattr">
+#### EDM_ProvidedCHO.dcterms_spatial
+```python
+dcterms_spatial: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_spatial: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_spatial"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -1530,12 +1527,12 @@ spatial rdf:resource=“<a href="https://sws.geonames.org/2264397/">https://sws.
 ta quality see Tier A-C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_tableOfContents" class="classattr">
+#### EDM_ProvidedCHO.dcterms_tableOfContents
+```python
+dcterms_tableOfContents: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### dcterms_tableOfContents: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_tableOfContents"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1552,12 +1549,12 @@ Optional[List[Lit]]</p>
 er 2. History </dcterms:tableOfContents></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.dcterms_temporal" class="classattr">
+#### EDM_ProvidedCHO.dcterms_temporal
+```python
+dcterms_temporal: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_temporal: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.dcterms_temporal"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -1582,12 +1579,12 @@ an class <dcterms:temporal rdf:resource=“http://semium.org/time/roman_empire�
 ommendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_currentLocation" class="classattr">
+#### EDM_ProvidedCHO.edm_currentLocation
+```python
+edm_currentLocation: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref, NoneType]
+```
 
-#### edm_currentLocation: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref, NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_currentLocation"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1613,12 +1610,12 @@ onames.org/2950159/”&gt; (Identifier for Berlin)For recommendations on medata 
 Tier A-C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_hasMet" class="classattr">
+#### EDM_ProvidedCHO.edm_hasMet
+```python
+edm_hasMet: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_hasMet: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_hasMet"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1638,12 +1635,12 @@ at the CHO may have “met” in its life. <edm:hasMet rdf:resource=“<a href="
 commendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_hasType" class="classattr">
+#### EDM_ProvidedCHO.edm_hasType
+```python
+edm_hasType: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### edm_hasType: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_hasType"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1662,12 +1659,12 @@ y can be seen as a super-­property of e.g. dc:format or dc:type to support “W
 tions. <edm:hasType>Painting</edm:hasType></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_incorporates" class="classattr">
+#### EDM_ProvidedCHO.edm_incorporates
+```python
+edm_incorporates: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_incorporates: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_incorporates"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1685,12 +1682,12 @@ movie “A Clockwork Orange” incorporates Rossini’s La Gazza Ladra” in its
 <edm:incorporates rdf:resource=“http://www.identifier/IncorporatedResource/“&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_isDerivativeOf" class="classattr">
+#### EDM_ProvidedCHO.edm_isDerivativeOf
+```python
+edm_isDerivativeOf: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isDerivativeOf: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_isDerivativeOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1708,12 +1705,12 @@ the identifier of Moby Dick when the Italian translation is the described CHO. <
 sDerivativeOf rdf:resource=“http://www.identifier/SourceResource/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_isNextInSequence" class="classattr">
+#### EDM_ProvidedCHO.edm_isNextInSequence
+```python
+edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_isNextInSequence"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -1732,12 +1729,12 @@ rect display in the portal. <edm:isNextInSequence rdf:resource=“<a href="http:
 PrecedingResource”/</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_isRelatedTo" class="classattr">
+#### EDM_ProvidedCHO.edm_isRelatedTo
+```python
+edm_isRelatedTo: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### edm_isRelatedTo: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_isRelatedTo"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1756,12 +1753,12 @@ atedTo>Literature</edm:isRelatedTo> Or link to resource <edm:isRelatedTo rdf:res
 “http://www.eionet.europa.eu/gemet/concept?cp=4850/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_isRepresentationOf" class="classattr">
+#### EDM_ProvidedCHO.edm_isRepresentationOf
+```python
+edm_isRepresentationOf: Optional[edmlib.edm.value_types.Ref]
+```
 
-#### edm_isRepresentationOf: Optional[edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_isRepresentationOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1779,12 +1776,12 @@ the identifier of the statue when the CHO being described is a painting of that 
 . <edm:isRepresentativeOf rdf:resource=“http://www.identifier/RepresentedResource/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_isSimilarTo" class="classattr">
+#### EDM_ProvidedCHO.edm_isSimilarTo
+```python
+edm_isSimilarTo: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isSimilarTo: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_isSimilarTo"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1801,12 +1798,12 @@ Optional[List[Ref]]</p>
 arTo rdf:resource=“http://www.identifier/SimilarResource”/></p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_isSuccessorOf" class="classattr">
+#### EDM_ProvidedCHO.edm_isSuccessorOf
+```python
+edm_isSuccessorOf: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isSuccessorOf: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_isSuccessorOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1824,12 +1821,12 @@ Towers” is a successor of “Fellowship of the Ring”. <edm:isSuccessorOf rdf
 http://dbpedia.org/resource/The_Fellowship_of_the_Ring/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.edm_realizes" class="classattr">
+#### EDM_ProvidedCHO.edm_realizes
+```python
+edm_realizes: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_realizes: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.edm_realizes"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1846,12 +1843,12 @@ Optional[List[Ref]]</p>
 . E.g. a copy of the Gutenberg publication realizes the Bible.</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.owl_sameAs" class="classattr">
+#### EDM_ProvidedCHO.owl_sameAs
+```python
+owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.owl_sameAs"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -1867,35 +1864,35 @@ Optional[List[Ref]]</p>
 <p>Use to point to your own (linked data) representation of the object, if you have already minted a URI identifier for it. It is also possible to provide URIs minted by third-parties for the object. <owl:sameAs rdf:resource=“http://www.identifier/SameResourceElsewhere/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_ProvidedCHO.validate_dependent_edm" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_dependent_edm(self) -&gt; Self  
-
-<a class="headerlink" href="#EDM_ProvidedCHO.validate_dependent_edm"></a>
+#### EDM_ProvidedCHO.validate_dependent_edm
+```python
+@model_validator(mode='after') def validate_dependent_edm(self) -> Self
+```
 
 
 
-</div>
-<div id="EDM_ProvidedCHO.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#EDM_ProvidedCHO.model_config"></a>
+#### EDM_ProvidedCHO.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="ORE_Aggregation">
+---
+### ORE_Aggregation
+```python
+class ORE_Aggregation(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class ORE_Aggregation<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#ORE_Aggregation"></a>
 
 <div class="docstring"><p>ORE Aggregation</p>
 
@@ -1906,11 +1903,12 @@ Optional[List[Ref]]</p>
 <p>recommended-properties: EDM_object, EDM_intermediateProvider</p>
 </div> 
 
-<div id="ORE_Aggregation.edm_aggregatedCHO" class="classattr">
+#### ORE_Aggregation.edm_aggregatedCHO
+```python
+edm_aggregatedCHO: edmlib.edm.value_types.Ref
+```
 
-#### edm_aggregatedCHO: edmlib.edm.value_types.Ref 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_aggregatedCHO"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -1928,12 +1926,12 @@ nked open data URI or an internal identifier. <edm:aggregatedCHO rdf:resource=�
 214”/></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_dataProvider" class="classattr">
+#### ORE_Aggregation.edm_dataProvider
+```python
+edm_dataProvider: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]
+```
 
-#### edm_dataProvider: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_dataProvider"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -1955,12 +1953,12 @@ mediateProvider>Erfgoedplus.be</edm:intermediateProvider> <edm:provider>LoCloud<
 rovider></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_provider" class="classattr">
+#### ORE_Aggregation.edm_provider
+```python
+edm_provider: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]
+```
 
-#### edm_provider: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_provider"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -1982,12 +1980,12 @@ er> <edm:intermediateProvider>Erfgoedplus.be</edm:intermediateProvider><edm:prov
 oCloud</edm:provider></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_rights" class="classattr">
+#### ORE_Aggregation.edm_rights
+```python
+edm_rights: edmlib.edm.value_types.Ref
+```
 
-#### edm_rights: edmlib.edm.value_types.Ref 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_rights"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -2031,12 +2029,12 @@ r the restrictions): <a href="http://rightsstatements.org/vocab/NoC-­NC/1.0/">h
 :resource="#statement_3000095353971"/></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_hasView" class="classattr">
+#### ORE_Aggregation.edm_hasView
+```python
+edm_hasView: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_hasView: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_hasView"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2059,12 +2057,12 @@ EDIN/VIDEO/0032195v.mpg"/> <edm:hasView rdf:resource="<a href="http://www.mimo-�
 IN/AUDIO/0032195s.mp3"/></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_isShownAt" class="classattr">
+#### ORE_Aggregation.edm_isShownAt
+```python
+edm_isShownAt: Optional[edmlib.edm.value_types.Ref]
+```
 
-#### edm_isShownAt: Optional[edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_isShownAt"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -2084,12 +2082,12 @@ ng an edm:isShownAt is strongly recommended in all cases.<edm:isShownAt rdf:reso
 http://www.mimo-­‐db.eu/UEDIN/214"/></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_isShownBy" class="classattr">
+#### ORE_Aggregation.edm_isShownBy
+```python
+edm_isShownBy: Optional[edmlib.edm.value_types.Ref]
+```
 
-#### edm_isShownBy: Optional[edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_isShownBy"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -2109,12 +2107,12 @@ uropeana Media Policy or information regarding the specifications of previews. <
 ShownBy rdf:resource="http://www.mimo‐db.eu/media/UEDIN/IMAGE/0032195c.jpg"/></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_object" class="classattr">
+#### ORE_Aggregation.edm_object
+```python
+edm_object: Optional[edmlib.edm.value_types.Ref]
+```
 
-#### edm_object: Optional[edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_object"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -2136,12 +2134,12 @@ ion approach, objects with edm:type=IMAGE that have no edm:isShownBy nor edm:obj
 ll not be published in Europeana. (See also ContentTier 1: Image type )</p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.dc_rights" class="classattr">
+#### ORE_Aggregation.dc_rights
+```python
+dc_rights: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_rights: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#ORE_Aggregation.dc_rights"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2159,12 +2157,12 @@ cluded here for the conversion of data from ESE where it is not known which obje
 rights apply to.</p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_ugc" class="classattr">
+#### ORE_Aggregation.edm_ugc
+```python
+edm_ugc: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### edm_ugc: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_ugc"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2183,12 +2181,12 @@ tify such content and can only take the value “true” (lower case). <edm:ugc>
 ugc></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.edm_intermediateProvider" class="classattr">
+#### ORE_Aggregation.edm_intermediateProvider
+```python
+edm_intermediateProvider: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### edm_intermediateProvider: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#ORE_Aggregation.edm_intermediateProvider"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -2212,46 +2210,47 @@ es would look like this: <edm:dataProvider>Zuidwestbrabants Museum</edm:dataProv
 ermediateProvider></p>
 </div> 
 
-</div>
-<div id="ORE_Aggregation.validate_conditional_attributes" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_conditional_attributes(self) -&gt; Self  
-
-<a class="headerlink" href="#ORE_Aggregation.validate_conditional_attributes"></a>
+#### ORE_Aggregation.validate_conditional_attributes
+```python
+@model_validator(mode='after') def validate_conditional_attributes(self) -> Self
+```
 
 
 
-</div>
-<div id="ORE_Aggregation.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#ORE_Aggregation.model_config"></a>
+#### ORE_Aggregation.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="EDM_WebResource">
+---
+### EDM_WebResource
+```python
+class EDM_WebResource(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class EDM_WebResource<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#EDM_WebResource"></a>
 
 <div class="docstring"><p>optional-properties: DC_creator, DC_description, DC_format, DC_rights, DC_source, DC_type, DCTERMS_conformsTo, DCTERMS_created, DCTERMS_extent, DCTERMS_hasPart, DCTERMS_isFormatOf, DCTERMS_isPartOf, DCTERMS_isReferencedBy, DCTERMS_issued, EDM_isNextInSequence, OWL_sameAs, SVCS_has_service, DCTERMS_IsReferencedBy</p>
 
 <p>recommended-properties: EDM_rights</p>
 </div> 
 
-<div id="EDM_WebResource.dc_creator" class="classattr">
+#### EDM_WebResource.dc_creator
+```python
+dc_creator: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_creator: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dc_creator"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2270,12 +2269,12 @@ icoteca Nacional de España</dc:creator> or create a reference to an instance of
 ent class <dc:creator rdf:resource=“http://viaf.org/viaf/147143794/”/></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dc_description" class="classattr">
+#### EDM_WebResource.dc_description
+```python
+dc_description: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_description: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dc_description"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2292,12 +2291,12 @@ Optional[MixedValuesList]</p>
 rmance with Buccin trombone</dc:description></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dc_format" class="classattr">
+#### EDM_WebResource.dc_format
+```python
+dc_format: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_format: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dc_format"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2314,12 +2313,12 @@ Optional[MixedValuesList]</p>
 ate.)<dc:format>image/jpeg</dc:format></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dc_rights" class="classattr">
+#### EDM_WebResource.dc_rights
+```python
+dc_rights: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_rights: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dc_rights"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2338,12 +2337,12 @@ andatory, controlled edm:rights property below. <dc:rights> Copyright © British
 y Board</dc:rights></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dc_source" class="classattr">
+#### EDM_WebResource.dc_source
+```python
+dc_source: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_source: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dc_source"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2360,12 +2359,12 @@ Optional[MixedValuesList]</p>
 rce>The name of the source video tape <dc:source></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dc_type" class="classattr">
+#### EDM_WebResource.dc_type
+```python
+dc_type: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_type: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dc_type"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2384,12 +2383,12 @@ c:type>video</dc:type> or create a reference to an instance of the Concept class
 ype rdf:about= “<a href="http://schema.org/VideoObject”">http://schema.org/VideoObject”</a> &gt;</p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_conformsTo" class="classattr">
+#### EDM_WebResource.dcterms_conformsTo
+```python
+dcterms_conformsTo: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_conformsTo: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_conformsTo"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2406,12 +2405,12 @@ Optional[MixedValuesList]</p>
 AG 2.0</dcterms:conformsTo> (web content accessibility guidelines).</p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_created" class="classattr">
+#### EDM_WebResource.dcterms_created
+```python
+dcterms_created: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_created: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_created"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2430,12 +2429,12 @@ created> or create a reference to an instance of the TimeSpan class <dc:date rdf
 rce=“http://semium.org/time/2010”/></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_extent" class="classattr">
+#### EDM_WebResource.dcterms_extent
+```python
+dcterms_extent: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_extent: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_extent"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2452,12 +2451,12 @@ Optional[MixedValuesList]</p>
 s:extent></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_hasPart" class="classattr">
+#### EDM_WebResource.dcterms_hasPart
+```python
+dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_hasPart"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2474,12 +2473,12 @@ Optional[List[Ref]]</p>
 ms:hasPart rdf:resource=“http://www.identifier/Part”/></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_isFormatOf" class="classattr">
+#### EDM_WebResource.dcterms_isFormatOf
+```python
+dcterms_isFormatOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isFormatOf: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_isFormatOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2499,12 +2498,12 @@ as a link to a resource <dcterms:isFormatOf rdf:resource=“<a href="http://uplo
 wikipedia/en/f/f3/Europeana_logo.png”/></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_isPartOf" class="classattr">
+#### EDM_WebResource.dcterms_isPartOf
+```python
+dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_isPartOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2525,12 +2524,12 @@ s:isPartOf rdf:resource=“<a href="http://data.europeana.eu/item/08701/1B0BACAA
 C9781AAD2F96E65”/></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_isReferencedBy" class="classattr">
+#### EDM_WebResource.dcterms_isReferencedBy
+```python
+dcterms_isReferencedBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_isReferencedBy: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_isReferencedBy"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2549,12 +2548,12 @@ esource to a IIIF manifest URI. <dcterms:isReferencedBy rdf:resource="<a href="h
 bnf.fr/iiif/ark:/12148/btv1b55001425m/manifest.json"/></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.dcterms_issued" class="classattr">
+#### EDM_WebResource.dcterms_issued
+```python
+dcterms_issued: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dcterms_issued: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_WebResource.dcterms_issued"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2573,12 +2572,12 @@ issued>1999</dcterms:issued> or create a reference to an instance of the TimeSpa
 s<dcterms:issued rdf:resource=“http://semium.org/time/2010”/></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.edm_isNextInSequence" class="classattr">
+#### EDM_WebResource.edm_isNextInSequence
+```python
+edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_WebResource.edm_isNextInSequence"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2597,12 +2596,12 @@ e objects. Each web resource (apart from the first in the sequence) should use t
 operty to give the URI of the preceding resource in the sequence.</p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.edm_rights" class="classattr">
+#### EDM_WebResource.edm_rights
+```python
+edm_rights: Optional[edmlib.edm.value_types.Ref]
+```
 
-#### edm_rights: Optional[edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#EDM_WebResource.edm_rights"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -2629,12 +2628,12 @@ piry date for the restrictions): <a href="http://rightsstatements.org/vocab/NoC-
 rights rdf:resource="#statement_3000095353971"/>This is a recommended property.</p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.owl_sameAs" class="classattr">
+#### EDM_WebResource.owl_sameAs
+```python
+owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_WebResource.owl_sameAs"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2651,12 +2650,12 @@ Optional[List[Ref]]</p>
 source=”urn:soundcloud:150424305></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.svcs_has_service" class="classattr">
+#### EDM_WebResource.svcs_has_service
+```python
+svcs_has_service: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### svcs_has_service: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_WebResource.svcs_has_service"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2675,46 +2674,47 @@ The identifier of the svcs:Service required to consume the edm:WebResource. Exam
 <p><svcs:has_service rdf:resource="http://www.example.org/Service/IIIF"></p>
 </div> 
 
-</div>
-<div id="EDM_WebResource.validate_web_resource" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_web_resource(self) -&gt; Self  
-
-<a class="headerlink" href="#EDM_WebResource.validate_web_resource"></a>
+#### EDM_WebResource.validate_web_resource
+```python
+@model_validator(mode='after') def validate_web_resource(self) -> Self
+```
 
 
 
-</div>
-<div id="EDM_WebResource.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#EDM_WebResource.model_config"></a>
+#### EDM_WebResource.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="CC_License">
+---
+### CC_License
+```python
+class CC_License(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class CC_License<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#CC_License"></a>
 
 <div class="docstring"><p>mandatory-properties: ODRL_inheritFrom</p>
 
 <p>optional-properties: CC_deprecatedOn</p>
 </div> 
 
-<div id="CC_License.odrl_inheritFrom" class="classattr">
+#### CC_License.odrl_inheritFrom
+```python
+odrl_inheritFrom: edmlib.edm.value_types.Ref
+```
 
-#### odrl_inheritFrom: edmlib.edm.value_types.Ref 
 
-<a class="headerlink" href="#CC_License.odrl_inheritFrom"></a>
 
 <div class="docstring"><p>Mandate: 
 mandatory</p>
@@ -2732,12 +2732,12 @@ must come for alist of statements controlled by Europeana.<odrl:inheritFrom rdf:
 ce=“http://rightsstatements.org/vocab/NoC-­NC/1.0/”/></p>
 </div> 
 
-</div>
-<div id="CC_License.cc_deprecatedOn" class="classattr">
+#### CC_License.cc_deprecatedOn
+```python
+cc_deprecatedOn: Any
+```
 
-#### cc_deprecatedOn: Any 
 
-<a class="headerlink" href="#CC_License.cc_deprecatedOn"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2756,37 +2756,38 @@ df:datatype=”http://www.w3.org/2001/XMLSchema#date”&gt;2029‐06-­01</cc:de
 this datatype is mandatory for cc:deprecatedOn.</p>
 </div> 
 
-</div>
-<div id="CC_License.model_config" class="classattr">
+#### CC_License.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#CC_License.model_config"></a>
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="SKOS_Concept">
+---
+### SKOS_Concept
+```python
+class SKOS_Concept(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class SKOS_Concept<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#SKOS_Concept"></a>
 
 <div class="docstring"><p>optional-properties: SKOS_broader, SKOS_narrower, SKOS_related, SKOS_broadMatch, SKOS_narrowMatch, SKOS_relatedMatch, SKOS_exactMatch, SKOS_closeMatch, SKOS_note, SKOS_notation, SKOS_inScheme</p>
 
 <p>recommended-properties: SKOS_prefLabel, SKOS_altLabel</p>
 </div> 
 
-<div id="SKOS_Concept.skos_prefLabel" class="classattr">
+#### SKOS_Concept.skos_prefLabel
+```python
+skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_prefLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -2809,12 +2810,12 @@ dations on medata quality see Tier A-C requirements , more specifically Metadata
 B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_altLabel" class="classattr">
+#### SKOS_Concept.skos_altLabel
+```python
+skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_altLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -2833,12 +2834,12 @@ of prefLabel).<skos:altLabel xml:lang="en">Buccin</skos:altLabel>This is a recom
 d property for this class.</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_broader" class="classattr">
+#### SKOS_Concept.skos_broader
+```python
+skos_broader: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_broader: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_broader"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2857,12 +2858,12 @@ mendations on medata quality see Tier A-C requirements , more specifically Metad
 er B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_narrower" class="classattr">
+#### SKOS_Concept.skos_narrower
+```python
+skos_narrower: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_narrower: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_narrower"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2880,12 +2881,12 @@ Optional[List[Ref]]</p>
 y Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_related" class="classattr">
+#### SKOS_Concept.skos_related
+```python
+skos_related: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_related: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_related"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2903,36 +2904,12 @@ For recommendations on medata quality see Tier A-C requirements , more specifica
 tadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_broadMatch" class="classattr">
+#### SKOS_Concept.skos_broadMatch
+```python
+skos_broadMatch: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_broadMatch: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_broadMatch"></a>
-
-<div class="docstring"><p>Mandate: 
-optional</p>
-
-<p>Cardinality: 
-zero_to_many</p>
-
-<p>Value-Type:
-Optional[List[Ref]]</p>
-
-<p>Description: </p>
-
-<p>The identifier of a broader, narrower or related matching concepts from other concept 
-schemes.<skos:broadMatch rdf:resource=“http://broadMatch.term/”/><skos:narrowMatch rdf
-:resource=“http://narrowMatch.term/”/><skos:relatedMatch rdf:resource=“<a href="http://relatedM">http://relatedM</a>
-atch.term/”/></p>
-</div> 
-
-</div>
-<div id="SKOS_Concept.skos_narrowMatch" class="classattr">
-
-#### skos_narrowMatch: Optional[List[edmlib.edm.value_types.Ref]] 
-
-<a class="headerlink" href="#SKOS_Concept.skos_narrowMatch"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2951,12 +2928,12 @@ schemes.<skos:broadMatch rdf:resource=“http://broadMatch.term/”/><skos:narro
 atch.term/”/></p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_relatedMatch" class="classattr">
+#### SKOS_Concept.skos_narrowMatch
+```python
+skos_narrowMatch: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_relatedMatch: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_relatedMatch"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2975,12 +2952,36 @@ schemes.<skos:broadMatch rdf:resource=“http://broadMatch.term/”/><skos:narro
 atch.term/”/></p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_exactMatch" class="classattr">
+#### SKOS_Concept.skos_relatedMatch
+```python
+skos_relatedMatch: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_exactMatch: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_exactMatch"></a>
+
+<div class="docstring"><p>Mandate: 
+optional</p>
+
+<p>Cardinality: 
+zero_to_many</p>
+
+<p>Value-Type:
+Optional[List[Ref]]</p>
+
+<p>Description: </p>
+
+<p>The identifier of a broader, narrower or related matching concepts from other concept 
+schemes.<skos:broadMatch rdf:resource=“http://broadMatch.term/”/><skos:narrowMatch rdf
+:resource=“http://narrowMatch.term/”/><skos:relatedMatch rdf:resource=“<a href="http://relatedM">http://relatedM</a>
+atch.term/”/></p>
+</div> 
+
+#### SKOS_Concept.skos_exactMatch
+```python
+skos_exactMatch: Optional[List[edmlib.edm.value_types.Ref]]
+```
+
+
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -2999,12 +3000,12 @@ exactMatch rdf:resource=“http://exactMatch.term/”/><skos:closeMatch rdf:reso
 , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_closeMatch" class="classattr">
+#### SKOS_Concept.skos_closeMatch
+```python
+skos_closeMatch: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_closeMatch: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_closeMatch"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3023,12 +3024,12 @@ exactMatch rdf:resource=“http://exactMatch.term/”/><skos:closeMatch rdf:reso
 , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_note" class="classattr">
+#### SKOS_Concept.skos_note
+```python
+skos_note: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_note: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_note"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3047,12 +3048,12 @@ ded into obscurity.</skos:note>For recommendations on medata quality see Tier A-
 irements, more specifically Metadata Tier B and Metadata Tier C.</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_notation" class="classattr">
+#### SKOS_Concept.skos_notation
+```python
+skos_notation: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_notation: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_notation"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3070,12 +3071,12 @@ guage for someknowledge organisation systems e.g. algebra<skos:notation rdf:data
 http://www.w3.org/2001/XMLSchema#int”&gt;123</skos:notation></p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.skos_inScheme" class="classattr">
+#### SKOS_Concept.skos_inScheme
+```python
+skos_inScheme: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### skos_inScheme: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SKOS_Concept.skos_inScheme"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3091,46 +3092,47 @@ Optional[List[Ref]]</p>
 <p>The URI of a concept scheme</p>
 </div> 
 
-</div>
-<div id="SKOS_Concept.validate_skos_pref_label" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_skos_pref_label(self) -&gt; Self  
-
-<a class="headerlink" href="#SKOS_Concept.validate_skos_pref_label"></a>
+#### SKOS_Concept.validate_skos_pref_label
+```python
+@model_validator(mode='after') def validate_skos_pref_label(self) -> Self
+```
 
 
 
-</div>
-<div id="SKOS_Concept.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#SKOS_Concept.model_config"></a>
+#### SKOS_Concept.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="EDM_Agent">
+---
+### EDM_Agent
+```python
+class EDM_Agent(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class EDM_Agent<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#EDM_Agent"></a>
 
 <div class="docstring"><p>optional-properties: SKOS_note, DC_date, DC_identifier, DCTERMS_hasPart, DCTERMS_isPartOf, EDM_begin, EDM_end, EDM_hasMet, EDM_isRelatedTo, FOAF_name, RDAGR2_biographicalInformation, RDAGR2_dateOfEstablishment, RDAGR2_dateOfTermination, RDAGR2_gender, RDAGR2_placeOfBirth, RDAGR2_placeOfDeath, RDAGR2_professionOrOccupation, OWL_sameAs</p>
 
 <p>recommended-properties: SKOS_prefLabel, SKOS_altLabel, RDAGR2_dateOfBirth, RDAGR2_dateOfDeath</p>
 </div> 
 
-<div id="EDM_Agent.skos_prefLabel" class="classattr">
+#### EDM_Agent.skos_prefLabel
+```python
+skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Agent.skos_prefLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -3153,12 +3155,12 @@ ality see Tier A-C requirements , more specifically Metadata Tier B and Metadata
 C</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.skos_altLabel" class="classattr">
+#### EDM_Agent.skos_altLabel
+```python
+skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Agent.skos_altLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -3176,12 +3178,12 @@ ass.<skos:altLabel xml:lang="en">Courtois</skos:altLabel><skos:altLabel xml:lang
 Augte. Courtois aîné</skos:altLabel></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.skos_note" class="classattr">
+#### EDM_Agent.skos_note
+```python
+skos_note: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_note: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Agent.skos_note"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3199,12 +3201,12 @@ a company of the same name manufacturing brass instruments in Paris in 1803</sko
 e></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.dc_date" class="classattr">
+#### EDM_Agent.dc_date
+```python
+dc_date: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### dc_date: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_Agent.dc_date"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3221,12 +3223,12 @@ Optional[MixedValuesList]</p>
 ISO 8601 starting with the year and with hyphens (YYYY-MM-DD).<dc:date>1803</dc:date/></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.dc_identifier" class="classattr">
+#### EDM_Agent.dc_identifier
+```python
+dc_identifier: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### dc_identifier: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Agent.dc_identifier"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3243,12 +3245,12 @@ Optional[List[Lit]]</p>
 er></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.dcterms_hasPart" class="classattr">
+#### EDM_Agent.dcterms_hasPart
+```python
+dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Agent.dcterms_hasPart"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3265,12 +3267,12 @@ Optional[List[Ref]]</p>
 oration).<dcterms:hasPart rdf:resource=“http://identifier/partOfCorporation/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.dcterms_isPartOf" class="classattr">
+#### EDM_Agent.dcterms_isPartOf
+```python
+dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Agent.dcterms_isPartOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3287,12 +3289,12 @@ Optional[List[Ref]]</p>
 ce=“http://identifier/parentCorporation/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.edm_begin" class="classattr">
+#### EDM_Agent.edm_begin
+```python
+edm_begin: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### edm_begin: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Agent.edm_begin"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3313,12 +3315,12 @@ irth and death dates.For recommendations on medata quality see Tier A-C requirem
 more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.edm_end" class="classattr">
+#### EDM_Agent.edm_end
+```python
+edm_end: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### edm_end: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Agent.edm_end"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3337,12 +3339,12 @@ dbirth and death dates.For recommendations on medata quality see Tier A-C requir
 , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.edm_hasMet" class="classattr">
+#### EDM_Agent.edm_hasMet
+```python
+edm_hasMet: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_hasMet: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Agent.edm_hasMet"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3359,12 +3361,12 @@ Optional[List[Ref]]</p>
 reference to a Place class<edm:hasMet rdf:resource=“http://sws.geonames.org/6620265/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.edm_isRelatedTo" class="classattr">
+#### EDM_Agent.edm_isRelatedTo
+```python
+edm_isRelatedTo: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isRelatedTo: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Agent.edm_isRelatedTo"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3381,12 +3383,12 @@ Optional[List[Ref]]</p>
 in a generic sense.<edm:isRelatedTo rdf:resource=“http://identifier/relatedAgent/”&gt;</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.foaf_name" class="classattr">
+#### EDM_Agent.foaf_name
+```python
+foaf_name: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### foaf_name: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Agent.foaf_name"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3403,12 +3405,12 @@ Optional[List[Lit]]</p>
 e></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_biographicalInformation" class="classattr">
+#### EDM_Agent.rdagr2_biographicalInformation
+```python
+rdagr2_biographicalInformation: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### rdagr2_biographicalInformation: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_biographicalInformation"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3426,12 +3428,12 @@ tion>Courtois neveu aîné started a company of the same name manufacturing bras
 ments in Paris in 1803</rdaGr2:biographicalInformation></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_dateOfBirth" class="classattr">
+#### EDM_Agent.rdagr2_dateOfBirth
+```python
+rdagr2_dateOfBirth: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### rdagr2_dateOfBirth: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_dateOfBirth"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -3451,12 +3453,12 @@ on medata quality see Tier A-C requirements , more specifically Metadata Tier B 
 tadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_dateOfDeath" class="classattr">
+#### EDM_Agent.rdagr2_dateOfDeath
+```python
+rdagr2_dateOfDeath: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### rdagr2_dateOfDeath: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_dateOfDeath"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -3476,12 +3478,12 @@ quality see Tier A-C requirements , more specifically Metadata Tier B and Metada
 r C</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_dateOfEstablishment" class="classattr">
+#### EDM_Agent.rdagr2_dateOfEstablishment
+```python
+rdagr2_dateOfEstablishment: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### rdagr2_dateOfEstablishment: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_dateOfEstablishment"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3498,12 +3500,12 @@ Optional[Lit]</p>
 Establishment>1795</rdaGr2:dateOfEstablishment></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_dateOfTermination" class="classattr">
+#### EDM_Agent.rdagr2_dateOfTermination
+```python
+rdagr2_dateOfTermination: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### rdagr2_dateOfTermination: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_dateOfTermination"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3520,12 +3522,12 @@ Optional[Lit]</p>
 fTermination>1895</rdaGr2:dateOfTermination></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_gender" class="classattr">
+#### EDM_Agent.rdagr2_gender
+```python
+rdagr2_gender: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### rdagr2_gender: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_gender"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3541,12 +3543,12 @@ Optional[Lit]</p>
 <p>The gender with which the agent identifies.&lt; rdaGr2:gender>Female</rdaGr2:gender></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_placeOfBirth" class="classattr">
+#### EDM_Agent.rdagr2_placeOfBirth
+```python
+rdagr2_placeOfBirth: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref, NoneType]
+```
 
-#### rdagr2_placeOfBirth: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref, NoneType] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_placeOfBirth"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3565,12 +3567,12 @@ urce=”http://sws.geonames.org/909137/”/>For recommendations on medata qualit
 A-C requirements , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_placeOfDeath" class="classattr">
+#### EDM_Agent.rdagr2_placeOfDeath
+```python
+rdagr2_placeOfDeath: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref, NoneType]
+```
 
-#### rdagr2_placeOfDeath: Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref, NoneType] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_placeOfDeath"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3589,12 +3591,12 @@ ttp://sws.geonames.org/2635167/”/>For recommendations on medata quality see Ti
 equirements , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Agent.rdagr2_professionOrOccupation" class="classattr">
+#### EDM_Agent.rdagr2_professionOrOccupation
+```python
+rdagr2_professionOrOccupation: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType]
+```
 
-#### rdagr2_professionOrOccupation: Union[List[Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], List[edmlib.edm.value_types.Ref], List[edmlib.edm.value_types.Lit], NoneType] 
 
-<a class="headerlink" href="#EDM_Agent.rdagr2_professionOrOccupation"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3611,12 +3613,12 @@ Optional[MixedValuesList]</p>
 OrOccupation>Instrument Maker</rdaGr2:professionOrOccupation></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.owl_sameAs" class="classattr">
+#### EDM_Agent.owl_sameAs
+```python
+owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Agent.owl_sameAs"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3633,46 +3635,47 @@ Optional[List[Ref]]</p>
 urceElsewhere”/></p>
 </div> 
 
-</div>
-<div id="EDM_Agent.validate_skos_pref_label" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_skos_pref_label(self) -&gt; Self  
-
-<a class="headerlink" href="#EDM_Agent.validate_skos_pref_label"></a>
+#### EDM_Agent.validate_skos_pref_label
+```python
+@model_validator(mode='after') def validate_skos_pref_label(self) -> Self
+```
 
 
 
-</div>
-<div id="EDM_Agent.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#EDM_Agent.model_config"></a>
+#### EDM_Agent.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="EDM_TimeSpan">
+---
+### EDM_TimeSpan
+```python
+class EDM_TimeSpan(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class EDM_TimeSpan<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#EDM_TimeSpan"></a>
 
 <div class="docstring"><p>optional-properties: SKOS_altLabel, SKOS_note, DCTERMS_hasPart, DCTERMS_isPartOf, EDM_isNextInSequence, OWL_sameAs</p>
 
 <p>recommended-properties: SKOS_prefLabel, EDM_begin, EDM_end</p>
 </div> 
 
-<div id="EDM_TimeSpan.skos_prefLabel" class="classattr">
+#### EDM_TimeSpan.skos_prefLabel
+```python
+skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_TimeSpan.skos_prefLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -3692,12 +3695,12 @@ recommended for language variants andtranslations.<skos:prefLabel xml:lang=“en
 Empire</skos:prefLabel>This is a recommended property for this class.</p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.skos_altLabel" class="classattr">
+#### EDM_TimeSpan.skos_altLabel
+```python
+skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_TimeSpan.skos_altLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3714,12 +3717,12 @@ Optional[List[Lit]]</p>
 '>Empire romain (27 avant J.-­‐C.-­‐476 après J.-­C.)</skos:altLabel &gt;</p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.skos_note" class="classattr">
+#### EDM_TimeSpan.skos_note
+```python
+skos_note: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_note: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_TimeSpan.skos_note"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3738,12 +3741,12 @@ acterised by an autocratic form of government and large territorial holdings aro
 e Mediterranean in Europe, Africa, and Asia.</skos:note></p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.dcterms_hasPart" class="classattr">
+#### EDM_TimeSpan.dcterms_hasPart
+```python
+dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_TimeSpan.dcterms_hasPart"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3759,12 +3762,12 @@ Optional[List[Ref]]</p>
 <p>Reference to a timespan which is part of the described timespan.</p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.dcterms_isPartOf" class="classattr">
+#### EDM_TimeSpan.dcterms_isPartOf
+```python
+dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_TimeSpan.dcterms_isPartOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3780,12 +3783,12 @@ Optional[List[Ref]]</p>
 <p>Reference to a timespan of which the described timespan is a part.</p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.edm_begin" class="classattr">
+#### EDM_TimeSpan.edm_begin
+```python
+edm_begin: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### edm_begin: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_TimeSpan.edm_begin"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -3806,12 +3809,12 @@ ve recommendation.For recommendations on medata quality see Tier A-C requirement
 re specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.edm_end" class="classattr">
+#### EDM_TimeSpan.edm_end
+```python
+edm_end: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### edm_end: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_TimeSpan.edm_end"></a>
 
 <div class="docstring"><p>Mandate: 
 recommended</p>
@@ -3831,12 +3834,12 @@ medata quality see Tier A-C requirements , more specifically Metadata Tier B and
 data Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.edm_isNextInSequence" class="classattr">
+#### EDM_TimeSpan.edm_isNextInSequence
+```python
+edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_TimeSpan.edm_isNextInSequence"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3855,12 +3858,12 @@ ence rdf:resource=“http://semium.org/time/roman_republic”/> (The Roman Empir
 eded by the Roman Republic)</p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.owl_sameAs" class="classattr">
+#### EDM_TimeSpan.owl_sameAs
+```python
+owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_TimeSpan.owl_sameAs"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3876,44 +3879,45 @@ Optional[List[Ref]]</p>
 <p>The URI of a timespan<owl:sameAs rdf:resource=“http://semium.org/time/roman_empire”/></p>
 </div> 
 
-</div>
-<div id="EDM_TimeSpan.validate_skos_pref_label" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_skos_pref_label(self) -&gt; Self  
-
-<a class="headerlink" href="#EDM_TimeSpan.validate_skos_pref_label"></a>
+#### EDM_TimeSpan.validate_skos_pref_label
+```python
+@model_validator(mode='after') def validate_skos_pref_label(self) -> Self
+```
 
 
 
-</div>
-<div id="EDM_TimeSpan.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#EDM_TimeSpan.model_config"></a>
+#### EDM_TimeSpan.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="EDM_Place">
+---
+### EDM_Place
+```python
+class EDM_Place(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class EDM_Place<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#EDM_Place"></a>
 
 <div class="docstring"><p>optional-properties: WGS84_POS_lat, WGS84_POS_long, WGS84_POS_alt, SKOS_prefLabel, SKOS_altLabel, SKOS_note, DCTERMS_hasPart, DCTERMS_isPartOf, EDM_isNextInSequence, OWL_sameAs</p>
 </div> 
 
-<div id="EDM_Place.wgs84_pos_lat" class="classattr">
+#### EDM_Place.wgs84_pos_lat
+```python
+wgs84_pos_lat: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### wgs84_pos_lat: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Place.wgs84_pos_lat"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3931,12 +3935,12 @@ this class.<wgs84_pos:lat>51.5075</wgs84_pos:lat>For recommendations on medata q
 see Tier A-C requirements , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Place.wgs84_pos_long" class="classattr">
+#### EDM_Place.wgs84_pos_long
+```python
+wgs84_pos_long: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### wgs84_pos_long: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Place.wgs84_pos_long"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3954,12 +3958,12 @@ this class.<wgs84_pos:long>-­‐0.1231</wgs84_pos:long>For recommendations on m
 ality see Tier A-C requirements, more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Place.wgs84_pos_alt" class="classattr">
+#### EDM_Place.wgs84_pos_alt
+```python
+wgs84_pos_alt: Optional[edmlib.edm.value_types.Lit]
+```
 
-#### wgs84_pos_alt: Optional[edmlib.edm.value_types.Lit] 
 
-<a class="headerlink" href="#EDM_Place.wgs84_pos_alt"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -3976,12 +3980,12 @@ Optional[Lit]</p>
 /wgs84_pos:alt></p>
 </div> 
 
-</div>
-<div id="EDM_Place.skos_prefLabel" class="classattr">
+#### EDM_Place.skos_prefLabel
+```python
+skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_prefLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Place.skos_prefLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -4002,12 +4006,12 @@ Label>For recommendations on medata quality see Tier A-C requirements , more spe
 lly Metadata Tier B and Metadata Tier C</p>
 </div> 
 
-</div>
-<div id="EDM_Place.skos_altLabel" class="classattr">
+#### EDM_Place.skos_altLabel
+```python
+skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_altLabel: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Place.skos_altLabel"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -4024,12 +4028,12 @@ Optional[List[Lit]]</p>
 </skos:altLabel></p>
 </div> 
 
-</div>
-<div id="EDM_Place.skos_note" class="classattr">
+#### EDM_Place.skos_note
+```python
+skos_note: Optional[List[edmlib.edm.value_types.Lit]]
+```
 
-#### skos_note: Optional[List[edmlib.edm.value_types.Lit]] 
 
-<a class="headerlink" href="#EDM_Place.skos_note"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -4045,12 +4049,12 @@ Optional[List[Lit]]</p>
 <p>Information relating to the place.<skos:note xml:lang="en">Pop. 21m</skos:note></p>
 </div> 
 
-</div>
-<div id="EDM_Place.dcterms_hasPart" class="classattr">
+#### EDM_Place.dcterms_hasPart
+```python
+dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_hasPart: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Place.dcterms_hasPart"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -4067,12 +4071,12 @@ Optional[List[Ref]]</p>
 source=“http://sws.geonames.org/2643741/”/> (City of London)</p>
 </div> 
 
-</div>
-<div id="EDM_Place.dcterms_isPartOf" class="classattr">
+#### EDM_Place.dcterms_isPartOf
+```python
+dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_isPartOf: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Place.dcterms_isPartOf"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -4089,12 +4093,12 @@ Optional[List[Ref]]</p>
 e=“http://sws.geonames.org/2635167/”/> (United Kingdom)</p>
 </div> 
 
-</div>
-<div id="EDM_Place.edm_isNextInSequence" class="classattr">
+#### EDM_Place.edm_isNextInSequence
+```python
+edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### edm_isNextInSequence: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Place.edm_isNextInSequence"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -4112,12 +4116,12 @@ yers of the city of Troy. Use this for objects that are part of a hierarchy or s
 e to ensure correct display in the portal.</p>
 </div> 
 
-</div>
-<div id="EDM_Place.owl_sameAs" class="classattr">
+#### EDM_Place.owl_sameAs
+```python
+owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### owl_sameAs: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#EDM_Place.owl_sameAs"></a>
 
 <div class="docstring"><p>Mandate: 
 optional</p>
@@ -4133,35 +4137,35 @@ Optional[List[Ref]]</p>
 <p>URI of a Place<owl:sameAs rdf:resource=“http://sws.geonames.org/2635167/”/>(London)</p>
 </div> 
 
-</div>
-<div id="EDM_Place.validate_skos_pref_label" class="classattr">
-
-####   @model_validator(mode=&#39;after&#39;)    def validate_skos_pref_label(self) -&gt; Self  
-
-<a class="headerlink" href="#EDM_Place.validate_skos_pref_label"></a>
+#### EDM_Place.validate_skos_pref_label
+```python
+@model_validator(mode='after') def validate_skos_pref_label(self) -> Self
+```
 
 
 
-</div>
-<div id="EDM_Place.model_config" class="classattr">
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#EDM_Place.model_config"></a>
+#### EDM_Place.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
+
+
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="SVCS_Service">
+---
+### SVCS_Service
+```python
+class SVCS_Service(edmlib.edm.base.EDM_BaseClass):
+``` 
 
-###    class SVCS_Service<wbr>(<span class="base">edmlib.edm.base.EDM_BaseClass</span>): 
 
-<a class="headerlink" href="#SVCS_Service"></a>
 
 <div class="docstring"><p>(Manually copied)</p>
 
@@ -4181,11 +4185,12 @@ to describe the IIIF protocol the resource is conforming to.</p>
 <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/></p>
 </div> 
 
-<div id="SVCS_Service.dcterms_conformsTo" class="classattr">
+#### SVCS_Service.dcterms_conformsTo
+```python
+dcterms_conformsTo: Optional[List[edmlib.edm.value_types.Ref]]
+```
 
-#### dcterms_conformsTo: Optional[List[edmlib.edm.value_types.Ref]] 
 
-<a class="headerlink" href="#SVCS_Service.dcterms_conformsTo"></a>
 
 <div class="docstring"><p>Mandate: 
 Optional</p>
@@ -4200,12 +4205,12 @@ the resource is conforming to.</p>
 <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/></p>
 </div> 
 
-</div>
-<div id="SVCS_Service.doap_implements" class="classattr">
+#### SVCS_Service.doap_implements
+```python
+doap_implements: Optional[edmlib.edm.value_types.Ref]
+```
 
-#### doap_implements: Optional[edmlib.edm.value_types.Ref] 
 
-<a class="headerlink" href="#SVCS_Service.doap_implements"></a>
 
 <div class="docstring"><p>Mandate: 
 Optional</p>
@@ -4218,172 +4223,172 @@ In IIIF doap:implements refers to the the protocol implemented in IIIF.</p>
 <doap:implements rdf:resource="http://iiif.io/api/image/2/level1.json"/></p>
 </div> 
 
-</div>
-<div id="SVCS_Service.model_config" class="classattr">
+#### SVCS_Service.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#SVCS_Service.model_config"></a>
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="MixedValuesList">
-
-#### MixedValuesList = typing.Union[typing.List[typing.Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], typing.List[edmlib.edm.value_types.Ref], typing.List[edmlib.edm.value_types.Lit]] 
-
-<a class="headerlink" href="#MixedValuesList"></a>
+### MixedValuesList
+```python
+MixedValuesList = typing.Union[typing.List[typing.Union[edmlib.edm.value_types.Lit, edmlib.edm.value_types.Ref]], typing.List[edmlib.edm.value_types.Ref], typing.List[edmlib.edm.value_types.Lit]]
+```
 
 
 
-</section>
-<section id="EDM_Parser">
 
-###    class EDM_Parser: 
 
-<a class="headerlink" href="#EDM_Parser"></a>
+---
+### EDM_Parser
+```python
+class EDM_Parser:
+``` 
+
+
 
 <div class="docstring"><p>Parser for edm-xml records. Returns an edm_python.edm.EDM_Record object.</p>
 </div> 
 
-<div id="EDM_Parser.__init__" class="classattr">
-
-####     EDM_Parser(graph: rdflib.graph.Graph)  
-
-<a class="headerlink" href="#EDM_Parser.__init__"></a>
+#### EDM_Parser.__init__
+```python
+EDM_Parser(graph: rdflib.graph.Graph) ```
 
 
 
-</div>
-<div id="EDM_Parser.from_file" class="classattr">
-
-####   @classmethod    def from_file(cls, path: str, format: str = &#39;xml&#39;) -&gt; Self  
-
-<a class="headerlink" href="#EDM_Parser.from_file"></a>
 
 
-
-</div>
-<div id="EDM_Parser.from_string" class="classattr">
-
-####   @classmethod    def from_string(cls, content: str, format: str = &#39;xml&#39;) -&gt; Self  
-
-<a class="headerlink" href="#EDM_Parser.from_string"></a>
+#### EDM_Parser.from_file
+```python
+@classmethod def from_file(cls, path: str, format: str = 'xml') -> Self
+```
 
 
 
-</div>
-<div id="EDM_Parser.graph" class="classattr">
-
-#### graph: rdflib.graph.Graph 
-
-<a class="headerlink" href="#EDM_Parser.graph"></a>
 
 
+#### EDM_Parser.from_string
+```python
+@classmethod def from_string(cls, content: str, format: str = 'xml') -> Self
+```
 
-</div>
-<div id="EDM_Parser.get_single_ref" class="classattr">
 
-####     def get_single_ref(self, obj_cls: object) -&gt; rdflib.term.URIRef  
 
-<a class="headerlink" href="#EDM_Parser.get_single_ref"></a>
+
+
+#### EDM_Parser.graph
+```python
+graph: rdflib.graph.Graph
+```
+
+
+
+
+
+#### EDM_Parser.get_single_ref
+```python
+def get_single_ref(self, obj_cls: object) -> rdflib.term.URIRef
+```
+
+
 
 <div class="docstring"><p>Loooks up instances of a given obj_cls (a edm_python edm-class) and returns
 a single IRI.
 This method expects that the cardinality of the obj_cls is one per record.</p>
 </div> 
 
-</div>
-<div id="EDM_Parser.get_many_ref" class="classattr">
+#### EDM_Parser.get_many_ref
+```python
+def get_many_ref(self, obj_cls: object) -> List[rdflib.term.URIRef]
+```
 
-####     def get_many_ref(self, obj_cls: object) -&gt; List[rdflib.term.URIRef]  
 
-<a class="headerlink" href="#EDM_Parser.get_many_ref"></a>
 
 <div class="docstring"><p>Loooks up instances of a given obj_cls (a edm_python edm-class) and returns
 a list of instance-IRIs.
 This method expects that the cardinality of the obj_cls is one or more.</p>
 </div> 
 
-</div>
-<div id="EDM_Parser.get_triples" class="classattr">
+#### EDM_Parser.get_triples
+```python
+def get_triples(self, ref: rdflib.term.URIRef)
+```
 
-####     def get_triples(self, ref: rdflib.term.URIRef)  
 
-<a class="headerlink" href="#EDM_Parser.get_triples"></a>
 
 <div class="docstring"><p>Return all predicate-object triples for a given URIRef within the instance`s-graph.</p>
 </div> 
 
-</div>
-<div id="EDM_Parser.get_aggregation" class="classattr">
-
-####     def get_aggregation(self)  
-
-<a class="headerlink" href="#EDM_Parser.get_aggregation"></a>
+#### EDM_Parser.get_aggregation
+```python
+def get_aggregation(self)
+```
 
 
 
-</div>
-<div id="EDM_Parser.get_webresources" class="classattr">
-
-####     def get_webresources(self) -&gt; list[typing.Any]  
-
-<a class="headerlink" href="#EDM_Parser.get_webresources"></a>
 
 
-
-</div>
-<div id="EDM_Parser.get_instance_triples" class="classattr">
-
-####     def get_instance_triples(self, instance: rdflib.term.URIRef, cls_obj: object) -&gt; Dict[str, Any]  
-
-<a class="headerlink" href="#EDM_Parser.get_instance_triples"></a>
+#### EDM_Parser.get_webresources
+```python
+def get_webresources(self) -> list[typing.Any]
+```
 
 
 
-</div>
-<div id="EDM_Parser.parse_single_class" class="classattr">
-
-####     def parse_single_class(self, cls_obj: object) -&gt; Any  
-
-<a class="headerlink" href="#EDM_Parser.parse_single_class"></a>
 
 
-
-</div>
-<div id="EDM_Parser.parse_many_class" class="classattr">
-
-####     def parse_many_class(self, cls_obj: Any) -&gt; List[Any]  
-
-<a class="headerlink" href="#EDM_Parser.parse_many_class"></a>
+#### EDM_Parser.get_instance_triples
+```python
+def get_instance_triples(self, instance: rdflib.term.URIRef, cls_obj: object) -> Dict[str, Any]
+```
 
 
 
-</div>
-<div id="EDM_Parser.parse" class="classattr">
-
-####     def parse(self) -&gt; edmlib.edm.record.EDM_Record  
-
-<a class="headerlink" href="#EDM_Parser.parse"></a>
 
 
+#### EDM_Parser.parse_single_class
+```python
+def parse_single_class(self, cls_obj: object) -> Any
+```
 
-</div>
+
+
+
+
+#### EDM_Parser.parse_many_class
+```python
+def parse_many_class(self, cls_obj: Any) -> List[Any]
+```
+
+
+
+
+
+#### EDM_Parser.parse
+```python
+def parse(self) -> edmlib.edm.record.EDM_Record
+```
+
+
+
+
+
 
 ---
 
-</section>
-<section id="Ref">
+---
+### Ref
+```python
+class Ref(pydantic.main.BaseModel):
+``` 
 
-###    class Ref<wbr>(<span class="base">pydantic.main.BaseModel</span>): 
 
-<a class="headerlink" href="#Ref"></a>
 
 <div class="docstring"><p>About IRIs (from the rdflib.URIRef docstring):</p>
 
@@ -4393,138 +4398,138 @@ IRIs in the RDF abstract syntax MUST be absolute, and MAY contain a fragment ide
 IRIs are a generalization of URIs [RFC3986] that permits a wider range of Unicode characters.</p>
 </div> 
 
-<div id="Ref.value" class="classattr">
-
-#### value: Annotated[str, StringConstraints(strip_whitespace=True, to_upper=None, to_lower=None, strict=None, min_length=1, max_length=None, pattern=None)] 
-
-<a class="headerlink" href="#Ref.value"></a>
-
-
-
-</div>
-<div id="Ref.is_ref" class="classattr">
-
-#### is_ref: bool 
-
-<a class="headerlink" href="#Ref.is_ref"></a>
+#### Ref.value
+```python
+value: Annotated[str, StringConstraints(strip_whitespace=True, to_upper=None, to_lower=None, strict=None, min_length=1, max_length=None, pattern=None)]
+```
 
 
 
-</div>
-<div id="Ref.validate_value_as_uri" class="classattr">
-
-####   @field_validator(&#39;value&#39;)  @classmethod    def validate_value_as_uri(cls, value: str)  
-
-<a class="headerlink" href="#Ref.validate_value_as_uri"></a>
 
 
+#### Ref.is_ref
+```python
+is_ref: bool
+```
 
-</div>
-<div id="Ref.to_rdflib" class="classattr">
 
-####     def to_rdflib(self)  
 
-<a class="headerlink" href="#Ref.to_rdflib"></a>
+
+
+#### Ref.validate_value_as_uri
+```python
+@field_validator('value') @classmethod def validate_value_as_uri(cls, value: str)
+```
+
+
+
+
+
+#### Ref.to_rdflib
+```python
+def to_rdflib(self)
+```
+
+
 
 <div class="docstring"><p>Helper to convert this custom type to the rdflib equivalent
 Used in the graph serialization of the EDM_Base-Class</p>
 </div> 
 
-</div>
-<div id="Ref.model_config" class="classattr">
+#### Ref.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#Ref.model_config"></a>
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
-<section id="Lit">
+---
+### Lit
+```python
+class Lit(pydantic.main.BaseModel):
+``` 
 
-###    class Lit<wbr>(<span class="base">pydantic.main.BaseModel</span>): 
 
-<a class="headerlink" href="#Lit"></a>
 
 <div class="docstring"><p>Overrides the RDFLib Literal with a custom class, so that it is serializable in pydantic model.
 For the same reason, it uses the same attribute names.
 Ignore the normalize attribute, it is just added for completeness.</p>
 </div> 
 
-<div id="Lit.value" class="classattr">
-
-#### value: Annotated[str, StringConstraints(strip_whitespace=True, to_upper=None, to_lower=None, strict=None, min_length=1, max_length=None, pattern=None)] 
-
-<a class="headerlink" href="#Lit.value"></a>
-
-
-
-</div>
-<div id="Lit.lang" class="classattr">
-
-#### lang: Optional[str] 
-
-<a class="headerlink" href="#Lit.lang"></a>
+#### Lit.value
+```python
+value: Annotated[str, StringConstraints(strip_whitespace=True, to_upper=None, to_lower=None, strict=None, min_length=1, max_length=None, pattern=None)]
+```
 
 
 
-</div>
-<div id="Lit.datatype" class="classattr">
-
-#### datatype: Optional[str] 
-
-<a class="headerlink" href="#Lit.datatype"></a>
 
 
-
-</div>
-<div id="Lit.normalize" class="classattr">
-
-#### normalize: Optional[bool] 
-
-<a class="headerlink" href="#Lit.normalize"></a>
+#### Lit.lang
+```python
+lang: Optional[str]
+```
 
 
 
-</div>
-<div id="Lit.validate_consistency" class="classattr">
 
-####   @model_validator(mode=&#39;after&#39;)    def validate_consistency(self) -&gt; Self  
 
-<a class="headerlink" href="#Lit.validate_consistency"></a>
+#### Lit.datatype
+```python
+datatype: Optional[str]
+```
+
+
+
+
+
+#### Lit.normalize
+```python
+normalize: Optional[bool]
+```
+
+
+
+
+
+#### Lit.validate_consistency
+```python
+@model_validator(mode='after') def validate_consistency(self) -> Self
+```
+
+
 
 <div class="docstring"><p>Checks that literal either has a lang_tag or a datatype, not both.</p>
 </div> 
 
-</div>
-<div id="Lit.to_rdflib" class="classattr">
+#### Lit.to_rdflib
+```python
+def to_rdflib(self)
+```
 
-####     def to_rdflib(self)  
 
-<a class="headerlink" href="#Lit.to_rdflib"></a>
 
 <div class="docstring"><p>Helper to convert this custom type to the rdflib equivalent
 Used in the graph serialization of the EDM_Base-Class</p>
 </div> 
 
-</div>
-<div id="Lit.model_config" class="classattr">
+#### Lit.model_config
+```python
+model_config: ClassVar[pydantic.config.ConfigDict] = {}
+```
 
-#### model_config: ClassVar[pydantic.config.ConfigDict] = {} 
 
-<a class="headerlink" href="#Lit.model_config"></a>
 
 <div class="docstring"><p>Configuration for the model, should be a dictionary conforming to [<code>ConfigDict</code>][pydantic.config.ConfigDict].</p>
 </div> 
 
-</div>
 
 ---
 
-</section>
 <!--pdoc-end-->
