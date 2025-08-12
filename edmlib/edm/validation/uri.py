@@ -73,7 +73,7 @@ def sanitize_url_quotation(url: str):
         scheme, rest = unquoted.split("://", 1)
         return f"{scheme}://{urllib.parse.quote(rest)}"  # type: ignore
     else:
-        return unquoted
+        return url
 
 
 def uri_is_not_local(uri: str) -> bool:
