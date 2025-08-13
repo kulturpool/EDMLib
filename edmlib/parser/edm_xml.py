@@ -192,8 +192,29 @@ class EDM_Parser:
                 for el in list(self.graph.triples((instance, ref, None)))
             ]
             values = [lit_or_ref for lit_or_ref in values if lit_or_ref.value != ""]
-            for value in values:
-                value.__class__.model_validate(value.__class__(**value.model_dump()))  
+
+            if cls_obj == ORE_Aggregation and att == "edm_aggregatedCHO":
+                # ORE_Aggregation.edm_aggregatedCHO needs to have as its new
+                # value the validation function's result. This is because, at a
+                # later stage, it is validated against the EDM_ProvidedCHO.id in
+                # EDM_Record.validate_provided_cho_identity(). ProvidedCHO has
+                # its validation value assigned at instantiation and would
+                # therefore not match ORE_Aggregation.edm_aggregatedCHO.
+                # 
+                # The validation function returns a Ref that might differ from
+                # the original value, because urls are sanitized via
+                # sanitize_url_quotation() in Ref.validate_value_as_uri().
+                values = [
+                    value.__class__.model_validate(
+                        value.__class__(**value.model_dump())
+                    )
+                    for value in values
+                ]
+            else:
+                for value in values:
+                    value.__class__.model_validate(
+                        value.__class__(**value.model_dump())
+                    )
             if values:
                 many = check_if_many(cls_obj, att)
                 if not many:
