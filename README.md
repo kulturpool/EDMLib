@@ -660,8 +660,8 @@ Lit</p>
 
 <p>The value must be one of the types accepted by Europeana as it will support portal fun
 ctionality: TEXT, VIDEO, SOUND, IMAGE, 3D. (For 3D, when applicable, use the value “3D
-‐PDF” in dc:format ) <edm:type>IMAGE</edm:type> (upper-­case &amp; case sensitive) <edm:ty
-pe>3D</edm:type> (upper-­case &amp; case sensitive)</p>
+‐PDF” in dc:format ) <code>&lt;edm:type&gt;IMAGE&lt;/edm:type&gt;</code> (upper-­case &amp; case sensitive) <code>&lt;edm:ty
+pe&gt;3D&lt;/edm:type&gt;</code> (upper-­case &amp; case sensitive)</p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_contributor
@@ -684,9 +684,9 @@ Optional[MixedValuesList]</p>
 
 <p>Use for contributors to the CHO. If possible supply the identifier of the contributor 
 from an authority source. Providers with richer role terms can elect to map a subset t
-o dc:contributor and others to dc:creator. Repeat for multiple contributors. <dc:contr
-ibutor>Maria Callas</dc:contributor> or create a reference to an instance of the Agent
-class <dc:contributor rdf:resource=“http://www.example.com/MariaCallas”&gt;For recommend
+o dc:contributor and others to dc:creator. Repeat for multiple contributors. <code>&lt;dc:contr
+ibutor&gt;Maria Callas&lt;/dc:contributor&gt;</code> or create a reference to an instance of the Agent
+class <code>&lt;dc:contributor rdf:resource=“http://www.example.com/MariaCallas”&gt;</code>For recommend
 ations on medata quality see Tier A-C requirements ,</p>
 </div> 
 
@@ -709,10 +709,10 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>The spatial or temporal topic of the CHO. Use the more precise dcterms:spatial or dcte
-rms:temporal properties if the data will support it. <dc:coverage>1995-­1996</dc:cover
-age> or <dc:coverage>Berlin</dc:coverage> or create a reference to an instance of a co
-ntextual class, for example, a Place class <dc:coverage rdf:resource=“<a href="https://sws.geon">https://sws.geon</a>
-ames.org/2950159/ ”/></p>
+rms:temporal properties if the data will support it. <code>&lt;dc:coverage&gt;1995-­1996&lt;/dc:cover
+age&gt;</code> or <code>&lt;dc:coverage&gt;Berlin&lt;/dc:coverage&gt;</code> or create a reference to an instance of a co
+ntextual class, for example, a Place class <code>&lt;dc:coverage rdf:resource=“https://sws.geon
+ames.org/2950159/ ”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_creator
@@ -734,9 +734,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>For the creator of the CHO. If possible supply the identifier of the creator from an a
-uthority source. Repeat for multiple creators.  <dc:creator>Shakespeare, William</dc:c
-reator> or create a reference to an instance of the Agent class <dc:creator rdf:resour
-ce=“http://viaf.org/viaf/96994048”/>For recommendations on medata quality see Tier A-C
+uthority source. Repeat for multiple creators.  <code>&lt;dc:creator&gt;Shakespeare, William&lt;/dc:c
+reator&gt;</code> or create a reference to an instance of the Agent class <code>&lt;dc:creator rdf:resour
+ce=“http://viaf.org/viaf/96994048”/&gt;</code>For recommendations on medata quality see Tier A-C
 requirements .</p>
 </div> 
 
@@ -762,9 +762,9 @@ Optional[MixedValuesList]</p>
 ng to ISO 8601 starting with the year and with hyphens (YYYY-­MM-DD). NB: other EDM el
 ements are relevant for expressing dates of different events in the life of the CHO: d
 cterms:temporal, dcterms:created and dcterms:issued. Be careful and choose the most ap
-propriate one! <dc:date>Early 20th century</dc:date> or <dc:date>1919</dc:date> or cre
-ate a reference to an instance of the TimeSpan class <dc:date rdf:resource=“<a href="http://sem">http://sem</a>
-ium.org/time/19xx_1_third”/></p>
+propriate one! <code>&lt;dc:date&gt;Early 20th century&lt;/dc:date&gt;</code> or <code>&lt;dc:date&gt;1919&lt;/dc:date&gt;</code> or cre
+ate a reference to an instance of the TimeSpan class <code>&lt;dc:date rdf:resource=“http://sem
+ium.org/time/19xx_1_third”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_description
@@ -786,10 +786,10 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>A description of the CHO. If there is no dc:description for an object, there must be a
-dc:title. If both are  available, provide both. <dc:description>Illustrated guide to 
+dc:title. If both are  available, provide both. <code>&lt;dc:description&gt;Illustrated guide to 
 airport markings and lighting signals, with particular reference to SMGCS  (Surface Mo
-vement Guidance and Control System) for airports with low visibility conditions.</dc:d
-escription></p>
+vement Guidance and Control System) for airports with low visibility conditions.&lt;/dc:d
+escription&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_format
@@ -812,7 +812,7 @@ Optional[MixedValuesList]</p>
 
 <p>Use for the terms generally applied to indicate the format of the cultural heritage ob
 ject or the file format of a born digital object. Use the value “3D-­PDF” if appropria
-te. <dc:format>paper</dc:format>For recommendations on medata quality see Tier A-C req
+te. <code>&lt;dc:format&gt;paper&lt;/dc:format&gt;</code>For recommendations on medata quality see Tier A-C req
 uirements .</p>
 </div> 
 
@@ -834,7 +834,7 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>An identifier of the original CHO. <dc:identifier>RP-­T-­1952-­380</dc:identifier></p>
+<p>An identifier of the original CHO. <code>&lt;dc:identifier&gt;RP-­T-­1952-­380&lt;/dc:identifier&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_language
@@ -881,9 +881,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>The name of the publisher of the CHO. If possible supply the identifier of the publish
-er from an authority source. <dc:publisher>Oxford University Press</dc:publisher> or c
-reate a reference to an instance of the Agent class <dc:publisher rdf:resource=“http:/
-/www.oup.com/”/>For recommendations on medata quality see Tier A-C requirements .</p>
+er from an authority source. <code>&lt;dc:publisher&gt;Oxford University Press&lt;/dc:publisher&gt;</code> or c
+reate a reference to an instance of the Agent class <code>&lt;dc:publisher rdf:resource=“http:/
+/www.oup.com/”/&gt;</code>For recommendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_relation
@@ -905,9 +905,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>The name or identifier of a related resource, generally used for other related CHOs. C
-f edm:isRelatedTo. <dc:relation>maps.crace.1/33</dc:relation> (Shelf mark) Or to provi
-de a link to another object: <dc:relation rdf:resource=“<a href="http://www.identifier/relatedO">http://www.identifier/relatedO</a>
-bject”/></p>
+f edm:isRelatedTo. <code>&lt;dc:relation&gt;maps.crace.1/33&lt;/dc:relation&gt;</code> (Shelf mark) Or to provi
+de a link to another object: <code>&lt;dc:relation rdf:resource=“http://www.identifier/relatedO
+bject”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_rights
@@ -930,8 +930,8 @@ Optional[MixedValuesList]</p>
 
 <p>Use to give the name of the rights holder of the CHO if possible or for more general r
 ights information. (Note that the controlled edm:rights property relates to the digita
-l objects and applies to the edm:WebResource and/or edm:Aggregation). <dc:rights>Copyr
-ight © British Library Board</dc:rights></p>
+l objects and applies to the edm:WebResource and/or edm:Aggregation). <code>&lt;dc:rights&gt;Copyr
+ight © British Library Board&lt;/dc:rights&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_source
@@ -954,7 +954,7 @@ Optional[MixedValuesList]</p>
 
 <p>A related resource from which the described resource is derived in whole or in part i.
 e. the source of the original CHO.  (Not the name of the content holder: for this see 
-edm:dataProvider.) <dc:source>Security Magazine pp 3-12</dc:source></p>
+edm:dataProvider.) <code>&lt;dc:source&gt;Security Magazine pp 3-12&lt;/dc:source&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_subject
@@ -978,11 +978,11 @@ Optional[MixedValuesList]</p>
 <p>The subject of the CHO.One of dc:subject or dc:type or dcterms:spatial or dcterms:temp
 oral must be  provided; if more than one of these properties is available, please prov
 ide them all. High-­level dc:subject  values like 'archaeology' are allowed, especiall
-y when there is no other subject that can be easily filled in. <dc:subject>archeology&lt;
-/dc:subject>or create a reference to an instance of the Concept class <skos:Concept rd
-f:about="http://semantics.gr/authorities/ekt-unesco/560215094">   <skos:prefLabel xml:
-lang="el">Αρχαιολογία</skos:prefLabel>   <skos:prefLabel xml:lang="en">Archaeology</sk
-os:prefLabel></skos:Concept>For recommendations on medata quality see Tier A-C require
+y when there is no other subject that can be easily filled in. <code>&lt;dc:subject&gt;archeology&lt;
+/dc:subject&gt;</code>or create a reference to an instance of the Concept class <code>&lt;skos:Concept rd
+f:about="http://semantics.gr/authorities/ekt-unesco/560215094"&gt;   &lt;skos:prefLabel xml:
+lang="el"&gt;Αρχαιολογία&lt;/skos:prefLabel&gt;   &lt;skos:prefLabel xml:lang="en"&gt;Archaeology&lt;/sk
+os:prefLabel&gt;&lt;/skos:Concept&gt;</code>For recommendations on medata quality see Tier A-C require
 ments .</p>
 </div> 
 
@@ -1007,8 +1007,8 @@ Optional[List[Lit]]</p>
 <p>A name given to the CHO. dc:title should be present; but if there is no dc:title avail
 able, it is acceptable to have dc:description instead. dc:title and dc:description sho
 uld be distinct. Exact translations of the title can be  provided using appropriate xm
-l language attributes. <dc:title xml:lang=“en”&gt;Eight Weeks</dc:title> <dc:title xml:la
-ng=“it”&gt;Ocho semanas</ dc:title></p>
+l language attributes. <code>&lt;dc:title xml:lang=“en”&gt;Eight Weeks&lt;/dc:title&gt; &lt;dc:title xml:la
+ng=“it”&gt;Ocho semanas&lt;/ dc:title&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dc_type
@@ -1032,9 +1032,9 @@ Optional[MixedValuesList]</p>
 <p>The nature or genre of the CHO. Ideally the term(s) will be taken from a controlled vo
 cabulary. One of dc:type or dc:subject or dcterms:spatial or dcterms:temporal must be 
 provided; if more than one of these properties is available, please provide them all. 
-dc:type should not be (strictly) identical to edm:type. <dc:type>Book</dc:type> or <dc
-:type>trombone</dc:type> or create a reference to an instance of the Concept class <dc
-:type rdf:resource=“http://www.mimo-­db.eu/HornbostelAndSachs/356/”&gt;For recommendation
+dc:type should not be (strictly) identical to edm:type. <code>&lt;dc:type&gt;Book&lt;/dc:type&gt;</code> or <code>&lt;dc
+:type&gt;trombone&lt;/dc:type&gt;</code> or create a reference to an instance of the Concept class <code>&lt;dc
+:type rdf:resource=“http://www.mimo-­db.eu/HornbostelAndSachs/356/”&gt;</code>For recommendation
 s on medata quality see Tier A-C requirements .</p>
 </div> 
 
@@ -1057,7 +1057,7 @@ Optional[List[Lit]]</p>
 <p>Description: </p>
 
 <p>Any alternative title of the CHO including abbreviations or translations that may not 
-be exact. <dcterms:alternativexml:lang=“en”&gt;Eight weeks: a novel</dcterms:alternative></p>
+be exact. <code>&lt;dcterms:alternativexml:lang=“en”&gt;Eight weeks: a novel&lt;/dcterms:alternative&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_conformsTo
@@ -1078,9 +1078,9 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>An established standard to which the CHO conforms. <dcterms:conformsTo>W3C WCAG 2.0</d
-cterms:conformsTo> (conforms to web content accessibility guidelines). Or link to the 
-resource <dcterms:conformsTo rdf:resource=“http://www.w3.org/TR/WCAG/”/></p>
+<p>An established standard to which the CHO conforms. <code>&lt;dcterms:conformsTo&gt;W3C WCAG 2.0&lt;/d
+cterms:conformsTo&gt;</code> (conforms to web content accessibility guidelines). Or link to the 
+resource <code>&lt;dcterms:conformsTo rdf:resource=“http://www.w3.org/TR/WCAG/”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_created
@@ -1104,10 +1104,10 @@ Optional[MixedValuesList]</p>
 <p>The date of creation of the CHO. Europeana recommends date conforming to ISO 8601 star
 ting with the year and with hyphens (YYYY-­MM-DD). NB: other EDM elements are relevant
 for expressing dates of different events in the life of the CHO: dc:date, dcterms:tem
-poral and dcterms:issued. Be careful and choose the most appropriate one! <dcterms:cre
-ated>Mid 16th century</dcterms:created> or <dcterms:created>1584</dcterms:created> or 
-create a reference to an instance of the TimeSpan class<dcterms:created rdf:resource=“
-http://semium.org/time/15xx_3_third”/>For recommendations on medata quality see Tier A
+poral and dcterms:issued. Be careful and choose the most appropriate one! <code>&lt;dcterms:cre
+ated&gt;Mid 16th century&lt;/dcterms:created&gt;</code> or <code>&lt;dcterms:created&gt;1584&lt;/dcterms:created&gt;</code> or 
+create a reference to an instance of the TimeSpan class<code>&lt;dcterms:created rdf:resource=“
+http://semium.org/time/15xx_3_third”/&gt;</code>For recommendations on medata quality see Tier A
 -C requirements .</p>
 </div> 
 
@@ -1129,8 +1129,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>The size or duration of the CHO. <dcterms:extent>13 cm</dcterms:extent> (the width of 
-an original object). <dcterms:extent>34 minutes</dcterms:extent> (the duration of an a
+<p>The size or duration of the CHO. <code>&lt;dcterms:extent&gt;13 cm&lt;/dcterms:extent&gt;</code> (the width of 
+an original object). <code>&lt;dcterms:extent&gt;34 minutes&lt;/dcterms:extent&gt;</code> (the duration of an a
 udio file)</p>
 </div> 
 
@@ -1153,10 +1153,10 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>A resource related to the CHO that is substantially the same as the CHO but in another
-format. <dcterms:hasFormat><a href="http://upload.wikimedia.org/wikipedia/en/f/f3/Europeana_lo">http://upload.wikimedia.org/wikipedia/en/f/f3/Europeana_lo</a>
-go.png</dcterms:hasFormat> for a png image file of the described tiff resource Or as a
-link to a resource <dcterms:hasFormat rdf:resource=“<a href="http://upload.wikimedia.org/wikip">http://upload.wikimedia.org/wikip</a>
-edia/en/f/f3/Europeana_logo.png’’/></p>
+format. <code>&lt;dcterms:hasFormat&gt;http://upload.wikimedia.org/wikipedia/en/f/f3/Europeana_lo
+go.png&lt;/dcterms:hasFormat&gt;</code> for a png image file of the described tiff resource Or as a
+link to a resource <code>&lt;dcterms:hasFormat rdf:resource=“http://upload.wikimedia.org/wikip
+edia/en/f/f3/Europeana_logo.png’’/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_hasPart
@@ -1180,8 +1180,8 @@ Optional[MixedValuesList]</p>
 <p>A resource that is included either physically or logically in the CHO. It is possible 
 to use either dcterms:isPartOf or dcterms:hasPart to express relation between objects 
 in a hierarchy. However in many cases (especially when a parent object has many childr
-en) it is preferable to use dcterms:isPartOf. <dcterms:hasPart>Vol.2. Issue 1</dcterms
-:hasPart></p>
+en) it is preferable to use dcterms:isPartOf. <code>&lt;dcterms:hasPart&gt;Vol.2. Issue 1&lt;/dcterms
+:hasPart&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_hasVersion
@@ -1203,8 +1203,8 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Another, later resource that is a version, edition or adaptation of the CHO demonstrat
-ing substantive changes in content rather than format. <dcterms:hasVersion>The Sorcere
-r’s Apprentice (translation by Edwin Zeydel, 1955)</dcterms:hasVersion> In this exampl
+ing substantive changes in content rather than format. <code>&lt;dcterms:hasVersion&gt;The Sorcere
+r’s Apprentice (translation by Edwin Zeydel, 1955)&lt;/dcterms:hasVersion&gt;</code> In this exampl
 e the 1955 translation is a version of the described resource.</p>
 </div> 
 
@@ -1226,8 +1226,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>Another resource that is substantially the same as the CHO but in another format. <dct
-erms:isFormatOf>Europeana_logo.tiff</dcterms:isFormatOf> where the resource being desc
+<p>Another resource that is substantially the same as the CHO but in another format. <code>&lt;dct
+erms:isFormatOf&gt;Europeana_logo.tiff&lt;/dcterms:isFormatOf&gt;</code> where the resource being desc
 ribed is a png image file</p>
 </div> 
 
@@ -1255,8 +1255,8 @@ te display in the portal. For that purpose it will be necessary to supply a refe
 as the value. See the Task Force report on representing hierarchical entities.  It is 
 possible to use either dcterms:isPartOf or dcterms:hasPart to express relation between
 objects in a hierarchy. However in many cases (especially when a parent object has ma
-ny children) it is preferable to use dcterms:isPartOf. <dcterms:isPartOf>Crace Collect
-ion of Maps of London</dcterms:isPartOf></p>
+ny children) it is preferable to use dcterms:isPartOf. <code>&lt;dcterms:isPartOf&gt;Crace Collect
+ion of Maps of London&lt;/dcterms:isPartOf&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_isReferencedBy
@@ -1277,9 +1277,9 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>Another resource that references, cites or otherwise points to the CHO. <dcterms:isRef
-erencedBy>Till, Nicholas (1994) Mozart and the Enlightenment: Truth, Virtue and Beauty
-in Mozart’s Operas, W. W. Norton &amp; Company</dcterms:isReferencedBy></p>
+<p>Another resource that references, cites or otherwise points to the CHO. <code>&lt;dcterms:isRef
+erencedBy&gt;Till, Nicholas (1994) Mozart and the Enlightenment: Truth, Virtue and Beauty
+in Mozart’s Operas, W. W. Norton &amp; Company&lt;/dcterms:isReferencedBy&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_isReplacedBy
@@ -1300,11 +1300,11 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>Another resource that supplants , displaces, or supersedes the CHO. <dcterms:isReplace
-dBy><a href="http://dublincore.org/about/2009/01/05/bylaws/">http://dublincore.org/about/2009/01/05/bylaws/</a></dcterms:isReplacedBy> where the re
+<p>Another resource that supplants , displaces, or supersedes the CHO. <code>&lt;dcterms:isReplace
+dBy&gt;http://dublincore.org/about/2009/01/05/bylaws/&lt;/dcterms:isReplacedBy&gt;</code> where the re
 source described is an older version (<a href="http://dublincore.org/about/2006/01/01/bylaws/">http://dublincore.org/about/2006/01/01/bylaws/</a>) 
-or link <dcterms:isReplacedBy rdf:resource=“<a href="http://dublincore.org/about/2009/01/05/byl">http://dublincore.org/about/2009/01/05/byl</a>
-aws/”/></p>
+or link <code>&lt;dcterms:isReplacedBy rdf:resource=“http://dublincore.org/about/2009/01/05/byl
+aws/”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_isRequiredBy
@@ -1326,7 +1326,7 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Another related resource that requires the CHO to support its function, delivery or co
-herence <isRequiredBy><a href="http://www.myslides.com/myslideshow.ppt">http://www.myslides.com/myslideshow.ppt</a></isRequiredBy> where the
+herence <code>&lt;isRequiredBy&gt;http://www.myslides.com/myslideshow.ppt&lt;/isRequiredBy&gt;</code> where the
 image being described is required for an online slideshow.</p>
 </div> 
 
@@ -1352,11 +1352,11 @@ Optional[MixedValuesList]</p>
 g to ISO 8601  starting with the year and with hyphens (YYYY-­MM-DD). NB: other EDM el
 ements are relevant for expressing dates of different events in the life of the CHO: d
 c:date, dcterms:temporal and dcterms:created. Be careful and choose the most appropria
-te one! <dcterms:issued>1993</dcterms:issued> or create a reference to an instance of 
-the TimeSpan class <dcterms:issued rdf:resource=“<a href="http://semium.org/time/17xx_3_third”/">http://semium.org/time/17xx_3_third”/</a></p>
+te one! <code>&lt;dcterms:issued&gt;1993&lt;/dcterms:issued&gt;</code> or create a reference to an instance of 
+the TimeSpan class `<dcterms:issued rdf:resource=“<a href="http://semium.org/time/17xx_3_third”/">http://semium.org/time/17xx_3_third”/</a></p>
 
 <blockquote>
-<p>(late 18th century)For recommendations on medata quality see Tier A-C requirements .</p>
+<p>` (late 18th century)For recommendations on medata quality see Tier A-C requirements .</p>
 </blockquote>
 </div> 
 
@@ -1379,8 +1379,8 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Another, earlier resource of which the CHO is a version, edition or adaptation, demons
-trating substantive changes in content rather than format. <dcterms:isVersionOf>The So
-rcerer’s Apprentice<dcterms:isVersionOf>In this example The Sorcerer’s Apprentice (tra
+trating substantive changes in content rather than format. <code>&lt;dcterms:isVersionOf&gt;The So
+rcerer’s Apprentice&lt;dcterms:isVersionOf&gt;</code>In this example The Sorcerer’s Apprentice (tra
 nslation by Edwin Zeydel, 1955) is the resource being described.</p>
 </div> 
 
@@ -1402,7 +1402,7 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>The material or physical carrier of the CHO.  <dcterms:medium>metal</dcterms:medium>Fo
+<p>The material or physical carrier of the CHO.  <code>&lt;dcterms:medium&gt;metal&lt;/dcterms:medium&gt;</code>Fo
 r recommendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
@@ -1425,8 +1425,8 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>A statement of changes in ownership and custody of the CHO since its creation. Signifi
-cant for authenticity, integrity and interpretation. <dcterms:provenance>Donated to Th
-e National Library in 1965</dcterms:provenance></p>
+cant for authenticity, integrity and interpretation. <code>&lt;dcterms:provenance&gt;Donated to Th
+e National Library in 1965&lt;/dcterms:provenance&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_references
@@ -1447,8 +1447,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>Other resources referenced, cited or otherwise pointed to by the CHO. <dcterms:referen
-ces>Honderd jaar Noorse schilderkunst </dcterms:references></p>
+<p>Other resources referenced, cited or otherwise pointed to by the CHO. <code>&lt;dcterms:referen
+ces&gt;Honderd jaar Noorse schilderkunst &lt;/dcterms:references&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_replaces
@@ -1469,11 +1469,11 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>A related resource that is supplanted, displaced, or superseded by the CHO. <dcterms:r
-eplaces><a href="http://dublincore.org/about/2006/01/01/bylaws/">http://dublincore.org/about/2006/01/01/bylaws/</a></dcterms:replaces> where the re
+<p>A related resource that is supplanted, displaced, or superseded by the CHO. <code>&lt;dcterms:r
+eplaces&gt;http://dublincore.org/about/2006/01/01/bylaws/&lt;/dcterms:replaces&gt;</code> where the re
 source described is a newer version (<a href="http://dublincore.org/about/2009/01/05/bylaws/">http://dublincore.org/about/2009/01/05/bylaws/</a>) o
-r link to resource <dcterms:replaces rdf:resource=“<a href="http://dublincore.org/about/2006/01">http://dublincore.org/about/2006/01</a>
-/01/bylaws/”/></p>
+r link to resource <code>&lt;dcterms:replaces rdf:resource=“http://dublincore.org/about/2006/01
+/01/bylaws/”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_requires
@@ -1495,8 +1495,8 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Another resource that is required by the described resource to support its function, d
-elivery or coherence. <dcterms:requires><a href="http://ads.ahds.ac.uk/project/userinfo/css/old">http://ads.ahds.ac.uk/project/userinfo/css/old</a>
-browsers.css </dcterms:requires> where the resource described is an HTML file at http:
+elivery or coherence. <code>&lt;dcterms:requires&gt;http://ads.ahds.ac.uk/project/userinfo/css/old
+browsers.css &lt;/dcterms:requires&gt;</code> where the resource described is an HTML file at http:
 //ads.ahds.ac.uk/project/userinfo/digitalTextArchiving.html</p>
 </div> 
 
@@ -1524,9 +1524,9 @@ c:subject or dcterms:temporal must be provided; if more than one of these proper
 s available, please provide them all. dcterms:spatial is used to record the place depi
 cted in the CHO and other locations associated with it as opposed to edm:currentLocati
 on which is used only to record the place where the CHO is currently held (e.g. a muse
-um or gallery). Be careful to choose the most appropriate one! <dcterms:spatial>Portug
-al</dcterms:spatial> or create a reference to an instance of the Place class <dcterms:
-spatial rdf:resource=“<a href="https://sws.geonames.org/2264397/">https://sws.geonames.org/2264397/</a> ”/>For recommendations on meda
+um or gallery). Be careful to choose the most appropriate one! <code>&lt;dcterms:spatial&gt;Portug
+al&lt;/dcterms:spatial&gt;</code> or create a reference to an instance of the Place class <code>&lt;dcterms:
+spatial rdf:resource=“https://sws.geonames.org/2264397/ ”/&gt;</code>For recommendations on meda
 ta quality see Tier A-C requirements .</p>
 </div> 
 
@@ -1548,8 +1548,8 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>A list of sub‐units of the CHO.<dcterms:tableOfContents>Chapter 1. Introduction, Chapt
-er 2. History </dcterms:tableOfContents></p>
+<p>A list of sub‐units of the CHO.<code>&lt;dcterms:tableOfContents&gt;Chapter 1. Introduction, Chapt
+er 2. History &lt;/dcterms:tableOfContents&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.dcterms_temporal
@@ -1576,9 +1576,9 @@ bject or dcterms:spatial must be provided; if more than one of these properties 
 ilable, please provide them all. Europeana recommends date conforming to ISO 8601 star
 ting with the year and with hyphens (YYYY-MM-DD). NB: other EDM elements are relevant 
 for expressing dates of different events in the life of the CHO: dc:date, dcterms:crea
-ted and dcterms:issued. Be careful and choose the most appropriate one! <dcterms:tempo
-ral>Roman Empire</dcterms:temporal> or create a reference to an instance of the TimeSp
-an class <dcterms:temporal rdf:resource=“http://semium.org/time/roman_empire”/>For rec
+ted and dcterms:issued. Be careful and choose the most appropriate one! <code>&lt;dcterms:tempo
+ral&gt;Roman Empire&lt;/dcterms:temporal&gt;</code> or create a reference to an instance of the TimeSp
+an class <code>&lt;dcterms:temporal rdf:resource=“http://semium.org/time/roman_empire”/&gt;</code>For rec
 ommendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
@@ -1608,8 +1608,8 @@ ty, either by using a reference (to a Place entity) that has coordinates or an a
 attribute, or as a simple Lit. edm:currentLocation is used only to record the pla
 ce where the CHO is currently held (e.g. a museum or gallery)dcterms:spatial is used t
 o record the place depicted in the CHO and other locations associated with itBe carefu
-l to choose the most appropriate one!<edm:currentLocation rdf:resource=“<a href="https://sws.ge">https://sws.ge</a>
-onames.org/2950159/”&gt; (Identifier for Berlin)For recommendations on medata quality see
+l to choose the most appropriate one!<code>&lt;edm:currentLocation rdf:resource=“https://sws.ge
+onames.org/2950159/”&gt;</code> (Identifier for Berlin)For recommendations on medata quality see
 Tier A-C requirements .</p>
 </div> 
 
@@ -1632,9 +1632,9 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>The identifier of an agent, a place, a time period or any other identifiable entity th
-at the CHO may have “met” in its life. <edm:hasMet rdf:resource=“<a href="http://viaf.org/viaf/">http://viaf.org/viaf/</a>
-96994048/”&gt; (Identifier for William Shakespeare) <edm:hasMet rdf:resource=“<a href="https://sws">https://sws</a>
-.geonames.org/6620265/ ”&gt; (location identifier for Shakespeare’s Globe theatre.)For re
+at the CHO may have “met” in its life. <code>&lt;edm:hasMet rdf:resource=“http://viaf.org/viaf/
+96994048/”&gt; (Identifier for William Shakespeare) &lt;edm:hasMet rdf:resource=“https://sws
+.geonames.org/6620265/ ”&gt;</code> (location identifier for Shakespeare’s Globe theatre.)For re
 commendations on medata quality see Tier A-C requirements .</p>
 </div> 
 
@@ -1659,7 +1659,7 @@ Optional[MixedValuesList]</p>
 <p>The identifier of a concept, or a word or phrase from a controlled vocabulary (thesaur
 us etc) giving the type of the CHO. E.g. Painting from the AAT thesaurus. This propert
 y can be seen as a super-­property of e.g. dc:format or dc:type to support “What” ques
-tions. <edm:hasType>Painting</edm:hasType></p>
+tions. <code>&lt;edm:hasType&gt;Painting&lt;/edm:hasType&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_incorporates
@@ -1682,7 +1682,7 @@ Optional[List[Ref]]</p>
 
 <p>The identifier of another resource that is incorporated in the described CHO. E.g. the
 movie “A Clockwork Orange” incorporates Rossini’s La Gazza Ladra” in its soundtrack. 
-<edm:incorporates rdf:resource=“http://www.identifier/IncorporatedResource/“&gt;</p>
+<code>&lt;edm:incorporates rdf:resource=“http://www.identifier/IncorporatedResource/“&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_isDerivativeOf
@@ -1704,8 +1704,8 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>The identifier of another resource from which the described CHO has been derived. E.g.
-the identifier of Moby Dick when the Italian translation is the described CHO. <edm:i
-sDerivativeOf rdf:resource=“http://www.identifier/SourceResource/”&gt;</p>
+the identifier of Moby Dick when the Italian translation is the described CHO. <code>&lt;edm:i
+sDerivativeOf rdf:resource=“http://www.identifier/SourceResource/”&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_isNextInSequence
@@ -1728,8 +1728,8 @@ Optional[List[Ref]]</p>
 
 <p>The identifier of the preceding object where both objects are part of the same overall
 resource. Use this for objects that are part of a hierarchy or sequence to ensure cor
-rect display in the portal. <edm:isNextInSequence rdf:resource=“<a href="http://www.identifier/">http://www.identifier/</a>
-PrecedingResource”/</p>
+rect display in the portal. <code>&lt;edm:isNextInSequence rdf:resource=“http://www.identifier/
+PrecedingResource”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_isRelatedTo
@@ -1751,9 +1751,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>The identifier or name of a concept or other resource to which the described CHO is re
-lated. E.g. Moby Dick is related to XIX Century literature. Cf dc:relation. <edm:isRel
-atedTo>Literature</edm:isRelatedTo> Or link to resource <edm:isRelatedTo rdf:resource=
-“http://www.eionet.europa.eu/gemet/concept?cp=4850/”&gt;</p>
+lated. E.g. Moby Dick is related to XIX Century literature. Cf dc:relation. <code>&lt;edm:isRel
+atedTo&gt;Literature&lt;/edm:isRelatedTo&gt;</code> Or link to resource <code>&lt;edm:isRelatedTo rdf:resource=
+“http://www.eionet.europa.eu/gemet/concept?cp=4850/”&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_isRepresentationOf
@@ -1776,7 +1776,7 @@ Optional[Ref]</p>
 
 <p>The identifier of another object of which the described CHO is a representation. E.g. 
 the identifier of the statue when the CHO being described is a painting of that statue
-. <edm:isRepresentativeOf rdf:resource=“http://www.identifier/RepresentedResource/”&gt;</p>
+. <code>&lt;edm:isRepresentativeOf rdf:resource=“http://www.identifier/RepresentedResource/”&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_isSimilarTo
@@ -1797,8 +1797,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>The identifier of another resource to which the described CHO is similar. <edm:isSimil
-arTo rdf:resource=“http://www.identifier/SimilarResource”/></p>
+<p>The identifier of another resource to which the described CHO is similar. <code>&lt;edm:isSimil
+arTo rdf:resource=“http://www.identifier/SimilarResource”/&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_isSuccessorOf
@@ -1820,8 +1820,8 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>The identifier of a resource to which the described CHO is a successor. E.g. “The Two
-Towers” is a successor of “Fellowship of the Ring”. <edm:isSuccessorOf rdf:resource=“
-http://dbpedia.org/resource/The_Fellowship_of_the_Ring/”&gt;</p>
+Towers” is a successor of “Fellowship of the Ring”. <code>&lt;edm:isSuccessorOf rdf:resource=“
+http://dbpedia.org/resource/The_Fellowship_of_the_Ring/”&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.edm_realizes
@@ -1864,7 +1864,7 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>Use to point to your own (linked data) representation of the object, if you have already minted a URI identifier for it. It is also possible to provide URIs minted by third-parties for the object. <owl:sameAs rdf:resource=“http://www.identifier/SameResourceElsewhere/”&gt;</p>
+<p>Use to point to your own (linked data) representation of the object, if you have already minted a URI identifier for it. It is also possible to provide URIs minted by third-parties for the object. <code>&lt;owl:sameAs rdf:resource=“http://www.identifier/SameResourceElsewhere/”&gt;</code></p>
 </div> 
 
 #### EDM_ProvidedCHO.validate_dependent_edm
@@ -1925,8 +1925,8 @@ Ref</p>
 <p>Description: </p>
 
 <p>The identifier of the source object e.g. the Mona Lisa itself. This could be a full li
-nked open data URI or an internal identifier. <edm:aggregatedCHO rdf:resource=“#UEDIN:
-214”/></p>
+nked open data URI or an internal identifier. <code>&lt;edm:aggregatedCHO rdf:resource=“#UEDIN:
+214”/&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_dataProvider
@@ -1951,9 +1951,9 @@ Union[Lit, Ref]</p>
 ding data to an aggregator). Identifiers will not be available until Europeana has imp
 lemented its Organization profile.  In the case of the data provider Zuidwestbrabants 
 Museum, which delivers data through Erfgoedplus.be to LoCloud, the properties would lo
-ok like this: <edm:dataProvider>Zuidwestbrabants  Museum</edm:dataProvider> <edm:inter
-mediateProvider>Erfgoedplus.be</edm:intermediateProvider> <edm:provider>LoCloud</edm:p
-rovider></p>
+ok like this: <code>&lt;edm:dataProvider&gt;Zuidwestbrabants  Museum&lt;/edm:dataProvider&gt; &lt;edm:inter
+mediateProvider&gt;Erfgoedplus.be&lt;/edm:intermediateProvider&gt; &lt;edm:provider&gt;LoCloud&lt;/edm:p
+rovider&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_provider
@@ -1978,9 +1978,9 @@ Union[Lit, Ref]</p>
 data directly to Europeana). Identifiers will not be available until Europeana has imp
 lemented its Organization profile.  In the case of the provider LoCloud, which collect
 s data from the data provider Zuidwestbrabants Museum through Erfgoedplus.be, the prop
-erties would look like this: <edm:dataProvider>Zuidwestbrabants Museum</edm:dataProvid
-er> <edm:intermediateProvider>Erfgoedplus.be</edm:intermediateProvider><edm:provider>L
-oCloud</edm:provider></p>
+erties would look like this: <code>&lt;edm:dataProvider&gt;Zuidwestbrabants Museum&lt;/edm:dataProvid
+er&gt; &lt;edm:intermediateProvider&gt;Erfgoedplus.be&lt;/edm:intermediateProvider&gt;&lt;edm:provider&gt;L
+oCloud&lt;/edm:provider&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_rights
@@ -2024,12 +2024,12 @@ ion.For example, a low­‐resolution of a JPEG file could be CC‐BY, while the
 ution version or a video showing the object would be CC-­BY-­NC. In such cases the rig
 hts statements given for the individual web resources would ‘override’ the one specifi
 ed at the ore:Aggregation level. Any other associated web resources would still be gov
-erned by the edm:rights of the ore:Aggregation.   <edm:rights rdf:resource=“<a href="http://cre">http://cre</a>
-ativecommons.org/publicdomain/mark/1.0/”/> <edm:rights rdf:resource=“<a href="http://rightsstat">http://rightsstat</a>
-ements.org/vocab/InC/1.0/”/>  Or create a reference to an instance of the cc:License c
+erned by the edm:rights of the ore:Aggregation.   <code>&lt;edm:rights rdf:resource=“http://cre
+ativecommons.org/publicdomain/mark/1.0/”/&gt; &lt;edm:rights rdf:resource=“http://rightsstat
+ements.org/vocab/InC/1.0/”/&gt;</code>  Or create a reference to an instance of the cc:License c
 lass where additional details of the rights can be provided (such as an expiry date fo
-r the restrictions): <a href="http://rightsstatements.org/vocab/NoC-­NC/1.0/">http://rightsstatements.org/vocab/NoC-­NC/1.0/</a> or <edm:rights rdf
-:resource="#statement_3000095353971"/></p>
+r the restrictions): <a href="http://rightsstatements.org/vocab/NoC-­NC/1.0/">http://rightsstatements.org/vocab/NoC-­NC/1.0/</a> or <code>&lt;edm:rights rdf
+:resource="#statement_3000095353971"/&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_hasView
@@ -2055,9 +2055,9 @@ e source object itself in the case of a born digital cultural heritage object. e
 View should only be used where there are several views of the CHO and one (or both) of
 the mandatory edm:isShownAt or edm:isShownBy properties have already been used. It is
 for cases where one CHO has several views of the same object. (e.g. a shoe and a deta
-il of the label of the shoe)  <edm:hasView rdf:resource="<a href="http://www.mimo‐db.eu/media/U">http://www.mimo‐db.eu/media/U</a>
-EDIN/VIDEO/0032195v.mpg"/> <edm:hasView rdf:resource="<a href="http://www.mimo-­db.eu/media/UED">http://www.mimo-­db.eu/media/UED</a>
-IN/AUDIO/0032195s.mp3"/></p>
+il of the label of the shoe)  <code>&lt;edm:hasView rdf:resource="http://www.mimo‐db.eu/media/U
+EDIN/VIDEO/0032195v.mpg"/&gt; &lt;edm:hasView rdf:resource="http://www.mimo-­db.eu/media/UED
+IN/AUDIO/0032195s.mp3"/&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_isShownAt
@@ -2081,8 +2081,8 @@ Optional[Ref]</p>
 <p>The URL of a web view of the object in full information context. An edm:isShownAt must
 be provided. If there is no edm:isShownAt for an object, there must be a edm:isShownB
 y. If both are available, provide both. The use of edm:isShownBy is preferred. Providi
-ng an edm:isShownAt is strongly recommended in all cases.<edm:isShownAt rdf:resource="
-http://www.mimo-­‐db.eu/UEDIN/214"/></p>
+ng an edm:isShownAt is strongly recommended in all cases.<code>&lt;edm:isShownAt rdf:resource="
+http://www.mimo-­‐db.eu/UEDIN/214"/&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_isShownBy
@@ -2106,8 +2106,8 @@ Optional[Ref]</p>
 <p>The URL of a web view of the object. An edm:isShownBy must be provided. If there is no
 edm:isShownBy for an object, there must be a edm:isShownAt. The use of edm:isShownBy 
 is preferred. Europeana generates previews for any direct link to an image file. See E
-uropeana Media Policy or information regarding the specifications of previews. <edm:is
-ShownBy rdf:resource="http://www.mimo‐db.eu/media/UEDIN/IMAGE/0032195c.jpg"/></p>
+uropeana Media Policy or information regarding the specifications of previews. <code>&lt;edm:is
+ShownBy rdf:resource="http://www.mimo‐db.eu/media/UEDIN/IMAGE/0032195c.jpg"/&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_object
@@ -2131,8 +2131,8 @@ Optional[Ref]</p>
 <p>The URL of a representation of the CHO which will be used for generating previews for 
 use in the Europeana portal. This may be the same URL as edm:isShownBy.See Europeana M
 edia Policy for information regarding the specifications of previews. This must be an 
-image, even if it is for a sound object. <edm:object rdf:resource="<a href="http://www.mimo-‐db">http://www.mimo-‐db</a>
-.eu/media/UEDIN/IMAGE/0032195c.jpg"/>In accordance with Europeana's 2023 data publicat
+image, even if it is for a sound object. <code>&lt;edm:object rdf:resource="http://www.mimo-‐db
+.eu/media/UEDIN/IMAGE/0032195c.jpg"/&gt;</code>In accordance with Europeana's 2023 data publicat
 ion approach, objects with edm:type=IMAGE that have no edm:isShownBy nor edm:object wi
 ll not be published in Europeana. (See also ContentTier 1: Image type )</p>
 </div> 
@@ -2180,8 +2180,8 @@ Optional[Lit]</p>
 
 <p>This is a mandatory property for objects that are user generated or user created that 
 have been collected by crowdsourcing or project activity. The property is used to iden
-tify such content and can only take the value “true” (lower case). <edm:ugc>true</edm:
-ugc></p>
+tify such content and can only take the value “true” (lower case). <code>&lt;edm:ugc&gt;true&lt;/edm:
+ugc&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.edm_intermediateProvider
@@ -2208,9 +2208,9 @@ ana harvests. The Intermediate Provider must be distinct from both the Data Prov
 nd the Provider in the data supply chain. Identifiers will not be available until Euro
 peana has implemented its Organization profile. In the case of the Erfgoedplus.be, whi
 ch collects data from Zuidwestbrabants Museum and provides it to LoCloud, the properti
-es would look like this: <edm:dataProvider>Zuidwestbrabants Museum</edm:dataProvider> 
-<edm:provider>LoCloud</edm:provider> <edm:intermediateProvider>Erfgoedplus.be</edm:int
-ermediateProvider></p>
+es would look like this: <code>&lt;edm:dataProvider&gt;Zuidwestbrabants Museum&lt;/edm:dataProvider&gt; 
+&lt;edm:provider&gt;LoCloud&lt;/edm:provider&gt; &lt;edm:intermediateProvider&gt;Erfgoedplus.be&lt;/edm:int
+ermediateProvider&gt;</code></p>
 </div> 
 
 #### ORE_Aggregation.validate_conditional_attributes
@@ -2267,9 +2267,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>For the creator of the web resource. If possible supply the identifier of the creator 
-from an authority source. Repeat for multiple creators. <dc:creator xml:lang=“es”&gt;Bibl
-icoteca Nacional de España</dc:creator> or create a reference to an instance of the Ag
-ent class <dc:creator rdf:resource=“http://viaf.org/viaf/147143794/”/></p>
+from an authority source. Repeat for multiple creators. <code>&lt;dc:creator xml:lang=“es”&gt;Bibl
+icoteca Nacional de España&lt;/dc:creator&gt;</code> or create a reference to an instance of the Ag
+ent class <code>&lt;dc:creator rdf:resource=“http://viaf.org/viaf/147143794/”/&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dc_description
@@ -2290,8 +2290,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>Use for an account or description of this digital representation <dc:description>Perfo
-rmance with Buccin trombone</dc:description></p>
+<p>Use for an account or description of this digital representation <code>&lt;dc:description&gt;Perfo
+rmance with Buccin trombone&lt;/dc:description&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dc_format
@@ -2313,7 +2313,7 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Use for the format of this digital representation. (Use the value “3D‐PDF” if appropri
-ate.)<dc:format>image/jpeg</dc:format></p>
+ate.)<code>&lt;dc:format&gt;image/jpeg&lt;/dc:format&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dc_rights
@@ -2336,8 +2336,8 @@ Optional[MixedValuesList]</p>
 
 <p>Use for the name of the rights holder of this digital representation if possible or fo
 r more general rights information. Note the difference between this property and the m
-andatory, controlled edm:rights property below. <dc:rights> Copyright © British Librar
-y Board</dc:rights></p>
+andatory, controlled edm:rights property below. <code>&lt;dc:rights&gt; Copyright © British Librar
+y Board&lt;/dc:rights&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dc_source
@@ -2358,8 +2358,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>A related resource from which the Web resource is derived in whole or in part. <dc:sou
-rce>The name of the source video tape <dc:source></p>
+<p>A related resource from which the Web resource is derived in whole or in part. <code>&lt;dc:sou
+rce&gt;The name of the source video tape &lt;dc:source&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dc_type
@@ -2381,9 +2381,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>The nature or genre of the digital representation. Ideally the term(s) will be taken f
-rom a controlled vocabulary.dc:type should not be (strictly) identical to edm:type. <d
-c:type>video</dc:type> or create a reference to an instance of the Concept class <dc:t
-ype rdf:about= “<a href="http://schema.org/VideoObject”">http://schema.org/VideoObject”</a> &gt;</p>
+rom a controlled vocabulary.dc:type should not be (strictly) identical to edm:type. <code>&lt;d
+c:type&gt;video&lt;/dc:type&gt;</code> or create a reference to an instance of the Concept class <code>&lt;dc:t
+ype rdf:about= “http://schema.org/VideoObject” &gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dcterms_conformsTo
@@ -2404,8 +2404,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>An established standard to which the web resource conforms. <dcterms:conformsTo>W3C WC
-AG 2.0</dcterms:conformsTo> (web content accessibility guidelines).</p>
+<p>An established standard to which the web resource conforms. <code>&lt;dcterms:conformsTo&gt;W3C WC
+AG 2.0&lt;/dcterms:conformsTo&gt;</code> (web content accessibility guidelines).</p>
 </div> 
 
 #### EDM_WebResource.dcterms_created
@@ -2427,9 +2427,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Date of creation of the Web resource. Europeana recommends date conforming to ISO 8601
-starting with the year and with hyphens (YYYY-MM-DD). <dcterms:created>2010</dcterms:
-created> or create a reference to an instance of the TimeSpan class <dc:date rdf:resou
-rce=“http://semium.org/time/2010”/></p>
+starting with the year and with hyphens (YYYY-MM-DD). <code>&lt;dcterms:created&gt;2010&lt;/dcterms:
+created&gt;</code> or create a reference to an instance of the TimeSpan class <code>&lt;dc:date rdf:resou
+rce=“http://semium.org/time/2010”/&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dcterms_extent
@@ -2450,8 +2450,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>The size or duration of the digital resource. <dcterms:extent>1h 26 min 41 sec</dcterm
-s:extent></p>
+<p>The size or duration of the digital resource. <code>&lt;dcterms:extent&gt;1h 26 min 41 sec&lt;/dcterm
+s:extent&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dcterms_hasPart
@@ -2472,8 +2472,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>A resource that is included either physically or logically in the web resource. <dcter
-ms:hasPart rdf:resource=“http://www.identifier/Part”/></p>
+<p>A resource that is included either physically or logically in the web resource. <code>&lt;dcter
+ms:hasPart rdf:resource=“http://www.identifier/Part”/&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dcterms_isFormatOf
@@ -2495,10 +2495,10 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Another resource that is substantially the same as the web resource but in another for
-mat.  <dcterms:isFormatOf><a href="http://upload.wikimedia.org/wikipedia/en/f/f3/Europeana_logo">http://upload.wikimedia.org/wikipedia/en/f/f3/Europeana_logo</a>
-.png</dcterms:isFormatOf> for a png image file of the described tiff web resource. Or 
-as a link to a resource <dcterms:isFormatOf rdf:resource=“<a href="http://upload.wikimedia.org/">http://upload.wikimedia.org/</a>
-wikipedia/en/f/f3/Europeana_logo.png”/></p>
+mat.  <code>&lt;dcterms:isFormatOf&gt;http://upload.wikimedia.org/wikipedia/en/f/f3/Europeana_logo
+.png&lt;/dcterms:isFormatOf&gt;</code> for a png image file of the described tiff web resource. Or 
+as a link to a resource <code>&lt;dcterms:isFormatOf rdf:resource=“http://upload.wikimedia.org/
+wikipedia/en/f/f3/Europeana_logo.png”/&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dcterms_isPartOf
@@ -2522,9 +2522,9 @@ Optional[List[Ref]]</p>
 <p>A resource in which the WebResource is physically or logically included. This property
 can be used for web resources that are part of a hierarchy. Hierarchies can be repres
 ented as hierarchies of ProvidedCHOs or hierarchies of web resources but not both at t
-he same time. See the Task Force report on representing hierarchical entities. <dcterm
-s:isPartOf rdf:resource=“<a href="http://data.europeana.eu/item/08701/1B0BACAA44D5A807E43D9B411">http://data.europeana.eu/item/08701/1B0BACAA44D5A807E43D9B411</a>
-C9781AAD2F96E65”/></p>
+he same time. See the Task Force report on representing hierarchical entities. <code>&lt;dcterm
+s:isPartOf rdf:resource=“http://data.europeana.eu/item/08701/1B0BACAA44D5A807E43D9B411
+C9781AAD2F96E65”/&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dcterms_isReferencedBy
@@ -2547,8 +2547,8 @@ Optional[MixedValuesList]</p>
 
 <p>A related resource that references, cites, or otherwise points to the described resour
 ce. In a IIIF implementation, dcterms:isReferencedBy can be used to connect a edm:WebR
-esource to a IIIF manifest URI. <dcterms:isReferencedBy rdf:resource="<a href="https://gallica">https://gallica</a>.
-bnf.fr/iiif/ark:/12148/btv1b55001425m/manifest.json"/></p>
+esource to a IIIF manifest URI. <code>&lt;dcterms:isReferencedBy rdf:resource="https://gallica.
+bnf.fr/iiif/ark:/12148/btv1b55001425m/manifest.json"/&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.dcterms_issued
@@ -2570,9 +2570,9 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>Date of formal issuance or publication of the web resource. Europeana recommends date 
-conforming to ISO 8601 starting with the year and with hyphens (YYYY‐MM-DD). <dcterms:
-issued>1999</dcterms:issued> or create a reference to an instance of the TimeSpan clas
-s<dcterms:issued rdf:resource=“http://semium.org/time/2010”/></p>
+conforming to ISO 8601 starting with the year and with hyphens (YYYY‐MM-DD). <code>&lt;dcterms:
+issued&gt;1999&lt;/dcterms:issued&gt;</code> or create a reference to an instance of the TimeSpan clas
+s<code>&lt;dcterms:issued rdf:resource=“http://semium.org/time/2010”/&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.edm_isNextInSequence
@@ -2623,12 +2623,12 @@ d for this property for each instance of a web resource.The value for the rights
 ment in this element must be a URI from the list of available values. Note: rights sta
 tements must be exactly as specified there, which means they must start with http and 
 not https. The rights statement specified at the level of the web resource will ‘overr
-ide’ the statement specified at the level of the aggregation. <edm:rights rdf:resource
-=“http://creativecommons.org/publicdomain/mark/1.0/”/> <edm:rights rdf:resource=“http:
-//rightsstatements.org/vocab/InC/1.0/”/>  Or create a reference to an instance of the 
+ide’ the statement specified at the level of the aggregation. <code>&lt;edm:rights rdf:resource
+=“http://creativecommons.org/publicdomain/mark/1.0/”/&gt; &lt;edm:rights rdf:resource=“http:
+//rightsstatements.org/vocab/InC/1.0/”/&gt;</code>  Or create a reference to an instance of the 
 cc:License class where additional details of the rights can be provided (such as an ex
-piry date for the restrictions): <a href="http://rightsstatements.org/vocab/NoC-NC/1.0/or">http://rightsstatements.org/vocab/NoC-NC/1.0/or</a> <edm:
-rights rdf:resource="#statement_3000095353971"/>This is a recommended property.</p>
+piry date for the restrictions): <a href="http://rightsstatements.org/vocab/NoC-NC/1.0/or">http://rightsstatements.org/vocab/NoC-NC/1.0/or</a> <code>&lt;edm:
+rights rdf:resource="#statement_3000095353971"/&gt;</code>This is a recommended property.</p>
 </div> 
 
 #### EDM_WebResource.owl_sameAs
@@ -2649,8 +2649,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>Provide the URI of another web representation of the same resource. <owl:sameAs rdf:re
-source=”urn:soundcloud:150424305></p>
+<p>Provide the URI of another web representation of the same resource. <code>&lt;owl:sameAs rdf:re
+source=”urn:soundcloud:150424305&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.svcs_has_service
@@ -2674,7 +2674,7 @@ Description:
 The identifier of the svcs:Service required to consume the edm:WebResource. Example:
 </code></pre>
 
-<p><svcs:has_service rdf:resource="http://www.example.org/Service/IIIF"></p>
+<p><code>&lt;svcs:has_service rdf:resource="http://www.example.org/Service/IIIF"&gt;</code></p>
 </div> 
 
 #### EDM_WebResource.validate_web_resource
@@ -2731,8 +2731,8 @@ Ref</p>
 <p>Description: </p>
 
 <p>ID of a base rights statement from which the described License is derived. This value 
-must come for alist of statements controlled by Europeana.<odrl:inheritFrom rdf:resour
-ce=“http://rightsstatements.org/vocab/NoC-­NC/1.0/”/></p>
+must come for alist of statements controlled by Europeana.<code>&lt;odrl:inheritFrom rdf:resour
+ce=“http://rightsstatements.org/vocab/NoC-­NC/1.0/”/&gt;</code></p>
 </div> 
 
 #### CC_License.cc_deprecatedOn
@@ -2754,8 +2754,8 @@ Any</p>
 <p>Description: </p>
 
 <p>The date that the license expires, as it has been described, which implies among other
-things the expiration of the restrictions specified by the license.<cc:deprecatedOn r
-df:datatype=”http://www.w3.org/2001/XMLSchema#date”&gt;2029‐06-­01</cc:deprecatedOn> Note
+things the expiration of the restrictions specified by the license.<code>&lt;cc:deprecatedOn r
+df:datatype=”http://www.w3.org/2001/XMLSchema#date”&gt;2029‐06-­01&lt;/cc:deprecatedOn&gt;</code> Note
 this datatype is mandatory for cc:deprecatedOn.</p>
 </div> 
 
@@ -2807,8 +2807,8 @@ Optional[List[Lit]]</p>
 ces is set at 1, it can be interpreted as 1 per language tag. At least one skos:prefLa
 bel SHOULD be provided. Several prefLabels with languages tags are strongly recommende
 d for language variants and translations.This is a recommended property for this class
-.<skos:prefLabel xml:lang="fr">Buccin</skos:prefLabel><skos:prefLabel xml:lang="de">Bu
-ccin</skos:prefLabel><skos:prefLabel xml:lang="nl">Buccin</skos:prefLabel>For recommen
+.<code>&lt;skos:prefLabel xml:lang="fr"&gt;Buccin&lt;/skos:prefLabel&gt;&lt;skos:prefLabel xml:lang="de"&gt;Bu
+ccin&lt;/skos:prefLabel&gt;&lt;skos:prefLabel xml:lang="nl"&gt;Buccin&lt;/skos:prefLabel&gt;</code>For recommen
 dations on medata quality see Tier A-C requirements , more specifically Metadata Tier 
 B and Metadata Tier C</p>
 </div> 
@@ -2833,7 +2833,7 @@ Optional[List[Lit]]</p>
 
 <p>Alternative forms of the name of the concept. Recommended unless several prefLabel are
 already given with different language tags (altLabel is not suitable for translations
-of prefLabel).<skos:altLabel xml:lang="en">Buccin</skos:altLabel>This is a recommende
+of prefLabel).<code>&lt;skos:altLabel xml:lang="en"&gt;Buccin&lt;/skos:altLabel&gt;</code>This is a recommende
 d property for this class.</p>
 </div> 
 
@@ -2855,8 +2855,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>The identifier of a broader concept in the same thesaurus or controlled vocabulary.<sk
-os:broader rdf:resource=“<a href="http://www.mimo-db.eu/InstrumentsKeywords/4369_1">http://www.mimo-db.eu/InstrumentsKeywords/4369_1</a> ”/>For recom
+<p>The identifier of a broader concept in the same thesaurus or controlled vocabulary.<code>&lt;sk
+os:broader rdf:resource=“http://www.mimo-db.eu/InstrumentsKeywords/4369_1 ”/&gt;</code>For recom
 mendations on medata quality see Tier A-C requirements , more specifically Metadata Ti
 er B and Metadata Tier C</p>
 </div> 
@@ -2879,8 +2879,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>The identifier of a narrower concept.<skos:narrower rdf:resource=“<a href="http://narrower.term">http://narrower.term</a>
-/”/>For recommendations on medata quality see Tier A-C requirements , more specificall
+<p>The identifier of a narrower concept.<code>&lt;skos:narrower rdf:resource=“http://narrower.term
+/”/&gt;</code>For recommendations on medata quality see Tier A-C requirements , more specificall
 y Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -2902,7 +2902,7 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>The identifier of a related concept<skos:related rdf:resource=“http://related.term/”/>
+<p>The identifier of a related concept<code>&lt;skos:related rdf:resource=“http://related.term/”/&gt;</code>
 For recommendations on medata quality see Tier A-C requirements , more specifically Me
 tadata Tier B and Metadata Tier C</p>
 </div> 
@@ -2926,9 +2926,9 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>The identifier of a broader, narrower or related matching concepts from other concept 
-schemes.<skos:broadMatch rdf:resource=“http://broadMatch.term/”/><skos:narrowMatch rdf
-:resource=“http://narrowMatch.term/”/><skos:relatedMatch rdf:resource=“<a href="http://relatedM">http://relatedM</a>
-atch.term/”/></p>
+schemes.<code>&lt;skos:broadMatch rdf:resource=“http://broadMatch.term/”/&gt;&lt;skos:narrowMatch rdf
+:resource=“http://narrowMatch.term/”/&gt;&lt;skos:relatedMatch rdf:resource=“http://relatedM
+atch.term/”/&gt;</code></p>
 </div> 
 
 #### SKOS_Concept.skos_narrowMatch
@@ -2950,9 +2950,9 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>The identifier of a broader, narrower or related matching concepts from other concept 
-schemes.<skos:broadMatch rdf:resource=“http://broadMatch.term/”/><skos:narrowMatch rdf
-:resource=“http://narrowMatch.term/”/><skos:relatedMatch rdf:resource=“<a href="http://relatedM">http://relatedM</a>
-atch.term/”/></p>
+schemes.<code>&lt;skos:broadMatch rdf:resource=“http://broadMatch.term/”/&gt;&lt;skos:narrowMatch rdf
+:resource=“http://narrowMatch.term/”/&gt;&lt;skos:relatedMatch rdf:resource=“http://relatedM
+atch.term/”/&gt;</code></p>
 </div> 
 
 #### SKOS_Concept.skos_relatedMatch
@@ -2974,9 +2974,9 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>The identifier of a broader, narrower or related matching concepts from other concept 
-schemes.<skos:broadMatch rdf:resource=“http://broadMatch.term/”/><skos:narrowMatch rdf
-:resource=“http://narrowMatch.term/”/><skos:relatedMatch rdf:resource=“<a href="http://relatedM">http://relatedM</a>
-atch.term/”/></p>
+schemes.<code>&lt;skos:broadMatch rdf:resource=“http://broadMatch.term/”/&gt;&lt;skos:narrowMatch rdf
+:resource=“http://narrowMatch.term/”/&gt;&lt;skos:relatedMatch rdf:resource=“http://relatedM
+atch.term/”/&gt;</code></p>
 </div> 
 
 #### SKOS_Concept.skos_exactMatch
@@ -2997,9 +2997,9 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>The identifier of close or exactly matching concepts from other concept schemes.<skos:
-exactMatch rdf:resource=“http://exactMatch.term/”/><skos:closeMatch rdf:resource=“http
-://closeMatch.term/”/>For recommendations on medata quality see Tier A-C requirements 
+<p>The identifier of close or exactly matching concepts from other concept schemes.<code>&lt;skos:
+exactMatch rdf:resource=“http://exactMatch.term/”/&gt;&lt;skos:closeMatch rdf:resource=“http
+://closeMatch.term/”/&gt;</code>For recommendations on medata quality see Tier A-C requirements 
 , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -3021,9 +3021,9 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>The identifier of close or exactly matching concepts from other concept schemes.<skos:
-exactMatch rdf:resource=“http://exactMatch.term/”/><skos:closeMatch rdf:resource=“http
-://closeMatch.term/”/>For recommendations on medata quality see Tier A-C requirements 
+<p>The identifier of close or exactly matching concepts from other concept schemes.<code>&lt;skos:
+exactMatch rdf:resource=“http://exactMatch.term/”/&gt;&lt;skos:closeMatch rdf:resource=“http
+://closeMatch.term/”/&gt;</code>For recommendations on medata quality see Tier A-C requirements 
 , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -3045,9 +3045,9 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>Information relating to the concept.<skos:note>The buccin is a visually distinctive tr
+<p>Information relating to the concept.<code>&lt;skos:note&gt;The buccin is a visually distinctive tr
 ombone popularized in military bands in France between 1810–1845 which subsequently fa
-ded into obscurity.</skos:note>For recommendations on medata quality see Tier A-C requ
+ded into obscurity.&lt;/skos:note&gt;</code>For recommendations on medata quality see Tier A-C requ
 irements, more specifically Metadata Tier B and Metadata Tier C.</p>
 </div> 
 
@@ -3070,8 +3070,8 @@ Optional[List[Lit]]</p>
 <p>Description: </p>
 
 <p>The notation in which the concept is represented. This may not be words in natural lan
-guage for someknowledge organisation systems e.g. algebra<skos:notation rdf:datatype=“
-http://www.w3.org/2001/XMLSchema#int”&gt;123</skos:notation></p>
+guage for someknowledge organisation systems e.g. algebra<code>&lt;skos:notation rdf:datatype=“
+http://www.w3.org/2001/XMLSchema#int”&gt;123&lt;/skos:notation&gt;</code></p>
 </div> 
 
 #### SKOS_Concept.skos_inScheme
@@ -3152,8 +3152,8 @@ Optional[List[Lit]]</p>
 s is set at 1, it can be interpreted as 1 per language tag. At least one skos:prefLabe
 l SHOULD be provided. Several prefLabels with languages tags are strongly recommended 
 for language variants and translations. This is a recommended property for this class.
-<skos:prefLabel xml:lang=''fr''>Courtois neveu aîné</skos:prefLabel><skos:prefLabel xm
-l:lang=''en''>Courtois’eldest nephew</skos:prefLabel> For recommendations on medata qu
+<code>&lt;skos:prefLabel xml:lang=''fr''&gt;Courtois neveu aîné&lt;/skos:prefLabel&gt;&lt;skos:prefLabel xm
+l:lang=''en''&gt;Courtois’eldest nephew&lt;/skos:prefLabel&gt;</code> For recommendations on medata qu
 ality see Tier A-C requirements , more specifically Metadata Tier B and Metadata Tier 
 C</p>
 </div> 
@@ -3177,8 +3177,8 @@ Optional[List[Lit]]</p>
 <p>Description: </p>
 
 <p>Alternative forms of the name of the agent. This is a recommended property for this cl
-ass.<skos:altLabel xml:lang="en">Courtois</skos:altLabel><skos:altLabel xml:lang="fr">
-Augte. Courtois aîné</skos:altLabel></p>
+ass.<code>&lt;skos:altLabel xml:lang="en"&gt;Courtois&lt;/skos:altLabel&gt;&lt;skos:altLabel xml:lang="fr"&gt;
+Augte. Courtois aîné&lt;/skos:altLabel&gt;</code></p>
 </div> 
 
 #### EDM_Agent.skos_note
@@ -3199,9 +3199,9 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>A note about the agent e.g. biographical notes.<skos:note> Courtois neveu aîné started
-a company of the same name manufacturing brass instruments in Paris in 1803</skos:not
-e></p>
+<p>A note about the agent e.g. biographical notes.<code>&lt;skos:note&gt; Courtois neveu aîné started
+a company of the same name manufacturing brass instruments in Paris in 1803&lt;/skos:not
+e&gt;</code></p>
 </div> 
 
 #### EDM_Agent.dc_date
@@ -3223,7 +3223,7 @@ Optional[MixedValuesList]</p>
 <p>Description: </p>
 
 <p>A significant date associated with the Agent. Europeana recommends date conforming to 
-ISO 8601 starting with the year and with hyphens (YYYY-MM-DD).<dc:date>1803</dc:date/></p>
+ISO 8601 starting with the year and with hyphens (YYYY-MM-DD).<code>&lt;dc:date&gt;1803&lt;/dc:date/&gt;</code></p>
 </div> 
 
 #### EDM_Agent.dc_identifier
@@ -3244,8 +3244,8 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>An identifier of the agent.<dc:identifier><a href="http://viaf.org/viaf/96994048">http://viaf.org/viaf/96994048</a>  </dc:identifi
-er></p>
+<p>An identifier of the agent.<code>&lt;dc:identifier&gt;http://viaf.org/viaf/96994048  &lt;/dc:identifi
+er&gt;</code></p>
 </div> 
 
 #### EDM_Agent.dcterms_hasPart
@@ -3267,7 +3267,7 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>Reference to an Agent that is part of the Agent being described (e.g. a part of a corp
-oration).<dcterms:hasPart rdf:resource=“http://identifier/partOfCorporation/”&gt;</p>
+oration).<code>&lt;dcterms:hasPart rdf:resource=“http://identifier/partOfCorporation/”&gt;</code></p>
 </div> 
 
 #### EDM_Agent.dcterms_isPartOf
@@ -3288,8 +3288,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>Reference to an agent that the described agent is part of.<dcterms:isPartOf rdf:resour
-ce=“http://identifier/parentCorporation/”&gt;</p>
+<p>Reference to an agent that the described agent is part of.<code>&lt;dcterms:isPartOf rdf:resour
+ce=“http://identifier/parentCorporation/”&gt;</code></p>
 </div> 
 
 #### EDM_Agent.edm_begin
@@ -3311,7 +3311,7 @@ Optional[Lit]</p>
 <p>Description: </p>
 
 <p>The date the agent was born/established. Europeana recommends date conforming to ISO 8
-601 starting with the year and with hyphens (YYYY-MM-DD).<edm:begin>1795</edm:begin>Ge
+601 starting with the year and with hyphens (YYYY-MM-DD).<code>&lt;edm:begin&gt;1795&lt;/edm:begin&gt;</code>Ge
 neric "begin" and "end" properties are being used to indicate start date and end date 
 generically for edm:Agent and edm:TimeSpan. For edm:Agent this can be interpreted andb
 irth and death dates.For recommendations on medata quality see Tier A-C requirements ,
@@ -3361,7 +3361,7 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>Reference to another entity which the agent has “met” in a broad sense. For example a 
-reference to a Place class<edm:hasMet rdf:resource=“http://sws.geonames.org/6620265/”&gt;</p>
+reference to a Place class<code>&lt;edm:hasMet rdf:resource=“http://sws.geonames.org/6620265/”&gt;</code></p>
 </div> 
 
 #### EDM_Agent.edm_isRelatedTo
@@ -3383,7 +3383,7 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>Reference to other entities, particularly other agents, with whom the agent is related
-in a generic sense.<edm:isRelatedTo rdf:resource=“http://identifier/relatedAgent/”&gt;</p>
+in a generic sense.<code>&lt;edm:isRelatedTo rdf:resource=“http://identifier/relatedAgent/”&gt;</code></p>
 </div> 
 
 #### EDM_Agent.foaf_name
@@ -3404,8 +3404,8 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>The name of the agent as a simple textual string.<foaf:name>Auguste Courtois</foaf:nam
-e></p>
+<p>The name of the agent as a simple textual string.<code>&lt;foaf:name&gt;Auguste Courtois&lt;/foaf:nam
+e&gt;</code></p>
 </div> 
 
 #### EDM_Agent.rdagr2_biographicalInformation
@@ -3426,9 +3426,9 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>Information pertaining to the life or history of the agent.<rdaGr2:biographicalInforma
-tion>Courtois neveu aîné started a company of the same name manufacturing brass instru
-ments in Paris in 1803</rdaGr2:biographicalInformation></p>
+<p>Information pertaining to the life or history of the agent.<code>&lt;rdaGr2:biographicalInforma
+tion&gt;Courtois neveu aîné started a company of the same name manufacturing brass instru
+ments in Paris in 1803&lt;/rdaGr2:biographicalInformation&gt;</code></p>
 </div> 
 
 #### EDM_Agent.rdagr2_dateOfBirth
@@ -3451,7 +3451,7 @@ Optional[Lit]</p>
 
 <p>The date the agent (person) was born. Europeana recommends date conforming to ISO 8601
 starting with the year and with hyphens (YYYY-MM-DD). This is a recommended property 
-for this class.<rdaGr2:dateOfBirth>1795</rdaGr2:dateOfBirth>dates.For recommendations 
+for this class.<code>&lt;rdaGr2:dateOfBirth&gt;1795&lt;/rdaGr2:dateOfBirth&gt;</code>dates.For recommendations 
 on medata quality see Tier A-C requirements , more specifically Metadata Tier B and Me
 tadata Tier C</p>
 </div> 
@@ -3476,7 +3476,7 @@ Optional[Lit]</p>
 
 <p>The date the agent (person) died. Europeana recommends date conforming to ISO 8601 sta
 rting with the year and with hyphens (YYYY‐MM-DD). This is a recommended property for 
-this class.<rdaGr2:dateOfDeath>1895</rdaGr2:dateOfDeath>For recommendations on medata 
+this class.<code>&lt;rdaGr2:dateOfDeath&gt;1895&lt;/rdaGr2:dateOfDeath&gt;</code>For recommendations on medata 
 quality see Tier A-C requirements , more specifically Metadata Tier B and Metadata Tie
 r C</p>
 </div> 
@@ -3499,8 +3499,8 @@ Optional[Lit]</p>
 
 <p>Description: </p>
 
-<p>The date on which the agent (corporate body) was established or founded.<rdaGr2:dateOf
-Establishment>1795</rdaGr2:dateOfEstablishment></p>
+<p>The date on which the agent (corporate body) was established or founded.<code>&lt;rdaGr2:dateOf
+Establishment&gt;1795&lt;/rdaGr2:dateOfEstablishment&gt;</code></p>
 </div> 
 
 #### EDM_Agent.rdagr2_dateOfTermination
@@ -3521,8 +3521,8 @@ Optional[Lit]</p>
 
 <p>Description: </p>
 
-<p>The date on which the agent (corporate body) was terminated or dissolved.<rdaGr2:dateO
-fTermination>1895</rdaGr2:dateOfTermination></p>
+<p>The date on which the agent (corporate body) was terminated or dissolved.<code>&lt;rdaGr2:dateO
+fTermination&gt;1895&lt;/rdaGr2:dateOfTermination&gt;</code></p>
 </div> 
 
 #### EDM_Agent.rdagr2_gender
@@ -3543,7 +3543,7 @@ Optional[Lit]</p>
 
 <p>Description: </p>
 
-<p>The gender with which the agent identifies.&lt; rdaGr2:gender>Female</rdaGr2:gender></p>
+<p>The gender with which the agent identifies.<code>&lt; rdaGr2:gender&gt;Female&lt;/rdaGr2:gender&gt;</code></p>
 </div> 
 
 #### EDM_Agent.rdagr2_placeOfBirth
@@ -3564,9 +3564,9 @@ Optional[Union[Lit, Ref]]</p>
 
 <p>Description: </p>
 
-<p>The town, city, province, state, and/or country in which a person was born.<rdaGr2:pla
-ceOfBirth>Lusaka, Northern Rhodesia</rdaGr2:placeOfBirth><rdaGr2:placeOfBirth rdf:reso
-urce=”http://sws.geonames.org/909137/”/>For recommendations on medata quality see Tier
+<p>The town, city, province, state, and/or country in which a person was born.<code>&lt;rdaGr2:pla
+ceOfBirth&gt;Lusaka, Northern Rhodesia&lt;/rdaGr2:placeOfBirth&gt;&lt;rdaGr2:placeOfBirth rdf:reso
+urce=”http://sws.geonames.org/909137/”/&gt;</code>For recommendations on medata quality see Tier
 A-C requirements , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -3588,9 +3588,9 @@ Optional[Union[Lit, Ref]]</p>
 
 <p>Description: </p>
 
-<p>The town, city, province, state, and/or country in which a person died.<rdaGr2:placeOf
-Death>London, United Kingdom</rdaGr2:placeOfDeath><rdaGr2:placeOfDeath rdf:resource=“h
-ttp://sws.geonames.org/2635167/”/>For recommendations on medata quality see Tier A-C r
+<p>The town, city, province, state, and/or country in which a person died.<code>&lt;rdaGr2:placeOf
+Death&gt;London, United Kingdom&lt;/rdaGr2:placeOfDeath&gt;&lt;rdaGr2:placeOfDeath rdf:resource=“h
+ttp://sws.geonames.org/2635167/”/&gt;</code>For recommendations on medata quality see Tier A-C r
 equirements , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -3612,8 +3612,8 @@ Optional[MixedValuesList]</p>
 
 <p>Description: </p>
 
-<p>The profession or occupation in which the agent works or has worked.<rdaGr2:profession
-OrOccupation>Instrument Maker</rdaGr2:professionOrOccupation></p>
+<p>The profession or occupation in which the agent works or has worked.<code>&lt;rdaGr2:profession
+OrOccupation&gt;Instrument Maker&lt;/rdaGr2:professionOrOccupation&gt;</code></p>
 </div> 
 
 #### EDM_Agent.owl_sameAs
@@ -3634,8 +3634,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>Another URI of the same agent.<owl:sameAs rdf:resource=“<a href="http://www.identifier/sameReso">http://www.identifier/sameReso</a>
-urceElsewhere”/></p>
+<p>Another URI of the same agent.<code>&lt;owl:sameAs rdf:resource=“http://www.identifier/sameReso
+urceElsewhere”/&gt;</code></p>
 </div> 
 
 #### EDM_Agent.validate_skos_pref_label
@@ -3694,8 +3694,8 @@ Optional[List[Lit]]</p>
 <p>The preferred form of the name of the timespan or period. Although the maximum number 
 of occurrences is set at 1, it can be interpreted as 1 per language tag. At least one 
 skos:prefLabel SHOULD be provided. Several prefLabels with languages tags are strongly
-recommended for language variants andtranslations.<skos:prefLabel xml:lang=“en”&gt;Roman
-Empire</skos:prefLabel>This is a recommended property for this class.</p>
+recommended for language variants andtranslations.<code>&lt;skos:prefLabel xml:lang=“en”&gt;Roman
+Empire&lt;/skos:prefLabel&gt;</code>This is a recommended property for this class.</p>
 </div> 
 
 #### EDM_TimeSpan.skos_altLabel
@@ -3716,8 +3716,8 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>Alternative forms of the name of the timespan or period. <skos:altLabel xml:lang=''fr'
-'>Empire romain (27 avant J.-­‐C.-­‐476 après J.-­C.)</skos:altLabel &gt;</p>
+<p>Alternative forms of the name of the timespan or period. <code>&lt;skos:altLabel xml:lang=''fr'
+'&gt;Empire romain (27 avant J.-­‐C.-­‐476 après J.-­C.)&lt;/skos:altLabel &gt;</code></p>
 </div> 
 
 #### EDM_TimeSpan.skos_note
@@ -3738,10 +3738,10 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>Information relating to the timespan or period.<skos:note>The Roman Empire (Latin: Imp
+<p>Information relating to the timespan or period.<code>&lt;skos:note&gt;The Roman Empire (Latin: Imp
 erium Romanum) was the post-­Republican period of the ancient Roman civilization, char
 acterised by an autocratic form of government and large territorial holdings around th
-e Mediterranean in Europe, Africa, and Asia.</skos:note></p>
+e Mediterranean in Europe, Africa, and Asia.&lt;/skos:note&gt;</code></p>
 </div> 
 
 #### EDM_TimeSpan.dcterms_hasPart
@@ -3806,7 +3806,7 @@ Optional[Lit]</p>
 
 <p>The date the timespan started. Europeana recommends date conforming to ISO 8601 starti
 ng with the year and with hyphens (YYYY-­MM-DD). Providing edm:begin in combination wi
-th edm:end is recommended for this class.Example 1: <edm:begin>-0026</edm:begin>Exampl
+th edm:end is recommended for this class.Example 1: <code>&lt;edm:begin&gt;-0026&lt;/edm:begin&gt;</code>Exampl
 e:2: <edm:begin>27 BC</edm:begin>Note: '27 BC', while allowed, does not follow the abo
 ve recommendation.For recommendations on medata quality see Tier A-C requirements , mo
 re specifically Metadata Tier B and Metadata Tier C</p>
@@ -3832,7 +3832,7 @@ Optional[Lit]</p>
 
 <p>The date the timespan finished. Europeana recommends date conforming to ISO 8601 start
 ing with the year and with hyphens (YYYY‐MM-DD). Providing edm:end in combination with
-edm:begin is recommended for this class.<edm:end>1770</edm:end>For recommendations on
+edm:begin is recommended for this class.<code>&lt;edm:end&gt;1770&lt;/edm:end&gt;</code>For recommendations on
 medata quality see Tier A-C requirements , more specifically Metadata Tier B and Meta
 data Tier C</p>
 </div> 
@@ -3856,8 +3856,8 @@ Optional[List[Ref]]</p>
 <p>Description: </p>
 
 <p>Can be used to represent a sequence of Time periods. Use this for objects that are par
-t of a hierarchy or sequence to ensure correct display in the portal.<edm:isNextInSequ
-ence rdf:resource=“http://semium.org/time/roman_republic”/> (The Roman Empire was prec
+t of a hierarchy or sequence to ensure correct display in the portal.<code>&lt;edm:isNextInSequ
+ence rdf:resource=“http://semium.org/time/roman_republic”/&gt;</code> (The Roman Empire was prec
 eded by the Roman Republic)</p>
 </div> 
 
@@ -3879,7 +3879,7 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>The URI of a timespan<owl:sameAs rdf:resource=“http://semium.org/time/roman_empire”/></p>
+<p>The URI of a timespan<code>&lt;owl:sameAs rdf:resource=“http://semium.org/time/roman_empire”/&gt;</code></p>
 </div> 
 
 #### EDM_TimeSpan.validate_skos_pref_label
@@ -3934,7 +3934,7 @@ Optional[Lit]</p>
 <p>Description: </p>
 
 <p>The latitude of a spatial thing (decimal degrees). This is a recommended property for 
-this class.<wgs84_pos:lat>51.5075</wgs84_pos:lat>For recommendations on medata quality
+this class.<code>&lt;wgs84_pos:lat&gt;51.5075&lt;/wgs84_pos:lat&gt;</code>For recommendations on medata quality
 see Tier A-C requirements , more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -3957,7 +3957,7 @@ Optional[Lit]</p>
 <p>Description: </p>
 
 <p>The longitude of a spatial thing (decimal degrees). This is a recommended property for
-this class.<wgs84_pos:long>-­‐0.1231</wgs84_pos:long>For recommendations on medata qu
+this class.<code>&lt;wgs84_pos:long&gt;-­‐0.1231&lt;/wgs84_pos:long&gt;</code>For recommendations on medata qu
 ality see Tier A-C requirements, more specifically Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -3979,8 +3979,8 @@ Optional[Lit]</p>
 
 <p>Description: </p>
 
-<p>The altitude of a spatial thing (decimal metres above the reference)<wgs84_pos:alt>21&lt;
-/wgs84_pos:alt></p>
+<p>The altitude of a spatial thing (decimal metres above the reference)<code>&lt;wgs84_pos:alt&gt;21&lt;
+/wgs84_pos:alt&gt;</code></p>
 </div> 
 
 #### EDM_Place.skos_prefLabel
@@ -4004,8 +4004,8 @@ Optional[List[Lit]]</p>
 <p>The preferred form of the name of the place. Although the maximum number of occurrence
 s is set at 1, it can be interpreted as 1 per language tag. At least one skos:prefLabe
 l SHOULD be provided. Several prefLabels with languages tags are strongly recommended 
-for language variants and translations.<skos:prefLabel xml:lang="en">London</skos:pref
-Label>For recommendations on medata quality see Tier A-C requirements , more specifica
+for language variants and translations.<code>&lt;skos:prefLabel xml:lang="en"&gt;London&lt;/skos:pref
+Label&gt;</code>For recommendations on medata quality see Tier A-C requirements , more specifica
 lly Metadata Tier B and Metadata Tier C</p>
 </div> 
 
@@ -4027,8 +4027,8 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>Alternative forms of the name of the place.<skos:altLabel xml:lang="en">Greater London
-</skos:altLabel></p>
+<p>Alternative forms of the name of the place.<code>&lt;skos:altLabel xml:lang="en"&gt;Greater London
+&lt;/skos:altLabel&gt;</code></p>
 </div> 
 
 #### EDM_Place.skos_note
@@ -4049,7 +4049,7 @@ Optional[List[Lit]]</p>
 
 <p>Description: </p>
 
-<p>Information relating to the place.<skos:note xml:lang="en">Pop. 21m</skos:note></p>
+<p>Information relating to the place.<code>&lt;skos:note xml:lang="en"&gt;Pop. 21m&lt;/skos:note&gt;</code></p>
 </div> 
 
 #### EDM_Place.dcterms_hasPart
@@ -4070,8 +4070,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>Reference to a place that is part of the place being described.<dcterms:hasPart rdf:re
-source=“http://sws.geonames.org/2643741/”/> (City of London)</p>
+<p>Reference to a place that is part of the place being described.<code>&lt;dcterms:hasPart rdf:re
+source=“http://sws.geonames.org/2643741/”/&gt;</code> (City of London)</p>
 </div> 
 
 #### EDM_Place.dcterms_isPartOf
@@ -4092,8 +4092,8 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>Reference to a place that the described place is part of.<dcterms:isPartOf rdf:resourc
-e=“http://sws.geonames.org/2635167/”/> (United Kingdom)</p>
+<p>Reference to a place that the described place is part of.<code>&lt;dcterms:isPartOf rdf:resourc
+e=“http://sws.geonames.org/2635167/”/&gt;</code> (United Kingdom)</p>
 </div> 
 
 #### EDM_Place.edm_isNextInSequence
@@ -4137,7 +4137,7 @@ Optional[List[Ref]]</p>
 
 <p>Description: </p>
 
-<p>URI of a Place<owl:sameAs rdf:resource=“http://sws.geonames.org/2635167/”/>(London)</p>
+<p>URI of a Place<code>&lt;owl:sameAs rdf:resource=“http://sws.geonames.org/2635167/”/&gt;</code>(London)</p>
 </div> 
 
 #### EDM_Place.validate_skos_pref_label
@@ -4185,7 +4185,7 @@ If the Service describes a IIIF resource, dcterms:conformsTo must be used
 to describe the IIIF protocol the resource is conforming to.</p>
 
 <p>Example:
-<dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/></p>
+<code>&lt;dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/&gt;</code></p>
 </div> 
 
 #### SVCS_Service.dcterms_conformsTo
@@ -4205,7 +4205,7 @@ a IIIF resource, dcterms:conformsTo must be used to describe the IIIF protocol
 the resource is conforming to.</p>
 
 <p>Example: 
-<dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/></p>
+<code>&lt;dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/&gt;</code></p>
 </div> 
 
 #### SVCS_Service.doap_implements
@@ -4223,7 +4223,7 @@ A specification that a project implements. Could be a standard, API or legally d
 In IIIF doap:implements refers to the the protocol implemented in IIIF.</p>
 
 <p>Example: 
-<doap:implements rdf:resource="http://iiif.io/api/image/2/level1.json"/></p>
+<code>&lt;doap:implements rdf:resource="http://iiif.io/api/image/2/level1.json"/&gt;</code></p>
 </div> 
 
 #### SVCS_Service.model_config

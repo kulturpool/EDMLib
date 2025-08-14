@@ -21,7 +21,7 @@ class SVCS_Service(EDM_BaseClass):
         to describe the IIIF protocol the resource is conforming to.
 
     Example:
-        <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+        `<dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>`
     """
 
     dcterms_conformsTo: Optional[List[Ref]]
@@ -36,7 +36,7 @@ class SVCS_Service(EDM_BaseClass):
         the resource is conforming to.
 
     Example: 
-        <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+        `<dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>`
     """
 
     doap_implements: Optional[Ref]
@@ -49,5 +49,5 @@ class SVCS_Service(EDM_BaseClass):
         In IIIF doap:implements refers to the the protocol implemented in IIIF.
 
     Example: 
-        <doap:implements rdf:resource="http://iiif.io/api/image/2/level1.json"/>
+        `<doap:implements rdf:resource="http://iiif.io/api/image/2/level1.json"/>`
     """
