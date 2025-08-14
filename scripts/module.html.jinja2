@@ -90,7 +90,10 @@ See https://pdoc.dev/docs/pdoc/render_helpers.html#DefaultMacroExtension for an 
 {# {% defaultmacro function(fn) -%} {{ decorators(fn) }} {% if fn.name == "__init__" %} <span class="name">{{ ".".join(fn.qualname.split(".")[:-1]) }}</span> {{- fn.signature_without_self | format_signature(colon=False) | linkify }} {% else %} <span class="def">{{ fn.funcdef }}</span> <span class="name">{{ fn.name }}</span> {{- fn.signature | format_signature(colon=True) | linkify }} {% endif %} {% enddefaultmacro %} #}
 {% defaultmacro function(fn, depth=0) -%}{{ "#" * depth }} {{ fn.qualname }}
 ```python
-{{ decorators(fn) }}{% if fn.name == "__init__" %} {{ ".".join(fn.qualname.split(".")[:-1]) | safe }} {{- fn.signature_without_self | safe }} {% else %}{{ fn.funcdef | safe }} {{ fn.name | safe }}{{- fn.signature | safe }}
+{{ decorators(fn) }}{% if fn.name == "__init__" %}
+{{ ".".join(fn.qualname.split(".")[:-1]) | safe }}
+{{- fn.signature_without_self | safe }}
+{% else %}{{ fn.funcdef | safe }} {{ fn.name | safe }}{{- fn.signature | safe }}
 {% endif %}
 ```
 {% enddefaultmacro %}

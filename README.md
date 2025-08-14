@@ -4261,7 +4261,8 @@ class EDM_Parser:
 
 #### EDM_Parser.__init__
 ```python
-EDM_Parser(graph: rdflib.graph.Graph) ```
+EDM_Parser(graph: rdflib.graph.Graph)
+```
 
 
 
