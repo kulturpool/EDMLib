@@ -22,6 +22,7 @@ class Ref(BaseModel):
     @field_validator("value")
     @classmethod
     def validate_value_as_uri(cls, value: str):
+        value = value.strip()
         value = sanitize_url_quotation(value)
         assert is_valid_uri(value)
         return value
@@ -54,6 +55,8 @@ class Lit(BaseModel):
         assert not (
             self.lang and self.datatype
         ), f"A literal can either have a datatype or lang_tag, not both: {self.lang=}, {self.datatype=}."
+        self.value = self.value.strip()
+
         return self
 
     def to_rdflib(self):

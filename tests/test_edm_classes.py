@@ -109,3 +109,30 @@ def test_validation_edm_type_with_lang_raises(xml_with_lang_in_edm_type) -> None
     with pytest.raises(ValidationError):
         parser = EDM_Parser.from_string(content=xml_with_lang_in_edm_type, format="xml")
         parser.parse()
+
+
+def test_rightsstatements_normalization():
+    aggregation = ORE_Aggregation(
+        id=Ref(value="https://example.com/aggregation"),
+        edm_aggregatedCHO=Ref(value="https://example.com/aggregation"),
+        edm_dataProvider=Lit(value="Data Provider"),
+        edm_isShownBy=Ref(value="https://example.com/isShownBy"),
+        edm_isShownAt=Ref(value="https://example.com/isShownAt"),
+        edm_provider=Lit(value="Provider"),
+        edm_rights=Ref(value="https://rightsstatements.org/page/NoC-NC/1.0/"),
+    )
+
+    assert (
+        aggregation.edm_rights.value == "http://rightsstatements.org/vocab/NoC-NC/1.0/"
+    )
+
+    ressource = EDM_WebResource(
+        id=Ref(value="https://example.com/webresource"),
+        edm_rights=Ref(value="https://rightsstatements.org/page/NoC-NC/1.0/"),
+    )
+
+    assert (
+        ressource.edm_rights
+        and ressource.edm_rights.value
+        == "http://rightsstatements.org/vocab/NoC-NC/1.0/"
+    )
