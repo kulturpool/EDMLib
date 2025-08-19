@@ -1,11 +1,12 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.formatOnType": false,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports.ruff": "never",
-        },
-    },
-    "python.analysis.typeCheckingMode": "standard"
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "never"
+    }
+  },
+  "python.analysis.typeCheckingMode": "standard"
 }
