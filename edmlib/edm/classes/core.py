@@ -5,7 +5,7 @@ from typing_extensions import Self
 from pydantic import model_validator
 from edmlib.edm.value_types import MixedValuesList, Ref, Lit
 from edmlib.edm.base import EDM_BaseClass
-from edmlib.edm.validation.edm_rights import assert_valid_statement
+from edmlib.edm.validation.edm_rights import assert_valid_statement, normalize_statement
 
 
 class ORE_Aggregation(EDM_BaseClass):
@@ -284,7 +284,7 @@ class ORE_Aggregation(EDM_BaseClass):
 
         assert self.edm_rights.value, "Missing value for edm-rights"
 
-        self.edm_rights.value = self.edm_rights.value.replace("https:", "http:")
+        self.edm_rights.value = normalize_statement(self.edm_rights.value)
         assert_valid_statement(self.edm_rights.value)
 
         return self
@@ -1655,7 +1655,7 @@ class EDM_WebResource(EDM_BaseClass):
             assert self.edm_rights
             assert self.edm_rights.value, "Missing value for edm-rights"
 
-            self.edm_rights.value = self.edm_rights.value.replace("https:", "http:")
+            self.edm_rights.value = normalize_statement(self.edm_rights.value)
             assert_valid_statement(self.edm_rights.value)
 
         return self
