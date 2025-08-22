@@ -52,6 +52,10 @@ class Lit(BaseModel):
         """
         Checks that literal either has a lang_tag or a datatype, not both.
         """
+        if self.lang == "":
+            self.lang = None
+        if self.datatype == "":
+            self.datatype = None
         assert not (
             self.lang and self.datatype
         ), f"A literal can either have a datatype or lang_tag, not both: {self.lang=}, {self.datatype=}."
