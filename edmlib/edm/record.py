@@ -7,6 +7,8 @@ from pydantic import BaseModel, model_validator
 from pyld import jsonld
 from rdflib import Graph
 from typing_extensions import Self
+
+from edmlib.edm.jsonld_cached_documentloader import cached_requests_document_loader
 from .classes import (
     CC_License,
     EDM_Agent,
@@ -24,12 +26,13 @@ import requests
 __all__ = ["EDM_Record"]
 
 
-edm_jsonld_frame_path = os.path.join(os.path.dirname(__file__), "edm_jsonld_frame.jsonld")
+jsonld.set_document_loader(cached_requests_document_loader())
+
+edm_jsonld_frame_path = os.path.join(
+    os.path.dirname(__file__), "edm_jsonld_frame.jsonld"
+)
 with open(edm_jsonld_frame_path) as frame_file:
     edm_jsonld_frame = json.load(frame_file)
-
-
-
 
 
 class EDM_Record(BaseModel):
@@ -118,7 +121,6 @@ class EDM_Record(BaseModel):
         ), f"URIs of providedCHO and aggregation.edm_aggregatedCHO do not match: {self.provided_cho.id.value=} != {self.aggregation.edm_aggregatedCHO.value=}."
         return self
 
-
     # === media checks ===
 
     def fetch_edm_isShownBy_head(self, **kwargs) -> requests.Response:
@@ -126,7 +128,7 @@ class EDM_Record(BaseModel):
         if not shown_by:
             raise Exception(">edm_isShownBy< is >None<. Cannot fetch head.")
         return requests.head(shown_by.value, **kwargs)
-        
+
     def has_edm_object(self) -> bool:
         return bool(self.aggregation.edm_object)
 
@@ -144,7 +146,6 @@ class EDM_Record(BaseModel):
         if not has_view:
             raise Exception(">edm_hasView< is >None<. Cannot fetch heads.")
         return [requests.head(view.value, **kwargs) for view in has_view]
-
 
     def fetch_edm_isShownAt_head(self, **kwargs) -> requests.Response:
         shown_at = self.aggregation.edm_isShownAt

@@ -17,7 +17,6 @@ pyld = "^2.0.3"
 requests = "^2.32.3"
 pdoc = "^15.0.4"
 
-
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
 jupyter-server = "^2.12.5"
