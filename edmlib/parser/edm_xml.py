@@ -191,7 +191,9 @@ class EDM_Parser:
                 convert(el[2])  # type: ignore
                 for el in list(self.graph.triples((instance, ref, None)))
             ]
-            values = [lit_or_ref for lit_or_ref in values if lit_or_ref.value != ""]
+            values = [
+                lit_or_ref for lit_or_ref in values if lit_or_ref.value.strip() != ""
+            ]
 
             if cls_obj == ORE_Aggregation and att == "edm_aggregatedCHO":
                 # ORE_Aggregation.edm_aggregatedCHO needs to have as its new
@@ -200,7 +202,7 @@ class EDM_Parser:
                 # EDM_Record.validate_provided_cho_identity(). ProvidedCHO has
                 # its validation value assigned at instantiation and would
                 # therefore not match ORE_Aggregation.edm_aggregatedCHO.
-                # 
+                #
                 # The validation function returns a Ref that might differ from
                 # the original value, because urls are sanitized via
                 # sanitize_url_quotation() in Ref.validate_value_as_uri().
