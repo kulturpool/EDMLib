@@ -9,30 +9,6 @@ A Python library providing utilities for working with the **Europeana Data Model
 - **XML/RDF parsing**: Parse EDM records from XML or RDF formats
 - **RDF serialization**: Export EDM records back to RDF formats
 
-## Setup
-
-Using virtualenv and pip:
-
-```bash
-GITLAB_TOKEN_NAME='<personal_access_token_name>'
-GITLAB_TOKEN='<personal_access_token>'
-
-virtualenv .venv && source .venv/bin/activate && pip install --index-url "https://$GITLAB_TOKEN_NAME:$GITLAB_TOKEN@git.kpool.at/api/v4/projects/359/packages/pypi/simple" edmlib
-```
-
-Using poetry, `pyproject.toml` and `${HOME}/.config/kpool/.env`:
-
-```toml
-[tool.poetry.dependencies]
-python = ">=3.10,<4.0.0"
-edmlib = { version = "^2.4.3", source = "edmlib" }
-
-[[tool.poetry.source]]
-name = "edmlib"
-url = "https://git.kpool.at/api/v4/projects/359/packages/pypi/simple"
-priority = "supplemental"
-```
-
 ## Quick Start
 
 EDM specifications are encapsulated in `EDM_Record`. All data is validated at instantiation, ensuring compliance with EDM.
@@ -161,7 +137,7 @@ assert isinstance(next(iter(record.svcs_service)),  SVCS_Service)    # optional
 
 ```bash
 # Clone repository
-git clone https://git.kpool.at/kulturpool/development/aggregation/libraries/edmlib.git
+git clone <repository-url>
 
 cd edmlib
 
