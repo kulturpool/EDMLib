@@ -1,7 +1,6 @@
-# pylint: disable=pointless-string-statement
 from rdflib.term import _is_valid_uri
 from edmlib.edm.exceptions import InvalidRefException
-import urllib
+import urllib.parse
 
 """
 This is the function that validates a URIRef in rdflib:
@@ -15,7 +14,7 @@ def _is_valid_uri(uri: str) -> bool:
             return False
     return True
 
-    
+
 
 ## This is how a uriref is instanciated (it uses the class __new__): 
 
