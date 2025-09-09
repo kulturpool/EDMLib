@@ -13,8 +13,3 @@ def test_json_ld_framing(xml_string):
 
 
 # test that validation of a record with missing co-dependent attributes in ore_Aggregation or edm_ProvidedCHO fails also when recovered from json!
-
-
-def test_minimal_record() -> None:
-    # TODO: test that all variants of minimal viable records are passing validation
-    pass
