@@ -17,6 +17,7 @@ from edmlib import (
 
 
 def test_validation_cho_and_aggregation_id(cho_id_missmatch) -> None:
+    """Tests whether a ValidationError is raised if the ids of the providedCHO and the aggregatedCHO do not match."""
     with pytest.raises(ValidationError):
         EDM_Record(**cho_id_missmatch)
 
