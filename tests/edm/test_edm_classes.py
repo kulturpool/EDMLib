@@ -21,10 +21,6 @@ def test_validation_cho_and_aggregation_id(cho_id_missmatch) -> None:
         EDM_Record(**cho_id_missmatch)
 
 
-def test_replacing_local_uris() -> None:
-    pass
-
-
 @pytest.mark.parametrize("model", (SKOS_Concept, EDM_Agent, EDM_Place, EDM_TimeSpan))
 def test_validation_skos_pref_label(model) -> None:
     with pytest.raises(ValidationError):
