@@ -5,13 +5,11 @@ from pydantic import ValidationError
 from edmlib import (
     EDM_Record,
     EDM_Agent,
-    EDM_ProvidedCHO,
     EDM_Place,
     EDM_TimeSpan,
     EDM_WebResource,
     ORE_Aggregation,
     SKOS_Concept,
-    SVCS_Service,
     EDM_Parser,
     Ref,
     Lit,
