@@ -1,7 +1,7 @@
 from rdflib import Graph
 import os
 from pathlib import Path
-from edmlib.parser.edm_xml import EDM_Parser
+from edmlib import EDM_Parser
 from edmlib.edm import EDM_Record
 import json
 
@@ -45,4 +45,6 @@ if __name__ == "__main__":
         file.write(json.dumps(schema))
 
     # Test that Model can be turned into an rdf graph:
-    restored_graph = restored.get_rdf_graph().serialize(FILE / "restored_graph.ttl", format="ttl")
+    restored_graph = restored.get_rdf_graph().serialize(
+        FILE / "restored_graph.ttl", format="ttl"
+    )

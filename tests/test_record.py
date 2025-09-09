@@ -1,6 +1,6 @@
 # ruff: noqa: F811
 
-from edmlib.parser.edm_xml import EDM_Parser
+from edmlib import EDM_Parser
 from tests.fixtures.record import (
     valid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
     invalid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
