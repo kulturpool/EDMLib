@@ -1,9 +1,15 @@
 from pydantic import ValidationError
 import pytest
-from edmlib import EDM_Parser, EDM_Record, Ref, Lit
+from edmlib import EDM_Parser, EDM_Record, Ref
 from pathlib import Path
 from tests.fixtures.record import xml_string  # noqa: F401
-from tests.fixtures.parser import get_ref_lit_json, get_ref_lit_xml, get_xml_with_xsdtypes, xml_with_empty_description, xml_with_empty_description_and_invalid_ref
+from tests.fixtures.parser import (
+    get_ref_lit_json,
+    get_ref_lit_xml,
+    get_xml_with_xsdtypes,
+    xml_with_empty_description,
+    xml_with_empty_description_and_invalid_ref,
+)
 
 
 def test_file_parser() -> None:
@@ -15,6 +21,12 @@ def test_file_parser() -> None:
     rec = parser.parse()
     assert rec
     assert rec.provided_cho.id
+
+
+def test_validation_edm_type_with_lang_raises(xml_with_lang_in_edm_type) -> None:
+    with pytest.raises(ValidationError):
+        parser = EDM_Parser.from_string(content=xml_with_lang_in_edm_type, format="xml")
+        parser.parse()
 
 
 def test_string_parser(xml_string) -> None:  # noqa: ANN001, F811
@@ -49,10 +61,17 @@ def test_parser_empty_element(xml_with_empty_description):
     parser = EDM_Parser.from_string(content=xml_with_empty_description, format="xml")
     rec = parser.parse()
     EDM_Record.model_validate(rec)
-    assert rec.provided_cho.dc_description is None or len(rec.provided_cho.dc_description) == 0
+    assert (
+        rec.provided_cho.dc_description is None
+        or len(rec.provided_cho.dc_description) == 0
+    )
 
-def test_parser_empty_element_and_invalid_ref(xml_with_empty_description_and_invalid_ref):
-    parser = EDM_Parser.from_string(content=xml_with_empty_description_and_invalid_ref, format="xml")
+
+def test_parser_empty_element_and_invalid_ref(
+    xml_with_empty_description_and_invalid_ref,
+):
+    parser = EDM_Parser.from_string(
+        content=xml_with_empty_description_and_invalid_ref, format="xml"
+    )
     with pytest.raises(ValidationError):
         parser.parse()
-    

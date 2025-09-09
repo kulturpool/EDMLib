@@ -1,5 +1,4 @@
 import pytest
-from tests.fixtures.record import xml_with_lang_in_edm_type
 from pydantic import ValidationError
 
 from edmlib import (
@@ -10,7 +9,6 @@ from edmlib import (
     EDM_WebResource,
     ORE_Aggregation,
     SKOS_Concept,
-    EDM_Parser,
     Ref,
     Lit,
 )
@@ -98,12 +96,6 @@ def test_validation_multi_pref_label_with_distinct_lang_tag_ok(model) -> None:
     assert concept
     pref_label = concept.skos_prefLabel
     assert pref_label and len(pref_label) == 3
-
-
-def test_validation_edm_type_with_lang_raises(xml_with_lang_in_edm_type) -> None:
-    with pytest.raises(ValidationError):
-        parser = EDM_Parser.from_string(content=xml_with_lang_in_edm_type, format="xml")
-        parser.parse()
 
 
 def test_rightsstatements_normalization():
