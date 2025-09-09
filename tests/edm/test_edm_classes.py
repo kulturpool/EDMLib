@@ -1,5 +1,5 @@
 import pytest
-from tests.fixtures.record import cho_id_missmatch, xml_with_lang_in_edm_type
+from tests.fixtures.record import xml_with_lang_in_edm_type
 from pydantic import ValidationError
 
 from edmlib import (
