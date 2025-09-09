@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:t="http://www.tei-c.org/ns/1.0"
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:europeana="http://www.europeana.eu/schemas/ese/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdagr2="http://rdvocab.info/ElementsGr2/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svcs="http://rdfs.org/sioc/services#"
+    xmlns:doap="http://usefulinc.com/ns/doap#"
+    xsi:schemaLocation="http://www.w3.org/1999/02/22-rdf-syntax-ns# https://gams.uni-graz.at/edm/2017-08/EDM.xsd">
+    <ore:Aggregation rdf:about="https://gzu.jacq.org/GZU000274120">
+        <edm:aggregatedCHO rdf:resource="https://gzu.jacq.org/GZU000274120#CHO" />
+        <edm:dataProvider>University of Graz, Institute of Plant Sciences - Herbarium GZU</edm:dataProvider>
+        <edm:isShownAt rdf:resource="https://gzu.jacq.org/GZU000274120" />
+        <edm:isShownBy
+            rdf:resource="https://services.jacq.org/jacq-services/rest/images/europeana/38321?withredirect=1" />
+        <edm:provider>Kulturpool</edm:provider>
+        <edm:rights rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <edm:object
+            rdf:resource="https://services.jacq.org/jacq-services/rest/images/europeana/38321?withredirect=1" />
+    </ore:Aggregation>
+    <edm:ProvidedCHO rdf:about="https://gzu.jacq.org/GZU000274120#CHO">
+        <dc:title>Adinandra acutifolia Hand.-Mazz.</dc:title>
+        <dc:description xml:lang="en">A PreservedSpecimen of Adinandra acutifolia Hand.-Mazz.
+            collected by Handel-Mazzetti,H.R.E. von</dc:description>
+        <dc:identifier>https://gzu.jacq.org/GZU000274120</dc:identifier>
+        <dc:language>und</dc:language>
+        <edm:type>IMAGE</edm:type>
+        <dc:type rdf:resource="http://rs.tdwg.org/dwc/terms/PreservedSpecimen" />
+        <dcterms:spatial>China, Guizhou, Prov. Kweitschou: in dumetis ad pagum Badschai. 950 m.</dcterms:spatial>
+        <dc:date>1917-07-14</dc:date>
+        <dc:creator>Handel-Mazzetti,H.R.E. von</dc:creator>
+    </edm:ProvidedCHO>
+    <edm:WebResource rdf:about="https://gzu.jacq.org/GZU000274120" />
+    <edm:WebResource
+        rdf:about="https://services.jacq.org/jacq-services/rest/images/europeana/38321?withredirect=1">
+        <dc:rights>University of Graz, Institute of Plant Sciences - Herbarium GZU</dc:rights>
+        <edm:rights rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+    </edm:WebResource>
+    <skos:Concept rdf:about="http://rs.tdwg.org/dwc/terms/PreservedSpecimen">
+        <skos:prefLabel xml:lang="en">Preserved Specimen</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Preserved Specimen</skos:altLabel>
+    </skos:Concept>
+</rdf:RDF>
