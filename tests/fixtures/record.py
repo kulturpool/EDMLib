@@ -1,27 +1,4 @@
-from typing import Any
-from edmlib.edm import EDM_Record
 import pytest
-import json
-
-
-@pytest.fixture(scope="session")
-def get_record() -> None:
-    pass
-
-
-@pytest.fixture(scope="session")
-def valid_json_samples() -> list[dict[str, Any]]:
-    return []
-
-
-@pytest.fixture(scope="session")
-def invalid_json_samples() -> list[dict[str, Any]]:
-    return []
-
-
-@pytest.fixture(scope="session")
-def valid_record_samples() -> list[EDM_Record]:
-    return []
 
 
 @pytest.fixture(scope="session")

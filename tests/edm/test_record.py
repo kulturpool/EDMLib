@@ -1,37 +1,6 @@
-# ruff: noqa: F811
-
 from edmlib import EDM_Parser
-from tests.fixtures.record import (
-    valid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
-    invalid_json_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
-    valid_record_samples,  # type:ignore # pylint: disable=import-error,unused-import # noqa: F401
-    xml_string,
-)
-from typing import Any
+from tests.fixtures.record import xml_string
 from pyld import jsonld
-
-
-def test_valid_json_instantiation(valid_json_samples: list[dict[str, Any]]) -> None:
-    # assert that you can instanciate an EDM_Record from each valid json
-    for sample in valid_json_samples:
-        print(sample)
-    pass
-
-
-def test_invalid_json_instantiation(invalid_json_samples: list[dict[str, Any]]) -> None:
-    # assert that you cannot instanciate an EDM_Record from each invalid json
-    for sample in invalid_json_samples:
-        print(sample)
-    pass
-
-
-def test_valid_record_recovery(valid_record_samples: list[dict[str, Any]]) -> None:
-    # dump the record to json
-
-    # assert that you can instanciate an EDM_Record form the dumped json
-    for sample in valid_record_samples:
-        print(sample)
-    pass
 
 
 def test_json_ld_framing(xml_string):
