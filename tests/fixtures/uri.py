@@ -33,8 +33,3 @@ def get_valid_uris() -> list[str]:
         "urn:sample-institution/ObjectID",
         "ftp://username:password@ftp.example.com",
     ]
-
-
-@fixture(scope="session")
-def get_uris_with_invalid_encoding() -> list[str]:
-    return [""]
