@@ -14,10 +14,10 @@ from edmlib import (
 )
 
 
-def test_validation_cho_and_aggregation_id(cho_id_missmatch) -> None:
+def test_validation_cho_and_aggregation_id(cho_id_mismatch) -> None:
     """Tests whether a ValidationError is raised if the ids of the providedCHO and the aggregatedCHO do not match."""
     with pytest.raises(ValidationError):
-        EDM_Record(**cho_id_missmatch)
+        EDM_Record(**cho_id_mismatch)
 
 
 @pytest.mark.parametrize("model", (SKOS_Concept, EDM_Agent, EDM_Place, EDM_TimeSpan))
