@@ -9,7 +9,7 @@ def _get_bytes(path: Path) -> bytes:
 
 @fixture(scope="session")
 def parser_files():
-    return Path(__file__).parent / "files"
+    return Path(__file__).parent / "conftest-files"
 
 
 @fixture(scope="session")

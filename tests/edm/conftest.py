@@ -5,7 +5,7 @@ import json
 
 @fixture(scope="session")
 def core_files():
-    return Path(__file__).parent / "files"
+    return Path(__file__).parent / "conftest-files"
 
 
 @fixture(scope="session")
