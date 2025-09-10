@@ -6,9 +6,9 @@
   xmlns:ore="http://www.openarchives.org/ore/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <ore:Aggregation rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation">
+  <ore:Aggregation rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation">
     <edm:aggregatedCHO>
-      <edm:ProvidedCHO rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho">
+      <edm:ProvidedCHO rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho">
         <dc:description>Negativform Detail 2 Voluten aus Blattranken. Die Voluten kommen aus einem gemeinsamen Stängel und sind auf dieselbe Weise mit mehreren Blättern verziert. In der Mitte der Voluten ist das Blattwerk noch einmal verdichtet.</dc:description>
         <dc:identifier>SE536</dc:identifier>
         <dc:rights>Schaubetrieb Ofenkachelmanufaktur Erndt</dc:rights>

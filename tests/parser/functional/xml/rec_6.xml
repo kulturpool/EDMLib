@@ -6,9 +6,9 @@
   xmlns:ore="http://www.openarchives.org/ore/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <ore:Aggregation rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE538_aggregation">
+  <ore:Aggregation rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE538_aggregation">
     <edm:aggregatedCHO>
-      <edm:ProvidedCHO rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE538_cho">
+      <edm:ProvidedCHO rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE538_cho">
         <dc:description>Negativform Detail Muschel mit floraler Verzierung. Die Muschel ist von Blattranken umgeben, wobei in der linken und rechten oberen Ecke jeweils eine kelchförmige Blüte abgebildet ist. Die Form selbst ist nach unten hin zugespitzt.</dc:description>
         <dc:identifier>SE538</dc:identifier>
         <dc:rights>Schaubetrieb Ofenkachelmanufaktur Erndt</dc:rights>

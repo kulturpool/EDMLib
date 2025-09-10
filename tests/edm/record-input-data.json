@@ -1,7 +1,7 @@
 {
   "provided_cho": {
     "id": {
-      "value": "file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
+      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
     },
     "edm_type": {
       "value": "IMAGE",
@@ -120,10 +120,10 @@
   },
   "aggregation": {
     "id": {
-      "value": "file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation"
+      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation"
     },
     "edm_aggregatedCHO": {
-      "value": "file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
+      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
     },
     "edm_dataProvider": {
       "value": "Schaubetrieb Ofenkachelmanufaktur Erndt",

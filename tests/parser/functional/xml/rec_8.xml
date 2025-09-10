@@ -6,9 +6,9 @@
   xmlns:ore="http://www.openarchives.org/ore/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <ore:Aggregation rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE535_aggregation">
+  <ore:Aggregation rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE535_aggregation">
     <edm:aggregatedCHO>
-      <edm:ProvidedCHO rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE535_cho">
+      <edm:ProvidedCHO rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE535_cho">
         <dc:description>Negativform Detail Rose mit 2 Blättern. Die Form selbst ist kreisförmig. Sie wird komplett von dem Motiv einer blühenden Rose mit 2 übergroßen Blättern eingenommen.</dc:description>
         <dc:identifier>SE535</dc:identifier>
         <dc:rights>Schaubetrieb Ofenkachelmanufaktur Erndt</dc:rights>

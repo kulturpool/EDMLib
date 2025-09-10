@@ -6,9 +6,9 @@
   xmlns:ore="http://www.openarchives.org/ore/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <ore:Aggregation rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG996_aggregation">
+  <ore:Aggregation rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG996_aggregation">
     <edm:aggregatedCHO>
-      <edm:ProvidedCHO rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG996_cho">
+      <edm:ProvidedCHO rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG996_cho">
         <dc:description>zylindrische Muttermolette; rechts verjüngt weiter gearbeiteter Fortsatz (Lagerzapfen); an den Deckflächen jeweils ein Loch; Mantel rechts und links mit vertieften regelmäßig angeordneten Punkten, im Zentrum vertieftes stilisiert florales Muster (kreisförmig angeordnete Blüten, dazwischen Blüten mit Stängel und Blätter) mit Punkten im Hintergrund</dc:description>
         <dc:identifier>WG996</dc:identifier>
         <dc:rights>Walzengravieranstalt Guntramsdorf</dc:rights>

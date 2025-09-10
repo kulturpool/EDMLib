@@ -3,8 +3,8 @@
 @prefix edm: <http://www.europeana.eu/schemas/edm/> .
 @prefix ore: <http://www.openarchives.org/ore/terms/> .
 
-<file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation> a ore:Aggregation ;
-    edm:aggregatedCHO <file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho> ;
+<file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation> a ore:Aggregation ;
+    edm:aggregatedCHO <file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho> ;
     edm:dataProvider "Schaubetrieb Ofenkachelmanufaktur Erndt" ;
     edm:hasView <https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg> ;
     edm:intermediateProvider "Museumsmanagement Niederösterreich" ;
@@ -13,7 +13,7 @@
     edm:provider "Kulturpool"@de ;
     edm:rights <http://creativecommons.org/publicdomain/zero/1.0/> .
 
-<file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho> a edm:ProvidedCHO ;
+<file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho> a edm:ProvidedCHO ;
     dc:description "Negativform Detail 2 Voluten aus Blattranken. Die Voluten kommen aus einem gemeinsamen Stängel und sind auf dieselbe Weise mit mehreren Blättern verziert. In der Mitte der Voluten ist das Blattwerk noch einmal verdichtet." ;
     dc:identifier "SE536" ;
     dc:rights "Schaubetrieb Ofenkachelmanufaktur Erndt" ;

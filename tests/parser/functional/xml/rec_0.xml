@@ -6,9 +6,9 @@
   xmlns:ore="http://www.openarchives.org/ore/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <ore:Aggregation rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE533_aggregation">
+  <ore:Aggregation rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE533_aggregation">
     <edm:aggregatedCHO>
-      <edm:ProvidedCHO rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE533_cho">
+      <edm:ProvidedCHO rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE533_cho">
         <dc:description>Negativform Detail Akanthusknospe und Band. Auf einem kurzen Stab mit Aufsatz ruht eine Knospe aus Akanthus mit nach außen gerichteten Blättern, die sich an den Spitzen nach unten hin zu kleinen Voluten drehen. Der Stab ist mit einem Band verziert das sich von der Mitte weg zu beiden Seiten spiegelgleich nach unten wellt. Die Knospe wird von einer kleinen Artischocke gekrönt, die wiederum zu beiden Seiten eine Akanthusvolute zeigt. Die Form selbst ist trapezförmig.</dc:description>
         <dc:identifier>SE533</dc:identifier>
         <dc:rights>Schaubetrieb Ofenkachelmanufaktur Erndt</dc:rights>

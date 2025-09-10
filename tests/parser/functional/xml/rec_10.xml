@@ -6,9 +6,9 @@
   xmlns:ore="http://www.openarchives.org/ore/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <ore:Aggregation rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG1000_aggregation">
+  <ore:Aggregation rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG1000_aggregation">
     <edm:aggregatedCHO>
-      <edm:ProvidedCHO rdf:about="file:///Users/gregorpirgie/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG1000_cho">
+      <edm:ProvidedCHO rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG1000_cho">
         <dc:description>zylindrische Reliefmolette; rechts verjüngt weiter gearbeiteter Fortsatz (Lagerzapfen) mit einer flach gearbeiteten Stelle; an den Deckflächen jeweils ein Loch; Mantel rechts und links mit vertieften regelmäßig angeordneten Punkten, im Zentrum vertieftes stilisiert florales Muster (weit geöffnete rosenähnliche Blüten, zackige Blätter, weitere Formen aus gruppierten Punkten)</dc:description>
         <dc:identifier>WG1000</dc:identifier>
         <dc:rights>Walzengravieranstalt Guntramsdorf</dc:rights>
