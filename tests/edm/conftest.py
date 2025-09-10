@@ -4,14 +4,14 @@ import json
 
 
 @fixture(scope="session")
-def files():
+def core_files():
     return Path(__file__).parent / "files"
 
 
 @fixture(scope="session")
-def cho_id_missmatch(files) -> dict:
+def cho_id_missmatch(core_files) -> dict:
     """Record is valid, but cho id has other value than ore-aggregation.aggregated_cho"""
-    with open(files / "cho-id-missmatch.json", "rb") as file:
+    with open(core_files / "cho-id-missmatch.json", "rb") as file:
         return json.load(file)
 
 

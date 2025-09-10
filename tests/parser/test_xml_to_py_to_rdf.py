@@ -1,6 +1,4 @@
-from tests.fixtures.record import xml_with_gyear
 from edmlib import EDM_Parser
-from datetime import date
 
 
 def test_gyear_serialization_cycle(xml_with_gyear):

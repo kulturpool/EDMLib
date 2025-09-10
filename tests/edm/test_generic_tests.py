@@ -13,7 +13,8 @@ def record_input_data() -> None:
 
 @fixture(scope="session")
 def web_resource_input_data() -> None:
-    return json.loads("""{
+    return json.loads(
+        """{
             "id": {
                 "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"
             },
@@ -56,15 +57,20 @@ def web_resource_input_data() -> None:
             "owl_sameAs": null,
             "svcs_has_service": null,
             "dcterms_isReferencedBy": null
-        }""")
+        }"""
+    )
 
 
 def test_provided_cho(record_input_data) -> None:  # noqa: ANN001, F811
-    assert EDM_ProvidedCHO(**record_input_data["provided_cho"]), "Provided CHO init test failed"
+    assert EDM_ProvidedCHO(
+        **record_input_data["provided_cho"]
+    ), "Provided CHO init test failed"
 
 
 def test_aggregation(record_input_data) -> None:  # noqa: ANN001, F811
-    assert ORE_Aggregation(**record_input_data["aggregation"]), "Aggregation init test failed"
+    assert ORE_Aggregation(
+        **record_input_data["aggregation"]
+    ), "Aggregation init test failed"
 
 
 def test_webresource(web_resource_input_data) -> None:  # noqa: ANN001, F811

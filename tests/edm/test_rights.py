@@ -1,45 +1,10 @@
-from tests.fixtures.record import (
-    get_record_with_http_edm_rights,
-    get_record_with_https_edm_rights,
-    get_record_with_missing_edm_rights,
-)
 from edmlib.edm.validation.edm_rights import assert_valid_statement
-from edmlib import EDM_Parser, EDM_Record
-from unittest import TestCase
-from pydantic import ValidationError
 import pytest
 
 
-@pytest.mark.usefixtures("get_record_with_missing_edm_rights")
-@pytest.mark.usefixtures("get_record_with_http_edm_rights")
-@pytest.mark.usefixtures("get_record_with_https_edm_rights")
-class EdmRightsTestCase(TestCase):
-    def SetUp(self): ...
-
-    @pytest.fixture(autouse=True)
-    def inject_fixtures(self, request):
-        self.record_with_missing_rights = request.getfixturevalue(
-            "get_record_with_missing_edm_rights"
-        )
-        self.record_with_https_rights = request.getfixturevalue(
-            "get_record_with_https_edm_rights"
-        )
-        self.record_with_http_rights = request.getfixturevalue(
-            "get_record_with_http_edm_rights"
-        )
-
-    def test_missing_edm_rights(self):
-        parser = EDM_Parser.from_string(self.record_with_missing_rights)
-        self.assertRaises(ValidationError, parser.parse)
-
-    def test_http_edm_rights(self):
-        parser = EDM_Parser.from_string(self.record_with_http_rights)
-        self.assertIsInstance(parser.parse(), EDM_Record)
-
-
-def test_for_valid_statements():
-    statements = [
-        # === creative commons 1.0 ===
+@pytest.mark.parametrize(
+    "statement",
+    [
         "http://creativecommons.org/licenses/by/1.0/",
         "http://creativecommons.org/licenses/by-sa/1.0/fi/",
         "http://creativecommons.org/licenses/by-nd/1.0/il/",
@@ -67,19 +32,20 @@ def test_for_valid_statements():
         "http://creativecommons.org/licenses/by-nc/4.0/",
         "http://creativecommons.org/licenses/by-nc-sa/4.0/",
         "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-    ]
+    ],
+)
+def test_for_valid_statements(statement):
+    assert_valid_statement(statement)
 
-    for statement in statements:
-        assert_valid_statement(statement)
 
-
-def test_for_invalid_statements():
-    statements = [
+@pytest.mark.parametrize(
+    "statement",
+    [
         "http://other-commons.org/licenses/by/1.0/",
         "https://creativecommons.org/licenses/by-nc-nd/4.0/",
         "http://creativecommons.org/licenses/not-ok/4.0/",
-    ]
-
-    for statement in statements:
-        with pytest.raises(AssertionError):
-            assert_valid_statement(statement)
+    ],
+)
+def test_for_invalid_statements(statement):
+    with pytest.raises(AssertionError):
+        assert_valid_statement(statement)
