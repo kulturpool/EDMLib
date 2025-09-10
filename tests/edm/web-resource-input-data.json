@@ -1,0 +1,44 @@
+{
+  "id": {
+    "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"
+  },
+  "dc_creator": null,
+  "dc_description": null,
+  "dc_format": [
+    {
+      "value": "jpg",
+      "lang": null,
+      "datatype": null,
+      "normalize": false
+    }
+  ],
+  "dc_rights": [
+    {
+      "value": "Museumsmanagement Niederösterreich, Foto: Elena Krizmanics",
+      "lang": null,
+      "datatype": null,
+      "normalize": false
+    }
+  ],
+  "dc_source": null,
+  "dc_type": [
+    {
+      "value": "digital image",
+      "lang": null,
+      "datatype": null,
+      "normalize": false
+    }
+  ],
+  "dcterms_conformsTo": null,
+  "dcterms_created": null,
+  "dcterms_extent": null,
+  "dcterms_hasPart": null,
+  "dcterms_isFormatOf": null,
+  "dcterms_isPartOf": null,
+  "dcterms_issued": null,
+  "edm_isNextInSequence": null,
+  "edm_rights": null,
+  "owl_sameAs": null,
+  "svcs_has_service": null,
+  "dcterms_isReferencedBy": null
+}
