@@ -18,24 +18,3 @@ from .edm import (
     Lit,
 )
 from .parser import EDM_Parser
-
-__all__ = [
-    "XSD_Types",
-    "EDM_Namespace",
-    "URIRef",
-    "Literal",
-    "EDM_Record",
-    "EDM_ProvidedCHO",
-    "ORE_Aggregation",
-    "EDM_WebResource",
-    "CC_License",
-    "SKOS_Concept",
-    "EDM_Agent",
-    "EDM_TimeSpan",
-    "EDM_Place",
-    "SVCS_Service",
-    "MixedValuesList",
-    "EDM_Parser",
-    "Ref",
-    "Lit",
-]

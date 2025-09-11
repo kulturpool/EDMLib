@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:edm="http://www.europeana.eu/schemas/edm/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ore="http://www.openarchives.org/ore/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <ore:Aggregation rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG998_aggregation">
+    <edm:aggregatedCHO>
+      <edm:ProvidedCHO rdf:about="file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Walzengravieranstalt__Guntramsdorf_WG998_cho">
+        <dc:description>zylindrische Muttermolette; rechts verjüngt weiter gearbeiteter Fortsatz (Lagerzapfen) mit einer flach gearbeiteten Stelle; an den Deckflächen jeweils ein Loch; Mantel rechts und links mit vertieften regelmäßig angeordneten Punkten, im Zentrum vertieftes stilisiert florales Muster (weit geöffnete Blüte im Zentrum, dazu kleinere Blüten und Blätter drumrum, Astwerk aus Punktlinien)</dc:description>
+        <dc:identifier>WG998</dc:identifier>
+        <dc:rights>Walzengravieranstalt Guntramsdorf</dc:rights>
+        <dc:title>Muttermolette</dc:title>
+        <dc:type>Museumsobjekt</dc:type>
+        <dcterms:extent>B x H x T: 14.8cm x 0cm x 0cm , Durchmesser: 3cm</dcterms:extent>
+        <dcterms:isPartOf>Moletten</dcterms:isPartOf>
+        <dcterms:medium>Stahl</dcterms:medium>
+        <edm:hasType>Arbeit|Gewerbe|Handwerk|Handel|Industrie</edm:hasType>
+        <edm:type>IMAGE</edm:type>
+      </edm:ProvidedCHO>
+    </edm:aggregatedCHO>
+    <edm:dataProvider>Walzengravieranstalt Guntramsdorf</edm:dataProvider>
+    <edm:hasView>
+      <edm:WebResource rdf:about="https://media.noemuseen.at/imdasemuseen/0158/01-Grundinventar.dip/_thumbnails/WG998_002_jpg_sr_1280x1280.jpg">
+        <dc:format>jpg</dc:format>
+        <dc:rights> Museumsmanagement Niederösterreich, Foto: Nina Harm</dc:rights>
+        <dc:type>digital image</dc:type>
+      </edm:WebResource>
+    </edm:hasView>
+    <edm:intermediateProvider>Museumsmanagement Niederösterreich</edm:intermediateProvider>
+    <edm:isShownAt>
+      <edm:WebResource rdf:about="https://www.noemuseen.at/objekt-detail/catalog/muttermolette-10629/"/>
+    </edm:isShownAt>
+    <edm:isShownBy>
+      <edm:WebResource rdf:about="https://media.noemuseen.at/imdasemuseen/0158/01-Grundinventar.dip/_thumbnails/WG998_001_jpg_sr_1280x1280.jpg">
+        <dc:format>jpg</dc:format>
+        <dc:rights> Museumsmanagement Niederösterreich, Foto: Nina Harm</dc:rights>
+        <dc:type>digital image</dc:type>
+      </edm:WebResource>
+    </edm:isShownBy>
+    <edm:provider xml:lang="de">Kulturpool</edm:provider>
+    <edm:rights rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+  </ore:Aggregation>
+</rdf:RDF>

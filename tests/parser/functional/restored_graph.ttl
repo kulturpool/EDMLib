@@ -1,0 +1,40 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+
+<file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation> a ore:Aggregation ;
+    edm:aggregatedCHO <file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho> ;
+    edm:dataProvider "Schaubetrieb Ofenkachelmanufaktur Erndt" ;
+    edm:hasView <https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg> ;
+    edm:intermediateProvider "Museumsmanagement Niederösterreich" ;
+    edm:isShownAt <https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/> ;
+    edm:isShownBy <https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg> ;
+    edm:provider "Kulturpool"@de ;
+    edm:rights <http://creativecommons.org/publicdomain/zero/1.0/> .
+
+<file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho> a edm:ProvidedCHO ;
+    dc:description "Negativform Detail 2 Voluten aus Blattranken. Die Voluten kommen aus einem gemeinsamen Stängel und sind auf dieselbe Weise mit mehreren Blättern verziert. In der Mitte der Voluten ist das Blattwerk noch einmal verdichtet." ;
+    dc:identifier "SE536" ;
+    dc:rights "Schaubetrieb Ofenkachelmanufaktur Erndt" ;
+    dc:title "Negativform Detail 2 Voluten aus Blattranken" ;
+    dc:type "Museumsobjekt" ;
+    dcterms:extent "B x H x T: 24.1cm x 13.5cm x 5.3cm , Durchmesser: 0cm" ;
+    dcterms:isPartOf "Negativformen" ;
+    dcterms:medium "Gips" ;
+    edm:hasType "Arbeit|Gewerbe|Handwerk|Handel|Industrie",
+        "Kachelöfen|Kachelofenteile" ;
+    edm:type "IMAGE" .
+
+<https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg> a edm:WebResource ;
+    dc:format "jpg" ;
+    dc:rights "Museumsmanagement Niederösterreich, Foto: Elena Krizmanics" ;
+    dc:type "digital image" .
+
+<https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg> a edm:WebResource ;
+    dc:format "jpg" ;
+    dc:rights "Museumsmanagement Niederösterreich, Foto: Elena Krizmanics" ;
+    dc:type "digital image" .
+
+<https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/> a edm:WebResource .
+

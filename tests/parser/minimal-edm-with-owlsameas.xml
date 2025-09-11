@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ore="http://www.openarchives.org/ore/terms/"
+>
+    <edm:ProvidedCHO rdf:about="http://example.org/cho/1">
+        <edm:type>IMAGE</edm:type>
+        <dc:identifier>id-1</dc:identifier>
+        <dc:description>Test object</dc:description>
+        <dc:subject>Test subject</dc:subject>
+        <dc:title>Test title</dc:title>
+        <dc:language>en</dc:language>
+        <dc:type>TestType</dc:type>
+        <dcterms:spatial xmlns:dcterms="http://purl.org/dc/terms/">TestPlace</dcterms:spatial>
+        <dcterms:temporal xmlns:dcterms="http://purl.org/dc/terms/">TestTime</dcterms:temporal>
+        <owl:sameAs rdf:resource="http://example.org/other/1" />
+        <owl:sameAs rdf:resource="http://example.org/other/2" />
+    </edm:ProvidedCHO>
+    <ore:Aggregation rdf:about="http://example.org/aggr/1">
+        <edm:aggregatedCHO rdf:resource="http://example.org/cho/1" />
+        <edm:dataProvider>Test DataProvider</edm:dataProvider>
+        <edm:provider>Test Provider</edm:provider>
+        <edm:rights rdf:resource="http://rightsstatements.org/vocab/InC/1.0/" />
+        <edm:isShownAt rdf:resource="http://example.org/view/1" />
+        <edm:isShownBy rdf:resource="http://example.org/image/1" />
+    </ore:Aggregation>
+</rdf:RDF>

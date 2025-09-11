@@ -3,7 +3,7 @@ name = "edmlib"
 # handled via git tags:
 version = "0.0.0"
 description = "Python utilities for working with the EDM (Europeana Data Model). Maps all EDM-classes and properties to pydantic models and attributes."
-authors = ["Gregor Pirgie <gregor.pirgie@nhm-wien.ac.at>"]
+authors = ["Kulturpool <info@kulturpool.at>"]
 license = "MIT"
 readme = "README.md"
 packages = [{ include = "./edmlib" }]

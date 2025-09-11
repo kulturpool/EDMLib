@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:ore="http://www.openarchives.org/ore/terms/">
+    <ore:Aggregation rdf:about="http://example.org/agg/empty">
+        <edm:aggregatedCHO rdf:resource="http://example.org/cho/empty" />
+        <edm:dataProvider>Test DataProvider</edm:dataProvider>
+        <edm:provider>Test Provider</edm:provider>
+        <edm:rights rdf:resource="http://rightsstatements.org/vocab/InC/1.0/" />
+        <edm:isShownAt rdf:resource="http://example.org/shownat" />
+        <edm:isShownBy rdf:resource="http://example.org/shownby" />
+    </ore:Aggregation>
+    <edm:ProvidedCHO rdf:about="http://example.org/cho/empty">
+        <edm:type>IMAGE</edm:type>
+        <dc:identifier>test-12345</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:title>Test Title</dc:title>
+        <dc:subject>Test Subject</dc:subject>
+        <dc:description />
+        <dc:description></dc:description>
+        <dc:description rdf:resource="/http#" />
+        <dc:type>Test Type</dc:type>
+        <dcterms:spatial>Test Spatial</dcterms:spatial>
+        <dcterms:temporal>Test Temporal</dcterms:temporal>
+    </edm:ProvidedCHO>
+</rdf:RDF>

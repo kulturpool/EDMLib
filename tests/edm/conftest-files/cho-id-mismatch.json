@@ -1,0 +1,267 @@
+{
+  "provided_cho": {
+    "id": {
+      "value": "https://id.kulturpool.at/000056bf-fe34-4e7f-ad3c-eb7bfff37c72342/cho"
+    },
+    "edm_type": {
+      "value": "IMAGE",
+      "lang": null,
+      "datatype": null,
+      "normalize": false
+    },
+    "dc_contributor": null,
+    "dc_coverage": null,
+    "dc_creator": [{ "value": "http://d-nb.info/gnd/11869703X" }],
+    "dc_date": null,
+    "dc_description": null,
+    "dc_format": null,
+    "dc_identifier": [
+      {
+        "value": "DG1949/697",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      }
+    ],
+    "dc_language": [
+      { "value": "de", "lang": null, "datatype": null, "normalize": false }
+    ],
+    "dc_publisher": null,
+    "dc_relation": null,
+    "dc_rights": [
+      {
+        "value": "Albertina, Wien, Österreich",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      }
+    ],
+    "dc_source": null,
+    "dc_subject": null,
+    "dc_title": [
+      {
+        "value": "Die Erweckung des Lazarus",
+        "lang": "german",
+        "datatype": null,
+        "normalize": false
+      }
+    ],
+    "dc_type": [{ "value": "http://vocab.getty.edu/aat/300041273" }],
+    "dcterms_alternative": null,
+    "dcterms_conformsTo": null,
+    "dcterms_created": [
+      { "value": "1506", "lang": null, "datatype": null, "normalize": false }
+    ],
+    "dcterms_extent": [
+      {
+        "value": "22,5 x 15,9 cm (laut Hollstein)",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      }
+    ],
+    "dcterms_hasFormat": null,
+    "dcterms_hasPart": null,
+    "dcterms_hasVersion": null,
+    "dcterms_isFormatOf": null,
+    "dcterms_isPartOf": [
+      {
+        "value": "Graphische Sammlung",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      }
+    ],
+    "dcterms_isReferencedBy": null,
+    "dcterms_isReplacedBy": null,
+    "dcterms_isRequiredBy": null,
+    "dcterms_issued": null,
+    "dcterms_isVersionOf": null,
+    "dcterms_medium": [
+      {
+        "value": "Holzschnitt",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      }
+    ],
+    "dcterms_provenance": null,
+    "dcterms_references": null,
+    "dcterms_replaces": null,
+    "dcterms_requires": null,
+    "dcterms_spatial": null,
+    "dcterms_tableOfContents": null,
+    "dcterms_temporal": null,
+    "edm_currentLocation": null,
+    "edm_hasMet": null,
+    "edm_hasType": null,
+    "edm_incorporates": null,
+    "edm_isDerivativeOf": null,
+    "edm_isNextInSequence": null,
+    "edm_isRelatedTo": null,
+    "edm_isRepresentationOf": null,
+    "edm_isSimilarTo": null,
+    "edm_isSuccessorOf": null,
+    "edm_realizes": null,
+    "owl_isSameAs": null
+  },
+  "aggregation": {
+    "id": {
+      "value": "https://id.kulturpool.at/000056bf-fe34-4e7f-ad3c-eb7bfff37c70/aggregation"
+    },
+    "edm_aggregatedCHO": {
+      "value": "https://id.kulturpool.at/000056bf-fe34-4e7f-ad3c-eb7bfff37c70/cho"
+    },
+    "edm_dataProvider": {
+      "value": "Albertina",
+      "lang": null,
+      "datatype": null,
+      "normalize": false
+    },
+    "edm_provider": {
+      "value": "Kulturpool",
+      "lang": "de",
+      "datatype": null,
+      "normalize": false
+    },
+    "edm_rights": {
+      "value": "http://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    "edm_hasView": [
+      {
+        "value": "https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes"
+      }
+    ],
+    "edm_isShownAt": {
+      "value": "https://sammlungenonline.albertina.at/?query=search=/record/objectnumbersearch=[DG1949/697]&showtype=record"
+    },
+    "edm_isShownBy": {
+      "value": "https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes"
+    },
+    "edm_object": {
+      "value": "https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes&maxwidth=400"
+    },
+    "dc_rights": null,
+    "edm_ugc": null,
+    "edm_intermediateProvider": null
+  },
+  "web_resource": [
+    {
+      "id": {
+        "value": "https://sammlungenonline.albertina.at/cc/imageproxy.ashx?server=localhost&port=15001&filename=images/DG1949_697.jpg&cache=yes"
+      },
+      "dc_creator": null,
+      "dc_description": null,
+      "dc_format": null,
+      "dc_rights": [
+        {
+          "value": "Albertina, Wien, Österreich",
+          "lang": null,
+          "datatype": null,
+          "normalize": false
+        }
+      ],
+      "dc_source": null,
+      "dc_type": null,
+      "dcterms_conformsTo": null,
+      "dcterms_created": null,
+      "dcterms_extent": null,
+      "dcterms_hasPart": null,
+      "dcterms_isFormatOf": null,
+      "dcterms_isPartOf": null,
+      "dcterms_isReferencedBy": [
+        {
+          "value": "https://sammlungenonline.albertina.at/iiif/tms_101507/manifest.json"
+        }
+      ],
+      "dcterms_issued": null,
+      "edm_isNextInSequence": null,
+      "edm_rights": {
+        "value": "http://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "owl_sameAs": null,
+      "svcs_has_service": [
+        {
+          "value": "https://sammlungenonline.albertina.at/iiif/images/DG1949_697.JPG"
+        }
+      ]
+    }
+  ],
+  "skos_concept": [
+    {
+      "id": { "value": "http://vocab.getty.edu/aat/300041273" },
+      "skos_prefLabel": {
+        "value": "Druckgraphik",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      },
+      "skos_altLabel": null,
+      "skos_broader": null,
+      "skos_narrower": null,
+      "skos_related": null,
+      "skos_broadMatch": null,
+      "skos_narrowMatch": null,
+      "skos_relatedMatch": null,
+      "skos_exactMatch": null,
+      "skos_closeMatch": null,
+      "skos_note": null,
+      "skos_notation": null,
+      "skos_inScheme": null
+    }
+  ],
+  "edm_agent": [
+    {
+      "id": { "value": "http://d-nb.info/gnd/11869703X" },
+      "skos_prefLabel": {
+        "value": "Urs Graf d. Ä.",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      },
+      "skos_altLabel": null,
+      "skos_note": null,
+      "dc_date": null,
+      "dc_identifier": null,
+      "dcterms_hasPart": null,
+      "dcterms_isPartOf": null,
+      "edm_begin": null,
+      "edm_end": null,
+      "edm_hasMet": null,
+      "edm_isRelatedTo": null,
+      "foaf_name": null,
+      "rdagr2_biographicalInformation": [
+        {
+          "value": "Solothurn um 1485 - 1527/28 Basel",
+          "lang": null,
+          "datatype": null,
+          "normalize": false
+        }
+      ],
+      "rdagr2_dateOfBirth": null,
+      "rdagr2_dateOfDeath": null,
+      "rdagr2_dateOfEstablishment": null,
+      "rdagr2_dateOfTermination": null,
+      "rdagr2_gender": null,
+      "rdagr2_placeOfBirth": null,
+      "rdagr2_placeOfDeath": null,
+      "rdagr2_professionOrOccupation": null,
+      "owl_sameAs": [
+        { "value": "http://d-nb.info/gnd/11869703X" },
+        { "value": "http://de.wikipedia.org/wiki/Urs_Graf_der_%C3%84ltere" }
+      ]
+    }
+  ],
+  "edm_time_span": [],
+  "edm_place": [],
+  "cc_license": [],
+  "svcs_service": [
+    {
+      "id": {
+        "value": "https://sammlungenonline.albertina.at/iiif/images/DG1949_697.JPG"
+      },
+      "dcterms_conformsTo": [{ "value": "http://iiif.io/api/image" }],
+      "doap_implements": { "value": "http://iiif.io/api/image/2/level2.json" }
+    }
+  ]
+}
