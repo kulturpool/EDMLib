@@ -103,7 +103,7 @@
     "edm_isSimilarTo": null,
     "edm_isSuccessorOf": null,
     "edm_realizes": null,
-    "owl_isSameAs": null
+    "owl_sameAs": null
   },
   "aggregation": {
     "id": {

@@ -877,7 +877,7 @@
           "default": null,
           "title": "Edm Realizes"
         },
-        "owl_isSameAs": {
+        "owl_sameAs": {
           "anyOf": [
             { "items": { "$ref": "#/$defs/Ref" }, "type": "array" },
             { "type": "null" }

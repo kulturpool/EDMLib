@@ -1,7 +1,8 @@
 {
   "provided_cho": {
     "id": {
-      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
+      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho",
+      "is_ref": true
     },
     "edm_type": {
       "value": "IMAGE",
@@ -116,14 +117,16 @@
     "edm_isSimilarTo": null,
     "edm_isSuccessorOf": null,
     "edm_realizes": null,
-    "owl_isSameAs": null
+    "owl_sameAs": null
   },
   "aggregation": {
     "id": {
-      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation"
+      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_aggregation",
+      "is_ref": true
     },
     "edm_aggregatedCHO": {
-      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho"
+      "value": "file:///Users/some_user/code/nhm/edm-python/edm_python/edm/examples/framed/records/kulturpool_Schaubetrieb__Ofenkachelmanufaktur__Erndt_SE536_cho",
+      "is_ref": true
     },
     "edm_dataProvider": {
       "value": "Schaubetrieb Ofenkachelmanufaktur Erndt",
@@ -138,18 +141,22 @@
       "normalize": false
     },
     "edm_rights": {
-      "value": "http://creativecommons.org/publicdomain/zero/1.0/"
+      "value": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "is_ref": true
     },
     "edm_hasView": [
       {
-        "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"
+        "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg",
+        "is_ref": true
       }
     ],
     "edm_isShownAt": {
-      "value": "https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/"
+      "value": "https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/",
+      "is_ref": true
     },
     "edm_isShownBy": {
-      "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg"
+      "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg",
+      "is_ref": true
     },
     "edm_object": null,
     "dc_rights": null,
@@ -166,7 +173,8 @@
   "web_resource": [
     {
       "id": {
-        "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg"
+        "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_002_jpg_sr_1280x1280.jpg",
+        "is_ref": true
       },
       "dc_creator": null,
       "dc_description": null,
@@ -205,7 +213,8 @@
     },
     {
       "id": {
-        "value": "https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/"
+        "value": "https://www.noemuseen.at/objekt-detail/catalog/negativform-detail-2-voluten-aus-blattranken-10865/",
+        "is_ref": true
       },
       "dc_creator": null,
       "dc_description": null,
@@ -228,7 +237,8 @@
     },
     {
       "id": {
-        "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg"
+        "value": "https://media.noemuseen.at/imdasemuseen/1266/01-Grundinventar.dip/_thumbnails/SE536_001_jpg_sr_1280x1280.jpg",
+        "is_ref": true
       },
       "dc_creator": null,
       "dc_description": null,
