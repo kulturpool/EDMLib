@@ -2,7 +2,7 @@
 name = "edmlib"
 # handled via git tags:
 version = "0.0.0"
-description = "Python utilities for working with the EDM (Europeana Data Model). Maps all EDM-classes and properties to pydantic models and attributes."
+description = "Provides comprehensive mapping of all EDM classes and properties to Pydantic models and attributes, enabling robust data validation and serialization. Includes parsing capabilities for XML EDM files, allowing seamless conversion of XML data into Python objects for further processing and analysis. "
 authors = ["Kulturpool <info@kulturpool.at>"]
 license = "MIT"
 readme = "README.md"
@@ -18,12 +18,8 @@ requests = "^2.32.3"
 pdoc = "^15.0.4"
 
 [tool.poetry.group.dev.dependencies]
-jupyter = "^1.0.0"
-jupyter-server = "^2.12.5"
-jupyterlab = "^4.1.1"
 black = "^24.8.0"
 pytest = "^8.1.1"
-polyfactory = "^2.18.1"
 
 [build-system]
 requires = ["poetry-core"]
