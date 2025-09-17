@@ -1,0 +1,586 @@
+{
+    "@context": "https://api.kulturpool.at/ns/v1/edm.json",
+    "id": "http://uri.test/edm123#Aggregation",
+    "type": "Aggregation",
+    "dcRights": [
+        {
+            "@language": "en",
+            "@value": "Additional rights information"
+        }
+    ],
+    "aggregatedCHO": {
+        "id": "http://uri.test/edm123#CHO",
+        "type": "ProvidedCHO",
+        "contributor": [
+            {
+                "@language": "en",
+                "@value": "John Doe"
+            }
+        ],
+        "coverage": [
+            {
+                "@language": "en",
+                "@value": "Europe"
+            }
+        ],
+        "creator": [
+            {
+                "id": "http://uri.test/agents#creator",
+                "type": "Agent",
+                "date": [
+                    "1800-1880"
+                ],
+                "identifier": [
+                    "123456789"
+                ],
+                "hasPart": [
+                    {
+                        "id": "http://uri.test/agents#collaborator"
+                    }
+                ],
+                "isPartOf": [
+                    {
+                        "id": "http://uri.test/organizations#university"
+                    }
+                ],
+                "biographicalInformation": [
+                    {
+                        "@language": "en",
+                        "@value": "Born in Vienna, studied literature and became a prominent researcher"
+                    }
+                ],
+                "dateOfBirth": "1800-01-01",
+                "dateOfDeath": "1880-12-31",
+                "dateOfEstablishment": "1800-01-01",
+                "dateOfTermination": "1880-12-31",
+                "gender": "Female",
+                "placeOfBirth": {
+                    "@language": "en",
+                    "@value": "Vienna, Austria"
+                },
+                "placeOfDeath": {
+                    "@language": "en",
+                    "@value": "Vienna, Austria"
+                },
+                "professionOrOccupation": [
+                    {
+                        "@language": "en",
+                        "@value": "Researcher"
+                    }
+                ],
+                "begin": "1800-01-01",
+                "end": "1880-12-31",
+                "hasMet": [
+                    {
+                        "id": "http://uri.test/places#vienna",
+                        "type": "Place",
+                        "hasPart": [
+                            {
+                                "id": "http://uri.test/places#vienna_city_center"
+                            }
+                        ],
+                        "isPartOf": [
+                            {
+                                "id": "http://uri.test/places#austria"
+                            }
+                        ],
+                        "isNextInSequence": [
+                            "http://uri.test/places#salzburg"
+                        ],
+                        "sameAs": [
+                            "http://sws.geonames.org/2761369/"
+                        ],
+                        "alt": "171",
+                        "lat": "48.2082",
+                        "long": "16.3738",
+                        "altLabel": [
+                            {
+                                "@language": "de",
+                                "@value": "Wien"
+                            }
+                        ],
+                        "note": [
+                            {
+                                "@language": "en",
+                                "@value": "Capital city of Austria"
+                            }
+                        ],
+                        "prefLabel": [
+                            {
+                                "@language": "en",
+                                "@value": "Vienna"
+                            }
+                        ]
+                    }
+                ],
+                "isRelatedTo": [
+                    {
+                        "id": "http://uri.test/agents#colleague"
+                    }
+                ],
+                "sameAs": [
+                    "http://external.uri.test/person/123456"
+                ],
+                "altLabel": [
+                    {
+                        "@language": "en",
+                        "@value": "J. Smith"
+                    }
+                ],
+                "note": [
+                    {
+                        "@language": "en",
+                        "@value": "Renowned author and researcher"
+                    }
+                ],
+                "prefLabel": [
+                    {
+                        "@language": "en",
+                        "@value": "Jane Smith"
+                    }
+                ],
+                "name": [
+                    {
+                        "@language": "en",
+                        "@value": "Jane Smith"
+                    }
+                ]
+            }
+        ],
+        "date": [
+            {
+                "id": "http://uri.test/timespan#21st_century",
+                "type": "TimeSpan",
+                "hasPart": [
+                    {
+                        "id": "http://uri.test/timespan#2020s"
+                    }
+                ],
+                "isPartOf": [
+                    {
+                        "id": "http://uri.test/timespan#3rd_millennium"
+                    }
+                ],
+                "begin": "2001-01-01",
+                "end": "2100-12-31",
+                "isNextInSequence": [
+                    "http://uri.test/timespan#22nd_century"
+                ],
+                "sameAs": [
+                    "http://external.uri.test/21st_century"
+                ],
+                "altLabel": [
+                    {
+                        "@language": "en",
+                        "@value": "2000s-2090s"
+                    }
+                ],
+                "note": [
+                    {
+                        "@language": "en",
+                        "@value": "The current century, marked by digital transformation"
+                    }
+                ],
+                "prefLabel": [
+                    {
+                        "@language": "en",
+                        "@value": "21st Century"
+                    }
+                ]
+            }
+        ],
+        "description": [
+            {
+                "@language": "en",
+                "@value": "A comprehensive example of an EDM record with all possible properties"
+            }
+        ],
+        "format": [
+            "application/pdf"
+        ],
+        "identifier": [
+            "123"
+        ],
+        "language": [
+            "en"
+        ],
+        "publisher": [
+            {
+                "@language": "en",
+                "@value": "Example Publisher"
+            }
+        ],
+        "relation": [
+            {
+                "id": "http://uri.test/related#item"
+            }
+        ],
+        "dcRights": [
+            {
+                "@language": "en",
+                "@value": "Copyright Example Organization"
+            }
+        ],
+        "source": [
+            {
+                "@language": "en",
+                "@value": "Original Source"
+            }
+        ],
+        "subject": [
+            {
+                "id": "http://uri.test/concepts#example",
+                "type": "Concept",
+                "altLabel": [
+                    {
+                        "@language": "en",
+                        "@value": "Sample Concept"
+                    }
+                ],
+                "broadMatch": "http://external.uri.test/broader_match",
+                "broader": "http://uri.test/concepts#broader",
+                "closeMatch": "http://external.uri.test/close_match",
+                "exactMatch": "http://external.uri.test/exact_match",
+                "inScheme": "http://uri.test/vocabulary#scheme",
+                "narrowMatch": "http://external.uri.test/narrow_match",
+                "narrower": "http://uri.test/concepts#narrower",
+                "notation": "EX001",
+                "note": [
+                    {
+                        "@language": "en",
+                        "@value": "This is an example concept for demonstration purposes"
+                    }
+                ],
+                "prefLabel": [
+                    {
+                        "@language": "en",
+                        "@value": "Example Concept"
+                    }
+                ],
+                "related": "http://uri.test/concepts#related",
+                "relatedMatch": "http://external.uri.test/related_match"
+            }
+        ],
+        "title": [
+            {
+                "@language": "en",
+                "@value": "Title"
+            }
+        ],
+        "dcType": [
+            {
+                "@language": "en",
+                "@value": "Text"
+            }
+        ],
+        "alternative": [
+            {
+                "@language": "de",
+                "@value": "Vollst\u00e4ndiges EDM-Datensatz-Beispiel"
+            }
+        ],
+        "conformsTo": [
+            {
+                "id": "http://www.w3.org/standards/"
+            }
+        ],
+        "created": [
+            "2025-09-15"
+        ],
+        "extent": [
+            "100 pages"
+        ],
+        "hasFormat": [
+            {
+                "id": "http://uri.test/edm123.html"
+            }
+        ],
+        "hasPart": [
+            {
+                "@language": "en",
+                "@value": "Chapter 1"
+            }
+        ],
+        "hasVersion": [
+            {
+                "@language": "en",
+                "@value": "Version 2.0"
+            }
+        ],
+        "isFormatOf": [
+            {
+                "id": "http://uri.test/original#format"
+            }
+        ],
+        "isPartOf": [
+            {
+                "@language": "en",
+                "@value": "Example Collection"
+            }
+        ],
+        "isReferencedBy": [
+            {
+                "@language": "en",
+                "@value": "Academic Paper XYZ"
+            }
+        ],
+        "isReplacedBy": [
+            {
+                "id": "http://uri.test/newer#version"
+            }
+        ],
+        "isRequiredBy": [
+            {
+                "id": "http://uri.test/dependent#resource"
+            }
+        ],
+        "isVersionOf": [
+            {
+                "id": "http://uri.test/original#version"
+            }
+        ],
+        "issued": [
+            "2025-09-15"
+        ],
+        "medium": [
+            {
+                "@language": "en",
+                "@value": "Digital"
+            }
+        ],
+        "provenance": [
+            {
+                "@language": "en",
+                "@value": "Digitized from original manuscript"
+            }
+        ],
+        "references": [
+            {
+                "id": "http://uri.test/referenced#work"
+            }
+        ],
+        "replaces": [
+            {
+                "id": "http://uri.test/old#version"
+            }
+        ],
+        "requires": [
+            {
+                "id": "http://uri.test/required#resource"
+            }
+        ],
+        "spatial": [
+            {
+                "@language": "en",
+                "@value": "Vienna, Austria"
+            }
+        ],
+        "tableOfContents": [
+            {
+                "@language": "en",
+                "@value": "1. Introduction, 2. Methods, 3. Results"
+            }
+        ],
+        "temporal": [
+            "2025"
+        ],
+        "currentLocation": {
+            "id": "http://uri.test/places#vienna",
+            "type": "Place",
+            "hasPart": [
+                {
+                    "id": "http://uri.test/places#vienna_city_center"
+                }
+            ],
+            "isPartOf": [
+                {
+                    "id": "http://uri.test/places#austria"
+                }
+            ],
+            "isNextInSequence": [
+                "http://uri.test/places#salzburg"
+            ],
+            "sameAs": [
+                "http://sws.geonames.org/2761369/"
+            ],
+            "alt": "171",
+            "lat": "48.2082",
+            "long": "16.3738",
+            "altLabel": [
+                {
+                    "@language": "de",
+                    "@value": "Wien"
+                }
+            ],
+            "note": [
+                {
+                    "@language": "en",
+                    "@value": "Capital city of Austria"
+                }
+            ],
+            "prefLabel": [
+                {
+                    "@language": "en",
+                    "@value": "Vienna"
+                }
+            ]
+        },
+        "hasMet": [
+            "http://uri.test/agents#expert"
+        ],
+        "hasType": [
+            {
+                "@language": "en",
+                "@value": "Research Document"
+            }
+        ],
+        "incorporates": [
+            "http://uri.test/incorporated#item"
+        ],
+        "isDerivativeOf": [
+            "http://uri.test/original#work"
+        ],
+        "isNextInSequence": [
+            "http://uri.test/next#item"
+        ],
+        "isRelatedTo": [
+            {
+                "id": "http://uri.test/related#item"
+            }
+        ],
+        "isRepresentationOf": "http://uri.test/represented#object",
+        "isSimilarTo": [
+            "http://uri.test/similar#item"
+        ],
+        "isSuccessorOf": [
+            "http://uri.test/predecessor#item"
+        ],
+        "realizes": [
+            "http://uri.test/realized#concept"
+        ],
+        "edmType": "TEXT",
+        "sameAs": [
+            "http://uri.test/same#resource"
+        ]
+    },
+    "dataProvider": {
+        "@language": "en",
+        "@value": "Example Data Provider"
+    },
+    "hasView": [
+        {
+            "id": "http://uri.test/edm123_view1.jpg",
+            "type": "WebResource"
+        },
+        {
+            "id": "http://uri.test/edm123_view2.jpg",
+            "type": "WebResource"
+        }
+    ],
+    "intermediateProvider": [
+        {
+            "@language": "en",
+            "@value": "Example Intermediate Provider"
+        }
+    ],
+    "isShownAt": "http://uri.test/edm123.html",
+    "isShownBy": {
+        "id": "http://uri.test/edm123.jpg",
+        "type": "WebResource",
+        "creator": [
+            {
+                "@language": "en",
+                "@value": "Photographer Name"
+            }
+        ],
+        "description": [
+            {
+                "@language": "en",
+                "@value": "High-resolution image of the document"
+            }
+        ],
+        "format": [
+            "image/jpeg"
+        ],
+        "dcRights": [
+            {
+                "id": "http://uri.test/licenses#custom",
+                "type": "http://creativecommons.org/ns#License",
+                "http://creativecommons.org/ns#deprecatedOn": {
+                    "type": "xsd:date",
+                    "@value": "2030-01-01"
+                },
+                "inheritFrom": "http://rightsstatements.org/vocab/NoC-NC/1.0/"
+            }
+        ],
+        "source": [
+            {
+                "@language": "en",
+                "@value": "Original photograph"
+            }
+        ],
+        "dcType": [
+            "digital image"
+        ],
+        "conformsTo": [
+            {
+                "id": "http://iiif.io/api/image"
+            }
+        ],
+        "created": [
+            "2025-09-15"
+        ],
+        "extent": [
+            "1920x1080 pixels"
+        ],
+        "hasPart": [
+            {
+                "id": "http://uri.test/edm123_detail.jpg"
+            }
+        ],
+        "isFormatOf": [
+            {
+                "id": "http://uri.test/edm123.tiff"
+            }
+        ],
+        "isPartOf": [
+            {
+                "id": "http://uri.test/image_collection"
+            }
+        ],
+        "isReferencedBy": [
+            {
+                "id": "http://uri.test/iiif_manifest.json"
+            }
+        ],
+        "issued": [
+            "2025-09-15"
+        ],
+        "hasService": {
+            "id": "http://uri.test/iiif_service",
+            "type": "Service",
+            "conformsTo": [
+                {
+                    "id": "http://iiif.io/api/image"
+                }
+            ],
+            "implements": {
+                "id": "http://iiif.io/api/image/2/level2.json"
+            }
+        },
+        "isNextInSequence": [
+            "http://uri.test/edm123_page2.jpg"
+        ],
+        "edmRights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "sameAs": [
+            "http://uri.test/same_image.jpg"
+        ]
+    },
+    "object": "http://uri.test/edm123_thumbnail.jpg",
+    "provider": {
+        "@language": "de",
+        "@value": "Kulturpool"
+    },
+    "edmRights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "ugc": "true"
+}
