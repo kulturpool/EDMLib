@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdagr2="http://rdvocab.info/ElementsGr2/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+    xmlns:svcs="http://rdfs.org/sioc/services#"
+    xmlns:doap="http://usefulinc.com/ns/doap#">
+
+    <edm:ProvidedCHO rdf:about="http://uri.test/edm123#CHO">
+        <!-- Minmal properties -->
+        <dc:type xml:lang="en">Text</dc:type>
+        <dc:title xml:lang="en">Title</dc:title>
+        <dc:identifier>123</dc:identifier>
+        <dc:language>en</dc:language>
+        <edm:type>TEXT</edm:type>
+
+        <!-- Alternative to minimal properties-->
+        <dc:subject rdf:resource="http://uri.test/concepts#example"></dc:subject>
+        <dc:description xml:lang="en">A comprehensive example of an EDM record with all possible properties</dc:description>
+        <dcterms:spatial xml:lang="en">Vienna, Austria</dcterms:spatial>
+        <dcterms:temporal>2025</dcterms:temporal>
+
+        <!-- Recommended properties -->
+        <dc:contributor xml:lang="en">John Doe</dc:contributor>
+        <dc:creator rdf:resource="http://uri.test/agents#creator"></dc:creator>
+        <dc:date rdf:resource="http://uri.test/timespan#21st_century"></dc:date>
+        <dc:publisher xml:lang="en">Example Publisher</dc:publisher>
+        <dc:source xml:lang="en">Original Source</dc:source>
+        <dcterms:alternative xml:lang="de">Vollständiges EDM-Datensatz-Beispiel</dcterms:alternative>
+        <dcterms:created>2025-09-15</dcterms:created>
+        <dcterms:isPartOf xml:lang="en">Example Collection</dcterms:isPartOf>
+        <dcterms:issued>2025-09-15</dcterms:issued>
+
+        <!-- Optional properties -->
+        <dc:coverage xml:lang="en">Europe</dc:coverage>
+        <dc:format>application/pdf</dc:format>
+        <dc:relation rdf:resource="http://uri.test/related#item"/>
+        <dc:rights xml:lang="en">Copyright Example Organization</dc:rights>
+        <dcterms:conformsTo rdf:resource="http://www.w3.org/standards/"/>
+        <dcterms:extent>100 pages</dcterms:extent>
+        <dcterms:hasFormat rdf:resource="http://uri.test/edm123.html"/>
+        <dcterms:hasPart xml:lang="en">Chapter 1</dcterms:hasPart>
+        <dcterms:hasVersion xml:lang="en">Version 2.0</dcterms:hasVersion>
+        <dcterms:isFormatOf rdf:resource="http://uri.test/original#format"/>
+        <dcterms:isReferencedBy xml:lang="en">Academic Paper XYZ</dcterms:isReferencedBy>
+        <dcterms:isReplacedBy rdf:resource="http://uri.test/newer#version"/>
+        <dcterms:isRequiredBy rdf:resource="http://uri.test/dependent#resource"/>
+        <dcterms:isVersionOf rdf:resource="http://uri.test/original#version"/>
+        <dcterms:medium xml:lang="en">Digital</dcterms:medium>
+        <dcterms:provenance xml:lang="en">Digitized from original manuscript</dcterms:provenance>
+        <dcterms:references rdf:resource="http://uri.test/referenced#work"/>
+        <dcterms:replaces rdf:resource="http://uri.test/old#version"/>
+        <dcterms:requires rdf:resource="http://uri.test/required#resource"/>
+        <dcterms:tableOfContents xml:lang="en">1. Introduction, 2. Methods, 3. Results</dcterms:tableOfContents>
+        <edm:currentLocation rdf:resource="http://uri.test/places#vienna"/>
+        <edm:hasMet rdf:resource="http://uri.test/agents#expert"/>
+        <edm:hasType xml:lang="en">Research Document</edm:hasType>
+        <edm:incorporates rdf:resource="http://uri.test/incorporated#item"/>
+        <edm:isDerivativeOf rdf:resource="http://uri.test/original#work"/>
+        <edm:isNextInSequence rdf:resource="http://uri.test/next#item"/>
+        <edm:isRelatedTo rdf:resource="http://uri.test/related#item"/>
+        <edm:isRepresentationOf rdf:resource="http://uri.test/represented#object"/>
+        <edm:isSimilarTo rdf:resource="http://uri.test/similar#item"/>
+        <edm:isSuccessorOf rdf:resource="http://uri.test/predecessor#item"/>
+        <edm:realizes rdf:resource="http://uri.test/realized#concept"/>
+        <owl:sameAs rdf:resource="http://uri.test/same#resource"/>
+    </edm:ProvidedCHO>
+
+    <ore:Aggregation rdf:about="http://uri.test/edm123#Aggregation">
+        <!-- Mandatory properties -->
+        <edm:aggregatedCHO rdf:resource="http://uri.test/edm123#CHO"/>
+        <edm:dataProvider xml:lang="en">Example Data Provider</edm:dataProvider>
+        <edm:isShownAt rdf:resource="http://uri.test/edm123.html"/>
+        <edm:isShownBy rdf:resource="http://uri.test/edm123.jpg"/>
+        <edm:provider>Kulturpool</edm:provider>
+        <edm:rights rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+
+        <!-- Recommended properties -->
+        <edm:object rdf:resource="http://uri.test/edm123_thumbnail.jpg"/>
+        <edm:intermediateProvider xml:lang="en">Example Intermediate Provider</edm:intermediateProvider>
+
+        <!-- Optional properties -->
+        <edm:hasView rdf:resource="http://uri.test/edm123_view1.jpg"/>
+        <edm:hasView rdf:resource="http://uri.test/edm123_view2.jpg"/>
+        <dc:rights xml:lang="en">Additional rights information</dc:rights>
+        <edm:ugc>true</edm:ugc>
+    </ore:Aggregation>
+
+    <edm:WebResource rdf:about="http://uri.test/edm123.jpg">
+        <!-- Recommended properties -->
+        <edm:rights rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+
+        <!-- Optional properties -->
+        <dc:creator xml:lang="en">Photographer Name</dc:creator>
+        <dc:description xml:lang="en">High-resolution image of the document</dc:description>
+        <dc:format>image/jpeg</dc:format>
+        <dc:rights rdf:resource="http://uri.test/licenses#custom"></dc:rights>
+        <dc:source xml:lang="en">Original photograph</dc:source>
+        <dc:type>digital image</dc:type>
+        <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+        <dcterms:created>2025-09-15</dcterms:created>
+        <dcterms:extent>1920x1080 pixels</dcterms:extent>
+        <dcterms:hasPart rdf:resource="http://uri.test/edm123_detail.jpg"/>
+        <dcterms:isFormatOf rdf:resource="http://uri.test/edm123.tiff"/>
+        <dcterms:isPartOf rdf:resource="http://uri.test/image_collection"/>
+        <dcterms:isReferencedBy rdf:resource="http://uri.test/iiif_manifest.json"/>
+        <dcterms:issued>2025-09-15</dcterms:issued>
+        <edm:isNextInSequence rdf:resource="http://uri.test/edm123_page2.jpg"/>
+        <owl:sameAs rdf:resource="http://uri.test/same_image.jpg"/>
+        <svcs:has_service rdf:resource="http://uri.test/iiif_service"/>
+    </edm:WebResource>
+
+    <svcs:Service rdf:about="http://uri.test/iiif_service">
+        <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+        <doap:implements rdf:resource="http://iiif.io/api/image/2/level2.json"/>
+    </svcs:Service>
+
+    <skos:Concept rdf:about="http://uri.test/concepts#example">
+        <!-- Recommended properties -->
+        <skos:prefLabel xml:lang="en">Example Concept</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Sample Concept</skos:altLabel>
+
+        <!-- Optional properties -->
+        <skos:broader rdf:resource="http://uri.test/concepts#broader"/>
+        <skos:narrower rdf:resource="http://uri.test/concepts#narrower"/>
+        <skos:related rdf:resource="http://uri.test/concepts#related"/>
+        <skos:broadMatch rdf:resource="http://external.uri.test/broader_match"/>
+        <skos:narrowMatch rdf:resource="http://external.uri.test/narrow_match"/>
+        <skos:relatedMatch rdf:resource="http://external.uri.test/related_match"/>
+        <skos:exactMatch rdf:resource="http://external.uri.test/exact_match"/>
+        <skos:closeMatch rdf:resource="http://external.uri.test/close_match"/>
+        <skos:note xml:lang="en">This is an example concept for demonstration purposes</skos:note>
+        <skos:notation>EX001</skos:notation>
+        <skos:inScheme rdf:resource="http://uri.test/vocabulary#scheme"/>
+    </skos:Concept>
+
+    <edm:Agent rdf:about="http://uri.test/agents#creator">
+        <!-- Recommended properties -->
+        <skos:prefLabel xml:lang="en">Jane Smith</skos:prefLabel>
+        <skos:altLabel xml:lang="en">J. Smith</skos:altLabel>
+        <rdagr2:dateOfBirth>1800-01-01</rdagr2:dateOfBirth>
+        <rdagr2:dateOfDeath>1880-12-31</rdagr2:dateOfDeath>
+
+        <!-- Optional properties -->
+        <skos:note xml:lang="en">Renowned author and researcher</skos:note>
+        <dc:date>1800-1880</dc:date>
+        <dc:identifier>123456789</dc:identifier>
+        <dcterms:hasPart rdf:resource="http://uri.test/agents#collaborator"/>
+        <dcterms:isPartOf rdf:resource="http://uri.test/organizations#university"/>
+        <edm:begin>1800-01-01</edm:begin>
+        <edm:end>1880-12-31</edm:end>
+        <edm:hasMet rdf:resource="http://uri.test/places#vienna"/>
+        <edm:isRelatedTo rdf:resource="http://uri.test/agents#colleague"/>
+        <foaf:name xml:lang="en">Jane Smith</foaf:name>
+        <rdagr2:biographicalInformation xml:lang="en">Born in Vienna, studied literature and became a prominent researcher</rdagr2:biographicalInformation>
+        <rdagr2:dateOfEstablishment>1800-01-01</rdagr2:dateOfEstablishment>
+        <rdagr2:dateOfTermination>1880-12-31</rdagr2:dateOfTermination>
+        <rdagr2:gender>Female</rdagr2:gender>
+        <rdagr2:placeOfBirth xml:lang="en">Vienna, Austria</rdagr2:placeOfBirth>
+        <rdagr2:placeOfDeath xml:lang="en">Vienna, Austria</rdagr2:placeOfDeath>
+        <rdagr2:professionOrOccupation xml:lang="en">Researcher</rdagr2:professionOrOccupation>
+        <owl:sameAs rdf:resource="http://external.uri.test/person/123456"/>
+    </edm:Agent>
+
+    <edm:TimeSpan rdf:about="http://uri.test/timespan#21st_century">
+        <!-- Recommended properties -->
+        <skos:prefLabel xml:lang="en">21st Century</skos:prefLabel>
+        <edm:begin>2001-01-01</edm:begin>
+        <edm:end>2100-12-31</edm:end>
+
+        <!-- Optional properties -->
+        <skos:altLabel xml:lang="en">2000s-2090s</skos:altLabel>
+        <skos:note xml:lang="en">The current century, marked by digital transformation</skos:note>
+        <dcterms:hasPart rdf:resource="http://uri.test/timespan#2020s"/>
+        <dcterms:isPartOf rdf:resource="http://uri.test/timespan#3rd_millennium"/>
+        <edm:isNextInSequence rdf:resource="http://uri.test/timespan#22nd_century"/>
+        <owl:sameAs rdf:resource="http://external.uri.test/21st_century"/>
+    </edm:TimeSpan>
+
+    <edm:Place rdf:about="http://uri.test/places#vienna">
+        <!-- Optional properties -->
+        <wgs84_pos:lat>48.2082</wgs84_pos:lat>
+        <wgs84_pos:long>16.3738</wgs84_pos:long>
+        <wgs84_pos:alt>171</wgs84_pos:alt>
+        <skos:prefLabel xml:lang="en">Vienna</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Wien</skos:altLabel>
+        <skos:note xml:lang="en">Capital city of Austria</skos:note>
+        <dcterms:hasPart rdf:resource="http://uri.test/places#vienna_city_center"/>
+        <dcterms:isPartOf rdf:resource="http://uri.test/places#austria"/>
+        <edm:isNextInSequence rdf:resource="http://uri.test/places#salzburg"/>
+        <owl:sameAs rdf:resource="http://sws.geonames.org/2761369/"/>
+    </edm:Place>
+
+    <cc:License rdf:about="http://uri.test/licenses#custom">
+        <!-- Mandatory properties -->
+        <odrl:inheritFrom rdf:resource="http://rightsstatements.org/vocab/NoC-NC/1.0/"/>
+
+        <!-- Optional properties -->
+        <cc:deprecatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2030-01-01</cc:deprecatedOn>
+    </cc:License>
+</rdf:RDF>

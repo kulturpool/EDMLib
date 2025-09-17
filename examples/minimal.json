@@ -1,0 +1,31 @@
+{
+    "@context": "https://api.kulturpool.at/ns/v1/edm.json",
+    "id": "http://uri.test/edm123#Aggregation",
+    "type": "Aggregation",
+    "aggregatedCHO": {
+        "id": "http://uri.test/edm123#CHO",
+        "type": "ProvidedCHO",
+        "identifier": [
+            "123"
+        ],
+        "title": [
+            "Titel"
+        ],
+        "language": "de",
+        "dcType": [
+            "Text"
+        ],
+        "edmType": "TEXT"
+    },
+    "dataProvider": "Test",
+    "isShownAt": "http://uri.test/edm123.jpg",
+    "isShownBy": {
+        "id": "http://uri.test/edm123.jpg",
+        "type": "WebResource"
+    },
+    "provider": {
+        "@language": "de",
+        "@value": "Kulturpool"
+    },
+    "edmRights": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+}
