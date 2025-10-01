@@ -4,7 +4,7 @@ A Python library providing utilities for working with the **Europeana Data Model
 
 ## Important Notes
 
-- This library is **not affiliated with, endorsed by, or directly connected to Europeana**.  
+- This library is developed in the context of **[Kulturpool](https://kulturpool.at)** and is not affiliated with, endorsed by, or directly connected to Europeana.  
 - Compared to the official EDM standard, there are some minor **deviations**:  
   - The fields **`dc:identifier`**, **`edm:isShownBy`**, and **`edm:isShownAt`** are **mandatory**.  
 
