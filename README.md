@@ -2,6 +2,12 @@
 
 A Python library providing utilities for working with the **Europeana Data Model (EDM)**. This library maps all EDM classes and properties to Pydantic models, enabling type-safe validation, parsing, and serialization of EDM records.
 
+## Important Notes
+
+- This library is **not affiliated with, endorsed by, or directly connected to Europeana**.  
+- Compared to the official EDM standard, there are some minor **deviations**:  
+  - The fields **`dc:identifier`**, **`edm:isShownBy`**, and **`edm:isShownAt`** are **mandatory**.  
+
 ## Features
 
 - **Validation**: Built-in validation for EDM record structure and property constraints
