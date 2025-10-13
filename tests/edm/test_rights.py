@@ -159,6 +159,22 @@ def test_for_invalid_statements(statement):
             "https://creativecommons.org/licenses/by-nc-nd/4.0/",
             "http://creativecommons.org/licenses/by-nc-nd/4.0/",
         ),
+        (
+            "http://creativecommons.org/licenses/by-nc-nd/4.0/deed.de",
+            "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+        ),
+        (
+            "http://creativecommons.org/licenses/by/4.0/deed.es",
+            "http://creativecommons.org/licenses/by/4.0/",
+        ),
+        (
+            "http://creativecommons.org/licenses/by-nc-nd/4.0/br",
+            "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+        ),
+        (
+            "http://creativecommons.org/licenses/by-nc/4.0/some/nonsense/attached/to/license/uri",
+            "http://creativecommons.org/licenses/by-nc/4.0/",
+        ),
     ],
 )
 def test_normalize_statement(statement, normalized):
