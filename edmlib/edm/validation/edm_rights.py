@@ -36,12 +36,23 @@ creative_commons_pattern = re.compile(
 rights_statements_pattern = re.compile(
     rf"/.*/(?P<license>{'|'.join(rights_statements_licenses)})"
 )
+creative_commons_normalize_pattern = re.compile(
+    r"^(http://creativecommons.org/licenses/)(.+)(/[4]\.0/)(.+)$"
+)
 
 
 def normalize_statement(uri: str) -> str:
-    return uri.replace("https:", "http:").replace(
+    normalized = uri.replace("https:", "http:").replace(
         "rightsstatements.org/page", "rightsstatements.org/vocab"
     )
+
+    if creative_commons_normalize_pattern.match(normalized):
+        # remove everything after version number (e.g. "/deed.de"), because "version
+        # 4.0 discourages using ported versions and instead acts as a single global
+        # license"
+        normalized = creative_commons_normalize_pattern.sub(r"\1\2\3", normalized)
+
+    return normalized
 
 
 def assert_valid_statement(uri: str):
