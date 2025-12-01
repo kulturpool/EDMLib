@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     
 jobs:
-  log-into-gitlab-registry:
+  publish:
     runs-on: ubuntu-24.04
     container: 
       image: registry.kpool.at/kulturpool/development-operations/ci-cd/docker-images/poetry-packaging/poetry-packaging:1.1.1 
