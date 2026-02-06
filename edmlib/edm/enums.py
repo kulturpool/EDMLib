@@ -28,6 +28,8 @@ class EDM_Namespace(StrEnum):
     ODRL = "http://www.w3.org/ns/odrl/2/"
     SVCS = "http://rdfs.org/sioc/services#"
     DOAP = "http://usefulinc.com/ns/doap#"
+    RDFS = "http://www.w3.org/2000/01/rdf-schema#"
+    SCHEMA = "http://schema.org/"
 
     # TODO: gp/refactor all uri methods
     @classmethod

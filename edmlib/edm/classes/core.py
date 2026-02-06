@@ -3,6 +3,7 @@ from typing import List, Optional, Union  # type: ignore
 # from rdflib import Literal, URIRef
 from typing_extensions import Self
 from pydantic import model_validator
+from edmlib.edm.validation.edm_types import EDM_TYPES, assert_valid_edm_type
 from edmlib.edm.value_types import MixedValuesList, Ref, Lit
 from edmlib.edm.base import EDM_BaseClass
 from edmlib.edm.validation.edm_rights import assert_valid_statement, normalize_statement
@@ -1283,7 +1284,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
             or self.dc_subject
             or self.dcterms_temporal
             or self.dcterms_spatial
-        ), f"ProvidedCHO must have one of [dc_type, dc_subject, dcterms_termporal, dctermrs_spatial], got {self.dc_type=}, {self.dc_subject=}, {self.dcterms_spatial=}, {self.dcterms_temporal=}."
+        ), f"ProvidedCHO must have one of [dc_type, dc_subject, dcterms_temporal, dcterms_spatial], got {self.dc_type=}, {self.dc_subject=}, {self.dcterms_spatial=}, {self.dcterms_temporal=}."
         assert (
             self.dc_title or self.dc_description
         ), f"ProvidedCHO must have either a dc_title or dc_description, got {self.dc_title=}, {self.dc_description=}."
@@ -1294,6 +1295,7 @@ class EDM_ProvidedCHO(EDM_BaseClass):
         assert (
             not self.edm_type.lang
         ), f"Property edm_type is not allowed to have a lang-tag"
+        assert_valid_edm_type(self.edm_type)
 
         return self
 
@@ -1413,6 +1415,9 @@ class EDM_WebResource(EDM_BaseClass):
 	rom a controlled vocabulary.dc:type should not be (strictly) identical to edm:type. `<d
 	c:type>video</dc:type>` or create a reference to an instance of the Concept class `<dc:t
 	ype rdf:about= “http://schema.org/VideoObject” >`
+
+    3D profile:
+    Used in edm:WebResource to indicate the type of the 3D model. The value should be a reference taken from the “type of 3D model” vocabulary (http://data.europeana.eu/vocabulary/modelType/).
     """
 
     dcterms_conformsTo: Optional[MixedValuesList] = None
@@ -1430,6 +1435,9 @@ class EDM_WebResource(EDM_BaseClass):
 
     An established standard to which the web resource conforms. `<dcterms:conformsTo>W3C WC
 	AG 2.0</dcterms:conformsTo>` (web content accessibility guidelines).
+
+    3D Profile:
+    Used in instances of edm:WebResource that represent paradata resources to indicate the format of the paradata.
     """
 
     dcterms_created: Optional[MixedValuesList] = None
@@ -1503,6 +1511,9 @@ class EDM_WebResource(EDM_BaseClass):
 	.png</dcterms:isFormatOf>` for a png image file of the described tiff web resource. Or 
 	as a link to a resource `<dcterms:isFormatOf rdf:resource=“http://upload.wikimedia.org/
 	wikipedia/en/f/f3/Europeana_logo.png”/>`
+
+    3D Profile:
+    Relates a digital representation to a pre-existing one that is substantially similar in terms of represented features but comes in a different format. Especially, this property can be used to link an edm:WebResource representing a view of a 3D model to another edm:WebResource representing the original 3D model, or to associate a lower-quality 3D model to a higher-quality one that it was generated from.
     """
 
     dcterms_isPartOf: Optional[List[Ref]] = None
@@ -1642,7 +1653,164 @@ class EDM_WebResource(EDM_BaseClass):
 
     The identifier of the svcs:Service required to consume the edm:WebResource. Example: 	
 	
-`<svcs:has_service rdf:resource="http://www.example.org/Service/IIIF">`
+    `<svcs:has_service rdf:resource="http://www.example.org/Service/IIIF">`
+    """
+
+    # --- 3D-specific properties (Europeana EDM 3D profile) ---
+
+    dc_language: Optional[List[Lit]] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_many
+
+    Value-Type:
+    Optional[List[Lit]]
+
+    Description:
+    Used in edm:WebResource to indicate the language of contents within the model, such as texts or soundtracks.
+    """
+
+    dc_title: Optional[List[Lit]] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_many
+
+    Value-Type:
+    Optional[List[Lit]]
+
+    Description:
+    Used in edm:WebResource to indicate a title for the model. It is recommended that when a resource offers multiple (two or more) 3D models, each model should be assigned a unique dc:title for unambiguous identification.
+    """
+
+    dcterms_temporal: Optional[MixedValuesList] = None
+    """
+    Mandate: 
+    optional
+
+    Cardinality: 
+    zero_to_many
+
+    Value-Type:
+    Optional[MixedValuesList]
+    
+    Description: 
+    Temporal characteristics of the resource. i.e. what the resource is about or depicts in terms of time (e.g. a period, date or date range). Note that this refers to the time period the model represents (its subject matter), not the time at which the model was created.
+    """
+
+    edm_intendedUsage: Optional[List[Ref]] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_many
+
+    Value-Type:
+    Optional[List[Ref]]
+
+    Description:
+    Indicates the intended purpose or use context for which a digital representation (such as a 3D model) has been prepared or is primarily suitable. This may include technical, functional, or communicative objectives.
+    """
+
+    edm_pointCount: Optional[Lit] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_one
+
+    Value-Type:
+    Optional[Lit]
+    The value must be a non-negative integer.
+
+    Description:
+    The number of points in the model.
+    """
+
+    edm_polygonCount: Optional[Lit] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_one
+
+    Value-Type:
+    Optional[Lit]
+    The value must be a non-negative integer.
+
+    Description:
+    The number of polygons in the model
+    """
+
+    edm_type: Optional[Lit] = None
+    """
+    Mandate: 
+    optional
+
+    Cardinality: 
+    zero_to_one
+
+    Value-Type:
+    Optional[Lit]
+    
+    Description: 
+    When an instance of a edm:WebResource represents a 3D model or a view of a 3D model, edm:type must be used with the value 3D
+    """
+
+    edm_vertexCount: Optional[Lit] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_one
+
+    Value-Type:
+    Optional[Lit]
+    The value must be a non-negative integer.
+
+    Description:
+    The number of vertices in the model
+    """
+
+    rdfs_seeAlso: Optional[List[Ref]] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_many
+
+    Value-Type:
+    Optional[List[Ref]]
+
+    Description:
+    Relates a resource to another resource that may provides additional information about the subject resource.
+    In EDM 3D context, this property is used to link to a full version of paradata published externally using a domain standard (or a more specific format).
+    The referenced paradata resource must be another edm:WebResource in the record, which must to have a dcterms:conformsTo property indicating the format of the paradata.
+    """
+
+    schema_digitalSourceType: Optional[Ref] = None
+    """
+    Mandate:
+    optional
+
+    Cardinality:
+    zero_to_one
+
+    Value-Type:
+    Optional[Ref]
+
+    Description:
+    How the model has been produced in its relation to physical reality.
     """
 
     @model_validator(mode="after")
@@ -1657,5 +1825,8 @@ class EDM_WebResource(EDM_BaseClass):
 
             self.edm_rights.value = normalize_statement(self.edm_rights.value)
             assert_valid_statement(self.edm_rights.value)
+
+        if self.edm_type:
+            assert_valid_edm_type(self.edm_type)
 
         return self
