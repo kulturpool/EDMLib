@@ -1,3 +1,4 @@
+from edmlib.edm.classes.core import EDM_ProvidedCHO
 import pytest
 from pydantic import ValidationError
 
@@ -123,3 +124,40 @@ def test_rightsstatements_normalization():
         and ressource.edm_rights.value
         == "http://rightsstatements.org/vocab/NoC-NC/1.0/"
     )
+
+
+@pytest.mark.parametrize(
+    "type,success",
+    [
+        ("IMAGE", True),
+        ("TEXT", True),
+        ("SOUND", True),
+        ("VIDEO", True),
+        ("3D", True),
+        ("SOMETHING_ELSE", False),
+    ],
+)
+def test_edm_type_validation(type, success):
+    if not success:
+        with pytest.raises(ValidationError):
+            EDM_ProvidedCHO(
+                id=Ref(value="http://example.org/cho/1"),
+                edm_type=Lit(value=type),
+                dc_description=[Lit(value="A description")],
+                dc_language=[Lit(value="en")],
+                dc_subject=[Lit(value="subject")],
+                dc_title=[Lit(value="Title")],
+                dc_type=[Lit(value="Type")],
+                dc_identifier=[Lit(value="id123")],
+            )
+    else:
+        prov_cho = EDM_ProvidedCHO(
+            id=Ref(value="http://example.org/cho/1"),
+            edm_type=Lit(value=type),
+            dc_description=[Lit(value="A description")],
+            dc_language=[Lit(value="en")],
+            dc_subject=[Lit(value="subject")],
+            dc_title=[Lit(value="Title")],
+            dc_type=[Lit(value="Type")],
+            dc_identifier=[Lit(value="id123")],
+        )

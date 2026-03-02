@@ -15,6 +15,17 @@ A Python library providing utilities for working with the **Europeana Data Model
 - **XML/RDF parsing**: Parse EDM records from XML or RDF formats
 - **RDF serialization**: Export EDM records back to RDF formats
 
+### EDM profile support
+
+| Profile | Classes and Properties Included | Full Validation |
+|---------|--------------------------------|-----------------|
+| [IIIF](https://europeana.atlassian.net/wiki/spaces/EF/pages/2189262924/IIIF+to+EDM+profile+definitions) | ✅ | ❌ |
+| [3D resources](https://europeana.atlassian.net/wiki/spaces/EF/pages/3294363660/3D+content+in+EDM+definitions) | ✅ | ❌ |
+| [Technical metadata](https://europeana.atlassian.net/wiki/spaces/EF/pages/2898886659/Technical+metadata+in+EDM+definitions) | ❌ | ❌ |
+| [Persistent Identifiers](https://europeana.atlassian.net/wiki/spaces/EF/pages/3283812410/Persistent+identifiers+in+EDM+definitions) | ❌ | ❌ |
+| [Embeddable Resources](https://europeana.atlassian.net/wiki/spaces/EF/pages/2820177937/Embeddable+resources+in+EDM+guidelines) | ❌ | ❌ |
+
+
 ## Quick Start
 
 EDM specifications are encapsulated in `EDM_Record`. All data is validated at instantiation, ensuring compliance with EDM.

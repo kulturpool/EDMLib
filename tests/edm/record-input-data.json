@@ -24,7 +24,12 @@
     ],
     "dc_format": null,
     "dc_identifier": [
-      { "value": "SE536", "lang": null, "datatype": null, "normalize": false }
+      {
+        "value": "SE536",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      }
     ],
     "dc_language": null,
     "dc_publisher": null,
@@ -84,7 +89,12 @@
     "dcterms_issued": null,
     "dcterms_isVersionOf": null,
     "dcterms_medium": [
-      { "value": "Gips", "lang": null, "datatype": null, "normalize": false }
+      {
+        "value": "Gips",
+        "lang": null,
+        "datatype": null,
+        "normalize": false
+      }
     ],
     "dcterms_provenance": null,
     "dcterms_references": null,
@@ -179,7 +189,12 @@
       "dc_creator": null,
       "dc_description": null,
       "dc_format": [
-        { "value": "jpg", "lang": null, "datatype": null, "normalize": false }
+        {
+          "value": "jpg",
+          "lang": null,
+          "datatype": null,
+          "normalize": false
+        }
       ],
       "dc_rights": [
         {
@@ -209,7 +224,17 @@
       "edm_rights": null,
       "owl_sameAs": null,
       "svcs_has_service": null,
-      "dcterms_isReferencedBy": null
+      "dcterms_isReferencedBy": null,
+      "dc_language": null,
+      "dc_title": null,
+      "dcterms_temporal": null,
+      "edm_intendedUsage": null,
+      "edm_pointCount": null,
+      "edm_polygonCount": null,
+      "edm_type": null,
+      "edm_vertexCount": null,
+      "rdfs_seeAlso": null,
+      "schema_digitalSourceType": null
     },
     {
       "id": {
@@ -233,7 +258,17 @@
       "edm_rights": null,
       "owl_sameAs": null,
       "svcs_has_service": null,
-      "dcterms_isReferencedBy": null
+      "dcterms_isReferencedBy": null,
+      "dc_language": null,
+      "dc_title": null,
+      "dcterms_temporal": null,
+      "edm_intendedUsage": null,
+      "edm_pointCount": null,
+      "edm_polygonCount": null,
+      "edm_type": null,
+      "edm_vertexCount": null,
+      "rdfs_seeAlso": null,
+      "schema_digitalSourceType": null
     },
     {
       "id": {
@@ -243,7 +278,12 @@
       "dc_creator": null,
       "dc_description": null,
       "dc_format": [
-        { "value": "jpg", "lang": null, "datatype": null, "normalize": false }
+        {
+          "value": "jpg",
+          "lang": null,
+          "datatype": null,
+          "normalize": false
+        }
       ],
       "dc_rights": [
         {
@@ -273,7 +313,17 @@
       "edm_rights": null,
       "owl_sameAs": null,
       "svcs_has_service": null,
-      "dcterms_isReferencedBy": null
+      "dcterms_isReferencedBy": null,
+      "dc_language": null,
+      "dc_title": null,
+      "dcterms_temporal": null,
+      "edm_intendedUsage": null,
+      "edm_pointCount": null,
+      "edm_polygonCount": null,
+      "edm_type": null,
+      "edm_vertexCount": null,
+      "rdfs_seeAlso": null,
+      "schema_digitalSourceType": null
     }
   ],
   "skos_concept": [],
