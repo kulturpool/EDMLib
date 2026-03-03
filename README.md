@@ -23,7 +23,7 @@ A Python library providing utilities for working with the **Europeana Data Model
 | [3D resources](https://europeana.atlassian.net/wiki/spaces/EF/pages/3294363660/3D+content+in+EDM+definitions) | ✅ | ❌ |
 | [Technical metadata](https://europeana.atlassian.net/wiki/spaces/EF/pages/2898886659/Technical+metadata+in+EDM+definitions) | ❌ | ❌ |
 | [Persistent Identifiers](https://europeana.atlassian.net/wiki/spaces/EF/pages/3283812410/Persistent+identifiers+in+EDM+definitions) | ❌ | ❌ |
-| [Embeddable Resources](https://europeana.atlassian.net/wiki/spaces/EF/pages/2820177937/Embeddable+resources+in+EDM+guidelines) | ❌ | ❌ |
+| [Embeddable Resources](https://europeana.atlassian.net/wiki/spaces/EF/pages/2820177937/Embeddable+resources+in+EDM+guidelines) | ✅ | ❌ |
 
 
 ## Quick Start
