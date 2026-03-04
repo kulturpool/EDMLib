@@ -39,7 +39,7 @@ class SVCS_Service(EDM_BaseClass):
         `<dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>`
     """
 
-    doap_implements: Optional[Ref]
+    doap_implements: Optional[Ref] = None
     """
     Mandate: 
         Optional
@@ -52,7 +52,7 @@ class SVCS_Service(EDM_BaseClass):
         `<doap:implements rdf:resource="http://iiif.io/api/image/2/level1.json"/>`
     """
 
-    rdfs_label: Optional[List[Lit]]
+    rdfs_label: Optional[List[Lit]] = None
     """
     Mandate:
         Optional
