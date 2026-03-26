@@ -1,7 +1,7 @@
 from typing import List, Optional
 
 from ..base import EDM_BaseClass
-from ..value_types import Ref
+from ..value_types import Lit, Ref
 
 
 class SVCS_Service(EDM_BaseClass):
@@ -39,7 +39,7 @@ class SVCS_Service(EDM_BaseClass):
         `<dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>`
     """
 
-    doap_implements: Optional[Ref]
+    doap_implements: Optional[Ref] = None
     """
     Mandate: 
         Optional
@@ -50,4 +50,16 @@ class SVCS_Service(EDM_BaseClass):
 
     Example: 
         `<doap:implements rdf:resource="http://iiif.io/api/image/2/level1.json"/>`
+    """
+
+    rdfs_label: Optional[List[Lit]] = None
+    """
+    Mandate:
+        Optional
+    
+    Definition:
+        A human-readable name for the resource.
+
+        Embeddable Resource Profile:
+        The svcs:Service class SHOULD also have an rdfs:label property with the name of the service (e.g. “Flickr”, “Vimeo”, “YouTube”, “SoundCloud”, “Sketchfab” etc.)
     """
