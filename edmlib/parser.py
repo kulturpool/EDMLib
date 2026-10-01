@@ -43,6 +43,8 @@ def to_literal(literal: Literal) -> Lit:
 
     obj, dtype = _castPythonToLiteral(literal.value, literal.datatype)
 
+    # only using model_construct here instead of the models constructor to bypass validation and
+    # keep empty values from raising ValidationError and filter them out later
     return Lit.model_construct(
         value=str(obj),
         lang=literal.language,
@@ -56,7 +58,8 @@ def to_ref(ref: URIRef) -> Ref:
     """
     value = str(ref)
 
-    # only using model_construct here instead of the models constructor to bypass validation and keep empty values from raising ValidationError and filter them out later
+    # only using model_construct here instead of the models constructor to bypass validation and
+    # keep empty values from raising ValidationError and filter them out later
     return Ref.model_construct(value=value)
 
 
@@ -197,6 +200,9 @@ class EDM_Parser:
                 lit_or_ref for lit_or_ref in values if lit_or_ref.value.strip() != ""
             ]
 
+            # validation of the Lit and Ref objects was bypassed earlier, to filter out empty ones
+            # Now triggering validation (only found way was to dump it and validate from that)
+            # values have to be reassigned because Refs can be changed during validation
             values = [
                 value.__class__.model_validate(value.__class__(**value.model_dump()))
                 for value in values
