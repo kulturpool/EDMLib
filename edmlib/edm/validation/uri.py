@@ -70,7 +70,7 @@ def sanitize_url_quotation(url: str):
     unquoted = unquote_url_recursively(url)
     if "://" in unquoted:
         scheme, rest = unquoted.split("://", 1)
-        return f"{scheme}://{urllib.parse.quote(rest)}"  # type: ignore
+        return f"{scheme}://{urllib.parse.quote(rest, safe="/:")}"  # type: ignore
     else:
         return url
 
